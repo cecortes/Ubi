@@ -1,0 +1,15 @@
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.Splash.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.Resources.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbproj.GenerateResource.cache
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbproj.CoreCompileInputs.cache
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiSoft.exe.config
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiSoft.exe
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiSoft.pdb
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiSoft.xml
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.exe
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.xml
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.pdb
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrMain.resources
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbproj.CopyComplete
