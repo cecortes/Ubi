@@ -38,7 +38,7 @@ Public Class Splash
             ProgBar.Value = 0
 
             'Cierre de pantalla
-            ScrMain.Show()
+            Login.Show()
             Me.Close()
 
         End If
