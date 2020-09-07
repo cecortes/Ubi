@@ -49,9 +49,18 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:UbiSoft.Login.txtPass_Click(System.Object,System.EventArgs)">
+<member name="M:UbiSoft.Login.txtPass_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
  <summary>
  Limpia el contenido del cuadro de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.Login.btnAceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Captura la info de los cuadros textos
+ Realiza la consulta mediante la dll
+ Valida el resultado y da acceso
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

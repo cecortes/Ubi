@@ -1,6 +1,13 @@
-﻿Public Class Login
+﻿'Imports
+Imports UbiDll
+
+Public Class Login
 
 #Region "Variables"
+
+    'Dll
+    Dim datos As New Datos
+    Dim consulta As New Consulta
 
 #End Region
 
@@ -52,7 +59,13 @@
         'Captura
         Dim usuario As String = txtUsr.Text
         Dim pwd As String = txtPass.Text
+        datos.correo_usr = usuario
 
+        'Consulta
+        Dim dllRes As String = consulta.GetPass(datos)
+        'Dim dbTipo As String = buscar.GetUserTipo(datos)
+
+        MsgBox(dllRes)
 
     End Sub
 

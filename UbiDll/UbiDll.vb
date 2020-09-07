@@ -27,13 +27,13 @@ Public Class Conexion
 
         'Variables locales
         Dim estado As Boolean = False
-        Dim ip As String = "localhost"
-        Dim user As String = "root"
+        Dim ip As String = "https://sql304.epizy.com"
+        Dim user As String = "epiz_26625789"
         Dim pass As String = "ZMalqp10"
 
         'Tratamos de abrir la conexión
         Try
-            _cadena = ("server= " & ip.Trim() & ";user id=" & user.Trim() & ";password=" & pass.Trim() & ";database=rfid ;SslMode=none")
+            _cadena = ("server= " & ip.Trim() & ";user id=" & user.Trim() & ";password=" & pass.Trim() & ";database=epiz_26625789_UbiSoft ;SslMode=none")
             _conexion = New MySqlConnection(_cadena)
             estado = True
         Catch ex As Exception
