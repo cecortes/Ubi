@@ -22,7 +22,17 @@ UbiSoft
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.cancelado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.Login">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.ok">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -31,6 +41,20 @@ UbiSoft
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member>
+<member name="M:UbiSoft.Login.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de borrar los cuadros de texto y regresarlos a condiciones iniciales.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.Login.txtPass_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia el contenido del cuadro de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
 </member>
 <member name="M:UbiSoft.Splash.TmrStart_Tick(System.Object,System.EventArgs)">
  <summary>

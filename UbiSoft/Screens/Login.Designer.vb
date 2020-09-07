@@ -23,12 +23,19 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.PbLogin = New System.Windows.Forms.PictureBox()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.PbLogin = New System.Windows.Forms.PictureBox()
         Me.txtUsr = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtPass = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.btnCancel = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnAceptar = New Bunifu.Framework.UI.BunifuTileButton()
         CType(Me.PbLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 100
+        Me.BunifuElipse1.TargetControl = Me.PbLogin
         '
         'PbLogin
         '
@@ -39,11 +46,6 @@ Partial Class Login
         Me.PbLogin.Size = New System.Drawing.Size(500, 600)
         Me.PbLogin.TabIndex = 0
         Me.PbLogin.TabStop = False
-        '
-        'BunifuElipse1
-        '
-        Me.BunifuElipse1.ElipseRadius = 100
-        Me.BunifuElipse1.TargetControl = Me.PbLogin
         '
         'txtUsr
         '
@@ -86,12 +88,52 @@ Partial Class Login
         Me.txtPass.Text = "1234"
         Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnCancel.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnCancel.colorActive = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.Font = New System.Drawing.Font("Ebrima", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.btnCancel.Image = Global.UbiSoft.My.Resources.Resources.cancelado
+        Me.btnCancel.ImagePosition = 4
+        Me.btnCancel.ImageZoom = 40
+        Me.btnCancel.LabelPosition = 27
+        Me.btnCancel.LabelText = "Cancelar"
+        Me.btnCancel.Location = New System.Drawing.Point(338, 461)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(91, 64)
+        Me.btnCancel.TabIndex = 4
+        '
+        'btnAceptar
+        '
+        Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnAceptar.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnAceptar.colorActive = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAceptar.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.btnAceptar.Image = Global.UbiSoft.My.Resources.Resources.ok
+        Me.btnAceptar.ImagePosition = 5
+        Me.btnAceptar.ImageZoom = 40
+        Me.btnAceptar.LabelPosition = 30
+        Me.btnAceptar.LabelText = "Aceptar"
+        Me.btnAceptar.Location = New System.Drawing.Point(50, 461)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(81, 64)
+        Me.btnAceptar.TabIndex = 3
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(500, 600)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUsr)
         Me.Controls.Add(Me.PbLogin)
@@ -111,4 +153,6 @@ Partial Class Login
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents txtUsr As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents btnAceptar As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents btnCancel As Bunifu.Framework.UI.BunifuTileButton
 End Class

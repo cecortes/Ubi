@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UbiDll
+</name>
+</assembly>
+<members>
+<member name="T:UbiDll.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:UbiDll.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:UbiDll.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:UbiDll.Conexion._cadena">
+ En esta región se declaran variables de la clase, las cuales se les
+ llama Data Members.
+</member>
+<member name="M:UbiDll.Conexion.Con_Global">
+ En esta región se implementan las funciones compartidas de la clase,
+ si la función no es compartida o pública, esta no podrá ser usada por
+ la aplicación que la llame aunque esté correctamente importada.
+</member>
+<member name="M:UbiDll.Consulta.GetPass(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener el Pass de la tabla y lo regresa como resultado
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
+</members>
+</doc>
