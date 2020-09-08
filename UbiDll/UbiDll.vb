@@ -27,13 +27,13 @@ Public Class Conexion
 
         'Variables locales
         Dim estado As Boolean = False
-        Dim ip As String = "https://sql304.epizy.com"
-        Dim user As String = "epiz_26625789"
+        Dim ip As String = "localhost"
+        Dim user As String = "root"
         Dim pass As String = "ZMalqp10"
 
         'Tratamos de abrir la conexión
         Try
-            _cadena = ("server= " & ip.Trim() & ";user id=" & user.Trim() & ";password=" & pass.Trim() & ";database=epiz_26625789_UbiSoft ;SslMode=none")
+            _cadena = ("server= " & ip.Trim() & ";user id=" & user.Trim() & ";password=" & pass.Trim() & ";database=ubi ;SslMode=none")
             _conexion = New MySqlConnection(_cadena)
             estado = True
         Catch ex As Exception
@@ -144,6 +144,7 @@ Public Class Consulta
     Public Function GetPass(ByVal Datos As Datos) As String
         'Variables locales
         Dim con As New Conexion
+        Dim reader As MySqlDataReader
         Dim resultado As String = ""
 
         'Excepción
@@ -153,15 +154,20 @@ Public Class Consulta
             con.Con_Global()
 
             'MySql 
-            _adaptador.SelectCommand = New MySqlCommand("SELECT pass_usr FROM usuarios WHERE correo_usr = @correo_usr", con._conexion)
+            _adaptador.SelectCommand = New MySqlCommand("SELECT pass_usr, unidad_usr FROM usuarios WHERE correo_usr = @correo_usr", con._conexion)
             _adaptador.SelectCommand.Parameters.Add("@correo_usr", MySqlDbType.String, 100).Value = Datos.correo_usr
 
             'Open Conection
             con._conexion.Open()
             _adaptador.SelectCommand.Connection = con._conexion
 
-            'MySql Result
-            resultado = _adaptador.SelectCommand.ExecuteScalar()
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+                resultado = reader("pass_usr").ToString() + "," + reader("unidad_usr").ToString
+            End While
 
         Catch ex As MySqlException
 
@@ -171,6 +177,7 @@ Public Class Consulta
         Finally
 
             'Close
+            reader.Close()
             con._conexion.Close()
 
         End Try
