@@ -22,12 +22,42 @@ UbiSoft
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.BackBottom">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.BackBottom1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.background">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.cancelado">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.close">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.Login">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.LogoMin">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.min">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

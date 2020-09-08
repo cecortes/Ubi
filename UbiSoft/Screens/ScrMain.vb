@@ -17,7 +17,7 @@
 #Region "Eventos"
 
     Private Sub ScrMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-        MsgBox(unidad)
+        'MsgBox(unidad)
     End Sub
 
 #End Region

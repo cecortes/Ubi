@@ -162,5 +162,23 @@
   <ItemGroup>
     <None Include="Resources\cancelado.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackBottom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
