@@ -8,6 +8,7 @@ Public Class Login
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
+    Dim errorMsg As New ErrorMsg
 
 #End Region
 
@@ -63,9 +64,26 @@ Public Class Login
 
         'Consulta
         Dim dllRes As String = consulta.GetPass(datos)
-        'Dim dbTipo As String = buscar.GetUserTipo(datos)
 
-        MsgBox(dllRes)
+        'Coma separeted values
+        Dim csvRes As String() = dllRes.Split(",")
+
+        'Valida
+        If (pwd = csvRes(0)) Then
+
+            'Captura unidad y la pasa como variable (Public Shared) al formulario ScrMain
+            ScrMain.unidad = csvRes(1)
+
+            'Muestra el formulario Main y cierra el actual
+            ScrMain.Show()
+            Me.Close()
+
+        Else
+
+            'Usuario
+            errorMsg.ErrorCode(1)
+
+        End If
 
     End Sub
 

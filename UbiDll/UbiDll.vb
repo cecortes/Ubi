@@ -183,7 +183,7 @@ Public Class Consulta
         End Try
 
         'Debug
-        MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
 
         'Regresamos el resultado de la consulta
         Return resultado
@@ -191,4 +191,27 @@ Public Class Consulta
     End Function
 
 #End Region
+End Class
+
+Public Class ErrorMsg
+
+    ''' <summary>
+    ''' Se encarga de mostrar al usuario el mensaje de acuerdo al tipo de error
+    ''' Recibe como parámetro el tipo y lo valida para mostrar el mensaje adecuado
+    ''' </summary>
+    ''' <param name="tipo">As integer error type</param>
+    Public Sub ErrorCode(ByVal tipo As Integer)
+
+        'Valida
+        Select Case tipo
+
+            Case 1
+                'Error Usuario o pasword incorrecto
+                Dim msg As String = "Usuario o contraseña incorrecta" + vbCrLf + "favor de verificar."
+                MsgBox(msg, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End Select
+
+    End Sub
+
 End Class

@@ -38,5 +38,12 @@ UbiDll
  <param name="Datos"></param>
  <returns>Password as string</returns>
 </member>
+<member name="M:UbiDll.ErrorMsg.ErrorCode(System.Int32)">
+ <summary>
+ Se encarga de mostrar al usuario el mensaje de acuerdo al tipo de error
+ Recibe como parámetro el tipo y lo valida para mostrar el mensaje adecuado
+ </summary>
+ <param name="tipo">As integer error type</param>
+</member>
 </members>
 </doc>
