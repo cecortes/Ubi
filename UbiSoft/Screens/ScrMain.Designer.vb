@@ -24,34 +24,34 @@ Partial Class ScrMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PnlTop = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
-        Me.Drag = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-        Me.Elipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseConfig = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseAdmin = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseAlma = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseManto = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseProd = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.ElipseVentas = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.BtnVentas = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BtnProd = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BtnManto = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BtnAlmacen = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BtnAdmin = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BtnConfig = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.PbBottom = New System.Windows.Forms.PictureBox()
         Me.PbMin = New System.Windows.Forms.PictureBox()
         Me.PbClose = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PbLogoMin = New System.Windows.Forms.PictureBox()
+        Me.Drag = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.PbBckGround = New System.Windows.Forms.PictureBox()
+        Me.Elipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.ElipseConfig = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnConfig = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.ElipseAdmin = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnAdmin = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.ElipseAlma = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnAlmacen = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.ElipseManto = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnManto = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.ElipseProd = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnProd = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.ElipseVentas = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BtnVentas = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.PbBottom = New System.Windows.Forms.PictureBox()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
-        CType(Me.PbBottom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbBckGround, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbBottom, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -66,17 +66,6 @@ Partial Class ScrMain
         Me.PnlTop.Size = New System.Drawing.Size(1024, 40)
         Me.PnlTop.TabIndex = 1
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(235, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 23)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Ubicamatic (C) 2020"
-        '
         'PnlCtrl
         '
         Me.PnlCtrl.Controls.Add(Me.PbMin)
@@ -86,175 +75,6 @@ Partial Class ScrMain
         Me.PnlCtrl.Name = "PnlCtrl"
         Me.PnlCtrl.Size = New System.Drawing.Size(400, 40)
         Me.PnlCtrl.TabIndex = 4
-        '
-        'Drag
-        '
-        Me.Drag.Fixed = True
-        Me.Drag.Horizontal = True
-        Me.Drag.TargetControl = Me.PbBckGround
-        Me.Drag.Vertical = True
-        '
-        'Elipse
-        '
-        Me.Elipse.ElipseRadius = 30
-        Me.Elipse.TargetControl = Me
-        '
-        'ElipseConfig
-        '
-        Me.ElipseConfig.ElipseRadius = 50
-        Me.ElipseConfig.TargetControl = Me.BtnConfig
-        '
-        'ElipseAdmin
-        '
-        Me.ElipseAdmin.ElipseRadius = 50
-        Me.ElipseAdmin.TargetControl = Me.BtnAdmin
-        '
-        'ElipseAlma
-        '
-        Me.ElipseAlma.ElipseRadius = 50
-        Me.ElipseAlma.TargetControl = Me.BtnAlmacen
-        '
-        'ElipseManto
-        '
-        Me.ElipseManto.ElipseRadius = 50
-        Me.ElipseManto.TargetControl = Me.BtnManto
-        '
-        'ElipseProd
-        '
-        Me.ElipseProd.ElipseRadius = 50
-        Me.ElipseProd.TargetControl = Me.BtnProd
-        '
-        'ElipseVentas
-        '
-        Me.ElipseVentas.ElipseRadius = 50
-        Me.ElipseVentas.TargetControl = Me.BtnVentas
-        '
-        'BtnVentas
-        '
-        Me.BtnVentas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnVentas.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnVentas.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnVentas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnVentas.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnVentas.Image = Global.UbiSoft.My.Resources.Resources.ventas
-        Me.BtnVentas.ImagePosition = 15
-        Me.BtnVentas.ImageZoom = 45
-        Me.BtnVentas.LabelPosition = 41
-        Me.BtnVentas.LabelText = "Ventas"
-        Me.BtnVentas.Location = New System.Drawing.Point(579, 520)
-        Me.BtnVentas.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnVentas.Name = "BtnVentas"
-        Me.BtnVentas.Size = New System.Drawing.Size(202, 150)
-        Me.BtnVentas.TabIndex = 8
-        '
-        'BtnProd
-        '
-        Me.BtnProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnProd.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnProd.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnProd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnProd.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnProd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnProd.Image = Global.UbiSoft.My.Resources.Resources.proveedor
-        Me.BtnProd.ImagePosition = 15
-        Me.BtnProd.ImageZoom = 45
-        Me.BtnProd.LabelPosition = 41
-        Me.BtnProd.LabelText = "Producción"
-        Me.BtnProd.Location = New System.Drawing.Point(239, 520)
-        Me.BtnProd.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnProd.Name = "BtnProd"
-        Me.BtnProd.Size = New System.Drawing.Size(200, 150)
-        Me.BtnProd.TabIndex = 7
-        '
-        'BtnManto
-        '
-        Me.BtnManto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnManto.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnManto.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnManto.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnManto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnManto.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnManto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnManto.Image = Global.UbiSoft.My.Resources.Resources.mantenimiento
-        Me.BtnManto.ImagePosition = 15
-        Me.BtnManto.ImageZoom = 45
-        Me.BtnManto.LabelPosition = 41
-        Me.BtnManto.LabelText = "Mantenimiento"
-        Me.BtnManto.Location = New System.Drawing.Point(637, 314)
-        Me.BtnManto.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnManto.Name = "BtnManto"
-        Me.BtnManto.Size = New System.Drawing.Size(200, 150)
-        Me.BtnManto.TabIndex = 6
-        '
-        'BtnAlmacen
-        '
-        Me.BtnAlmacen.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnAlmacen.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnAlmacen.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnAlmacen.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAlmacen.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAlmacen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAlmacen.Image = Global.UbiSoft.My.Resources.Resources.caja
-        Me.BtnAlmacen.ImagePosition = 15
-        Me.BtnAlmacen.ImageZoom = 45
-        Me.BtnAlmacen.LabelPosition = 41
-        Me.BtnAlmacen.LabelText = "Almacén"
-        Me.BtnAlmacen.Location = New System.Drawing.Point(171, 314)
-        Me.BtnAlmacen.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnAlmacen.Name = "BtnAlmacen"
-        Me.BtnAlmacen.Size = New System.Drawing.Size(200, 150)
-        Me.BtnAlmacen.TabIndex = 5
-        '
-        'BtnAdmin
-        '
-        Me.BtnAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnAdmin.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnAdmin.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnAdmin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAdmin.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAdmin.Image = Global.UbiSoft.My.Resources.Resources.mano
-        Me.BtnAdmin.ImagePosition = 15
-        Me.BtnAdmin.ImageZoom = 45
-        Me.BtnAdmin.LabelPosition = 41
-        Me.BtnAdmin.LabelText = "Administración"
-        Me.BtnAdmin.Location = New System.Drawing.Point(579, 108)
-        Me.BtnAdmin.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnAdmin.Name = "BtnAdmin"
-        Me.BtnAdmin.Size = New System.Drawing.Size(200, 150)
-        Me.BtnAdmin.TabIndex = 4
-        '
-        'BtnConfig
-        '
-        Me.BtnConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnConfig.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnConfig.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnConfig.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnConfig.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnConfig.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnConfig.Image = Global.UbiSoft.My.Resources.Resources.gear
-        Me.BtnConfig.ImagePosition = 15
-        Me.BtnConfig.ImageZoom = 45
-        Me.BtnConfig.LabelPosition = 41
-        Me.BtnConfig.LabelText = "Configuración"
-        Me.BtnConfig.Location = New System.Drawing.Point(239, 108)
-        Me.BtnConfig.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.BtnConfig.Name = "BtnConfig"
-        Me.BtnConfig.Size = New System.Drawing.Size(200, 150)
-        Me.BtnConfig.TabIndex = 3
-        '
-        'PbBottom
-        '
-        Me.PbBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PbBottom.Image = Global.UbiSoft.My.Resources.Resources.BackBottom1
-        Me.PbBottom.Location = New System.Drawing.Point(0, 743)
-        Me.PbBottom.Name = "PbBottom"
-        Me.PbBottom.Size = New System.Drawing.Size(1024, 25)
-        Me.PbBottom.TabIndex = 2
-        Me.PbBottom.TabStop = False
         '
         'PbMin
         '
@@ -276,6 +96,17 @@ Partial Class ScrMain
         Me.PbClose.TabIndex = 0
         Me.PbClose.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(235, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(162, 23)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Ubicamatic (C) 2020"
+        '
         'PbLogoMin
         '
         Me.PbLogoMin.Dock = System.Windows.Forms.DockStyle.Left
@@ -286,6 +117,13 @@ Partial Class ScrMain
         Me.PbLogoMin.TabIndex = 0
         Me.PbLogoMin.TabStop = False
         '
+        'Drag
+        '
+        Me.Drag.Fixed = True
+        Me.Drag.Horizontal = True
+        Me.Drag.TargetControl = Me.PbBckGround
+        Me.Drag.Vertical = True
+        '
         'PbBckGround
         '
         Me.PbBckGround.Dock = System.Windows.Forms.DockStyle.Fill
@@ -295,6 +133,174 @@ Partial Class ScrMain
         Me.PbBckGround.Size = New System.Drawing.Size(1024, 768)
         Me.PbBckGround.TabIndex = 0
         Me.PbBckGround.TabStop = False
+        '
+        'Elipse
+        '
+        Me.Elipse.ElipseRadius = 30
+        Me.Elipse.TargetControl = Me
+        '
+        'ElipseConfig
+        '
+        Me.ElipseConfig.ElipseRadius = 50
+        Me.ElipseConfig.TargetControl = Me.BtnConfig
+        '
+        'BtnConfig
+        '
+        Me.BtnConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnConfig.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnConfig.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnConfig.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnConfig.Enabled = False
+        Me.BtnConfig.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnConfig.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnConfig.Image = Global.UbiSoft.My.Resources.Resources.gear
+        Me.BtnConfig.ImagePosition = 15
+        Me.BtnConfig.ImageZoom = 45
+        Me.BtnConfig.LabelPosition = 41
+        Me.BtnConfig.LabelText = "Configuración"
+        Me.BtnConfig.Location = New System.Drawing.Point(239, 108)
+        Me.BtnConfig.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnConfig.Name = "BtnConfig"
+        Me.BtnConfig.Size = New System.Drawing.Size(200, 150)
+        Me.BtnConfig.TabIndex = 3
+        '
+        'ElipseAdmin
+        '
+        Me.ElipseAdmin.ElipseRadius = 50
+        Me.ElipseAdmin.TargetControl = Me.BtnAdmin
+        '
+        'BtnAdmin
+        '
+        Me.BtnAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdmin.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdmin.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnAdmin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAdmin.Enabled = False
+        Me.BtnAdmin.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAdmin.Image = Global.UbiSoft.My.Resources.Resources.mano
+        Me.BtnAdmin.ImagePosition = 15
+        Me.BtnAdmin.ImageZoom = 45
+        Me.BtnAdmin.LabelPosition = 41
+        Me.BtnAdmin.LabelText = "Administración"
+        Me.BtnAdmin.Location = New System.Drawing.Point(579, 108)
+        Me.BtnAdmin.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnAdmin.Name = "BtnAdmin"
+        Me.BtnAdmin.Size = New System.Drawing.Size(200, 150)
+        Me.BtnAdmin.TabIndex = 4
+        '
+        'ElipseAlma
+        '
+        Me.ElipseAlma.ElipseRadius = 50
+        Me.ElipseAlma.TargetControl = Me.BtnAlmacen
+        '
+        'BtnAlmacen
+        '
+        Me.BtnAlmacen.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnAlmacen.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnAlmacen.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnAlmacen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAlmacen.Enabled = False
+        Me.BtnAlmacen.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAlmacen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAlmacen.Image = Global.UbiSoft.My.Resources.Resources.caja
+        Me.BtnAlmacen.ImagePosition = 15
+        Me.BtnAlmacen.ImageZoom = 45
+        Me.BtnAlmacen.LabelPosition = 41
+        Me.BtnAlmacen.LabelText = "Almacén"
+        Me.BtnAlmacen.Location = New System.Drawing.Point(171, 314)
+        Me.BtnAlmacen.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnAlmacen.Name = "BtnAlmacen"
+        Me.BtnAlmacen.Size = New System.Drawing.Size(200, 150)
+        Me.BtnAlmacen.TabIndex = 5
+        '
+        'ElipseManto
+        '
+        Me.ElipseManto.ElipseRadius = 50
+        Me.ElipseManto.TargetControl = Me.BtnManto
+        '
+        'BtnManto
+        '
+        Me.BtnManto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnManto.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnManto.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnManto.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnManto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnManto.Enabled = False
+        Me.BtnManto.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnManto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnManto.Image = Global.UbiSoft.My.Resources.Resources.mantenimiento
+        Me.BtnManto.ImagePosition = 15
+        Me.BtnManto.ImageZoom = 45
+        Me.BtnManto.LabelPosition = 41
+        Me.BtnManto.LabelText = "Mantenimiento"
+        Me.BtnManto.Location = New System.Drawing.Point(637, 314)
+        Me.BtnManto.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnManto.Name = "BtnManto"
+        Me.BtnManto.Size = New System.Drawing.Size(200, 150)
+        Me.BtnManto.TabIndex = 6
+        '
+        'ElipseProd
+        '
+        Me.ElipseProd.ElipseRadius = 50
+        Me.ElipseProd.TargetControl = Me.BtnProd
+        '
+        'BtnProd
+        '
+        Me.BtnProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnProd.color = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnProd.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnProd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnProd.Enabled = False
+        Me.BtnProd.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnProd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnProd.Image = Global.UbiSoft.My.Resources.Resources.proveedor
+        Me.BtnProd.ImagePosition = 15
+        Me.BtnProd.ImageZoom = 45
+        Me.BtnProd.LabelPosition = 41
+        Me.BtnProd.LabelText = "Producción"
+        Me.BtnProd.Location = New System.Drawing.Point(239, 520)
+        Me.BtnProd.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnProd.Name = "BtnProd"
+        Me.BtnProd.Size = New System.Drawing.Size(200, 150)
+        Me.BtnProd.TabIndex = 7
+        '
+        'ElipseVentas
+        '
+        Me.ElipseVentas.ElipseRadius = 50
+        Me.ElipseVentas.TargetControl = Me.BtnVentas
+        '
+        'BtnVentas
+        '
+        Me.BtnVentas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnVentas.color = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnVentas.colorActive = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnVentas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnVentas.Enabled = False
+        Me.BtnVentas.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnVentas.Image = Global.UbiSoft.My.Resources.Resources.ventas
+        Me.BtnVentas.ImagePosition = 15
+        Me.BtnVentas.ImageZoom = 45
+        Me.BtnVentas.LabelPosition = 41
+        Me.BtnVentas.LabelText = "Ventas"
+        Me.BtnVentas.Location = New System.Drawing.Point(579, 520)
+        Me.BtnVentas.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.BtnVentas.Name = "BtnVentas"
+        Me.BtnVentas.Size = New System.Drawing.Size(202, 150)
+        Me.BtnVentas.TabIndex = 8
+        '
+        'PbBottom
+        '
+        Me.PbBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PbBottom.Image = Global.UbiSoft.My.Resources.Resources.BackBottom1
+        Me.PbBottom.Location = New System.Drawing.Point(0, 743)
+        Me.PbBottom.Name = "PbBottom"
+        Me.PbBottom.Size = New System.Drawing.Size(1024, 25)
+        Me.PbBottom.TabIndex = 2
+        Me.PbBottom.TabStop = False
         '
         'ScrMain
         '
@@ -320,11 +326,11 @@ Partial Class ScrMain
         Me.PnlTop.ResumeLayout(False)
         Me.PnlTop.PerformLayout()
         Me.PnlCtrl.ResumeLayout(False)
-        CType(Me.PbBottom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbBckGround, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbBottom, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

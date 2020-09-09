@@ -29,6 +29,8 @@ Partial Class Login
         Me.txtPass = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.btnCancel = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnAceptar = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.PbLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,6 +128,16 @@ Partial Class Login
         Me.btnAceptar.Size = New System.Drawing.Size(81, 64)
         Me.btnAceptar.TabIndex = 3
         '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 20
+        Me.BunifuElipse2.TargetControl = Me.btnAceptar
+        '
+        'BunifuElipse3
+        '
+        Me.BunifuElipse3.ElipseRadius = 20
+        Me.BunifuElipse3.TargetControl = Me.btnCancel
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -155,4 +167,6 @@ Partial Class Login
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents btnAceptar As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnCancel As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents BunifuElipse3 As Bunifu.Framework.UI.BunifuElipse
 End Class

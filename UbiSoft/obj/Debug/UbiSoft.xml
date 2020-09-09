@@ -130,6 +130,19 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrMain.EnableCtrl(System.String)">
+ <summary>
+ Mediante un select mustra los controles de usuario adecuados
+ </summary>
+ <param name="op">As string</param>
+</member>
+<member name="M:UbiSoft.ScrMain.ScrMain_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para evaluar los controles a mostrar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.Splash.TmrStart_Tick(System.Object,System.EventArgs)">
  <summary>
  Se encarga de cerrar la pantalla al cabo de x seg.
