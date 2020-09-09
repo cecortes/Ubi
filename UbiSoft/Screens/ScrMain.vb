@@ -87,6 +87,107 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Cierra el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbClose_Click(sender As Object, e As EventArgs) Handles PbClose.Click
+
+        'Cierre
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Minimiza el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbMin_Click(sender As Object, e As EventArgs) Handles PbMin.Click
+
+        Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de configuración
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnConfig_Click(sender As Object, e As EventArgs) Handles BtnConfig.Click
+
+        ScrConfig.Show()
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de administración
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmin.Click
+
+        'ScrAdmin.Show()
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de almacén
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAlmacen_Click(sender As Object, e As EventArgs) Handles BtnAlmacen.Click
+
+        'ScrAlmacen.Show()
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de producción
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnProd_Click(sender As Object, e As EventArgs) Handles BtnProd.Click
+
+        'ScrProd.Show()
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de mantenimiento
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnManto_Click(sender As Object, e As EventArgs) Handles BtnManto.Click
+
+        'ScrManto.Show()
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra el formulario de ventas
+    ''' Cierra el formulario actual
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnVentas_Click(sender As Object, e As EventArgs) Handles BtnVentas.Click
+
+        'ScrVentas.Show()
+        Me.Close()
+
+    End Sub
+
 #End Region
 
 End Class

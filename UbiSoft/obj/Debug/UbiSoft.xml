@@ -82,12 +82,27 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.maximizar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.menu">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.min">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.ok">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.PnlBckG">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -139,6 +154,68 @@ UbiSoft
 <member name="M:UbiSoft.ScrMain.ScrMain_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para evaluar los controles a mostrar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnConfig_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de configuración
+ Cierra el formulario actual
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnAdmin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de administración
+ Cierra el formulario actual
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnAlmacen_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de almacén
+ Cierra el formulario actual
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnProd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de producción
+ Cierra el formulario actual
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnManto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de mantenimiento
+ Cierra el formulario actual
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMain.BtnVentas_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el formulario de ventas
+ Cierra el formulario actual
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
