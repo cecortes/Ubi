@@ -122,6 +122,48 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrConfig.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y muestra el menú principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.PbMenu_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida el tamaño del panel side y lo cambia según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.PbMenu_MouseHover(System.Object,System.EventArgs)">
+ <summary>
+ Cambia el color de fondo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.PbMenu_MouseLeave(System.Object,System.EventArgs)">
+ <summary>
+ Regresa el color de fondo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.Login.btnCancel_Click(System.Object,System.EventArgs)">
  <summary>
  Se encarga de borrar los cuadros de texto y regresarlos a condiciones iniciales.

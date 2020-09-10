@@ -32,6 +32,10 @@ Partial Class ScrConfig
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PbLogoMin = New System.Windows.Forms.PictureBox()
         Me.PnlSide = New System.Windows.Forms.Panel()
+        Me.BtnAvanzada = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BtnProdTer = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BtnMatPrima = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BtnInventario = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnAutos = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnMaq = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnPrecios = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -46,10 +50,6 @@ Partial Class ScrConfig
         Me.Elipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.DragTop = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.DragSide = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-        Me.BtnInventario = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BtnMatPrima = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BtnProdTer = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BtnAvanzada = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,8 +156,112 @@ Partial Class ScrConfig
         Me.PnlSide.Dock = System.Windows.Forms.DockStyle.Left
         Me.PnlSide.Location = New System.Drawing.Point(0, 40)
         Me.PnlSide.Name = "PnlSide"
-        Me.PnlSide.Size = New System.Drawing.Size(150, 728)
+        Me.PnlSide.Size = New System.Drawing.Size(40, 728)
         Me.PnlSide.TabIndex = 3
+        '
+        'BtnAvanzada
+        '
+        Me.BtnAvanzada.ActiveBorderThickness = 1
+        Me.BtnAvanzada.ActiveCornerRadius = 20
+        Me.BtnAvanzada.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnAvanzada.ActiveForecolor = System.Drawing.Color.White
+        Me.BtnAvanzada.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnAvanzada.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAvanzada.BackgroundImage = CType(resources.GetObject("BtnAvanzada.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAvanzada.ButtonText = "Avanzada"
+        Me.BtnAvanzada.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAvanzada.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAvanzada.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAvanzada.IdleBorderThickness = 1
+        Me.BtnAvanzada.IdleCornerRadius = 20
+        Me.BtnAvanzada.IdleFillColor = System.Drawing.Color.Transparent
+        Me.BtnAvanzada.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAvanzada.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAvanzada.Location = New System.Drawing.Point(5, 505)
+        Me.BtnAvanzada.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BtnAvanzada.Name = "BtnAvanzada"
+        Me.BtnAvanzada.Size = New System.Drawing.Size(137, 46)
+        Me.BtnAvanzada.TabIndex = 11
+        Me.BtnAvanzada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnAvanzada.Visible = False
+        '
+        'BtnProdTer
+        '
+        Me.BtnProdTer.ActiveBorderThickness = 1
+        Me.BtnProdTer.ActiveCornerRadius = 20
+        Me.BtnProdTer.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnProdTer.ActiveForecolor = System.Drawing.Color.White
+        Me.BtnProdTer.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnProdTer.BackColor = System.Drawing.Color.Transparent
+        Me.BtnProdTer.BackgroundImage = CType(resources.GetObject("BtnProdTer.BackgroundImage"), System.Drawing.Image)
+        Me.BtnProdTer.ButtonText = "Packaging"
+        Me.BtnProdTer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnProdTer.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnProdTer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnProdTer.IdleBorderThickness = 1
+        Me.BtnProdTer.IdleCornerRadius = 20
+        Me.BtnProdTer.IdleFillColor = System.Drawing.Color.Transparent
+        Me.BtnProdTer.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnProdTer.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnProdTer.Location = New System.Drawing.Point(5, 459)
+        Me.BtnProdTer.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BtnProdTer.Name = "BtnProdTer"
+        Me.BtnProdTer.Size = New System.Drawing.Size(137, 46)
+        Me.BtnProdTer.TabIndex = 10
+        Me.BtnProdTer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnProdTer.Visible = False
+        '
+        'BtnMatPrima
+        '
+        Me.BtnMatPrima.ActiveBorderThickness = 1
+        Me.BtnMatPrima.ActiveCornerRadius = 20
+        Me.BtnMatPrima.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnMatPrima.ActiveForecolor = System.Drawing.Color.White
+        Me.BtnMatPrima.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnMatPrima.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMatPrima.BackgroundImage = CType(resources.GetObject("BtnMatPrima.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMatPrima.ButtonText = "Materia Prima"
+        Me.BtnMatPrima.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMatPrima.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMatPrima.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnMatPrima.IdleBorderThickness = 1
+        Me.BtnMatPrima.IdleCornerRadius = 20
+        Me.BtnMatPrima.IdleFillColor = System.Drawing.Color.Transparent
+        Me.BtnMatPrima.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnMatPrima.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnMatPrima.Location = New System.Drawing.Point(5, 413)
+        Me.BtnMatPrima.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BtnMatPrima.Name = "BtnMatPrima"
+        Me.BtnMatPrima.Size = New System.Drawing.Size(137, 46)
+        Me.BtnMatPrima.TabIndex = 9
+        Me.BtnMatPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnMatPrima.Visible = False
+        '
+        'BtnInventario
+        '
+        Me.BtnInventario.ActiveBorderThickness = 1
+        Me.BtnInventario.ActiveCornerRadius = 20
+        Me.BtnInventario.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnInventario.ActiveForecolor = System.Drawing.Color.White
+        Me.BtnInventario.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.BtnInventario.BackColor = System.Drawing.Color.Transparent
+        Me.BtnInventario.BackgroundImage = CType(resources.GetObject("BtnInventario.BackgroundImage"), System.Drawing.Image)
+        Me.BtnInventario.ButtonText = "Inventario"
+        Me.BtnInventario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnInventario.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnInventario.IdleBorderThickness = 1
+        Me.BtnInventario.IdleCornerRadius = 20
+        Me.BtnInventario.IdleFillColor = System.Drawing.Color.Transparent
+        Me.BtnInventario.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnInventario.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnInventario.Location = New System.Drawing.Point(5, 367)
+        Me.BtnInventario.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BtnInventario.Name = "BtnInventario"
+        Me.BtnInventario.Size = New System.Drawing.Size(137, 46)
+        Me.BtnInventario.TabIndex = 8
+        Me.BtnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnInventario.Visible = False
         '
         'BtnAutos
         '
@@ -183,6 +287,7 @@ Partial Class ScrConfig
         Me.BtnAutos.Size = New System.Drawing.Size(137, 46)
         Me.BtnAutos.TabIndex = 7
         Me.BtnAutos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnAutos.Visible = False
         '
         'BtnMaq
         '
@@ -208,6 +313,7 @@ Partial Class ScrConfig
         Me.BtnMaq.Size = New System.Drawing.Size(137, 46)
         Me.BtnMaq.TabIndex = 6
         Me.BtnMaq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnMaq.Visible = False
         '
         'BtnPrecios
         '
@@ -233,6 +339,7 @@ Partial Class ScrConfig
         Me.BtnPrecios.Size = New System.Drawing.Size(137, 46)
         Me.BtnPrecios.TabIndex = 5
         Me.BtnPrecios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnPrecios.Visible = False
         '
         'BtnProductos
         '
@@ -258,6 +365,7 @@ Partial Class ScrConfig
         Me.BtnProductos.Size = New System.Drawing.Size(137, 46)
         Me.BtnProductos.TabIndex = 4
         Me.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnProductos.Visible = False
         '
         'BtnClientes
         '
@@ -283,6 +391,7 @@ Partial Class ScrConfig
         Me.BtnClientes.Size = New System.Drawing.Size(137, 46)
         Me.BtnClientes.TabIndex = 3
         Me.BtnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnClientes.Visible = False
         '
         'BtnUsuarios
         '
@@ -308,18 +417,21 @@ Partial Class ScrConfig
         Me.BtnUsuarios.Size = New System.Drawing.Size(137, 46)
         Me.BtnUsuarios.TabIndex = 2
         Me.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BtnUsuarios.Visible = False
         '
         'PnlMenu
         '
         Me.PnlMenu.BackColor = System.Drawing.Color.Transparent
         Me.PnlMenu.Controls.Add(Me.PbMenu)
-        Me.PnlMenu.Location = New System.Drawing.Point(0, 10)
+        Me.PnlMenu.Location = New System.Drawing.Point(0, 29)
         Me.PnlMenu.Name = "PnlMenu"
         Me.PnlMenu.Size = New System.Drawing.Size(150, 40)
         Me.PnlMenu.TabIndex = 1
         '
         'PbMenu
         '
+        Me.PbMenu.BackColor = System.Drawing.Color.Transparent
+        Me.PbMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PbMenu.Image = Global.UbiSoft.My.Resources.Resources.menu
         Me.PbMenu.Location = New System.Drawing.Point(0, 0)
@@ -337,7 +449,7 @@ Partial Class ScrConfig
         Me.PbBckPanel.Image = Global.UbiSoft.My.Resources.Resources.PnlBckG
         Me.PbBckPanel.Location = New System.Drawing.Point(0, 0)
         Me.PbBckPanel.Name = "PbBckPanel"
-        Me.PbBckPanel.Size = New System.Drawing.Size(150, 728)
+        Me.PbBckPanel.Size = New System.Drawing.Size(40, 728)
         Me.PbBckPanel.TabIndex = 0
         Me.PbBckPanel.TabStop = False
         '
@@ -345,9 +457,9 @@ Partial Class ScrConfig
         '
         Me.PnlWrapp.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.PnlWrapp.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlWrapp.Location = New System.Drawing.Point(150, 40)
+        Me.PnlWrapp.Location = New System.Drawing.Point(40, 40)
         Me.PnlWrapp.Name = "PnlWrapp"
-        Me.PnlWrapp.Size = New System.Drawing.Size(874, 728)
+        Me.PnlWrapp.Size = New System.Drawing.Size(984, 728)
         Me.PnlWrapp.TabIndex = 4
         '
         'PbBackground
@@ -378,106 +490,6 @@ Partial Class ScrConfig
         Me.DragSide.Horizontal = True
         Me.DragSide.TargetControl = Me.PbBckPanel
         Me.DragSide.Vertical = True
-        '
-        'BtnInventario
-        '
-        Me.BtnInventario.ActiveBorderThickness = 1
-        Me.BtnInventario.ActiveCornerRadius = 20
-        Me.BtnInventario.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnInventario.ActiveForecolor = System.Drawing.Color.White
-        Me.BtnInventario.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnInventario.BackColor = System.Drawing.Color.Transparent
-        Me.BtnInventario.BackgroundImage = CType(resources.GetObject("BtnInventario.BackgroundImage"), System.Drawing.Image)
-        Me.BtnInventario.ButtonText = "Inventario"
-        Me.BtnInventario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnInventario.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnInventario.IdleBorderThickness = 1
-        Me.BtnInventario.IdleCornerRadius = 20
-        Me.BtnInventario.IdleFillColor = System.Drawing.Color.Transparent
-        Me.BtnInventario.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnInventario.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnInventario.Location = New System.Drawing.Point(5, 367)
-        Me.BtnInventario.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.BtnInventario.Name = "BtnInventario"
-        Me.BtnInventario.Size = New System.Drawing.Size(137, 46)
-        Me.BtnInventario.TabIndex = 8
-        Me.BtnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnMatPrima
-        '
-        Me.BtnMatPrima.ActiveBorderThickness = 1
-        Me.BtnMatPrima.ActiveCornerRadius = 20
-        Me.BtnMatPrima.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnMatPrima.ActiveForecolor = System.Drawing.Color.White
-        Me.BtnMatPrima.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnMatPrima.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMatPrima.BackgroundImage = CType(resources.GetObject("BtnMatPrima.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMatPrima.ButtonText = "Materia Prima"
-        Me.BtnMatPrima.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMatPrima.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMatPrima.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnMatPrima.IdleBorderThickness = 1
-        Me.BtnMatPrima.IdleCornerRadius = 20
-        Me.BtnMatPrima.IdleFillColor = System.Drawing.Color.Transparent
-        Me.BtnMatPrima.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnMatPrima.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnMatPrima.Location = New System.Drawing.Point(5, 413)
-        Me.BtnMatPrima.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.BtnMatPrima.Name = "BtnMatPrima"
-        Me.BtnMatPrima.Size = New System.Drawing.Size(137, 46)
-        Me.BtnMatPrima.TabIndex = 9
-        Me.BtnMatPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnProdTer
-        '
-        Me.BtnProdTer.ActiveBorderThickness = 1
-        Me.BtnProdTer.ActiveCornerRadius = 20
-        Me.BtnProdTer.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnProdTer.ActiveForecolor = System.Drawing.Color.White
-        Me.BtnProdTer.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnProdTer.BackColor = System.Drawing.Color.Transparent
-        Me.BtnProdTer.BackgroundImage = CType(resources.GetObject("BtnProdTer.BackgroundImage"), System.Drawing.Image)
-        Me.BtnProdTer.ButtonText = "Packaging"
-        Me.BtnProdTer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnProdTer.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnProdTer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnProdTer.IdleBorderThickness = 1
-        Me.BtnProdTer.IdleCornerRadius = 20
-        Me.BtnProdTer.IdleFillColor = System.Drawing.Color.Transparent
-        Me.BtnProdTer.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnProdTer.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnProdTer.Location = New System.Drawing.Point(5, 459)
-        Me.BtnProdTer.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.BtnProdTer.Name = "BtnProdTer"
-        Me.BtnProdTer.Size = New System.Drawing.Size(137, 46)
-        Me.BtnProdTer.TabIndex = 10
-        Me.BtnProdTer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnAvanzada
-        '
-        Me.BtnAvanzada.ActiveBorderThickness = 1
-        Me.BtnAvanzada.ActiveCornerRadius = 20
-        Me.BtnAvanzada.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnAvanzada.ActiveForecolor = System.Drawing.Color.White
-        Me.BtnAvanzada.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.BtnAvanzada.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAvanzada.BackgroundImage = CType(resources.GetObject("BtnAvanzada.BackgroundImage"), System.Drawing.Image)
-        Me.BtnAvanzada.ButtonText = "Avanzada"
-        Me.BtnAvanzada.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAvanzada.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAvanzada.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAvanzada.IdleBorderThickness = 1
-        Me.BtnAvanzada.IdleCornerRadius = 20
-        Me.BtnAvanzada.IdleFillColor = System.Drawing.Color.Transparent
-        Me.BtnAvanzada.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAvanzada.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAvanzada.Location = New System.Drawing.Point(5, 505)
-        Me.BtnAvanzada.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.BtnAvanzada.Name = "BtnAvanzada"
-        Me.BtnAvanzada.Size = New System.Drawing.Size(137, 46)
-        Me.BtnAvanzada.TabIndex = 11
-        Me.BtnAvanzada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ScrConfig
         '
