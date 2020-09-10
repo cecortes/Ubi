@@ -53,6 +53,7 @@
     Private Sub PbClose_Click(sender As Object, e As EventArgs) Handles PbClose.Click
 
         'Pantalla principal
+        ScrMain.unidad = "ADMIN"
         ScrMain.Show()
 
         'Close

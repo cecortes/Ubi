@@ -32,3 +32,4 @@ D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiDll.xml
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\MySql.Data.xml
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.exe.config
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfig.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigUsr.resources
