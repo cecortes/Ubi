@@ -96,6 +96,7 @@
 
         'Cierre
         Me.Close()
+        Application.Exit()
 
     End Sub
 

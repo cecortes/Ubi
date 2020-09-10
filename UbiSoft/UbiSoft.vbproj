@@ -90,6 +90,60 @@
     <Compile Include="Screens\Config\ScrConfig.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\ScrConfigAdv.Designer.vb">
+      <DependentUpon>ScrConfigAdv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigAdv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigAutos.Designer.vb">
+      <DependentUpon>ScrConfigAutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigAutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigCli.Designer.vb">
+      <DependentUpon>ScrConfigCli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigCli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigInv.Designer.vb">
+      <DependentUpon>ScrConfigInv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigInv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigList.Designer.vb">
+      <DependentUpon>ScrConfigList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigMaq.Designer.vb">
+      <DependentUpon>ScrConfigMaq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigMaq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigPack.Designer.vb">
+      <DependentUpon>ScrConfigPack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigPack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigPrima.Designer.vb">
+      <DependentUpon>ScrConfigPrima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigPrima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigProd.Designer.vb">
+      <DependentUpon>ScrConfigProd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\ScrConfigProd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\ScrConfigUsr.Designer.vb">
       <DependentUpon>ScrConfigUsr.vb</DependentUpon>
     </Compile>
@@ -135,6 +189,33 @@
   <ItemGroup>
     <EmbeddedResource Include="Screens\Config\ScrConfig.resx">
       <DependentUpon>ScrConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigAdv.resx">
+      <DependentUpon>ScrConfigAdv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigAutos.resx">
+      <DependentUpon>ScrConfigAutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigCli.resx">
+      <DependentUpon>ScrConfigCli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigInv.resx">
+      <DependentUpon>ScrConfigInv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigList.resx">
+      <DependentUpon>ScrConfigList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigMaq.resx">
+      <DependentUpon>ScrConfigMaq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigPack.resx">
+      <DependentUpon>ScrConfigPack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigPrima.resx">
+      <DependentUpon>ScrConfigPrima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\ScrConfigProd.resx">
+      <DependentUpon>ScrConfigProd.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\ScrConfigUsr.resx">
       <DependentUpon>ScrConfigUsr.vb</DependentUpon>

@@ -122,6 +122,16 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrConfig.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
 <member name="M:UbiSoft.ScrConfig.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
@@ -160,6 +170,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfig.PbMenu_MouseLeave(System.Object,System.EventArgs)">
  <summary>
  Regresa el color de fondo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnUsuarios_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de usuarios
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

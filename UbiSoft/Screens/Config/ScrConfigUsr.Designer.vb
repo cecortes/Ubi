@@ -70,7 +70,7 @@ Partial Class ScrConfigUsr
         Me.BtnNew.IdleFillColor = System.Drawing.Color.Transparent
         Me.BtnNew.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.BtnNew.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnNew.Location = New System.Drawing.Point(24, 16)
+        Me.BtnNew.Location = New System.Drawing.Point(13, 16)
         Me.BtnNew.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(166, 46)
@@ -95,7 +95,7 @@ Partial Class ScrConfigUsr
         Me.BtnEdit.IdleFillColor = System.Drawing.Color.Transparent
         Me.BtnEdit.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.BtnEdit.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnEdit.Location = New System.Drawing.Point(207, 16)
+        Me.BtnEdit.Location = New System.Drawing.Point(196, 16)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(166, 46)
@@ -120,7 +120,7 @@ Partial Class ScrConfigUsr
         Me.BtnDel.IdleFillColor = System.Drawing.Color.Transparent
         Me.BtnDel.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.BtnDel.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnDel.Location = New System.Drawing.Point(390, 16)
+        Me.BtnDel.Location = New System.Drawing.Point(379, 16)
         Me.BtnDel.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.BtnDel.Name = "BtnDel"
         Me.BtnDel.Size = New System.Drawing.Size(166, 46)
