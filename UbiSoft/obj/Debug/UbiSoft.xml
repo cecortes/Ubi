@@ -37,6 +37,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.borrar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.caja">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -57,6 +62,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.excel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.gear">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -68,6 +78,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.LogoMin">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.lupa">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -98,6 +113,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.ok">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.ok32">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -177,6 +197,69 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfig.BtnUsuarios_Click(System.Object,System.EventArgs)">
  <summary>
  Abre el formulario de usuarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnClientes_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnProductos_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de productos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnPrecios_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de precios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnMaq_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de maquinaria
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnAutos_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de vehículos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnInventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de inventarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnMatPrima_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de materias primas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnProdTer_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de producto terminado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfig.BtnAvanzada_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario de configuración avanzada
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

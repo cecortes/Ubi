@@ -309,5 +309,17 @@
   <ItemGroup>
     <None Include="Resources\menu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
