@@ -23,59 +23,224 @@ Partial Class ScrConfigUsr
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScrConfigUsr))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim Elipse1 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse3 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse5 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse4 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-        Dim BunifuElipse6 As Bunifu.Framework.UI.BunifuElipse
         Dim BunifuElipse7 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse6 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse4 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse5 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse3 As Bunifu.Framework.UI.BunifuElipse
+        Dim BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
         Dim BunifuElipse8 As Bunifu.Framework.UI.BunifuElipse
+        Dim Elipse1 As Bunifu.Framework.UI.BunifuElipse
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScrConfigUsr))
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
+        Me.BtnOk = New System.Windows.Forms.Button()
+        Me.TxtTel = New System.Windows.Forms.MaskedTextBox()
+        Me.TxtPass = New System.Windows.Forms.TextBox()
+        Me.TxtMail = New System.Windows.Forms.TextBox()
+        Me.TxtApelli = New System.Windows.Forms.TextBox()
+        Me.CboUnidad = New System.Windows.Forms.ComboBox()
+        Me.TxtNom = New System.Windows.Forms.TextBox()
         Me.PnlOpt = New System.Windows.Forms.Panel()
         Me.BtnDel = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnEdit = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnNew = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.PnlBottom = New System.Windows.Forms.Panel()
-        Me.BtnSearch = New System.Windows.Forms.Button()
         Me.DgvUsr = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.PnlData = New System.Windows.Forms.Panel()
-        Me.BtnClear = New System.Windows.Forms.Button()
-        Me.BtnOk = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtTel = New System.Windows.Forms.MaskedTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtPass = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtMail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtApelli = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtNom = New System.Windows.Forms.TextBox()
-        Me.CboUnidad = New System.Windows.Forms.ComboBox()
-        Elipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse5 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse4 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        BunifuElipse6 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         BunifuElipse7 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse6 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse4 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse5 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         BunifuElipse8 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Elipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PnlOpt.SuspendLayout()
         Me.PnlBottom.SuspendLayout()
         CType(Me.DgvUsr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlData.SuspendLayout()
         Me.SuspendLayout()
         '
+        'BunifuElipse7
+        '
+        BunifuElipse7.ElipseRadius = 25
+        BunifuElipse7.TargetControl = Me.BtnSearch
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSearch.Image = Global.UbiSoft.My.Resources.Resources.excel
+        Me.BtnSearch.Location = New System.Drawing.Point(13, 586)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(60, 60)
+        Me.BtnSearch.TabIndex = 16
+        Me.BtnSearch.UseVisualStyleBackColor = False
+        '
+        'BunifuElipse6
+        '
+        BunifuElipse6.ElipseRadius = 25
+        BunifuElipse6.TargetControl = Me.BtnClear
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
+        Me.BtnClear.Location = New System.Drawing.Point(795, 586)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(60, 60)
+        Me.BtnClear.TabIndex = 16
+        Me.BtnClear.UseVisualStyleBackColor = False
+        '
+        'BunifuElipse1
+        '
+        BunifuElipse1.ElipseRadius = 25
+        BunifuElipse1.TargetControl = Me.BtnOk
+        '
+        'BtnOk
+        '
+        Me.BtnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnOk.Location = New System.Drawing.Point(912, 586)
+        Me.BtnOk.Name = "BtnOk"
+        Me.BtnOk.Size = New System.Drawing.Size(60, 60)
+        Me.BtnOk.TabIndex = 15
+        Me.BtnOk.UseVisualStyleBackColor = False
+        '
+        'BunifuElipse4
+        '
+        BunifuElipse4.ElipseRadius = 25
+        BunifuElipse4.TargetControl = Me.TxtTel
+        '
+        'TxtTel
+        '
+        Me.TxtTel.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtTel.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtTel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtTel.Location = New System.Drawing.Point(337, 179)
+        Me.TxtTel.Mask = "(999)000-0000"
+        Me.TxtTel.Name = "TxtTel"
+        Me.TxtTel.PromptChar = Global.Microsoft.VisualBasic.ChrW(120)
+        Me.TxtTel.Size = New System.Drawing.Size(250, 31)
+        Me.TxtTel.TabIndex = 8
+        Me.TxtTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BunifuElipse5
+        '
+        BunifuElipse5.ElipseRadius = 25
+        BunifuElipse5.TargetControl = Me.TxtPass
+        '
+        'TxtPass
+        '
+        Me.TxtPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtPass.Font = New System.Drawing.Font("Ebrima", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtPass.Location = New System.Drawing.Point(54, 179)
+        Me.TxtPass.Name = "TxtPass"
+        Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
+        Me.TxtPass.Size = New System.Drawing.Size(200, 29)
+        Me.TxtPass.TabIndex = 6
+        Me.TxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BunifuElipse3
+        '
+        BunifuElipse3.ElipseRadius = 25
+        BunifuElipse3.TargetControl = Me.TxtMail
+        '
+        'TxtMail
+        '
+        Me.TxtMail.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtMail.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtMail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtMail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtMail.Location = New System.Drawing.Point(664, 63)
+        Me.TxtMail.Name = "TxtMail"
+        Me.TxtMail.Size = New System.Drawing.Size(250, 31)
+        Me.TxtMail.TabIndex = 4
+        Me.TxtMail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BunifuElipse2
+        '
+        BunifuElipse2.ElipseRadius = 25
+        BunifuElipse2.TargetControl = Me.TxtApelli
+        '
+        'TxtApelli
+        '
+        Me.TxtApelli.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtApelli.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtApelli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtApelli.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtApelli.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtApelli.Location = New System.Drawing.Point(337, 63)
+        Me.TxtApelli.Name = "TxtApelli"
+        Me.TxtApelli.Size = New System.Drawing.Size(250, 31)
+        Me.TxtApelli.TabIndex = 2
+        Me.TxtApelli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BunifuElipse8
+        '
+        BunifuElipse8.ElipseRadius = 15
+        BunifuElipse8.TargetControl = Me.CboUnidad
+        '
+        'CboUnidad
+        '
+        Me.CboUnidad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CboUnidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.CboUnidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboUnidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboUnidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboUnidad.FormattingEnabled = True
+        Me.CboUnidad.Location = New System.Drawing.Point(664, 179)
+        Me.CboUnidad.Name = "CboUnidad"
+        Me.CboUnidad.Size = New System.Drawing.Size(250, 31)
+        Me.CboUnidad.TabIndex = 13
+        '
+        'Elipse1
+        '
+        Elipse1.ElipseRadius = 25
+        Elipse1.TargetControl = Me.TxtNom
+        '
+        'TxtNom
+        '
+        Me.TxtNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtNom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtNom.Location = New System.Drawing.Point(54, 63)
+        Me.TxtNom.Name = "TxtNom"
+        Me.TxtNom.Size = New System.Drawing.Size(200, 31)
+        Me.TxtNom.TabIndex = 0
+        Me.TxtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'PnlOpt
         '
         Me.PnlOpt.BackColor = System.Drawing.Color.Transparent
-        Me.PnlOpt.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.PnlOpt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PnlOpt.Controls.Add(Me.BtnDel)
         Me.PnlOpt.Controls.Add(Me.BtnEdit)
@@ -177,38 +342,24 @@ Partial Class ScrConfigUsr
         Me.PnlBottom.Size = New System.Drawing.Size(984, 663)
         Me.PnlBottom.TabIndex = 1
         '
-        'BtnSearch
-        '
-        Me.BtnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnSearch.Image = Global.UbiSoft.My.Resources.Resources.excel
-        Me.BtnSearch.Location = New System.Drawing.Point(13, 586)
-        Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(60, 60)
-        Me.BtnSearch.TabIndex = 16
-        Me.BtnSearch.UseVisualStyleBackColor = False
-        '
         'DgvUsr
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DgvUsr.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DgvUsr.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DgvUsr.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvUsr.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DgvUsr.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvUsr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvUsr.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvUsr.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvUsr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvUsr.DoubleBuffered = True
         Me.DgvUsr.EnableHeadersVisualStyles = False
@@ -242,34 +393,6 @@ Partial Class ScrConfigUsr
         Me.PnlData.Size = New System.Drawing.Size(984, 284)
         Me.PnlData.TabIndex = 0
         '
-        'BtnClear
-        '
-        Me.BtnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
-        Me.BtnClear.Location = New System.Drawing.Point(795, 586)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(60, 60)
-        Me.BtnClear.TabIndex = 16
-        Me.BtnClear.UseVisualStyleBackColor = False
-        '
-        'BtnOk
-        '
-        Me.BtnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnOk.Location = New System.Drawing.Point(912, 586)
-        Me.BtnOk.Name = "BtnOk"
-        Me.BtnOk.Size = New System.Drawing.Size(60, 60)
-        Me.BtnOk.TabIndex = 15
-        Me.BtnOk.UseVisualStyleBackColor = False
-        '
         'Label6
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -294,20 +417,6 @@ Partial Class ScrConfigUsr
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Teléfono:"
         '
-        'TxtTel
-        '
-        Me.TxtTel.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtTel.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtTel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtTel.Location = New System.Drawing.Point(337, 179)
-        Me.TxtTel.Mask = "(999)000-0000"
-        Me.TxtTel.Name = "TxtTel"
-        Me.TxtTel.PromptChar = Global.Microsoft.VisualBasic.ChrW(120)
-        Me.TxtTel.Size = New System.Drawing.Size(250, 31)
-        Me.TxtTel.TabIndex = 8
-        Me.TxtTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -318,18 +427,6 @@ Partial Class ScrConfigUsr
         Me.Label4.Size = New System.Drawing.Size(114, 28)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Contraseña:"
-        '
-        'TxtPass
-        '
-        Me.TxtPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtPass.Location = New System.Drawing.Point(54, 179)
-        Me.TxtPass.Name = "TxtPass"
-        Me.TxtPass.Size = New System.Drawing.Size(200, 31)
-        Me.TxtPass.TabIndex = 6
-        Me.TxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
@@ -343,19 +440,6 @@ Partial Class ScrConfigUsr
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Correo electrónico:"
         '
-        'TxtMail
-        '
-        Me.TxtMail.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtMail.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtMail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.TxtMail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtMail.Location = New System.Drawing.Point(664, 63)
-        Me.TxtMail.Name = "TxtMail"
-        Me.TxtMail.Size = New System.Drawing.Size(250, 31)
-        Me.TxtMail.TabIndex = 4
-        Me.TxtMail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -368,19 +452,6 @@ Partial Class ScrConfigUsr
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Apellidos:"
         '
-        'TxtApelli
-        '
-        Me.TxtApelli.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtApelli.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtApelli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtApelli.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtApelli.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtApelli.Location = New System.Drawing.Point(337, 63)
-        Me.TxtApelli.Name = "TxtApelli"
-        Me.TxtApelli.Size = New System.Drawing.Size(250, 31)
-        Me.TxtApelli.TabIndex = 2
-        Me.TxtApelli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -391,76 +462,6 @@ Partial Class ScrConfigUsr
         Me.Label1.Size = New System.Drawing.Size(89, 28)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nombre:"
-        '
-        'TxtNom
-        '
-        Me.TxtNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtNom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtNom.Location = New System.Drawing.Point(54, 63)
-        Me.TxtNom.Name = "TxtNom"
-        Me.TxtNom.Size = New System.Drawing.Size(200, 31)
-        Me.TxtNom.TabIndex = 0
-        Me.TxtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Elipse1
-        '
-        Elipse1.ElipseRadius = 25
-        Elipse1.TargetControl = Me.TxtNom
-        '
-        'BunifuElipse2
-        '
-        BunifuElipse2.ElipseRadius = 25
-        BunifuElipse2.TargetControl = Me.TxtApelli
-        '
-        'BunifuElipse3
-        '
-        BunifuElipse3.ElipseRadius = 25
-        BunifuElipse3.TargetControl = Me.TxtMail
-        '
-        'BunifuElipse5
-        '
-        BunifuElipse5.ElipseRadius = 25
-        BunifuElipse5.TargetControl = Me.TxtPass
-        '
-        'BunifuElipse4
-        '
-        BunifuElipse4.ElipseRadius = 25
-        BunifuElipse4.TargetControl = Me.TxtTel
-        '
-        'BunifuElipse1
-        '
-        BunifuElipse1.ElipseRadius = 25
-        BunifuElipse1.TargetControl = Me.BtnOk
-        '
-        'BunifuElipse6
-        '
-        BunifuElipse6.ElipseRadius = 25
-        BunifuElipse6.TargetControl = Me.BtnClear
-        '
-        'BunifuElipse7
-        '
-        BunifuElipse7.ElipseRadius = 25
-        BunifuElipse7.TargetControl = Me.BtnSearch
-        '
-        'CboUnidad
-        '
-        Me.CboUnidad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CboUnidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.CboUnidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboUnidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboUnidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboUnidad.FormattingEnabled = True
-        Me.CboUnidad.Location = New System.Drawing.Point(664, 179)
-        Me.CboUnidad.Name = "CboUnidad"
-        Me.CboUnidad.Size = New System.Drawing.Size(250, 31)
-        Me.CboUnidad.TabIndex = 13
-        '
-        'BunifuElipse8
-        '
-        BunifuElipse8.ElipseRadius = 15
-        BunifuElipse8.TargetControl = Me.CboUnidad
         '
         'ScrConfigUsr
         '

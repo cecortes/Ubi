@@ -124,6 +124,39 @@ Public Class Datos
 
 #End Region
 
+#Region "departamentos"
+
+#Region "DATAMEMBERS"
+
+    Private _Id_depa As String
+    Private _Total_depa As Integer
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property Id_depa() As String
+        Get
+            Return _Id_depa
+        End Get
+        Set(ByVal value As String)
+            _Id_depa = value
+        End Set
+    End Property
+
+    Public Property Total_depa() As Integer
+        Get
+            Return _Total_depa
+        End Get
+        Set(ByVal value As Integer)
+            _Total_depa = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
@@ -131,6 +164,9 @@ Public Class Consulta
 #Region "DATAMEMBERS"
 
     Private _adaptador As New MySqlDataAdapter
+
+    Public _dtsCbo As New DataSet       'ComboBox
+    Public _dtvCbo As New DataView      'ComboBox
 
 #End Region
 
@@ -191,6 +227,224 @@ Public Class Consulta
     End Function
 
 #End Region
+
+#Region "departamentos"
+
+    ''' <summary>
+    ''' Consulta la tabla departamentos
+    ''' Obtiene el Total_depa y lo devuelve como entero
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function GetTotDepa(ByVal datos As Datos) As Integer
+
+        'Privadas
+        Dim con As New Conexion
+        Dim total As Integer = 0
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT Total_depa FROM departamentos WHERE Id_depa = @Id_depa", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@Id_depa", MySqlDbType.String, 45).Value = datos.Id_depa
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            total = _adaptador.SelectCommand.ExecuteScalar()
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            con._conexion.Close()
+
+        End Try
+
+        'Return
+        Return total
+
+    End Function
+
+    ''' <summary>
+    ''' Se encarga de consultar a departamentos y llenar al cbo correspondiente con el Id_depa
+    ''' </summary>
+    Public Sub GetAllDepa()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM departamentos", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "depa")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+#End Region
+
+End Class
+
+Public Class Agregar
+
+#Region "DATAMEMBERS"
+
+    Private _adaptador As New MySqlDataAdapter
+
+#End Region
+
+#Region "USUARIOS"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla usuarios
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewUsr(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO usuarios (nombre_usr, apellidos_usr, correo_usr, pass_usr, tel_usr, unidad_usr) VALUES (@nombre_usr, @apellidos_usr, @correo_usr, @pass_usr, @tel_usr, @unidad_usr)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@nombre_usr", MySqlDbType.String, 45).Value = datos.nombre_usr
+            _adaptador.InsertCommand.Parameters.Add("@apellidos_usr", MySqlDbType.String, 45).Value = datos.apellidos_usr
+            _adaptador.InsertCommand.Parameters.Add("@correo_usr", MySqlDbType.String, 45).Value = datos.correo_usr
+            _adaptador.InsertCommand.Parameters.Add("@pass_usr", MySqlDbType.String, 10).Value = datos.pass_usr
+            _adaptador.InsertCommand.Parameters.Add("@tel_usr", MySqlDbType.String, 45).Value = datos.tel_usr
+            _adaptador.InsertCommand.Parameters.Add("@unidad_usr", MySqlDbType.String, 45).Value = datos.unidad_usr
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+End Class
+
+Public Class Actualizar
+
+#Region "DATAMEMBERS"
+
+    Private _adaptador As New MySqlDataAdapter
+
+#End Region
+
+#Region "DEPARTAMENTOS"
+
+    ''' <summary>
+    ''' Actualiza el total en Total_depa de la tabla departamentos
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdTotDepa(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Total_depa=@Total_depa WHERE Id_depa=@Id_depa", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@Id_depa", MySqlDbType.String, 45).Value = datos.Id_depa
+            _adaptador.UpdateCommand.Parameters.Add("@Total_depa", MySqlDbType.Int32, 11).Value = datos.Total_depa
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Return
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class ErrorMsg

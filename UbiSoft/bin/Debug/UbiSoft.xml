@@ -264,6 +264,37 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigUsr.FillCboUnidad">
+ <summary>
+ Consulta departamentos
+ Llena el cbo con los resultados
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.ClearTxt">
+ <summary>
+ Re inicia los valores de los textbox
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.AddUserData">
+ <summary>
+ Agrega a un nuevo usuario por medio de los datos de los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.ScrConfigUsr_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los datos de las unidades en el combo box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida que el dgv no tenga datos, en caso de ser así llama al método para la inserción por lista
+ En caso contrario realiza la inserción por medio de los cuadros de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.Login.btnCancel_Click(System.Object,System.EventArgs)">
  <summary>
  Se encarga de borrar los cuadros de texto y regresarlos a condiciones iniciales.

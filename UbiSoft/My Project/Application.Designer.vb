@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.UbiSoft.Splash
+            Me.MainForm = Global.UbiSoft.ScrConfig
         End Sub
     End Class
 End Namespace

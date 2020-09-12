@@ -38,6 +38,33 @@ UbiDll
  <param name="Datos"></param>
  <returns>Password as string</returns>
 </member>
+<member name="M:UbiDll.Consulta.GetTotDepa(UbiDll.Datos)">
+ <summary>
+ Consulta la tabla departamentos
+ Obtiene el Total_depa y lo devuelve como entero
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Consulta.GetAllDepa">
+ <summary>
+ Se encarga de consultar a departamentos y llenar al cbo correspondiente con el Id_depa
+ </summary>
+</member>
+<member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla usuarios
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Actualizar.UpdTotDepa(UbiDll.Datos)">
+ <summary>
+ Actualiza el total en Total_depa de la tabla departamentos
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.ErrorMsg.ErrorCode(System.Int32)">
  <summary>
  Se encarga de mostrar al usuario el mensaje de acuerdo al tipo de error
