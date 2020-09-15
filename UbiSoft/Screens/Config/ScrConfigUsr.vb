@@ -1,5 +1,6 @@
 ﻿'Imports
 Imports UbiDll
+Imports SpreadsheetLight
 
 Public Class ScrConfigUsr
 
@@ -47,6 +48,60 @@ Public Class ScrConfigUsr
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Recibe el path y el objeto datagrid como parámetros
+    ''' Llena el dgv que recibe como parámetro con los datos del excel
+    ''' </summary>
+    ''' <param name="path"></param>
+    ''' <param name="dgv"></param>
+    Private Sub FillDgvUsr(ByRef path As String, ByVal dgv As DataGridView)
+
+        'Privadas
+        Dim filas As Integer = 0
+
+        'Objeto de la clase spreadsheetslight para abrir el contenido del excel
+        Dim slExl As New SLDocument(path)
+
+        'Rutina para recorrer todos los datos del archivo
+        While (String.IsNullOrEmpty(slExl.GetCellValueAsString(filas, 1))) <> False
+
+            MsgBox(slExl.GetCellValueAsString(filas, 1))
+
+            'Incrementamos la fila
+            filas += 1
+
+        End While
+
+    End Sub
+
+    ''' <summary>
+    ''' Abre el diálogo para capturar el path del excel
+    ''' Lo pasa como parámetro al método para llenar el dgvUsr
+    ''' </summary>
+    Private Sub OpenExcel()
+
+        'Open
+        Dim opnExcel As New OpenFileDialog()
+
+        With opnExcel
+
+            .Title = "Seleccionar archivo"
+            .Filter = "Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*"
+            .Multiselect = False
+            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+
+            'Validación
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+
+                'Método para llenar el dgvUsr
+                FillDgvUsr(.FileName, DgvUsr)
+
+            End If
+
+        End With
 
     End Sub
 
@@ -165,6 +220,18 @@ Public Class ScrConfigUsr
             AddUserData()
 
         End If
+
+    End Sub
+
+    ''' <summary>
+    ''' LLama al método para abrir el excel
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+
+        'Open Excel
+
 
     End Sub
 
