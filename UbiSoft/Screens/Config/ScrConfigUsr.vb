@@ -60,7 +60,7 @@ Public Class ScrConfigUsr
     Private Sub FillDgvUsr(ByRef path As String, ByVal dgv As DataGridView)
 
         'Privadas
-        Dim filas As Integer = 1
+        Dim filas As Integer = 2
 
         'Objeto de la clase spreadsheetslight para abrir el contenido del excel
         Dim slExl As New SLDocument(path)
@@ -69,12 +69,40 @@ Public Class ScrConfigUsr
         'Rutina para recorrer todos los datos del archivo
         While (Not String.IsNullOrEmpty(slExl.GetCellValueAsString(filas, 1)))
 
-            MsgBox(slExl.GetCellValueAsString(filas, 1))
+            'Debug
+            'MsgBox(slExl.GetCellValueAsString(filas, 1))
+
+            'Populate DatagridView
+            DgvUsr.Rows.Add(slExl.GetCellValueAsString(filas, 1), slExl.GetCellValueAsString(filas, 2), slExl.GetCellValueAsString(filas, 3), slExl.GetCellValueAsString(filas, 4), slExl.GetCellValueAsString(filas, 5), slExl.GetCellValueAsString(filas, 6))
 
             'Incrementamos la fila
             filas += 1
 
         End While
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
+    ''' Valida que el valor de la celda no sea cero
+    ''' Cambia por el caracter X todo el contenido de la celda
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvUsr_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DgvUsr.CellFormatting
+
+        'Posición Columna 4 y validación de la colección
+        If (e.ColumnIndex <> -1 AndAlso DgvUsr.Columns(e.ColumnIndex).Name = "Column4") Then
+
+            'Validación del contenido
+            If (Not e.Value Is Nothing) Then
+
+                'Nueva cadena con los caracteres reemplazados por X
+                e.Value = New String("X", e.Value.ToString().Length)
+
+            End If
+
+        End If
 
     End Sub
 
