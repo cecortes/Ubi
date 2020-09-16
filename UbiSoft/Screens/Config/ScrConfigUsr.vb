@@ -60,13 +60,14 @@ Public Class ScrConfigUsr
     Private Sub FillDgvUsr(ByRef path As String, ByVal dgv As DataGridView)
 
         'Privadas
-        Dim filas As Integer = 0
+        Dim filas As Integer = 1
 
         'Objeto de la clase spreadsheetslight para abrir el contenido del excel
         Dim slExl As New SLDocument(path)
 
+
         'Rutina para recorrer todos los datos del archivo
-        While (String.IsNullOrEmpty(slExl.GetCellValueAsString(filas, 1))) <> False
+        While (Not String.IsNullOrEmpty(slExl.GetCellValueAsString(filas, 1)))
 
             MsgBox(slExl.GetCellValueAsString(filas, 1))
 
@@ -231,7 +232,7 @@ Public Class ScrConfigUsr
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
 
         'Open Excel
-
+        OpenExcel()
 
     End Sub
 
