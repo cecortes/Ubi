@@ -278,6 +278,15 @@ UbiSoft
  <param name="path"></param>
  <param name="dgv"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigUsr.DgvUsr_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+ <summary>
+ Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
+ Valida que el valor de la celda no sea cero
+ Cambia por el caracter X todo el contenido de la celda
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigUsr.OpenExcel">
  <summary>
  Abre el diálogo para capturar el path del excel
@@ -292,6 +301,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsr.AddUserData">
  <summary>
  Agrega a un nuevo usuario por medio de los datos de los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.AddUserDgv">
+ <summary>
+ Captura los valores del dgv en la clase datos
+ Agrega a los usuarios cargados por medio del archivo de excel al datagridview
+ Limpia el Dgv
  </summary>
 </member>
 <member name="M:UbiSoft.ScrConfigUsr.ScrConfigUsr_Load(System.Object,System.EventArgs)">
@@ -312,6 +328,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsr.BtnSearch_Click(System.Object,System.EventArgs)">
  <summary>
  LLama al método para abrir el excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsr.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los valores de los textbox y del datagrid
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

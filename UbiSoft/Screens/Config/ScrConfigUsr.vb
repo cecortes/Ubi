@@ -214,6 +214,59 @@ Public Class ScrConfigUsr
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores del dgv en la clase datos
+    ''' Agrega a los usuarios cargados por medio del archivo de excel al datagridview
+    ''' Limpia el Dgv
+    ''' </summary>
+    Private Sub AddUserDgv()
+
+        'Privadas
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvUsr.Rows
+
+            'Captura
+            datos.nombre_usr = filas.Cells(0).Value
+            datos.apellidos_usr = filas.Cells(1).Value
+            datos.correo_usr = filas.Cells(2).Value
+            datos.pass_usr = filas.Cells(3).Value
+            datos.tel_usr = filas.Cells(4).Value
+            datos.unidad_usr = filas.Cells(5).Value
+            datos.Id_depa = datos.unidad_usr
+            Dim tot As Integer = consulta.GetTotDepa(datos)
+            tot += 1
+            datos.Total_depa = tot
+
+            'Insert & Update
+            If (add.NewUsr(datos) And upd.UpdTotDepa(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Validación de todos las insert & update
+        If (DgvUsr.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todos los usuarios fueron agregados con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Uno o más usuarios no pudieron agregarse a la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvUsr.Rows.Clear()
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -242,6 +295,7 @@ Public Class ScrConfigUsr
         If (DgvUsr.Rows.Count > 0) Then
 
             'Método para insert por medio de la tabla
+            AddUserDgv()
 
         Else
 
@@ -261,6 +315,19 @@ Public Class ScrConfigUsr
 
         'Open Excel
         OpenExcel()
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los valores de los textbox y del datagrid
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clear
+        ClearTxt()
+        DgvUsr.Rows.Clear()
 
     End Sub
 
