@@ -378,6 +378,27 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.FillDgvAllUsr">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.DgvUsrEdit_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+ <summary>
+ Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
+ Valida que el valor de la celda no sea cero
+ Cambia por el caracter X todo el contenido de la celda
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.ScrConfigUsrEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para extraer a los usuarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigUsrNew.FillCboUnidad">
  <summary>
  Consulta departamentos

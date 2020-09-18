@@ -232,7 +232,7 @@ Public Class Consulta
     ''' Se encarga de consultar la tabala de usuarios y llenar el DGV con el resultado
     ''' </summary>
     ''' <param name="datos"></param>
-    Public Sub GetAllUsr(ByVal datos As Datos)
+    Public Sub GetAllUsr()
 
         'Privadas
         Dim con As New Conexion

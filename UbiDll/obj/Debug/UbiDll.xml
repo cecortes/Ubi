@@ -38,7 +38,7 @@ UbiDll
  <param name="Datos"></param>
  <returns>Password as string</returns>
 </member>
-<member name="M:UbiDll.Consulta.GetAllUsr(UbiDll.Datos)">
+<member name="M:UbiDll.Consulta.GetAllUsr">
  <summary>
  Se encarga de consultar la tabala de usuarios y llenar el DGV con el resultado
  </summary>
