@@ -26,10 +26,15 @@ Partial Class ScrConfig
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScrConfig))
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
+        Me.PbMax = New System.Windows.Forms.PictureBox()
+        Me.PbMin = New System.Windows.Forms.PictureBox()
+        Me.PbClose = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PbLogoMin = New System.Windows.Forms.PictureBox()
         Me.Elipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.DragTop = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.DragSide = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.PbBckPanel = New System.Windows.Forms.PictureBox()
         Me.PnlWrapp = New System.Windows.Forms.Panel()
         Me.PnlSide = New System.Windows.Forms.Panel()
         Me.BtnAvanzada = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -44,22 +49,17 @@ Partial Class ScrConfig
         Me.BtnUsuarios = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.PnlMenu = New System.Windows.Forms.Panel()
         Me.PbMenu = New System.Windows.Forms.PictureBox()
-        Me.PbBckPanel = New System.Windows.Forms.PictureBox()
-        Me.PbMax = New System.Windows.Forms.PictureBox()
-        Me.PbMin = New System.Windows.Forms.PictureBox()
-        Me.PbClose = New System.Windows.Forms.PictureBox()
-        Me.PbLogoMin = New System.Windows.Forms.PictureBox()
         Me.PbBackground = New System.Windows.Forms.PictureBox()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
-        Me.PnlSide.SuspendLayout()
-        Me.PnlMenu.SuspendLayout()
-        CType(Me.PbMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbBckPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbBckPanel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlSide.SuspendLayout()
+        Me.PnlMenu.SuspendLayout()
+        CType(Me.PbMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -86,6 +86,36 @@ Partial Class ScrConfig
         Me.PnlCtrl.Size = New System.Drawing.Size(400, 40)
         Me.PnlCtrl.TabIndex = 4
         '
+        'PbMax
+        '
+        Me.PbMax.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbMax.Image = Global.UbiSoft.My.Resources.Resources.maximizar
+        Me.PbMax.Location = New System.Drawing.Point(305, 5)
+        Me.PbMax.Name = "PbMax"
+        Me.PbMax.Size = New System.Drawing.Size(32, 32)
+        Me.PbMax.TabIndex = 4
+        Me.PbMax.TabStop = False
+        '
+        'PbMin
+        '
+        Me.PbMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbMin.Image = Global.UbiSoft.My.Resources.Resources.min
+        Me.PbMin.Location = New System.Drawing.Point(260, 5)
+        Me.PbMin.Name = "PbMin"
+        Me.PbMin.Size = New System.Drawing.Size(32, 32)
+        Me.PbMin.TabIndex = 3
+        Me.PbMin.TabStop = False
+        '
+        'PbClose
+        '
+        Me.PbClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbClose.Image = Global.UbiSoft.My.Resources.Resources.close
+        Me.PbClose.Location = New System.Drawing.Point(350, 5)
+        Me.PbClose.Name = "PbClose"
+        Me.PbClose.Size = New System.Drawing.Size(32, 32)
+        Me.PbClose.TabIndex = 0
+        Me.PbClose.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -96,6 +126,16 @@ Partial Class ScrConfig
         Me.Label1.Size = New System.Drawing.Size(162, 23)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Ubicamatic (C) 2020"
+        '
+        'PbLogoMin
+        '
+        Me.PbLogoMin.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PbLogoMin.Image = Global.UbiSoft.My.Resources.Resources.LogoMin
+        Me.PbLogoMin.Location = New System.Drawing.Point(0, 0)
+        Me.PbLogoMin.Name = "PbLogoMin"
+        Me.PbLogoMin.Size = New System.Drawing.Size(400, 40)
+        Me.PbLogoMin.TabIndex = 0
+        Me.PbLogoMin.TabStop = False
         '
         'Elipse1
         '
@@ -115,6 +155,19 @@ Partial Class ScrConfig
         Me.DragSide.Horizontal = True
         Me.DragSide.TargetControl = Me.PbBckPanel
         Me.DragSide.Vertical = True
+        '
+        'PbBckPanel
+        '
+        Me.PbBckPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.PbBckPanel.BackgroundImage = Global.UbiSoft.My.Resources.Resources.PnlBckG
+        Me.PbBckPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbBckPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PbBckPanel.Image = Global.UbiSoft.My.Resources.Resources.PnlBckG
+        Me.PbBckPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PbBckPanel.Name = "PbBckPanel"
+        Me.PbBckPanel.Size = New System.Drawing.Size(40, 728)
+        Me.PbBckPanel.TabIndex = 0
+        Me.PbBckPanel.TabStop = False
         '
         'PnlWrapp
         '
@@ -431,59 +484,6 @@ Partial Class ScrConfig
         Me.PbMenu.TabIndex = 0
         Me.PbMenu.TabStop = False
         '
-        'PbBckPanel
-        '
-        Me.PbBckPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.PbBckPanel.BackgroundImage = Global.UbiSoft.My.Resources.Resources.PnlBckG
-        Me.PbBckPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbBckPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PbBckPanel.Image = Global.UbiSoft.My.Resources.Resources.PnlBckG
-        Me.PbBckPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PbBckPanel.Name = "PbBckPanel"
-        Me.PbBckPanel.Size = New System.Drawing.Size(40, 728)
-        Me.PbBckPanel.TabIndex = 0
-        Me.PbBckPanel.TabStop = False
-        '
-        'PbMax
-        '
-        Me.PbMax.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PbMax.Image = Global.UbiSoft.My.Resources.Resources.maximizar
-        Me.PbMax.Location = New System.Drawing.Point(305, 5)
-        Me.PbMax.Name = "PbMax"
-        Me.PbMax.Size = New System.Drawing.Size(32, 32)
-        Me.PbMax.TabIndex = 4
-        Me.PbMax.TabStop = False
-        '
-        'PbMin
-        '
-        Me.PbMin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PbMin.Image = Global.UbiSoft.My.Resources.Resources.min
-        Me.PbMin.Location = New System.Drawing.Point(260, 5)
-        Me.PbMin.Name = "PbMin"
-        Me.PbMin.Size = New System.Drawing.Size(32, 32)
-        Me.PbMin.TabIndex = 3
-        Me.PbMin.TabStop = False
-        '
-        'PbClose
-        '
-        Me.PbClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PbClose.Image = Global.UbiSoft.My.Resources.Resources.close
-        Me.PbClose.Location = New System.Drawing.Point(350, 5)
-        Me.PbClose.Name = "PbClose"
-        Me.PbClose.Size = New System.Drawing.Size(32, 32)
-        Me.PbClose.TabIndex = 0
-        Me.PbClose.TabStop = False
-        '
-        'PbLogoMin
-        '
-        Me.PbLogoMin.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PbLogoMin.Image = Global.UbiSoft.My.Resources.Resources.LogoMin
-        Me.PbLogoMin.Location = New System.Drawing.Point(0, 0)
-        Me.PbLogoMin.Name = "PbLogoMin"
-        Me.PbLogoMin.Size = New System.Drawing.Size(400, 40)
-        Me.PbLogoMin.TabIndex = 0
-        Me.PbLogoMin.TabStop = False
-        '
         'PbBackground
         '
         Me.PbBackground.Dock = System.Windows.Forms.DockStyle.Fill
@@ -513,14 +513,14 @@ Partial Class ScrConfig
         Me.PnlTop.ResumeLayout(False)
         Me.PnlTop.PerformLayout()
         Me.PnlCtrl.ResumeLayout(False)
-        Me.PnlSide.ResumeLayout(False)
-        Me.PnlMenu.ResumeLayout(False)
-        CType(Me.PbMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbBckPanel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbBckPanel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlSide.ResumeLayout(False)
+        Me.PnlMenu.ResumeLayout(False)
+        CType(Me.PbMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

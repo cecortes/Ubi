@@ -48,3 +48,7 @@ D:\GITHUB\Ubi\UbiSoft\bin\Debug\DocumentFormat.OpenXml.dll
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.IO.FileSystem.Primitives.dll
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.IO.Packaging.dll
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.IO.Packaging.xml
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrCfgUsr.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigUsrEdit.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigUsrNew.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigUsrDel.resources

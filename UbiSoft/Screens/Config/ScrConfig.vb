@@ -98,6 +98,11 @@ Public Class ScrConfig
                 'Close
                 ScrConfigUsr.Close()
 
+            ElseIf formulario.Name = "ScrCfgUsr" Then
+
+                'Close
+                ScrCfgUsr.Close()
+
             ElseIf formulario.Name = "ScrConfigCli" Then
 
                 'Close
@@ -227,7 +232,9 @@ Public Class ScrConfig
     ''' <param name="e"></param>
     Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
 
-        AbrirFormPanel(Of ScrConfigUsr)()
+        'AbrirFormPanel(Of ScrConfigUsr)()
+
+        AbrirFormPanel(Of ScrCfgUsr)()
 
     End Sub
 

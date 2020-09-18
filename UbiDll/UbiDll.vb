@@ -167,6 +167,8 @@ Public Class Consulta
 
     Public _dtsCbo As New DataSet       'ComboBox
     Public _dtvCbo As New DataView      'ComboBox
+    Public _dtsDgv As New DataSet       'Datagridview
+    Public _dtvDgv As New DataView      'Datagridview
 
 #End Region
 
@@ -225,6 +227,51 @@ Public Class Consulta
         Return resultado
 
     End Function
+
+    ''' <summary>
+    ''' Se encarga de consultar la tabala de usuarios y llenar el DGV con el resultado
+    ''' </summary>
+    ''' <param name="datos"></param>
+    Public Sub GetAllUsr(ByVal datos As Datos)
+
+        'Privadas
+        Dim con As New Conexion
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM usuarios", con._conexion)
+
+            'Pasamos el resultado al DataSet
+            _adaptador.Fill(_dtsDgv)
+
+            'Pasamos la tabla al DataView
+            _dtvDgv.Table = _dtsDgv.Tables(0)
+
+            'Open Conection
+            con._conexion.Open()
+
+            'Query
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close conection
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
 
 #End Region
 

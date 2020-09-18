@@ -158,10 +158,34 @@
     <Compile Include="Screens\Config\ScrConfigProd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigUsr.Designer.vb">
+    <Compile Include="Screens\Config\Usuarios\ScrCfgUsr.Designer.vb">
+      <DependentUpon>ScrCfgUsr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrCfgUsr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsr.Designer.vb">
       <DependentUpon>ScrConfigUsr.vb</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigUsr.vb">
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrDel.Designer.vb">
+      <DependentUpon>ScrConfigUsrDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrEdit.Designer.vb">
+      <DependentUpon>ScrConfigUsrEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrNew.Designer.vb">
+      <DependentUpon>ScrConfigUsrNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Usuarios\ScrConfigUsrNew.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Login.Designer.vb">
@@ -231,8 +255,20 @@
     <EmbeddedResource Include="Screens\Config\ScrConfigProd.resx">
       <DependentUpon>ScrConfigProd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Config\ScrConfigUsr.resx">
+    <EmbeddedResource Include="Screens\Config\Usuarios\ScrCfgUsr.resx">
+      <DependentUpon>ScrCfgUsr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Usuarios\ScrConfigUsr.resx">
       <DependentUpon>ScrConfigUsr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Usuarios\ScrConfigUsrDel.resx">
+      <DependentUpon>ScrConfigUsrDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Usuarios\ScrConfigUsrEdit.resx">
+      <DependentUpon>ScrConfigUsrEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Usuarios\ScrConfigUsrNew.resx">
+      <DependentUpon>ScrConfigUsrNew.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
