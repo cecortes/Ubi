@@ -439,6 +439,63 @@ Public Class Actualizar
 
 #End Region
 
+#Region "USUARIOS"
+
+    ''' <summary>
+    ''' Actualiza los datos de la tabla de usuarios por medio de la llave primaria correo_usr
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdUsr(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control de errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE usuarios SET nombre_usr=@nombre_usr, apellidos_usr=@apellidos_usr, pass_usr=@pass_usr, tel_usr=@tel_usr, unidad_usr=@unidad_usr WHERE correo_usr=@correo_usr", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@correo_usr", MySqlDbType.String, 45).Value = datos.correo_usr
+            _adaptador.UpdateCommand.Parameters.Add("@nombre_usr", MySqlDbType.String, 45).Value = datos.nombre_usr
+            _adaptador.UpdateCommand.Parameters.Add("@apellidos_usr", MySqlDbType.String, 45).Value = datos.apellidos_usr
+            _adaptador.UpdateCommand.Parameters.Add("@pass_usr", MySqlDbType.String, 45).Value = datos.pass_usr
+            _adaptador.UpdateCommand.Parameters.Add("@tel_usr", MySqlDbType.String, 45).Value = datos.tel_usr
+            _adaptador.UpdateCommand.Parameters.Add("@unidad_usr", MySqlDbType.String, 45).Value = datos.unidad_usr
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Return
+        Return estado
+
+    End Function
+
+#End Region
+
 #Region "DEPARTAMENTOS"
 
     ''' <summary>

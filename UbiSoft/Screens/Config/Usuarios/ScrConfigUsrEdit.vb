@@ -50,6 +50,36 @@ Public Class ScrConfigUsrEdit
     End Sub
 
     ''' <summary>
+    ''' Consulta departamentos
+    ''' Llena el cbo con los resultados
+    ''' </summary>
+    Private Sub FillCboUnidad()
+
+        'Reset
+        consulta._dtsCbo.Reset()
+
+        'Consulta
+        consulta.GetAllDepa()
+
+        'Dataset 
+        CboUnidadEdit.DataSource = consulta._dtsCbo.Tables("depa")
+
+        'Datos
+        CboUnidadEdit.DisplayMember = "Id_depa"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboUnidadEdit.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
     ''' Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
     ''' Valida que el valor de la celda no sea cero
     ''' Cambia por el caracter X todo el contenido de la celda
@@ -79,6 +109,7 @@ Public Class ScrConfigUsrEdit
 
     ''' <summary>
     ''' Llama al método para extraer a los usuarios
+    ''' Llama al método para extraer a los ddepartamentos
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -86,6 +117,57 @@ Public Class ScrConfigUsrEdit
 
         'Dgv
         FillDgvAllUsr()
+
+        'Cbo
+        FillCboUnidad()
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox y cbo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvUsrEdit_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvUsrEdit.CellMouseClick
+
+        'Privadas
+        Dim fila As Integer = DgvUsrEdit.Rows(e.RowIndex).Index
+
+        'Datos
+        TxtNomEdit.Text = DgvUsrEdit.Item(6, fila).Value
+        TxtApelliEdit.Text = DgvUsrEdit.Item(7, fila).Value
+        TxtMailEdit.Text = DgvUsrEdit.Item(8, fila).Value
+        TxtPassEdit.Text = DgvUsrEdit.Item(9, fila).Value
+        TxtTelEdit.Text = DgvUsrEdit.Item(10, fila).Value
+        CboUnidadEdit.Text = DgvUsrEdit.Item(11, fila).Value
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los cuadros de texto y cbo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClearEdit_Click(sender As Object, e As EventArgs) Handles BtnClearEdit.Click
+
+        'Clean
+        TxtNomEdit.Text = ""
+        TxtApelliEdit.Text = ""
+        TxtMailEdit.Text = ""
+        TxtPassEdit.Text = ""
+        TxtTelEdit.Text = ""
+
+        'Control de errores
+        Try
+
+            'Posición del cbo
+            CboUnidadEdit.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
 
     End Sub
 

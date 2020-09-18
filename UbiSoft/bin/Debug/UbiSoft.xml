@@ -383,6 +383,12 @@ UbiSoft
  Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.FillCboUnidad">
+ <summary>
+ Consulta departamentos
+ Llena el cbo con los resultados
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigUsrEdit.DgvUsrEdit_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
  <summary>
  Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
@@ -395,6 +401,22 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsrEdit.ScrConfigUsrEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los usuarios
+ Llama al método para extraer a los ddepartamentos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.DgvUsrEdit_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox y cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.BtnClearEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto y cbo
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

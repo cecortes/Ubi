@@ -64,6 +64,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdUsr(UbiDll.Datos)">
+ <summary>
+ Actualiza los datos de la tabla de usuarios por medio de la llave primaria correo_usr
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Actualizar.UpdTotDepa(UbiDll.Datos)">
  <summary>
  Actualiza el total en Total_depa de la tabla departamentos
