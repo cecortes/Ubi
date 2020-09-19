@@ -8,6 +8,7 @@ Public Class ScrConfigUsrEdit
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
+    Dim upd As New Actualizar
     Dim errMsg As New ErrorMsg
 
 #End Region
@@ -103,6 +104,39 @@ Public Class ScrConfigUsrEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores necesarios en la clase datos
+    ''' Realiza la actualización por medio de la Dll para usuarios
+    ''' Realiza la actualización por medio de la Dll para departamentos
+    ''' Reset del datasource
+    ''' Recarga de datos al dgv
+    ''' </summary>
+    Private Sub EditUsr()
+
+        'Captura
+        datos.nombre_usr = TxtNomEdit.Text
+        datos.apellidos_usr = TxtApelliEdit.Text
+        datos.correo_usr = TxtMailEdit.Text
+        datos.pass_usr = TxtPassEdit.Text
+        datos.tel_usr = TxtTelEdit.Text
+        datos.unidad_usr = CboUnidadEdit.Text
+        datos.Id_depa = datos.unidad_usr
+        Dim tot As Integer = consulta.GetTotDepa(datos)
+        tot += 1
+        datos.Total_depa = tot
+
+        'Update
+        If (upd.UpdUsr(datos) And upd.UpdTotDepa(datos)) Then
+
+            'Usuario
+            MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Reset y Reload
+            FillDgvAllUsr()
+
+        End If
+
+    End Sub
 #End Region
 
 #Region "Eventos"
@@ -168,6 +202,18 @@ Public Class ScrConfigUsrEdit
 
         End Try
 
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para editar al usuario seleccionado en la base de datos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOkEdit_Click(sender As Object, e As EventArgs) Handles BtnOkEdit.Click
+
+        'Editar
+        EditUsr()
 
     End Sub
 

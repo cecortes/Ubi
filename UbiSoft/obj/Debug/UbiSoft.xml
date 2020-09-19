@@ -398,6 +398,15 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.EditUsr">
+ <summary>
+ Captura los valores necesarios en la clase datos
+ Realiza la actualización por medio de la Dll para usuarios
+ Realiza la actualización por medio de la Dll para departamentos
+ Reset del datasource
+ Recarga de datos al dgv
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigUsrEdit.ScrConfigUsrEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los usuarios
@@ -417,6 +426,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsrEdit.BtnClearEdit_Click(System.Object,System.EventArgs)">
  <summary>
  Limpia los cuadros de texto y cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.BtnOkEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para editar al usuario seleccionado en la base de datos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
