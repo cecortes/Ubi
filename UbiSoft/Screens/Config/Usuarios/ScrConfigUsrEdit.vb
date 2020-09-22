@@ -113,26 +113,33 @@ Public Class ScrConfigUsrEdit
     ''' </summary>
     Private Sub EditUsr()
 
-        'Captura
-        datos.nombre_usr = TxtNomEdit.Text
-        datos.apellidos_usr = TxtApelliEdit.Text
-        datos.correo_usr = TxtMailEdit.Text
-        datos.pass_usr = TxtPassEdit.Text
-        datos.tel_usr = TxtTelEdit.Text
-        datos.unidad_usr = CboUnidadEdit.Text
-        datos.Id_depa = datos.unidad_usr
-        Dim tot As Integer = consulta.GetTotDepa(datos)
-        tot += 1
-        datos.Total_depa = tot
+        ''Captura
+        'datos.nombre_usr = TxtNomEdit.Text
+        'datos.apellidos_usr = TxtApelliEdit.Text
+        'datos.correo_usr = TxtMailEdit.Text
+        'datos.pass_usr = TxtPassEdit.Text
+        'datos.tel_usr = TxtTelEdit.Text
+        'datos.unidad_usr = CboUnidadEdit.Text
+        'datos.Id_depa = datos.unidad_usr
+        'Dim tot As Integer = consulta.GetTotDepa(datos)
+        'tot += 1
+        'datos.Total_depa = tot
 
-        'Update
-        If (upd.UpdUsr(datos) And upd.UpdTotDepa(datos)) Then
+        ''Update
+        'If (upd.UpdUsr(datos) And upd.UpdTotDepa(datos)) Then
+
+        '    'Usuario
+        '    MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        '    'Reset y Reload
+        '    FillDgvAllUsr()
+
+        'End If
+
+        If (upd.UpdDepaFromTo(CboUnidadEdit.Text, CboUnidadEdit.Text)) Then
 
             'Usuario
             MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
-
-            'Reset y Reload
-            FillDgvAllUsr()
 
         End If
 
