@@ -78,6 +78,15 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdDepaFromTo(System.String,System.String)">
+ <summary>
+ Actualiza en -1 el Total_depa de la tabla departamentos depaFrom
+ Actualiza en +1 el Total_depa de la tabla departamentos depaTo
+ </summary>
+ <param name="depaFrom"></param>
+ <param name="depaTo"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.ErrorMsg.ErrorCode(System.Int32)">
  <summary>
  Se encarga de mostrar al usuario el mensaje de acuerdo al tipo de error
