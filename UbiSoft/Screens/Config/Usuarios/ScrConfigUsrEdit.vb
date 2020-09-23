@@ -5,6 +5,8 @@ Public Class ScrConfigUsrEdit
 
 #Region "Variables"
 
+    Dim depaFrom As String = ""
+
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
@@ -106,42 +108,47 @@ Public Class ScrConfigUsrEdit
 
     ''' <summary>
     ''' Captura los valores necesarios en la clase datos
-    ''' Realiza la actualización por medio de la Dll para usuarios
+    ''' Valida el tipo de edición, interna o entre departamentos
+    ''' Realiza la actualización por medio de la Dll para usuarios y mismo departamento
     ''' Realiza la actualización por medio de la Dll para departamentos
     ''' Reset del datasource
     ''' Recarga de datos al dgv
     ''' </summary>
     Private Sub EditUsr()
 
-        ''Captura
-        'datos.nombre_usr = TxtNomEdit.Text
-        'datos.apellidos_usr = TxtApelliEdit.Text
-        'datos.correo_usr = TxtMailEdit.Text
-        'datos.pass_usr = TxtPassEdit.Text
-        'datos.tel_usr = TxtTelEdit.Text
-        'datos.unidad_usr = CboUnidadEdit.Text
-        'datos.Id_depa = datos.unidad_usr
-        'Dim tot As Integer = consulta.GetTotDepa(datos)
-        'tot += 1
-        'datos.Total_depa = tot
+        'Captura
+        datos.nombre_usr = TxtNomEdit.Text
+        datos.apellidos_usr = TxtApelliEdit.Text
+        datos.correo_usr = TxtMailEdit.Text
+        datos.pass_usr = TxtPassEdit.Text
+        datos.tel_usr = TxtTelEdit.Text
+        datos.Id_depa = datos.unidad_usr
 
-        ''Update
-        'If (upd.UpdUsr(datos) And upd.UpdTotDepa(datos)) Then
+        'Validación
+        If (depaFrom = CboUnidadEdit.Text) Then
 
-        '    'Usuario
-        '    MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            'Update mismo departamento
+            If (upd.UpdUsr(datos)) Then
 
-        '    'Reset y Reload
-        '    FillDgvAllUsr()
+                'Usuario
+                MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
-        'End If
+            End If
 
-        If (upd.UpdDepaFromTo(CboUnidadEdit.Text, CboUnidadEdit.Text)) Then
+        Else
 
-            'Usuario
-            MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            'Update diferente departamento
+            If (upd.UpdDepaFromTo(depaFrom, CboUnidadEdit.Text)) Then
+
+                'Usuario
+                MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            End If
 
         End If
+
+        'Reset y Reload
+        FillDgvAllUsr()
 
     End Sub
 #End Region
@@ -182,6 +189,7 @@ Public Class ScrConfigUsrEdit
         TxtPassEdit.Text = DgvUsrEdit.Item(9, fila).Value
         TxtTelEdit.Text = DgvUsrEdit.Item(10, fila).Value
         CboUnidadEdit.Text = DgvUsrEdit.Item(11, fila).Value
+        depaFrom = DgvUsrEdit.Item(11, fila).Value
 
     End Sub
 
@@ -221,6 +229,20 @@ Public Class ScrConfigUsrEdit
 
         'Editar
         EditUsr()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el departamento del usuario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboUnidadEdit_TextChanged(sender As Object, e As EventArgs) Handles CboUnidadEdit.TextChanged
+
+        MsgBox(CboUnidadEdit.Text)
+
+        'Captura
+        datos.unidad_usr = CboUnidadEdit.Text
 
     End Sub
 

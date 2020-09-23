@@ -401,7 +401,8 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsrEdit.EditUsr">
  <summary>
  Captura los valores necesarios en la clase datos
- Realiza la actualización por medio de la Dll para usuarios
+ Valida el tipo de edición, interna o entre departamentos
+ Realiza la actualización por medio de la Dll para usuarios y mismo departamento
  Realiza la actualización por medio de la Dll para departamentos
  Reset del datasource
  Recarga de datos al dgv
@@ -433,6 +434,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsrEdit.BtnOkEdit_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para editar al usuario seleccionado en la base de datos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrEdit.CboUnidadEdit_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el departamento del usuario
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

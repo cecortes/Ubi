@@ -599,7 +599,7 @@ Public Class Actualizar
             con.Con_Global()
 
             'Query
-            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Total_depa=Total_depa + 1 WHERE Id_depa=@Id_depa", con._conexion)
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Total_depa=Total_depa + 1, Id_depa=@Id_depa WHERE Id_depa=@Id_depa", con._conexion)
 
             'Parámetros
             _adaptador.UpdateCommand.Parameters.Add("@Id_depa", MySqlDbType.String, 45).Value = depaTo
