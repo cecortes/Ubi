@@ -630,10 +630,11 @@ Public Class Actualizar
             con.Con_Global()
 
             'Query
-            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Id_depa=@Id_depa WHERE correo_usr=@correo_usr", con._conexion)
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE usuarios SET unidad_usr=@unidad_usr WHERE correo_usr=@correo_usr", con._conexion)
 
             'Parámetros
             _adaptador.UpdateCommand.Parameters.Add("@correo_usr", MySqlDbType.String, 45).Value = key
+            _adaptador.UpdateCommand.Parameters.Add("@unidad_usr", MySqlDbType.String, 45).Value = depaTo
 
             'Insert
             con._conexion.Open()

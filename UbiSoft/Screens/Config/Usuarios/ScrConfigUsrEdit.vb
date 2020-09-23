@@ -138,7 +138,7 @@ Public Class ScrConfigUsrEdit
         Else
 
             'Update diferente departamento
-            If (upd.UpdDepaFromTo(depaFrom, CboUnidadEdit.Text)) Then
+            If (upd.UpdDepaFromTo(depaFrom, CboUnidadEdit.Text, TxtMailEdit.Text)) Then
 
                 'Usuario
                 MsgBox("El usuario se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
