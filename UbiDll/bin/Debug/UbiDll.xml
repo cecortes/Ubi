@@ -78,7 +78,7 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
-<member name="M:UbiDll.Actualizar.UpdDepaFromTo(System.String,System.String)">
+<member name="M:UbiDll.Actualizar.UpdDepaFromTo(System.String,System.String,System.String)">
  <summary>
  Actualiza en -1 el Total_depa de la tabla departamentos depaFrom
  Actualiza en +1 el Total_depa de la tabla departamentos depaTo

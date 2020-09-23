@@ -554,7 +554,7 @@ Public Class Actualizar
     ''' <param name="depaFrom"></param>
     ''' <param name="depaTo"></param>
     ''' <returns></returns>
-    Public Function UpdDepaFromTo(ByVal depaFrom As String, ByVal depaTo As String) As Boolean
+    Public Function UpdDepaFromTo(ByVal depaFrom As String, ByVal depaTo As String, ByVal key As String) As Boolean
 
         'Privadas
         Dim estado As Boolean = False
@@ -599,10 +599,41 @@ Public Class Actualizar
             con.Con_Global()
 
             'Query
-            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Total_depa=Total_depa + 1, Id_depa=@Id_depa WHERE Id_depa=@Id_depa", con._conexion)
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Total_depa=Total_depa + 1 WHERE Id_depa=@Id_depa", con._conexion)
 
             'Parámetros
             _adaptador.UpdateCommand.Parameters.Add("@Id_depa", MySqlDbType.String, 45).Value = depaTo
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Tercer Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE departamentos SET Id_depa=@Id_depa WHERE correo_usr=@correo_usr", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@correo_usr", MySqlDbType.String, 45).Value = key
 
             'Insert
             con._conexion.Open()
