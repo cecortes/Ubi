@@ -87,6 +87,13 @@ UbiDll
  <param name="depaTo"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdDepaFromDel(System.String)">
+ <summary>
+ Actualiza en -1 el Total_depa de la tabla departamentos depaDel
+ </summary>
+ <param name="depaDel"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Eliminar.DelUsr(UbiDll.Datos)">
  <summary>
  Se encarga de eliminar al usuario por medio de la key recibida como parámetro

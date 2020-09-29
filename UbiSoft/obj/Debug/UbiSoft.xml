@@ -383,6 +383,15 @@ UbiSoft
  Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigUsrDel.DeleteUsr">
+ <summary>
+ Captura los valores necesarios en la clase datos
+ Realiza el borrado del usuario por medio de la dll
+ Actualiza el total en el departamento donde el usuario fue eliminado por medio de la dll
+ Reset del datasource
+ Recarga de datos al dgv
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigUsrDel.ScrConfigUsrDel_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los usuarios

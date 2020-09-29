@@ -10,6 +10,7 @@ Public Class ScrConfigUsrDel
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
+    Dim eliminar As New Eliminar
     Dim errMsg As New ErrorMsg
 
 #End Region
@@ -61,12 +62,19 @@ Public Class ScrConfigUsrDel
     Private Sub DeleteUsr()
 
         'Captura
-        datos.nombre_usr = TxtNomDel.Text
-        datos.apellidos_usr = TxtApelliDel.Text
         datos.correo_usr = TxtMailDel.Text
-        datos.pass_usr = TxtPassDel.Text
-        datos.tel_usr = TxtTelDel.Text
-        datos.Id_depa = datos.unidad_usr
+        'datos.Id_depa = datos.unidad_usr
+
+        'Borrado y actualizado
+        If (eliminar.DelUsr(datos) And True) Then
+
+            'Usuario
+            MsgBox("El usuario se eliminó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Reset y Reload
+        FillDgvAllUsr()
 
     End Sub
 
