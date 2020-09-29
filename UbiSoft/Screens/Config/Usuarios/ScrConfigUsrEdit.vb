@@ -157,7 +157,7 @@ Public Class ScrConfigUsrEdit
 
     ''' <summary>
     ''' Llama al método para extraer a los usuarios
-    ''' Llama al método para extraer a los ddepartamentos
+    ''' Llama al método para extraer a los departamentos
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>

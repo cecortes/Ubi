@@ -378,6 +378,49 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigUsrDel.FillDgvAllUsr">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrDel.ScrConfigUsrDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para extraer a los usuarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrDel.DgvUsrDel_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrDel.DgvUsrDel_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+ <summary>
+ Valida que la colección de columnas no sea nula y se posiciona en la Column4 (Contraseña)
+ Valida que el valor de la celda no sea cero
+ Cambia por el caracter X todo el contenido de la celda
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrDel.BtnClearDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigUsrDel.BtnOkDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para borrar al usuario seleccionado en la base de datos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigUsrEdit.FillDgvAllUsr">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
@@ -411,7 +454,7 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigUsrEdit.ScrConfigUsrEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los usuarios
- Llama al método para extraer a los ddepartamentos
+ Llama al método para extraer a los departamentos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
