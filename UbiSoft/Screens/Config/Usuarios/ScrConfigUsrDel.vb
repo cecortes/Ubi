@@ -10,6 +10,7 @@ Public Class ScrConfigUsrDel
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
+    Dim update As New Actualizar
     Dim eliminar As New Eliminar
     Dim errMsg As New ErrorMsg
 
@@ -63,10 +64,9 @@ Public Class ScrConfigUsrDel
 
         'Captura
         datos.correo_usr = TxtMailDel.Text
-        'datos.Id_depa = datos.unidad_usr
 
         'Borrado y actualizado
-        If (eliminar.DelUsr(datos) And True) Then
+        If (eliminar.DelUsr(datos) And update.UpdDepaFromDel(TxtDepa.Text)) Then
 
             'Usuario
             MsgBox("El usuario se eliminó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
