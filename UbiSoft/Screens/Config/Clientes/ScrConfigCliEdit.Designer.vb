@@ -77,29 +77,29 @@ Partial Class ScrConfigCliEdit
         Me.PnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTop.Location = New System.Drawing.Point(0, 0)
         Me.PnlTop.Name = "PnlTop"
-        Me.PnlTop.Size = New System.Drawing.Size(984, 79)
+        Me.PnlTop.Size = New System.Drawing.Size(984, 73)
         Me.PnlTop.TabIndex = 0
         '
         'CboRfcEdit
         '
-        Me.CboRfcEdit.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CboRfcEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CboRfcEdit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.CboRfcEdit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CboRfcEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.CboRfcEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.CboRfcEdit.FormattingEnabled = True
-        Me.CboRfcEdit.Location = New System.Drawing.Point(350, 23)
+        Me.CboRfcEdit.Location = New System.Drawing.Point(653, 27)
         Me.CboRfcEdit.Name = "CboRfcEdit"
         Me.CboRfcEdit.Size = New System.Drawing.Size(300, 31)
         Me.CboRfcEdit.TabIndex = 24
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(301, 21)
+        Me.Label1.Location = New System.Drawing.Point(604, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 28)
         Me.Label1.TabIndex = 3
@@ -127,9 +127,9 @@ Partial Class ScrConfigCliEdit
         Me.PnlData.Controls.Add(Me.TxtRfcEdit)
         Me.PnlData.Controls.Add(Me.Label9)
         Me.PnlData.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnlData.Location = New System.Drawing.Point(0, 79)
+        Me.PnlData.Location = New System.Drawing.Point(0, 73)
         Me.PnlData.Name = "PnlData"
-        Me.PnlData.Size = New System.Drawing.Size(984, 321)
+        Me.PnlData.Size = New System.Drawing.Size(984, 357)
         Me.PnlData.TabIndex = 1
         '
         'BtnOk
@@ -140,7 +140,7 @@ Partial Class ScrConfigCliEdit
         Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnOk.Location = New System.Drawing.Point(893, 245)
+        Me.BtnOk.Location = New System.Drawing.Point(893, 281)
         Me.BtnOk.Name = "BtnOk"
         Me.BtnOk.Size = New System.Drawing.Size(60, 60)
         Me.BtnOk.TabIndex = 18
@@ -154,7 +154,7 @@ Partial Class ScrConfigCliEdit
         Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
-        Me.BtnClear.Location = New System.Drawing.Point(19, 245)
+        Me.BtnClear.Location = New System.Drawing.Point(19, 281)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(60, 60)
         Me.BtnClear.TabIndex = 19
@@ -167,7 +167,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtEdoEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtEdoEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtEdoEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtEdoEdit.Location = New System.Drawing.Point(550, 199)
+        Me.TxtEdoEdit.Location = New System.Drawing.Point(550, 222)
         Me.TxtEdoEdit.Name = "TxtEdoEdit"
         Me.TxtEdoEdit.Size = New System.Drawing.Size(169, 31)
         Me.TxtEdoEdit.TabIndex = 17
@@ -179,7 +179,7 @@ Partial Class ScrConfigCliEdit
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(469, 196)
+        Me.Label8.Location = New System.Drawing.Point(469, 219)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 28)
         Me.Label8.TabIndex = 16
@@ -191,7 +191,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtCiudadEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCiudadEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtCiudadEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtCiudadEdit.Location = New System.Drawing.Point(94, 199)
+        Me.TxtCiudadEdit.Location = New System.Drawing.Point(94, 222)
         Me.TxtCiudadEdit.Name = "TxtCiudadEdit"
         Me.TxtCiudadEdit.Size = New System.Drawing.Size(220, 31)
         Me.TxtCiudadEdit.TabIndex = 15
@@ -202,7 +202,7 @@ Partial Class ScrConfigCliEdit
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(12, 196)
+        Me.Label7.Location = New System.Drawing.Point(12, 219)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 28)
         Me.Label7.TabIndex = 14
@@ -215,7 +215,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtDirEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDirEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtDirEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtDirEdit.Location = New System.Drawing.Point(550, 136)
+        Me.TxtDirEdit.Location = New System.Drawing.Point(550, 159)
         Me.TxtDirEdit.MaxLength = 100
         Me.TxtDirEdit.Name = "TxtDirEdit"
         Me.TxtDirEdit.Size = New System.Drawing.Size(403, 31)
@@ -228,7 +228,7 @@ Partial Class ScrConfigCliEdit
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(448, 133)
+        Me.Label6.Location = New System.Drawing.Point(448, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 28)
         Me.Label6.TabIndex = 12
@@ -239,7 +239,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtTelEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtTelEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTelEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtTelEdit.Location = New System.Drawing.Point(94, 136)
+        Me.TxtTelEdit.Location = New System.Drawing.Point(94, 159)
         Me.TxtTelEdit.Mask = "(999)000-0000"
         Me.TxtTelEdit.Name = "TxtTelEdit"
         Me.TxtTelEdit.PromptChar = Global.Microsoft.VisualBasic.ChrW(120)
@@ -252,7 +252,7 @@ Partial Class ScrConfigCliEdit
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(14, 133)
+        Me.Label5.Location = New System.Drawing.Point(14, 156)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 28)
         Me.Label5.TabIndex = 10
@@ -265,7 +265,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtContactoEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtContactoEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtContactoEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtContactoEdit.Location = New System.Drawing.Point(550, 73)
+        Me.TxtContactoEdit.Location = New System.Drawing.Point(550, 96)
         Me.TxtContactoEdit.MaxLength = 100
         Me.TxtContactoEdit.Name = "TxtContactoEdit"
         Me.TxtContactoEdit.Size = New System.Drawing.Size(403, 31)
@@ -278,7 +278,7 @@ Partial Class ScrConfigCliEdit
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(448, 70)
+        Me.Label4.Location = New System.Drawing.Point(448, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 28)
         Me.Label4.TabIndex = 8
@@ -290,7 +290,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtMailEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtMailEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtMailEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtMailEdit.Location = New System.Drawing.Point(94, 73)
+        Me.TxtMailEdit.Location = New System.Drawing.Point(94, 96)
         Me.TxtMailEdit.Name = "TxtMailEdit"
         Me.TxtMailEdit.Size = New System.Drawing.Size(220, 31)
         Me.TxtMailEdit.TabIndex = 7
@@ -301,7 +301,7 @@ Partial Class ScrConfigCliEdit
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 70)
+        Me.Label3.Location = New System.Drawing.Point(12, 93)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 28)
         Me.Label3.TabIndex = 6
@@ -314,7 +314,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtRazonEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRazonEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtRazonEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtRazonEdit.Location = New System.Drawing.Point(550, 12)
+        Me.TxtRazonEdit.Location = New System.Drawing.Point(550, 35)
         Me.TxtRazonEdit.MaxLength = 100
         Me.TxtRazonEdit.Name = "TxtRazonEdit"
         Me.TxtRazonEdit.Size = New System.Drawing.Size(403, 31)
@@ -327,7 +327,7 @@ Partial Class ScrConfigCliEdit
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(417, 9)
+        Me.Label2.Location = New System.Drawing.Point(417, 32)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(127, 28)
         Me.Label2.TabIndex = 4
@@ -339,7 +339,7 @@ Partial Class ScrConfigCliEdit
         Me.TxtRfcEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRfcEdit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtRfcEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtRfcEdit.Location = New System.Drawing.Point(94, 12)
+        Me.TxtRfcEdit.Location = New System.Drawing.Point(94, 35)
         Me.TxtRfcEdit.MaxLength = 13
         Me.TxtRfcEdit.Name = "TxtRfcEdit"
         Me.TxtRfcEdit.Size = New System.Drawing.Size(180, 31)
@@ -351,7 +351,7 @@ Partial Class ScrConfigCliEdit
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(12, 9)
+        Me.Label9.Location = New System.Drawing.Point(12, 32)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(43, 28)
         Me.Label9.TabIndex = 2
@@ -362,9 +362,9 @@ Partial Class ScrConfigCliEdit
         Me.PnlBottom.BackColor = System.Drawing.Color.Transparent
         Me.PnlBottom.Controls.Add(Me.DgvCliEdit)
         Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlBottom.Location = New System.Drawing.Point(0, 400)
+        Me.PnlBottom.Location = New System.Drawing.Point(0, 430)
         Me.PnlBottom.Name = "PnlBottom"
-        Me.PnlBottom.Size = New System.Drawing.Size(984, 263)
+        Me.PnlBottom.Size = New System.Drawing.Size(984, 233)
         Me.PnlBottom.TabIndex = 2
         '
         'DgvCliEdit
@@ -408,7 +408,7 @@ Partial Class ScrConfigCliEdit
         Me.DgvCliEdit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DgvCliEdit.RowHeadersWidth = 51
         Me.DgvCliEdit.RowTemplate.Height = 24
-        Me.DgvCliEdit.Size = New System.Drawing.Size(959, 245)
+        Me.DgvCliEdit.Size = New System.Drawing.Size(959, 215)
         Me.DgvCliEdit.TabIndex = 3
         '
         'Column1

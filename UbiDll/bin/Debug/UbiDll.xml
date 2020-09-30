@@ -62,6 +62,11 @@ UbiDll
  Se encarga de consultar la tabla de clientes y llenar el DGV con el resultado
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetAllRfc">
+ <summary>
+ Se encarga de consultar a clientes y llenar al cbo correspondiente con el rfc_cli
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

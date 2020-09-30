@@ -28,29 +28,61 @@ Public Class ScrConfigCliEdit
         consulta._dtsDgv.Reset()
 
         'Consulta
-        consulta.GetAllUsr()
+        consulta.GetAllCli()
 
         'Datagrid
         DgvCliEdit.DataSource = consulta._dtvDgv
 
         'Formato Dgv
-        DgvCliEdit.Columns(9).HeaderText = "Rfc"
+        DgvCliEdit.Columns(8).HeaderText = "Rfc"
+        DgvCliEdit.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvCliEdit.Columns(9).HeaderText = "Razón Social"
         DgvCliEdit.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvCliEdit.Columns(10).HeaderText = "Razón Social"
-        DgvCliEdit.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvCliEdit.Columns(11).HeaderText = "Correo electrónico"
-        DgvCliEdit.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DgvCliEdit.Columns(12).HeaderText = "Contacto"
-        DgvCliEdit.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvCliEdit.Columns(13).HeaderText = "Teléfono"
+        DgvCliEdit.Columns(10).HeaderText = "Correo electrónico"
+        DgvCliEdit.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCliEdit.Columns(11).HeaderText = "Teléfono"
+        DgvCliEdit.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvCliEdit.Columns(12).HeaderText = "Dirección"
+        DgvCliEdit.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCliEdit.Columns(13).HeaderText = "Estado"
         DgvCliEdit.Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DgvCliEdit.Columns(14).HeaderText = "Dirección"
+        DgvCliEdit.Columns(14).HeaderText = "Ciudad"
         DgvCliEdit.Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DgvCliEdit.Columns(15).HeaderText = "Ciudad"
-        DgvCliEdit.Columns(15).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        DgvCliEdit.Columns(16).HeaderText = "Estado"
-        DgvCliEdit.Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCliEdit.Columns(15).Visible = False
+        DgvCliEdit.Columns(16).Visible = False
+        DgvCliEdit.Columns(17).HeaderText = "Contacto"
+        DgvCliEdit.Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DgvCliEdit.Refresh()
+
+    End Sub
+
+    ''' <summary>
+    ''' Consulta clientes
+    ''' Llena el cbo con los resultados
+    ''' </summary>
+    Private Sub FillCboRfc()
+
+        'Reset
+        consulta._dtsCbo.Reset()
+
+        'Consulta
+        consulta.GetAllDepa()
+
+        'Dataset 
+        CboRfcEdit.DataSource = consulta._dtsCbo.Tables("depa")
+
+        'Datos
+        CboRfcEdit.DisplayMember = "Id_depa"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboRfcEdit.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 
@@ -70,7 +102,7 @@ Public Class ScrConfigCliEdit
         FillDgvAllCli()
 
         'Cbo
-        'FillCboUnidad()
+        FillCboRfc()
 
     End Sub
 

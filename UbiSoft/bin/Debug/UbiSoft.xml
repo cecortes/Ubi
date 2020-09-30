@@ -181,6 +181,19 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigCliEdit.FillDgvAllCli">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de clientes
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigCliEdit.ScrConfigCliEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para extraer a los clientes
+ Llama al método para extraer a los rfc de los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigCliNew.FillDgvUsr(System.String@,System.Windows.Forms.DataGridView)">
  <summary>
  Recibe el path y el objeto datagrid como parámetros

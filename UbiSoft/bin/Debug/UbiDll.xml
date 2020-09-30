@@ -57,6 +57,11 @@ UbiDll
  Se encarga de consultar a departamentos y llenar al cbo correspondiente con el Id_depa
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetAllCli">
+ <summary>
+ Se encarga de consultar la tabla de clientes y llenar el DGV con el resultado
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
