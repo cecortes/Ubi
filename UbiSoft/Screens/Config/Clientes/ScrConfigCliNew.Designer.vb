@@ -141,7 +141,7 @@ Partial Class ScrConfigCliNew
         Me.TxtEdoNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtEdoNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtEdoNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtEdoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtEdoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtEdoNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtEdoNew.Location = New System.Drawing.Point(550, 199)
         Me.TxtEdoNew.Name = "TxtEdoNew"
@@ -165,7 +165,7 @@ Partial Class ScrConfigCliNew
         '
         Me.TxtCiudadNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtCiudadNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCiudadNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtCiudadNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCiudadNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtCiudadNew.Location = New System.Drawing.Point(94, 199)
         Me.TxtCiudadNew.Name = "TxtCiudadNew"
@@ -464,11 +464,12 @@ Partial Class ScrConfigCliNew
         '
         'Column8
         '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Column8.HeaderText = "Estado"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 88
         '
         'ScrConfigCliNew
         '
