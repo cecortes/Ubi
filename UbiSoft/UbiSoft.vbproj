@@ -98,6 +98,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Config\Clientes\ScrCfgCli.Designer.vb">
+      <DependentUpon>ScrCfgCli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrCfgCli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliDel.Designer.vb">
+      <DependentUpon>ScrConfigCliDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliEdit.Designer.vb">
+      <DependentUpon>ScrConfigCliEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliNew.Designer.vb">
+      <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Clientes\ScrConfigCliNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\ScrConfig.Designer.vb">
       <DependentUpon>ScrConfig.vb</DependentUpon>
     </Compile>
@@ -225,6 +249,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Config\Clientes\ScrCfgCli.resx">
+      <DependentUpon>ScrCfgCli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliDel.resx">
+      <DependentUpon>ScrConfigCliDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliEdit.resx">
+      <DependentUpon>ScrConfigCliEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliNew.resx">
+      <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\ScrConfig.resx">
       <DependentUpon>ScrConfig.vb</DependentUpon>
     </EmbeddedResource>

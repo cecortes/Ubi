@@ -142,6 +142,45 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrCfgCli.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
+<member name="M:UbiSoft.ScrCfgCli.CerrarFormPanel">
+ <summary>
+ Método para recorrer los paneles abiertos y cerrarlos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrCfgCli.BtnNew_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para agregar a los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrCfgCli.BtnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para editar a los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrCfgCli.BtnDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para borrar a los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfig.AbrirFormPanel``1">
  <summary>
  Se encarga de crear un nuevo objeto del tipo Form

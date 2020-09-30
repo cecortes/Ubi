@@ -245,7 +245,9 @@ Public Class ScrConfig
     ''' <param name="e"></param>
     Private Sub BtnClientes_Click(sender As Object, e As EventArgs) Handles BtnClientes.Click
 
-        AbrirFormPanel(Of ScrConfigCli)()
+        'AbrirFormPanel(Of ScrConfigCli)()
+
+        AbrirFormPanel(Of ScrCfgCli)()
 
     End Sub
 
