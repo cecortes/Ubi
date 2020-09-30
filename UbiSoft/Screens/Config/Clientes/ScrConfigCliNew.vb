@@ -6,6 +6,13 @@ Public Class ScrConfigCliNew
 
 #Region "Variables"
 
+    'UbiDll
+    Dim datos As New Datos
+    Dim consulta As New Consulta
+    Dim add As New Agregar
+    Dim upd As New Actualizar
+    Dim errorMsg As New ErrorMsg
+
 #End Region
 
 #Region "Funciones"
@@ -13,6 +20,23 @@ Public Class ScrConfigCliNew
 #End Region
 
 #Region "Métodos"
+
+    ''' <summary>
+    ''' Re inicia los valores de los textbox
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Txt
+        TxtRfcNew.Text = ""
+        TxtRazonNew.Text = ""
+        TxtMailNew.Text = ""
+        TxtContactoNew.Text = ""
+        TxtTelNew.Text = ""
+        TxtDirNew.Text = ""
+        TxtCiudadNew.Text = ""
+        TxtEdoNew.Text = ""
+
+    End Sub
 
     ''' <summary>
     ''' Agrega a un nuevo usuario por medio de los datos de los cuadros de texto
@@ -39,6 +63,36 @@ Public Class ScrConfigCliNew
             flgErr = True
         ElseIf String.IsNullOrEmpty(TxtEdoNew.Text) Then
             flgErr = True
+        End If
+
+        'Usr
+        If flgErr Then
+
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Captura
+        datos.rfc_cli = TxtRfcNew.Text
+        datos.razon_cli = TxtRazonNew.Text
+        datos.mail_cli = TxtMailNew.Text
+        datos.contacto_cli = TxtContactoNew.Text
+        datos.tel_cli = TxtTelNew.Text
+        datos.dir_cli = TxtDirNew.Text
+        datos.ciudad_cli = TxtCiudadNew.Text
+        datos.edo_cli = TxtEdoNew.Text
+
+        'Insert 
+        If (add.NewUsr(datos)) Then
+
+            'Msg Usr
+            MsgBox("Nuevo cliente agregado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+
         End If
 
     End Sub

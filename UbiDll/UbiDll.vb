@@ -542,6 +542,64 @@ Public Class Agregar
 
 #End Region
 
+#Region "CLIENTES"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla clientes
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewClient(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO clientes (rfc_cli, razon_cli, mail_cli, tel_cli, dir_cli, edo_cli, ciudad_cli, contacto_cli) VALUES (@rfc_cli,@razon_cli,@mail_cli,@tel_cli,@dir_cli,@edo_cli,@ciudad_cli,@contacto_cli)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@rfc_cli", MySqlDbType.String, 13).Value = datos.rfc_cli
+            _adaptador.InsertCommand.Parameters.Add("@razon_cli", MySqlDbType.String, 45).Value = datos.razon_cli
+            _adaptador.InsertCommand.Parameters.Add("@mail_cli", MySqlDbType.String, 45).Value = datos.mail_cli
+            _adaptador.InsertCommand.Parameters.Add("@tel_cli", MySqlDbType.String, 10).Value = datos.tel_cli
+            _adaptador.InsertCommand.Parameters.Add("@dir_cli", MySqlDbType.String, 45).Value = datos.dir_cli
+            _adaptador.InsertCommand.Parameters.Add("@edo_cli", MySqlDbType.String, 45).Value = datos.edo_cli
+            _adaptador.InsertCommand.Parameters.Add("@ciudad_cli", MySqlDbType.String, 45).Value = datos.ciudad_cli
+            _adaptador.InsertCommand.Parameters.Add("@contacto_cli", MySqlDbType.String, 45).Value = datos.contacto_cli
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar
