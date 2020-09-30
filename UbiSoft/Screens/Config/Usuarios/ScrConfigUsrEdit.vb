@@ -239,8 +239,6 @@ Public Class ScrConfigUsrEdit
     ''' <param name="e"></param>
     Private Sub CboUnidadEdit_TextChanged(sender As Object, e As EventArgs) Handles CboUnidadEdit.TextChanged
 
-        MsgBox(CboUnidadEdit.Text)
-
         'Captura
         datos.unidad_usr = CboUnidadEdit.Text
 

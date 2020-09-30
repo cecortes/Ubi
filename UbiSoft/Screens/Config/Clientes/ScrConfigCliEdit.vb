@@ -66,13 +66,13 @@ Public Class ScrConfigCliEdit
         consulta._dtsCbo.Reset()
 
         'Consulta
-        consulta.GetAllDepa()
+        consulta.GetAllRfc()
 
         'Dataset 
-        CboRfcEdit.DataSource = consulta._dtsCbo.Tables("depa")
+        CboRfcEdit.DataSource = consulta._dtsCbo.Tables("rfcCli")
 
         'Datos
-        CboRfcEdit.DisplayMember = "Id_depa"
+        CboRfcEdit.DisplayMember = "rfc_cli"
 
         'Control de errores
         Try
@@ -103,6 +103,25 @@ Public Class ScrConfigCliEdit
 
         'Cbo
         FillCboRfc()
+
+    End Sub
+
+    ''' <summary>
+    ''' Realiza la consulta del rfc seleccionado en el cbo
+    ''' Captura el resultado en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboRfcEdit_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboRfcEdit.SelectedValueChanged
+
+        If CboRfcEdit.SelectedIndex > 0 Then
+            MsgBox("FIN")
+        End If
+
+        'Consulta
+        datos.rfc_cli = CboRfcEdit.Text
+
+        MsgBox(datos.rfc_cli)
 
     End Sub
 

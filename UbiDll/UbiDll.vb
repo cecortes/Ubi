@@ -560,6 +560,70 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un cliente en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetCli(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM clientes WHERE rfc_cli = @rfc_cli", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@rfc_cli", MySqlDbType.String, 13).Value = Datos.rfc_cli
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.rfc_cli = reader("rfc_cli").ToString
+                resultado.razon_cli = reader("razon_cli").ToString
+                resultado.mail_cli = reader("mail_cli").ToString
+                resultado.tel_cli = reader("tel_cli").ToString
+                resultado.dir_cli = reader("dir_cli").ToString
+                resultado.edo_cli = reader("edo_cli").ToString
+                resultado.ciudad_cli = reader("ciudad_cli").ToString
+                resultado.contacto_cli = reader("contacto_cli").ToString
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class

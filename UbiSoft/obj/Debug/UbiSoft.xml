@@ -186,10 +186,24 @@ UbiSoft
  Se encarga de llenar el datagrid con todas las entradas de la tabla de clientes
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigCliEdit.FillCboRfc">
+ <summary>
+ Consulta clientes
+ Llena el cbo con los resultados
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigCliEdit.ScrConfigCliEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los clientes
  Llama al método para extraer a los rfc de los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliEdit.CboRfcEdit_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Realiza la consulta del rfc seleccionado en el cbo
+ Captura el resultado en los textbox
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
