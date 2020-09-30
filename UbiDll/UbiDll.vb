@@ -157,6 +157,119 @@ Public Class Datos
 
 #End Region
 
+#Region "clientes"
+
+#Region "DATAMEMBERS"
+
+    Private _rfc_cli As String
+    Private _razon_cli As String
+    Private _mail_cli As String
+    Private _tel_cli As String
+    Private _dir_cli As String
+    Private _edo_cli As String
+    Private _ciudad_cli As String
+    Private _lat_cli As Double
+    Private _lon_cli As Double
+    Private _contacto_cli As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property rfc_cli() As String
+        Get
+            Return _rfc_cli
+        End Get
+        Set(ByVal value As String)
+            _rfc_cli = value
+        End Set
+    End Property
+
+    Public Property razon_cli() As String
+        Get
+            Return _razon_cli
+        End Get
+        Set(ByVal value As String)
+            _razon_cli = value
+        End Set
+    End Property
+
+    Public Property mail_cli() As String
+        Get
+            Return _mail_cli
+        End Get
+        Set(ByVal value As String)
+            _mail_cli = value
+        End Set
+    End Property
+
+    Public Property tel_cli() As String
+        Get
+            Return _tel_cli
+        End Get
+        Set(ByVal value As String)
+            _tel_cli = value
+        End Set
+    End Property
+
+    Public Property dir_cli() As String
+        Get
+            Return _dir_cli
+        End Get
+        Set(ByVal value As String)
+            _dir_cli = value
+        End Set
+    End Property
+
+    Public Property edo_cli() As String
+        Get
+            Return _edo_cli
+        End Get
+        Set(ByVal value As String)
+            _edo_cli = value
+        End Set
+    End Property
+
+    Public Property ciudad_cli() As String
+        Get
+            Return _ciudad_cli
+        End Get
+        Set(ByVal value As String)
+            _ciudad_cli = value
+        End Set
+    End Property
+
+    Public Property lat_cli() As Double
+        Get
+            Return _lat_cli
+        End Get
+        Set(ByVal value As Double)
+            _lat_cli = value
+        End Set
+    End Property
+
+    Public Property lon_cli() As Double
+        Get
+            Return _lon_cli
+        End Get
+        Set(ByVal value As Double)
+            _lon_cli = value
+        End Set
+    End Property
+
+    Public Property contacto_cli() As String
+        Get
+            Return _contacto_cli
+        End Get
+        Set(ByVal value As String)
+            _contacto_cli = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta

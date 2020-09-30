@@ -32,26 +32,26 @@ Partial Class ScrConfigCliNew
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlData = New System.Windows.Forms.Panel()
-        Me.PnlBottom = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtRfcNew = New System.Windows.Forms.TextBox()
-        Me.TxtRazonNew = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtMailNew = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtContactoNew = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtTelNew = New System.Windows.Forms.MaskedTextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtDirNew = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TxtCiudadNew = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TxtEdoNew = New System.Windows.Forms.TextBox()
         Me.BtnOk = New System.Windows.Forms.Button()
         Me.BtnClear = New System.Windows.Forms.Button()
         Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.TxtEdoNew = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TxtCiudadNew = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TxtDirNew = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TxtTelNew = New System.Windows.Forms.MaskedTextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtContactoNew = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtMailNew = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtRazonNew = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxtRfcNew = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PnlBottom = New System.Windows.Forms.Panel()
         Me.DgvCli = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -94,213 +94,6 @@ Partial Class ScrConfigCliNew
         Me.PnlData.Size = New System.Drawing.Size(984, 342)
         Me.PnlData.TabIndex = 0
         '
-        'PnlBottom
-        '
-        Me.PnlBottom.BackColor = System.Drawing.Color.Transparent
-        Me.PnlBottom.Controls.Add(Me.DgvCli)
-        Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlBottom.Location = New System.Drawing.Point(0, 342)
-        Me.PnlBottom.Name = "PnlBottom"
-        Me.PnlBottom.Size = New System.Drawing.Size(984, 321)
-        Me.PnlBottom.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 28)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Rfc:"
-        '
-        'TxtRfcNew
-        '
-        Me.TxtRfcNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtRfcNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtRfcNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtRfcNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtRfcNew.Location = New System.Drawing.Point(94, 12)
-        Me.TxtRfcNew.MaxLength = 13
-        Me.TxtRfcNew.Name = "TxtRfcNew"
-        Me.TxtRfcNew.Size = New System.Drawing.Size(180, 31)
-        Me.TxtRfcNew.TabIndex = 3
-        Me.TxtRfcNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TxtRazonNew
-        '
-        Me.TxtRazonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtRazonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtRazonNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtRazonNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtRazonNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtRazonNew.Location = New System.Drawing.Point(550, 12)
-        Me.TxtRazonNew.MaxLength = 100
-        Me.TxtRazonNew.Name = "TxtRazonNew"
-        Me.TxtRazonNew.Size = New System.Drawing.Size(403, 31)
-        Me.TxtRazonNew.TabIndex = 5
-        Me.TxtRazonNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(417, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(127, 28)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Razón Social:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 70)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 28)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Correo:"
-        '
-        'TxtMailNew
-        '
-        Me.TxtMailNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtMailNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtMailNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.TxtMailNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtMailNew.Location = New System.Drawing.Point(94, 73)
-        Me.TxtMailNew.Name = "TxtMailNew"
-        Me.TxtMailNew.Size = New System.Drawing.Size(220, 31)
-        Me.TxtMailNew.TabIndex = 7
-        Me.TxtMailNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(448, 70)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 28)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Contacto:"
-        '
-        'TxtContactoNew
-        '
-        Me.TxtContactoNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtContactoNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtContactoNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtContactoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtContactoNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtContactoNew.Location = New System.Drawing.Point(550, 73)
-        Me.TxtContactoNew.MaxLength = 100
-        Me.TxtContactoNew.Name = "TxtContactoNew"
-        Me.TxtContactoNew.Size = New System.Drawing.Size(403, 31)
-        Me.TxtContactoNew.TabIndex = 9
-        Me.TxtContactoNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(14, 133)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 28)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Tel:"
-        '
-        'TxtTelNew
-        '
-        Me.TxtTelNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtTelNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtTelNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtTelNew.Location = New System.Drawing.Point(94, 136)
-        Me.TxtTelNew.Mask = "(999)000-0000"
-        Me.TxtTelNew.Name = "TxtTelNew"
-        Me.TxtTelNew.PromptChar = Global.Microsoft.VisualBasic.ChrW(120)
-        Me.TxtTelNew.Size = New System.Drawing.Size(220, 31)
-        Me.TxtTelNew.TabIndex = 11
-        Me.TxtTelNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(448, 133)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(98, 28)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Dirección:"
-        '
-        'TxtDirNew
-        '
-        Me.TxtDirNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtDirNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtDirNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtDirNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDirNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtDirNew.Location = New System.Drawing.Point(550, 136)
-        Me.TxtDirNew.MaxLength = 100
-        Me.TxtDirNew.Name = "TxtDirNew"
-        Me.TxtDirNew.Size = New System.Drawing.Size(403, 31)
-        Me.TxtDirNew.TabIndex = 13
-        Me.TxtDirNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(12, 196)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 28)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Ciudad:"
-        '
-        'TxtCiudadNew
-        '
-        Me.TxtCiudadNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtCiudadNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCiudadNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.TxtCiudadNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtCiudadNew.Location = New System.Drawing.Point(94, 199)
-        Me.TxtCiudadNew.Name = "TxtCiudadNew"
-        Me.TxtCiudadNew.Size = New System.Drawing.Size(220, 31)
-        Me.TxtCiudadNew.TabIndex = 15
-        Me.TxtCiudadNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(469, 196)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 28)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Estado:"
-        '
-        'TxtEdoNew
-        '
-        Me.TxtEdoNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtEdoNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtEdoNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtEdoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.TxtEdoNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtEdoNew.Location = New System.Drawing.Point(550, 199)
-        Me.TxtEdoNew.Name = "TxtEdoNew"
-        Me.TxtEdoNew.Size = New System.Drawing.Size(169, 31)
-        Me.TxtEdoNew.TabIndex = 17
-        Me.TxtEdoNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'BtnOk
         '
         Me.BtnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -342,6 +135,213 @@ Partial Class ScrConfigCliNew
         Me.BtnSearch.Size = New System.Drawing.Size(60, 60)
         Me.BtnSearch.TabIndex = 20
         Me.BtnSearch.UseVisualStyleBackColor = False
+        '
+        'TxtEdoNew
+        '
+        Me.TxtEdoNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtEdoNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtEdoNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtEdoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtEdoNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtEdoNew.Location = New System.Drawing.Point(550, 199)
+        Me.TxtEdoNew.Name = "TxtEdoNew"
+        Me.TxtEdoNew.Size = New System.Drawing.Size(169, 31)
+        Me.TxtEdoNew.TabIndex = 17
+        Me.TxtEdoNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(469, 196)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(75, 28)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Estado:"
+        '
+        'TxtCiudadNew
+        '
+        Me.TxtCiudadNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtCiudadNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCiudadNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtCiudadNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtCiudadNew.Location = New System.Drawing.Point(94, 199)
+        Me.TxtCiudadNew.Name = "TxtCiudadNew"
+        Me.TxtCiudadNew.Size = New System.Drawing.Size(220, 31)
+        Me.TxtCiudadNew.TabIndex = 15
+        Me.TxtCiudadNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(12, 196)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(78, 28)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Ciudad:"
+        '
+        'TxtDirNew
+        '
+        Me.TxtDirNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtDirNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtDirNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtDirNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDirNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtDirNew.Location = New System.Drawing.Point(550, 136)
+        Me.TxtDirNew.MaxLength = 100
+        Me.TxtDirNew.Name = "TxtDirNew"
+        Me.TxtDirNew.Size = New System.Drawing.Size(403, 31)
+        Me.TxtDirNew.TabIndex = 13
+        Me.TxtDirNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(448, 133)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(98, 28)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Dirección:"
+        '
+        'TxtTelNew
+        '
+        Me.TxtTelNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtTelNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtTelNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtTelNew.Location = New System.Drawing.Point(94, 136)
+        Me.TxtTelNew.Mask = "(999)000-0000"
+        Me.TxtTelNew.Name = "TxtTelNew"
+        Me.TxtTelNew.PromptChar = Global.Microsoft.VisualBasic.ChrW(120)
+        Me.TxtTelNew.Size = New System.Drawing.Size(220, 31)
+        Me.TxtTelNew.TabIndex = 11
+        Me.TxtTelNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(14, 133)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 28)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Tel:"
+        '
+        'TxtContactoNew
+        '
+        Me.TxtContactoNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtContactoNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtContactoNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtContactoNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtContactoNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtContactoNew.Location = New System.Drawing.Point(550, 73)
+        Me.TxtContactoNew.MaxLength = 100
+        Me.TxtContactoNew.Name = "TxtContactoNew"
+        Me.TxtContactoNew.Size = New System.Drawing.Size(403, 31)
+        Me.TxtContactoNew.TabIndex = 9
+        Me.TxtContactoNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(448, 70)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 28)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Contacto:"
+        '
+        'TxtMailNew
+        '
+        Me.TxtMailNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtMailNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtMailNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TxtMailNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtMailNew.Location = New System.Drawing.Point(94, 73)
+        Me.TxtMailNew.Name = "TxtMailNew"
+        Me.TxtMailNew.Size = New System.Drawing.Size(220, 31)
+        Me.TxtMailNew.TabIndex = 7
+        Me.TxtMailNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(12, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 28)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Correo:"
+        '
+        'TxtRazonNew
+        '
+        Me.TxtRazonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtRazonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtRazonNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtRazonNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtRazonNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtRazonNew.Location = New System.Drawing.Point(550, 12)
+        Me.TxtRazonNew.MaxLength = 100
+        Me.TxtRazonNew.Name = "TxtRazonNew"
+        Me.TxtRazonNew.Size = New System.Drawing.Size(403, 31)
+        Me.TxtRazonNew.TabIndex = 5
+        Me.TxtRazonNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(417, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(127, 28)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Razón Social:"
+        '
+        'TxtRfcNew
+        '
+        Me.TxtRfcNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtRfcNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtRfcNew.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtRfcNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtRfcNew.Location = New System.Drawing.Point(94, 12)
+        Me.TxtRfcNew.MaxLength = 13
+        Me.TxtRfcNew.Name = "TxtRfcNew"
+        Me.TxtRfcNew.Size = New System.Drawing.Size(180, 31)
+        Me.TxtRfcNew.TabIndex = 3
+        Me.TxtRfcNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 28)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Rfc:"
+        '
+        'PnlBottom
+        '
+        Me.PnlBottom.BackColor = System.Drawing.Color.Transparent
+        Me.PnlBottom.Controls.Add(Me.DgvCli)
+        Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlBottom.Location = New System.Drawing.Point(0, 342)
+        Me.PnlBottom.Name = "PnlBottom"
+        Me.PnlBottom.Size = New System.Drawing.Size(984, 321)
+        Me.PnlBottom.TabIndex = 1
         '
         'DgvCli
         '
