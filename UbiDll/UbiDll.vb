@@ -476,6 +476,54 @@ Public Class Consulta
 
 #End Region
 
+#Region "clientes"
+
+    ''' <summary>
+    ''' Se encarga de consultar la tabla de clientes y llenar el DGV con el resultado
+    ''' </summary>
+    Public Sub GetAllCli()
+
+        'Privadas
+        Dim con As New Conexion
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM clientes", con._conexion)
+
+            'Pasamos el resultado al DataSet
+            _adaptador.Fill(_dtsDgv)
+
+            'Pasamos la tabla al DataView
+            _dtvDgv.Table = _dtsDgv.Tables(0)
+
+            'Open Conection
+            con._conexion.Open()
+
+            'Query
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close conection
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
+#End Region
+
 End Class
 
 Public Class Agregar

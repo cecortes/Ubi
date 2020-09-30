@@ -22,6 +22,15 @@ Partial Class ScrConfigCliEdit
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.CboRfcEdit = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,8 +53,20 @@ Partial Class ScrConfigCliEdit
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtRfcEdit = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.PnlBottom = New System.Windows.Forms.Panel()
+        Me.DgvCliEdit = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PnlTop.SuspendLayout()
         Me.PnlData.SuspendLayout()
+        Me.PnlBottom.SuspendLayout()
+        CType(Me.DgvCliEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -56,7 +77,7 @@ Partial Class ScrConfigCliEdit
         Me.PnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTop.Location = New System.Drawing.Point(0, 0)
         Me.PnlTop.Name = "PnlTop"
-        Me.PnlTop.Size = New System.Drawing.Size(984, 150)
+        Me.PnlTop.Size = New System.Drawing.Size(984, 79)
         Me.PnlTop.TabIndex = 0
         '
         'CboRfcEdit
@@ -67,7 +88,7 @@ Partial Class ScrConfigCliEdit
         Me.CboRfcEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.CboRfcEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.CboRfcEdit.FormattingEnabled = True
-        Me.CboRfcEdit.Location = New System.Drawing.Point(352, 37)
+        Me.CboRfcEdit.Location = New System.Drawing.Point(350, 23)
         Me.CboRfcEdit.Name = "CboRfcEdit"
         Me.CboRfcEdit.Size = New System.Drawing.Size(300, 31)
         Me.CboRfcEdit.TabIndex = 24
@@ -78,7 +99,7 @@ Partial Class ScrConfigCliEdit
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(303, 35)
+        Me.Label1.Location = New System.Drawing.Point(301, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 28)
         Me.Label1.TabIndex = 3
@@ -105,10 +126,10 @@ Partial Class ScrConfigCliEdit
         Me.PnlData.Controls.Add(Me.Label2)
         Me.PnlData.Controls.Add(Me.TxtRfcEdit)
         Me.PnlData.Controls.Add(Me.Label9)
-        Me.PnlData.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlData.Location = New System.Drawing.Point(0, 150)
+        Me.PnlData.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlData.Location = New System.Drawing.Point(0, 79)
         Me.PnlData.Name = "PnlData"
-        Me.PnlData.Size = New System.Drawing.Size(984, 513)
+        Me.PnlData.Size = New System.Drawing.Size(984, 321)
         Me.PnlData.TabIndex = 1
         '
         'BtnOk
@@ -119,7 +140,7 @@ Partial Class ScrConfigCliEdit
         Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnOk.Location = New System.Drawing.Point(893, 437)
+        Me.BtnOk.Location = New System.Drawing.Point(893, 245)
         Me.BtnOk.Name = "BtnOk"
         Me.BtnOk.Size = New System.Drawing.Size(60, 60)
         Me.BtnOk.TabIndex = 18
@@ -133,7 +154,7 @@ Partial Class ScrConfigCliEdit
         Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
-        Me.BtnClear.Location = New System.Drawing.Point(19, 437)
+        Me.BtnClear.Location = New System.Drawing.Point(19, 245)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(60, 60)
         Me.BtnClear.TabIndex = 19
@@ -336,6 +357,149 @@ Partial Class ScrConfigCliEdit
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Rfc:"
         '
+        'PnlBottom
+        '
+        Me.PnlBottom.BackColor = System.Drawing.Color.Transparent
+        Me.PnlBottom.Controls.Add(Me.DgvCliEdit)
+        Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlBottom.Location = New System.Drawing.Point(0, 400)
+        Me.PnlBottom.Name = "PnlBottom"
+        Me.PnlBottom.Size = New System.Drawing.Size(984, 263)
+        Me.PnlBottom.TabIndex = 2
+        '
+        'DgvCliEdit
+        '
+        Me.DgvCliEdit.AllowUserToAddRows = False
+        Me.DgvCliEdit.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.DgvCliEdit.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvCliEdit.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvCliEdit.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.DgvCliEdit.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvCliEdit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvCliEdit.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvCliEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCliEdit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvCliEdit.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DgvCliEdit.DoubleBuffered = True
+        Me.DgvCliEdit.EnableHeadersVisualStyles = False
+        Me.DgvCliEdit.GridColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.DgvCliEdit.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.DgvCliEdit.HeaderForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.DgvCliEdit.Location = New System.Drawing.Point(13, 6)
+        Me.DgvCliEdit.Name = "DgvCliEdit"
+        Me.DgvCliEdit.ReadOnly = True
+        Me.DgvCliEdit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvCliEdit.RowHeadersWidth = 51
+        Me.DgvCliEdit.RowTemplate.Height = 24
+        Me.DgvCliEdit.Size = New System.Drawing.Size(959, 245)
+        Me.DgvCliEdit.TabIndex = 3
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column1.HeaderText = "Rfc"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        Me.Column1.Width = 60
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column2.HeaderText = "Razón Social"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
+        Me.Column2.Width = 133
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column3.HeaderText = "Correo"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Visible = False
+        Me.Column3.Width = 89
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Column4.HeaderText = "Contacto"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Visible = False
+        Me.Column4.Width = 107
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Column5.HeaderText = "Teléfono"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        Me.Column5.Width = 103
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Column6.HeaderText = "Dirección"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Ciudad"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        Me.Column7.Width = 125
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Estado"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Visible = False
+        Me.Column8.Width = 125
+        '
         'ScrConfigCliEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -344,6 +508,7 @@ Partial Class ScrConfigCliEdit
         Me.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 663)
+        Me.Controls.Add(Me.PnlBottom)
         Me.Controls.Add(Me.PnlData)
         Me.Controls.Add(Me.PnlTop)
         Me.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -356,6 +521,8 @@ Partial Class ScrConfigCliEdit
         Me.PnlTop.PerformLayout()
         Me.PnlData.ResumeLayout(False)
         Me.PnlData.PerformLayout()
+        Me.PnlBottom.ResumeLayout(False)
+        CType(Me.DgvCliEdit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -382,4 +549,14 @@ Partial Class ScrConfigCliEdit
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtRfcEdit As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents PnlBottom As Panel
+    Friend WithEvents DgvCliEdit As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class
