@@ -198,6 +198,15 @@ UbiSoft
  Llena el cbo con los resultados
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigCliEdit.EditCli">
+ <summary>
+ Captura los valores necesarios en la clase datos
+ Realiza la actualización por medio de la Dll para clientes
+ Reset del datasource
+ Recarga de datos al dgv
+ Recarga de datos al cbo
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigCliEdit.ScrConfigCliEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los clientes
@@ -224,6 +233,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigCliEdit.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Limpia los cuadros de texto y cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliEdit.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para editar al usuario seleccionado en la base de datos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

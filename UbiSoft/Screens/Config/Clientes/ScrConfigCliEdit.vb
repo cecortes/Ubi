@@ -130,6 +130,17 @@ Public Class ScrConfigCliEdit
         datos.ciudad_cli = TxtCiudadEdit.Text
         datos.edo_cli = TxtEdoEdit.Text
 
+        'Update
+        If upd.UpdCli(datos) Then
+
+            'Usuario
+            MsgBox("El cliente se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Reset y Reload
+        FillDgvAllCli()
+        FillCboRfc()
 
     End Sub
 
