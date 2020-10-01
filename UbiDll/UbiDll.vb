@@ -1152,6 +1152,58 @@ Public Class Eliminar
 
 #End Region
 
+#Region "CLIENTES"
+
+    ''' <summary>
+    ''' Se encarga de eliminar al cliente por medio de la key recibida como parámetro
+    ''' </summary>
+    ''' <param name="datos"> Resultado del borrado </param>
+    ''' <returns></returns>
+    Public Function DelCli(ByVal datos As Datos) As Boolean
+
+        'Variables Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM clientes WHERE rfc_cli=@rfc_cli", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@rfc_cli", MySqlDbType.String, 13).Value = datos.rfc_cli
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Resultado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class ErrorMsg
