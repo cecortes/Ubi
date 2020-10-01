@@ -8,7 +8,7 @@ Public Class ScrConfigCliDel
     'Dll
     Dim datos As New Datos
     Dim consulta As New Consulta
-    Dim upd As New Actualizar
+    Dim borrar As New Eliminar
     Dim errMsg As New ErrorMsg
 
 #End Region
@@ -118,7 +118,7 @@ Public Class ScrConfigCliDel
     ''' Recarga de datos al dgv
     ''' Recarga de datos al cbo
     ''' </summary>
-    Private Sub EditCli()
+    Private Sub DelCliente()
 
         'Captura
         datos.rfc_cli = TxtRfcDel.Text
@@ -131,10 +131,10 @@ Public Class ScrConfigCliDel
         datos.edo_cli = TxtEdoDel.Text
 
         'Update
-        If upd.UpdCli(datos) Then
+        If borrar.DelCli(datos) Then
 
             'Usuario
-            MsgBox("El cliente se actualizó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("El cliente se eliminó correctamente", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
         End If
 
@@ -229,7 +229,7 @@ Public Class ScrConfigCliDel
     Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
 
         'Borrar
-        DelCli()
+        DelCliente()
 
     End Sub
 

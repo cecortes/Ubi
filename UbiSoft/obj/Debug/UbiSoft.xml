@@ -198,6 +198,15 @@ UbiSoft
  Llena el cbo con los resultados
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigCliDel.DelCliente">
+ <summary>
+ Captura los valores necesarios en la clase datos
+ Realiza el borradp por medio de la Dll para clientes
+ Reset del datasource
+ Recarga de datos al dgv
+ Recarga de datos al cbo
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigCliDel.ScrConfigCliDel_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para extraer a los clientes
@@ -209,6 +218,28 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigCliDel.CboRfcDel_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
  Llama al método para realizar la consulta del cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.DgvCliDel_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene el rfc de la fila / celda seleccionada
+ Llama al método para realizar la consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto y cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para borrar al usuario seleccionado en la base de datos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
