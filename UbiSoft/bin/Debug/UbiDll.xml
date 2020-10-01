@@ -67,6 +67,13 @@ UbiDll
  Se encarga de consultar a clientes y llenar al cbo correspondiente con el rfc_cli
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetCli(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener los datos de un cliente en particular y regresarlo como datos
+ </summary>
+ <param name="Datos"></param>
+ <returns>Resultado como objeto de Datos</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

@@ -421,7 +421,7 @@ Partial Class ScrConfigCliEdit
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Visible = False
-        Me.Column1.Width = 60
+        Me.Column1.Width = 125
         '
         'Column2
         '
@@ -433,7 +433,7 @@ Partial Class ScrConfigCliEdit
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         Me.Column2.Visible = False
-        Me.Column2.Width = 133
+        Me.Column2.Width = 125
         '
         'Column3
         '
@@ -445,7 +445,7 @@ Partial Class ScrConfigCliEdit
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         Me.Column3.Visible = False
-        Me.Column3.Width = 89
+        Me.Column3.Width = 125
         '
         'Column4
         '
@@ -457,7 +457,7 @@ Partial Class ScrConfigCliEdit
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         Me.Column4.Visible = False
-        Me.Column4.Width = 107
+        Me.Column4.Width = 125
         '
         'Column5
         '
@@ -469,7 +469,7 @@ Partial Class ScrConfigCliEdit
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         Me.Column5.Visible = False
-        Me.Column5.Width = 103
+        Me.Column5.Width = 125
         '
         'Column6
         '

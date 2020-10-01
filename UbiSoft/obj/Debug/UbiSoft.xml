@@ -181,6 +181,12 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigCliEdit.GetCliente(System.String)">
+ <summary>
+ Realiza la consulta del rfc seleccionado en el cbo
+ Captura el resultado en los textbox
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigCliEdit.FillDgvAllCli">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de clientes
@@ -202,8 +208,22 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrConfigCliEdit.CboRfcEdit_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
- Realiza la consulta del rfc seleccionado en el cbo
- Captura el resultado en los textbox
+ Llama al método para realizar la consulta del cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliEdit.DgvCliEdit_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene el rfc de la fila / celda seleccionada
+ Llama al método para realizar la consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliEdit.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto y cbo
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

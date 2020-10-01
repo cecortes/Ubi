@@ -20,6 +20,31 @@ Public Class ScrConfigCliEdit
 #Region "Métodos"
 
     ''' <summary>
+    ''' Realiza la consulta del rfc seleccionado en el cbo
+    ''' Captura el resultado en los textbox
+    ''' </summary>
+    Private Sub GetCliente(ByVal rfc As String)
+
+        'Privadas
+        Dim cliente As New Datos
+
+        'Consulta para datos del cliente
+        datos.rfc_cli = rfc
+        cliente = consulta.GetCli(datos)
+
+        'Textbox
+        TxtRfcEdit.Text = cliente.rfc_cli
+        TxtRazonEdit.Text = cliente.razon_cli
+        TxtMailEdit.Text = cliente.mail_cli
+        TxtContactoEdit.Text = cliente.contacto_cli
+        TxtTelEdit.Text = cliente.tel_cli
+        TxtDirEdit.Text = cliente.dir_cli
+        TxtCiudadEdit.Text = cliente.ciudad_cli
+        TxtEdoEdit.Text = cliente.edo_cli
+
+    End Sub
+
+    ''' <summary>
     ''' Se encarga de llenar el datagrid con todas las entradas de la tabla de clientes
     ''' </summary>
     Private Sub FillDgvAllCli()
@@ -86,6 +111,28 @@ Public Class ScrConfigCliEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores necesarios en la clase datos
+    ''' Realiza la actualización por medio de la Dll para clientes
+    ''' Reset del datasource
+    ''' Recarga de datos al dgv
+    ''' Recarga de datos al cbo
+    ''' </summary>
+    Private Sub EditCli()
+
+        'Captura
+        datos.rfc_cli = TxtRfcEdit.Text
+        datos.razon_cli = TxtRazonEdit.Text
+        datos.mail_cli = TxtMailEdit.Text
+        datos.contacto_cli = TxtContactoEdit.Text
+        datos.tel_cli = TxtTelEdit.Text
+        datos.dir_cli = TxtDirEdit.Text
+        datos.ciudad_cli = TxtCiudadEdit.Text
+        datos.edo_cli = TxtEdoEdit.Text
+
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -107,21 +154,71 @@ Public Class ScrConfigCliEdit
     End Sub
 
     ''' <summary>
-    ''' Realiza la consulta del rfc seleccionado en el cbo
-    ''' Captura el resultado en los textbox
+    ''' Llama al método para realizar la consulta del cliente
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub CboRfcEdit_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboRfcEdit.SelectedValueChanged
 
-        If CboRfcEdit.SelectedIndex > 0 Then
-            MsgBox("FIN")
-        End If
-
         'Consulta
-        datos.rfc_cli = CboRfcEdit.Text
+        GetCliente(CboRfcEdit.Text)
 
-        MsgBox(datos.rfc_cli)
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene el rfc de la fila / celda seleccionada
+    ''' Llama al método para realizar la consulta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvCliEdit_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvCliEdit.CellMouseClick
+
+        'Privadas
+        Dim fila As Integer = DgvCliEdit.Rows(e.RowIndex).Index
+
+        'Conuslta
+        GetCliente(DgvCliEdit.Item(8, fila).Value.ToString)
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los cuadros de texto y cbo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clean
+        TxtRfcEdit.Text = ""
+        TxtRazonEdit.Text = ""
+        TxtMailEdit.Text = ""
+        TxtContactoEdit.Text = ""
+        TxtTelEdit.Text = ""
+        TxtDirEdit.Text = ""
+        TxtCiudadEdit.Text = ""
+        TxtEdoEdit.Text = ""
+
+        'Control de errores
+        Try
+
+            'Posición del cbo
+            CboRfcEdit.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para editar al usuario seleccionado en la base de datos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Editar
+        EditCli()
 
     End Sub
 
