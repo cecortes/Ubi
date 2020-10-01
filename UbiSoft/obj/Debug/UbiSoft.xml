@@ -181,6 +181,38 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigCliDel.GetCliente(System.String)">
+ <summary>
+ Realiza la consulta del rfc seleccionado en el cbo
+ Captura el resultado en los textbox
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.FillDgvAllCli">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de clientes
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.FillCboRfc">
+ <summary>
+ Consulta clientes
+ Llena el cbo con los resultados
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.ScrConfigCliDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para extraer a los clientes
+ Llama al método para extraer a los rfc de los clientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigCliDel.CboRfcDel_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta del cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigCliEdit.GetCliente(System.String)">
  <summary>
  Realiza la consulta del rfc seleccionado en el cbo
