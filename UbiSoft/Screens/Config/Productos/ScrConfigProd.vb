@@ -51,20 +51,20 @@
 
         For Each formulario As Form In Application.OpenForms
 
-            If formulario.Name = "ScrConfigCliNew" Then
+            If formulario.Name = "ScrConfigProdNew" Then
 
                 'Close
-                ScrConfigCliNew.Close()
+                ScrConfigProdNew.Close()
 
-            ElseIf formulario.Name = "ScrConfigCliEdit" Then
-
-                'Close
-                ScrConfigCliEdit.Close()
-
-            ElseIf formulario.Name = "ScrConfigCliDel" Then
+            ElseIf formulario.Name = "ScrConfigProdEdit" Then
 
                 'Close
-                ScrConfigCliDel.Close()
+                'ScrConfigProdEdit.Close()
+
+            ElseIf formulario.Name = "ScrConfigProdDel" Then
+
+                'Close
+                'ScrConfigProdDel.Close()
 
             End If
 
@@ -77,29 +77,50 @@
 #Region "Eventos"
 
     ''' <summary>
-    ''' 
+    ''' Llama al método para cerrar los paneles
+    ''' Muestra el panel para agregar a los productos
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnNew_Click(sender As Object, e As EventArgs) Handles BtnNew.Click
 
+        'Close
+        CerrarFormPanel()
+
+        'Open
+        AbrirFormPanel(Of ScrConfigProdNew)()
+
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Llama al método para cerrar los paneles
+    ''' Muestra el panel para editar a los productos
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
 
+        'Close
+        CerrarFormPanel()
+
+        'Open
+        'AbrirFormPanel(Of ScrConfigProdEdit)()
+
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Llama al método para cerrar los paneles
+    ''' Muestra el panel para borrar a los productos
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnDel_Click(sender As Object, e As EventArgs) Handles BtnDel.Click
+
+        'Close
+        CerrarFormPanel()
+
+        'Open
+        'AbrirFormPanel(Of ScrConfigProdDel)()
 
     End Sub
 

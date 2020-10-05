@@ -293,6 +293,89 @@ Public Class Datos
 
 #End Region
 
+#Region "productos"
+
+#Region "DATAMEMBERS"
+
+    Private _nom_prod As String
+    Private _cat_prod As String
+    Private _pack_prod As String
+    Private _lp_1 As Double
+    Private _lp_2 As Double
+    Private _lp_3 As Double
+    Private _lp_4 As Double
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property nom_prod() As String
+        Get
+            Return _nom_prod
+        End Get
+        Set(ByVal value As String)
+            _nom_prod = value
+        End Set
+    End Property
+
+    Public Property cat_prod() As String
+        Get
+            Return _cat_prod
+        End Get
+        Set(ByVal value As String)
+            _cat_prod = value
+        End Set
+    End Property
+
+    Public Property pack_prod() As String
+        Get
+            Return _pack_prod
+        End Get
+        Set(ByVal value As String)
+            _pack_prod = value
+        End Set
+    End Property
+
+    Public Property lp_1() As Double
+        Get
+            Return _lp_1
+        End Get
+        Set(ByVal value As Double)
+            _lp_1 = value
+        End Set
+    End Property
+
+    Public Property lp_2() As Double
+        Get
+            Return _lp_2
+        End Get
+        Set(ByVal value As Double)
+            _lp_2 = value
+        End Set
+    End Property
+
+    Public Property lp_3() As Double
+        Get
+            Return _lp_3
+        End Get
+        Set(ByVal value As Double)
+            _lp_3 = value
+        End Set
+    End Property
+
+    Public Property lp_4() As Double
+        Get
+            Return _lp_4
+        End Get
+        Set(ByVal value As Double)
+            _lp_4 = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
@@ -671,6 +754,48 @@ Public Class Consulta
 
             'Cbo
             _adaptador.Fill(_dtsCbo, "uniProd")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+#End Region
+
+#Region "productos"
+
+    ''' <summary>
+    ''' Se encarga de consultar a productos y llenar al cbo correspondiente con el cat_prod
+    ''' </summary>
+    Public Sub GetCatProd()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM productos", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "catProd")
             _dtvCbo.Table = _dtsCbo.Tables(0)
 
             'Query
