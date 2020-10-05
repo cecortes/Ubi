@@ -940,6 +940,63 @@ Public Class Agregar
 
 #End Region
 
+#Region "PRODUCTOS"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla productos
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewProd(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO productos (nom_prod, cat_prod, pack_prod, lp_1, lp_2, lp_3, lp_4) VALUES (@nom_prod, @cat_prod, @pack_prod, @lp_1, @lp_2, @lp_3, @lp_4)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@nom_prod", MySqlDbType.String, 100).Value = datos.nom_prod
+            _adaptador.InsertCommand.Parameters.Add("@cat_prod", MySqlDbType.String, 45).Value = datos.cat_prod
+            _adaptador.InsertCommand.Parameters.Add("@pack_prod", MySqlDbType.String, 45).Value = datos.pack_prod
+            _adaptador.InsertCommand.Parameters.Add("@lp_1", MySqlDbType.Decimal, 10, 2).Value = datos.lp_1
+            _adaptador.InsertCommand.Parameters.Add("@lp_2", MySqlDbType.Decimal, 10, 2).Value = datos.lp_2
+            _adaptador.InsertCommand.Parameters.Add("@lp_3", MySqlDbType.Decimal, 10, 2).Value = datos.lp_3
+            _adaptador.InsertCommand.Parameters.Add("@lp_4", MySqlDbType.Decimal, 10, 2).Value = datos.lp_4
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar

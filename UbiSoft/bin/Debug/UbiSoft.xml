@@ -365,9 +365,15 @@ UbiSoft
  Carga al cbo la consulta de la tabla prod_uni
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigProdNew.FillCatego">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigProdNew.ScrConfigProdNew_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para cargar las unidades
+ Llama al método para cargar las categorías
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
