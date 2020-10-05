@@ -270,6 +270,29 @@ Public Class Datos
 
 #End Region
 
+#Region "prod_uni"
+
+#Region "DATAMEMBERS"
+
+    Private _tipo_uni As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property tipo_uni() As String
+        Get
+            Return _tipo_uni
+        End Get
+        Set(ByVal value As String)
+            _tipo_uni = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
@@ -623,6 +646,48 @@ Public Class Consulta
         Return resultado
 
     End Function
+
+#End Region
+
+#Region "prod_uni"
+
+    ''' <summary>
+    ''' Se encarga de consultar a prod_uni y llenar al cbo correspondiente con el tipo_uni
+    ''' </summary>
+    Public Sub GetUniProd()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM prod_uni", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "uniProd")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
 
 #End Region
 
