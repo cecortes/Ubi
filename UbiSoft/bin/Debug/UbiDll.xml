@@ -154,6 +154,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdProd(UbiDll.Datos)">
+ <summary>
+ Actualiza los datos de la tabla de productos por medio de la llave primaria nom_prod
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Eliminar.DelUsr(UbiDll.Datos)">
  <summary>
  Se encarga de eliminar al usuario por medio de la key recibida como parámetro

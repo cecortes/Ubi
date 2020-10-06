@@ -186,6 +186,122 @@ Public Class ScrConfigProdEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Re inicia los valores de los textbox
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Txt
+        TxtNom.Text = ""
+        TxtLp1.Text = ""
+        TxtLp2.Text = ""
+        TxtLp3.Text = ""
+        TxtLp4.Text = ""
+
+    End Sub
+
+    ''' <summary>
+    ''' Edita al producto por medio de los datos de los cuadros de texto
+    ''' </summary>
+    Private Sub UpdProdData()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+
+        'Valida
+        If String.IsNullOrEmpty(TxtNom.Text) Then
+            flgErr = True
+        ElseIf String.IsNullOrEmpty(TxtLp1.Text) Then
+            flgErr = True
+        ElseIf String.IsNullOrEmpty(TxtLp2.Text) Then
+            flgErr = True
+        ElseIf String.IsNullOrEmpty(TxtLp3.Text) Then
+            flgErr = True
+        ElseIf String.IsNullOrEmpty(TxtLp4.Text) Then
+            flgErr = True
+        End If
+
+        'Usr
+        If flgErr Then
+
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Captura
+        datos.nom_prod = TxtNom.Text
+        datos.cat_prod = CboCat.Text
+        datos.pack_prod = CboPack.Text
+        datos.lp_1 = TxtLp1.Text
+        datos.lp_2 = TxtLp2.Text
+        datos.lp_3 = TxtLp3.Text
+        datos.lp_4 = TxtLp4.Text
+
+        'Insert 
+        If (upd.UpdProd(datos)) Then
+
+            'Msg Usr
+            MsgBox("Producto editado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            FillCatego()
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura los valores del dgv en la clase datos
+    ''' Edita a los productos cargados por medio del archivo de excel al datagridview
+    ''' </summary>
+    Private Sub UpdProdDgv()
+
+        'Privadas
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvProd.Rows
+
+            'Captura
+            datos.nom_prod = filas.Cells(0).Value
+            datos.cat_prod = filas.Cells(1).Value
+            datos.pack_prod = filas.Cells(2).Value
+            datos.lp_1 = filas.Cells(3).Value
+            datos.lp_2 = filas.Cells(4).Value
+            datos.lp_3 = filas.Cells(5).Value
+            datos.lp_4 = filas.Cells(6).Value
+
+            'Insert & Update
+            If (upd.UpdProd(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Validación de todos las insert & update
+        If (DgvProd.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todos los productos fueron editados con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Uno o más productos no pudieron editarse en la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvProd.Rows.Clear()
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -237,6 +353,42 @@ Public Class ScrConfigProdEdit
 
         'Open Excel
         OpenExcel()
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida que el dgv no tenga datos, en caso de ser así llama al método para la inserción por lista
+    ''' En caso contrario realiza la inserción por medio de los cuadros de texto
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Validación
+        If (DgvProd.Rows.Count > 0) Then
+
+            'Método para update por medio de la tabla
+            UpdProdDgv()
+
+        Else
+
+            'Método para update de los campos de texto
+            UpdProdData()
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los valores de los textbox y del datagrid
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clear
+        ClearTxt()
+        DgvProd.Rows.Clear()
 
     End Sub
 
