@@ -14,6 +14,7 @@ D:\GITHUB\Ubi\UbiDll\bin\Debug\K4os.Hash.xxHash.dll
 D:\GITHUB\Ubi\UbiDll\bin\Debug\System.Memory.dll
 D:\GITHUB\Ubi\UbiDll\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\GITHUB\Ubi\UbiDll\bin\Debug\MySql.Data.xml
+D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbprojAssemblyReference.cache
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.Resources.resources
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbproj.GenerateResource.cache
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbproj.CoreCompileInputs.cache
@@ -21,4 +22,3 @@ D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbproj.CopyComplete
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.dll
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.xml
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.pdb
-D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbprojAssemblyReference.cache
