@@ -10,6 +10,7 @@ Public Class ScrConfigProdEdit
     Dim datos As New Datos
     Dim consulta As New Consulta
     Dim consulta2 As New Consulta
+    Dim consulta3 As New Consulta
     Dim add As New Agregar
     Dim upd As New Actualizar
     Dim errorMsg As New ErrorMsg
@@ -80,6 +81,35 @@ Public Class ScrConfigProdEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Carga al cbo la consulta de la tabla productos
+    ''' </summary>
+    Public Sub FillProd()
+
+        'Reset
+        consulta3._dtsCbo.Reset()
+
+        'Consulta
+        consulta3.GetNomProd()
+
+        'Dataset 
+        CboNom.DataSource = consulta3._dtsCbo.Tables("nomProd")
+
+        'Datos
+        CboNom.DisplayMember = "nom_prod"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboNom.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -92,8 +122,21 @@ Public Class ScrConfigProdEdit
     Private Sub ScrConfigProdEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'Cbo
+        FillProd()
         FillUnidades()
         FillCatego()
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos del producto mediante un método de consulta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboNom_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboNom.SelectedValueChanged
+
+        'Captura
+
 
     End Sub
 

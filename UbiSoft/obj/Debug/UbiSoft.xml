@@ -360,6 +360,28 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigProdEdit.FillUnidades">
+ <summary>
+ Carga al cbo la consulta de la tabla prod_uni
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdEdit.FillCatego">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdEdit.FillProd">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdEdit.ScrConfigProdEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los datos de los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigProdNew.FillUnidades">
  <summary>
  Carga al cbo la consulta de la tabla prod_uni

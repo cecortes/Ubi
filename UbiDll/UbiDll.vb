@@ -852,6 +852,69 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un producto en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetProd(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM productos WHERE nom_prod = @nom_prod", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@nom_prod", MySqlDbType.String, 100).Value = Datos.nom_prod
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.nom_prod = reader("nom_prod").ToString
+                resultado.cat_prod = reader("cat_prod").ToString
+                resultado.pack_prod = reader("pack_prod").ToString
+                resultado.lp_1 = reader("lp_1")
+                resultado.lp_2 = reader("lp_2")
+                resultado.lp_3 = reader("lp_3")
+                resultado.lp_4 = reader("lp_4")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class
