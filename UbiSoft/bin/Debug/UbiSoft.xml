@@ -360,6 +360,75 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigProdDel.FillUnidades">
+ <summary>
+ Carga al cbo la consulta de la tabla prod_uni
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.FillCatego">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.FillProd">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.OpenExcel">
+ <summary>
+ Abre el diálogo para capturar el path del excel
+ Lo pasa como parámetro al método para llenar el dgvProd
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.FillDgvProd(System.String@,System.Windows.Forms.DataGridView)">
+ <summary>
+ Recibe el path y el objeto datagrid como parámetros
+ Llena el dgv que recibe como parámetro con los datos del excel
+ </summary>
+ <param name="path"></param>
+ <param name="dgv"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.ClearTxt">
+ <summary>
+ Re inicia los valores de los textbox
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.ScrConfigProdDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los datos de los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.CboNom_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Obtiene los datos del producto mediante un método de consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.BtnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ LLama al método para abrir el excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los valores de los textbox y del datagrid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigProdEdit.FillUnidades">
  <summary>
  Carga al cbo la consulta de la tabla prod_uni
