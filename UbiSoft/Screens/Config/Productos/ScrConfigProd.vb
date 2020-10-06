@@ -59,12 +59,12 @@
             ElseIf formulario.Name = "ScrConfigProdEdit" Then
 
                 'Close
-                'ScrConfigProdEdit.Close()
+                ScrConfigProdEdit.Close()
 
             ElseIf formulario.Name = "ScrConfigProdDel" Then
 
                 'Close
-                'ScrConfigProdDel.Close()
+                ScrConfigProdDel.Close()
 
             End If
 
@@ -104,7 +104,7 @@
         CerrarFormPanel()
 
         'Open
-        'AbrirFormPanel(Of ScrConfigProdEdit)()
+        AbrirFormPanel(Of ScrConfigProdEdit)()
 
     End Sub
 
@@ -120,7 +120,7 @@
         CerrarFormPanel()
 
         'Open
-        'AbrirFormPanel(Of ScrConfigProdDel)()
+        AbrirFormPanel(Of ScrConfigProdDel)()
 
     End Sub
 

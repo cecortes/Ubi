@@ -57,3 +57,5 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigCliNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigCliDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigCliEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigProdNew.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigProdDel.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigProdEdit.resources

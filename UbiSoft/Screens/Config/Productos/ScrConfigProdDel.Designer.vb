@@ -211,6 +211,7 @@ Partial Class ScrConfigProdDel
         '
         'TxtLp2
         '
+        Me.TxtLp2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtLp2.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtLp2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtLp2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
@@ -225,6 +226,7 @@ Partial Class ScrConfigProdDel
         '
         'Label6
         '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
@@ -236,6 +238,7 @@ Partial Class ScrConfigProdDel
         '
         'TxtLp1
         '
+        Me.TxtLp1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtLp1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtLp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtLp1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
@@ -250,6 +253,7 @@ Partial Class ScrConfigProdDel
         '
         'Label5
         '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
@@ -261,22 +265,24 @@ Partial Class ScrConfigProdDel
         '
         'CboPack
         '
+        Me.CboPack.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CboPack.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.CboPack.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CboPack.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.CboPack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.CboPack.FormattingEnabled = True
-        Me.CboPack.Location = New System.Drawing.Point(664, 26)
+        Me.CboPack.Location = New System.Drawing.Point(674, 26)
         Me.CboPack.Name = "CboPack"
-        Me.CboPack.Size = New System.Drawing.Size(102, 31)
+        Me.CboPack.Size = New System.Drawing.Size(92, 31)
         Me.CboPack.TabIndex = 29
         '
         'Label4
         '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(569, 29)
+        Me.Label4.Location = New System.Drawing.Point(597, 29)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(98, 28)
         Me.Label4.TabIndex = 28
@@ -289,7 +295,7 @@ Partial Class ScrConfigProdDel
         Me.CboCat.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.CboCat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.CboCat.FormattingEnabled = True
-        Me.CboCat.Location = New System.Drawing.Point(237, 85)
+        Me.CboCat.Location = New System.Drawing.Point(188, 85)
         Me.CboCat.Name = "CboCat"
         Me.CboCat.Size = New System.Drawing.Size(300, 31)
         Me.CboCat.TabIndex = 27
@@ -311,7 +317,7 @@ Partial Class ScrConfigProdDel
         Me.TxtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtNom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtNom.Location = New System.Drawing.Point(237, 26)
+        Me.TxtNom.Location = New System.Drawing.Point(188, 26)
         Me.TxtNom.MaxLength = 100
         Me.TxtNom.Name = "TxtNom"
         Me.TxtNom.Size = New System.Drawing.Size(300, 31)
@@ -438,7 +444,7 @@ Partial Class ScrConfigProdDel
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 95
+        Me.Column4.Width = 71
         '
         'Column5
         '
@@ -449,7 +455,7 @@ Partial Class ScrConfigProdDel
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
-        Me.Column5.Width = 95
+        Me.Column5.Width = 71
         '
         'Column6
         '
@@ -460,7 +466,7 @@ Partial Class ScrConfigProdDel
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Width = 95
+        Me.Column6.Width = 71
         '
         'Column7
         '
@@ -469,7 +475,7 @@ Partial Class ScrConfigProdDel
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
-        Me.Column7.Width = 95
+        Me.Column7.Width = 71
         '
         'ScrConfigProdDel
         '
