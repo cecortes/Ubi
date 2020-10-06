@@ -394,6 +394,17 @@ UbiSoft
  Re inicia los valores de los textbox
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigProdDel.DelProdData">
+ <summary>
+ Borra al producto por medio de los datos de los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigProdDel.DelProdDgv">
+ <summary>
+ Captura los valores del dgv en la clase datos
+ Elimina a los productos cargados por medio del archivo de excel al datagridview
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigProdDel.ScrConfigProdDel_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los datos de los cbo
@@ -417,7 +428,8 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrConfigProdDel.BtnOk_Click(System.Object,System.EventArgs)">
  <summary>
- 
+ Valida que el dgv no tenga datos, en caso de ser así llama al método para borrar por lista
+ En caso contrario realiza la inserción por medio de los cuadros de texto
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

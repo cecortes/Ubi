@@ -11,8 +11,7 @@ Public Class ScrConfigProdDel
     Dim consulta As New Consulta
     Dim consulta2 As New Consulta
     Dim consulta3 As New Consulta
-    Dim add As New Agregar
-    Dim upd As New Actualizar
+    Dim del As New Eliminar
     Dim errorMsg As New ErrorMsg
 
 #End Region
@@ -232,7 +231,7 @@ Public Class ScrConfigProdDel
         datos.lp_4 = TxtLp4.Text
 
         'Insert 
-        If (upd.UpdProd(datos)) Then
+        If (del.DelProd(datos)) Then
 
             'Msg Usr
             MsgBox("Producto borrado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
@@ -242,6 +241,49 @@ Public Class ScrConfigProdDel
             FillCatego()
 
         End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura los valores del dgv en la clase datos
+    ''' Elimina a los productos cargados por medio del archivo de excel al datagridview
+    ''' </summary>
+    Private Sub DelProdDgv()
+
+        'Privadas
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvProd.Rows
+
+            'Captura
+            datos.nom_prod = filas.Cells(0).Value
+
+            'Insert & Update
+            If (del.DelProd(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Validación de todos las insert & update
+        If (DgvProd.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todos los productos fueron eliminados con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Uno o más productos no pudieron eliminarse en la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvProd.Rows.Clear()
 
     End Sub
 
