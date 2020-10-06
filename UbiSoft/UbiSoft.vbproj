@@ -122,6 +122,18 @@
     <Compile Include="Screens\Config\Clientes\ScrConfigCliNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\Productos\ScrConfigProdDel.Designer.vb">
+      <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Productos\ScrConfigProdDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Productos\ScrConfigProdEdit.Designer.vb">
+      <DependentUpon>ScrConfigProdEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Productos\ScrConfigProdEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Productos\ScrConfigProdNew.Designer.vb">
       <DependentUpon>ScrConfigProdNew.vb</DependentUpon>
     </Compile>
@@ -266,6 +278,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliNew.resx">
       <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdDel.resx">
+      <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdEdit.resx">
+      <DependentUpon>ScrConfigProdEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdNew.resx">
       <DependentUpon>ScrConfigProdNew.vb</DependentUpon>
