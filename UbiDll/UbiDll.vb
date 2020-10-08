@@ -376,6 +376,99 @@ Public Class Datos
 
 #End Region
 
+#Region "maquinaria"
+
+#Region "DATAMEMBERS"
+
+    Private _idmaq As Integer
+    Private _foto_maq As Byte()
+    Private _serie_maq As String
+    Private _modelo_maq As String
+    Private _marca_maq As String
+    Private _desc_maq As String
+    Private _area_maq As String
+    Private _yyadq_maq As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property idmaq() As Integer
+        Get
+            Return _idmaq
+        End Get
+        Set(ByVal value As Integer)
+            _idmaq = value
+        End Set
+    End Property
+
+    Public Property foto_maq() As Byte()
+        Get
+            Return _foto_maq
+        End Get
+        Set(ByVal value As Byte())
+            _foto_maq = value
+        End Set
+    End Property
+
+    Public Property serie_maq() As String
+        Get
+            Return _serie_maq
+        End Get
+        Set(ByVal value As String)
+            _serie_maq = value
+        End Set
+    End Property
+
+    Public Property modelo_maq() As String
+        Get
+            Return _modelo_maq
+        End Get
+        Set(ByVal value As String)
+            _modelo_maq = value
+        End Set
+    End Property
+
+    Public Property marca_maq() As String
+        Get
+            Return _marca_maq
+        End Get
+        Set(ByVal value As String)
+            _marca_maq = value
+        End Set
+    End Property
+
+    Public Property desc_maq() As String
+        Get
+            Return _desc_maq
+        End Get
+        Set(ByVal value As String)
+            _desc_maq = value
+        End Set
+    End Property
+
+    Public Property area_maq() As String
+        Get
+            Return _area_maq
+        End Get
+        Set(ByVal value As String)
+            _area_maq = value
+        End Set
+    End Property
+
+    Public Property yyadq_maq() As String
+        Get
+            Return _yyadq_maq
+        End Get
+        Set(ByVal value As String)
+            _yyadq_maq = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta

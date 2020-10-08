@@ -122,6 +122,24 @@
     <Compile Include="Screens\Config\Clientes\ScrConfigCliNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqDel.Designer.vb">
+      <DependentUpon>ScrConfigMaqDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqEdit.Designer.vb">
+      <DependentUpon>ScrConfigMaqEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqNew.Designer.vb">
+      <DependentUpon>ScrConfigMaqNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Productos\ScrConfigProdDel.Designer.vb">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
     </Compile>
@@ -176,10 +194,10 @@
     <Compile Include="Screens\Config\ScrConfigList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigMaq.Designer.vb">
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaq.Designer.vb">
       <DependentUpon>ScrConfigMaq.vb</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigMaq.vb">
+    <Compile Include="Screens\Config\Maquinaria\ScrConfigMaq.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Config\ScrConfigPack.Designer.vb">
@@ -279,6 +297,9 @@
     <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliNew.resx">
       <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqNew.resx">
+      <DependentUpon>ScrConfigMaqNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdDel.resx">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
     </EmbeddedResource>
@@ -306,7 +327,7 @@
     <EmbeddedResource Include="Screens\Config\ScrConfigList.resx">
       <DependentUpon>ScrConfigList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Config\ScrConfigMaq.resx">
+    <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaq.resx">
       <DependentUpon>ScrConfigMaq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\ScrConfigPack.resx">
@@ -434,6 +455,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camara %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
