@@ -1191,6 +1191,63 @@ Public Class Agregar
 
 #End Region
 
+#Region "MAQUINARIA"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla maquinaria
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewMaq(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO maquinaria (foto_maq, serie_maq, modelo_maq, marca_maq, desc_maq, area_maq, yyadq_maq) VALUES (@foto_maq, @serie_maq, @modelo_maq, @marca_maq, @desc_maq, @area_maq, @yyadq_maq)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.AddWithValue("@foto_maq", datos.foto_maq)
+            _adaptador.InsertCommand.Parameters.Add("@serie_maq", MySqlDbType.String, 45).Value = datos.serie_maq
+            _adaptador.InsertCommand.Parameters.Add("@modelo_maq", MySqlDbType.String, 45).Value = datos.modelo_maq
+            _adaptador.InsertCommand.Parameters.Add("@marca_maq", MySqlDbType.String, 45).Value = datos.marca_maq
+            _adaptador.InsertCommand.Parameters.Add("@desc_maq", MySqlDbType.String, 200).Value = datos.desc_maq
+            _adaptador.InsertCommand.Parameters.Add("@area_maq", MySqlDbType.String, 45).Value = datos.area_maq
+            _adaptador.InsertCommand.Parameters.Add("@yyadq_maq", MySqlDbType.Int32, 11).Value = datos.yyadq_maq
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar
