@@ -96,6 +96,13 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
+<member name="M:UbiDll.Consulta.GetLastId(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener el último id de la tabla y lo regresa como resultado
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

@@ -1010,6 +1010,63 @@ Public Class Consulta
 
 #End Region
 
+#Region "maquinaria"
+
+    ''' <summary>
+    ''' Se encarga de obtener el último id de la tabla y lo regresa como resultado
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Password as string</returns>
+    Public Function GetLastId(ByVal Datos As Datos) As String
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As Integer = 0
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT idmaq FROM maquinaria", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+                resultado = reader("idmaq")
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Agregar
