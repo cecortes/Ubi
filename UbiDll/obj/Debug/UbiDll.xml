@@ -96,7 +96,7 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
-<member name="M:UbiDll.Consulta.GetLastId(UbiDll.Datos)">
+<member name="M:UbiDll.Consulta.GetLastId">
  <summary>
  Se encarga de obtener el último id de la tabla y lo regresa como resultado
  </summary>

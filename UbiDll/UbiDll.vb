@@ -1017,7 +1017,7 @@ Public Class Consulta
     ''' </summary>
     ''' <param name="Datos"></param>
     ''' <returns>Password as string</returns>
-    Public Function GetLastId(ByVal Datos As Datos) As String
+    Public Function GetLastId() As Integer
         'Variables locales
         Dim con As New Conexion
         Dim reader As MySqlDataReader

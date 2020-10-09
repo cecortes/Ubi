@@ -326,14 +326,17 @@ Public Class ScrConfigMaqNew
     End Sub
 
     ''' <summary>
-    ''' Llama al método para cargar el número consecutivo de la base de datos
+    ''' Llama al método para cargar el número consecutivo de la tabla maquinaria
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub ScrConfigMaqNew_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        'Serial Bd
+        'Serial Bd + 1
+        Dim id As Integer = consulta.GetLastId + 1
 
+        'Text
+        TxtId.Text = id.ToString
 
     End Sub
 
