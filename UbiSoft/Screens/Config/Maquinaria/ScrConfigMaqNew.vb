@@ -340,6 +340,18 @@ Public Class ScrConfigMaqNew
 
     End Sub
 
+    ''' <summary>
+    ''' Muestra la pantalla para captura de datos desde el dispositivo lector RFID
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnDevice_Click(sender As Object, e As EventArgs) Handles BtnDevice.Click
+
+        'Show new screen
+        ScrMaqNewFromDevice.Show()
+
+    End Sub
+
 #End Region
 
 End Class

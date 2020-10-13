@@ -140,6 +140,12 @@
     <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.Designer.vb">
+      <DependentUpon>ScrMaqNewFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Productos\ScrConfigProdDel.Designer.vb">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqNew.resx">
       <DependentUpon>ScrConfigMaqNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.resx">
+      <DependentUpon>ScrMaqNewFromDevice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdDel.resx">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
