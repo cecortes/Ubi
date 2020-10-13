@@ -247,7 +247,84 @@ Public Class ScrMaqNewFromDevice
             'Re inicia los valores
             ClearTxt()
 
+            'Carga el Dgv
+            GetAllMaq()
+
         End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+    ''' </summary>
+    Private Sub GetAllMaq()
+
+        'Reset
+        consulta._dtsDgv.Reset()
+
+        'Consulta
+        consulta.GetAllMaq()
+
+        'Datagrid
+        DgvMaq.DataSource = consulta._dtvDgv
+
+        'Formato Dgv , Size mode para las columnas
+        DgvMaq.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(0).SortMode = DataGridViewColumnSortMode.Programmatic
+        'DgvMaq.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(1).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(1).HeaderText = "FOTO"
+        DgvMaq.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(2).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(3).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(4).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvMaq.Columns(5).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(6).SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns(7).SortMode = DataGridViewColumnSortMode.Programmatic
+
+        'DgvMaq.Columns(7).HeaderText = "FOTO"
+        'DgvMaq.Columns(7).Width = 300
+        'DgvMaq.Columns(8).HeaderText = "Serie"
+        'DgvMaq.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        'DgvMaq.Columns(9).HeaderText = "Modelo"
+        'DgvMaq.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        'DgvMaq.Columns(10).HeaderText = "Marca"
+        'DgvMaq.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        'DgvMaq.Columns(11).HeaderText = "Descripción"
+        'DgvMaq.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        'DgvMaq.Columns(12).HeaderText = "Area"
+        'DgvMaq.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        'DgvMaq.Columns(13).HeaderText = "Año de adq."
+        'DgvMaq.Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+
+        'Rutina para altura de las filas
+        For Each filas As DataGridViewRow In DgvMaq.Rows
+
+            'Altura
+            filas.Height = 150
+
+        Next
+
+        'Cambio de tipo para la columna que almacena la fotografía
+        DgvMaq.Columns(1).ValueType = GetType(DataGridViewImageColumn)
+        DgvMaq.Columns(1).Width = 180
+
+        'Rutina para configurar el tamaño de la foto
+        For Each col As DataGridViewImageColumn In DgvMaq.Columns
+
+            'Configuración para las columnas del tipo Image
+            col.ImageLayout = DataGridViewImageCellLayout.Stretch
+
+            Exit For
+
+        Next
+
+        DgvMaq.Refresh()
 
     End Sub
 
@@ -258,6 +335,7 @@ Public Class ScrMaqNewFromDevice
     ''' <summary>
     ''' Carga los puertos seriales
     ''' Llama al método para cargar el número consecutivo de la tabla maquinaria
+    ''' Llama al método para cargar la maquinaria en el Dgv
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -271,6 +349,9 @@ Public Class ScrMaqNewFromDevice
 
         'Text
         TxtId.Text = id.ToString
+
+        'Dgv
+        GetAllMaq()
 
     End Sub
 

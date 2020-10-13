@@ -481,6 +481,7 @@ Public Class Consulta
     Public _dtvCbo As New DataView      'ComboBox
     Public _dtsDgv As New DataSet       'Datagridview
     Public _dtvDgv As New DataView      'Datagridview
+    Public _dgvCode As New DataSet      'Datagrid Only HardCode
 
 #End Region
 
@@ -1103,6 +1104,82 @@ Public Class Consulta
         Finally
 
             'Close conection
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    Public Sub DgvAllMaq()
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode MAQREP
+        _dgvCode.Tables.Add("MAQ")
+        _dgvCode.Tables("MAQ").Columns.Add("Id", GetType(Integer()))
+        _dgvCode.Tables("MAQ").Columns.Add("FOTO", GetType(Byte()))
+        _dgvCode.Tables("MAQ").Columns.Add("SERIE", GetType(String))
+        _dgvCode.Tables("MAQ").Columns.Add("MODELO", GetType(String))
+        _dgvCode.Tables("MAQ").Columns.Add("MARCA", GetType(String))
+        _dgvCode.Tables("MAQ").Columns.Add("DESCRIPCION", GetType(String))
+        _dgvCode.Tables("MAQ").Columns.Add("AREA", GetType(String))
+        _dgvCode.Tables("MAQ").Columns.Add("YEAR", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM maquinaria", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.idmaq = reader("idmaq")
+                resultado.foto_maq = reader("foto_maq")
+                resultado.serie_maq = reader("serie_maq")
+                resultado.modelo_maq = reader("modelo_maq")
+                resultado.marca_maq = reader("marca_maq")
+                resultado.desc_maq = reader("desc_maq")
+                resultado.area_maq = reader("area_maq")
+                resultado.yyadq_maq = reader("yyadq_maq")
+
+                'Pasamos el dato a una variable local
+                'Dim p As String = resultado.foto_maq
+
+                ' Convert Base64 String to byte[]
+                'Dim imageBytes As Byte() = Convert.FromBase64String(p)
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                _dgvCode.Tables("MAQREP").Rows.Add(resultado.idmaq, resultado.foto_maq, resultado.serie_maq, resultado.modelo_maq, resultado.marca_maq, resultado.desc_maq, resultado.area_maq, resultado.yyadq_maq)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
             con._conexion.Close()
 
         End Try

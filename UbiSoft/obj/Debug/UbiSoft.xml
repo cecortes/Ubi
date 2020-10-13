@@ -495,10 +495,23 @@ UbiSoft
  <param name="pic">Objeto Imágen</param>
  <returns>Bin as Memory Stream</returns>
 </member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.AddMaqData">
+ <summary>
+ Captura los valores de los textbox
+ Llama al método para convertir la imágen a binario
+ Realiza la inserción en la tabla de maquinaria
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.GetAllMaq">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrMaqNewFromDevice.ScrMaqNewFromDevice_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los puertos seriales
  Llama al método para cargar el número consecutivo de la tabla maquinaria
+ Llama al método para cargar la maquinaria en el Dgv
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
