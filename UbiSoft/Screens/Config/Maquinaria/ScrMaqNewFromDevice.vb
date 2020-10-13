@@ -184,6 +184,43 @@ Public Class ScrMaqNewFromDevice
     End Function
 
     ''' <summary>
+    ''' Convierte el arreglo Byte() recibido a Imágen
+    ''' Regresa una imágen
+    ''' </summary>
+    ''' <param name="Imagen">Image filetype</param>
+    ''' <returns></returns>
+    Private Function BinToImg(ByVal Imagen As Byte()) As Image
+
+        'Control de errores
+        Try
+
+            'Validamos si hay imagen
+            If Not Imagen Is Nothing Then
+
+                'Capturar array con memorystream hacia Bin
+                Dim Bin As New MemoryStream(Imagen)
+
+                'Con el método FromStream de Image obtenemos imagen
+                Dim Resultado As Image = Image.FromStream(Bin)
+
+                'Regresamos la imágen
+                Return Resultado
+
+            Else
+
+                Return Nothing
+
+            End If
+
+        Catch ex As Exception
+
+            Return Nothing
+
+        End Try
+
+    End Function
+
+    ''' <summary>
     ''' Captura los valores de los textbox
     ''' Llama al método para convertir la imágen a binario
     ''' Realiza la inserción en la tabla de maquinaria
@@ -260,71 +297,59 @@ Public Class ScrMaqNewFromDevice
     Private Sub GetAllMaq()
 
         'Reset
-        consulta._dtsDgv.Reset()
+        consulta.dgvCode.Reset()
 
         'Consulta
-        consulta.GetAllMaq()
+        consulta.DgvAllMaq()
 
         'Datagrid
-        DgvMaq.DataSource = consulta._dtvDgv
+        DgvMaq.DataSource = consulta.dgvCode.Tables("MAQ")
 
-        'Formato Dgv , Size mode para las columnas
-        DgvMaq.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(0).SortMode = DataGridViewColumnSortMode.Programmatic
-        'DgvMaq.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(1).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(1).HeaderText = "FOTO"
-        DgvMaq.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(2).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(3).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(4).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DgvMaq.Columns(5).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(6).SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvMaq.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvMaq.Columns(7).SortMode = DataGridViewColumnSortMode.Programmatic
+        'Formato al Dgv
+        FormatDgv()
 
-        'DgvMaq.Columns(7).HeaderText = "FOTO"
-        'DgvMaq.Columns(7).Width = 300
-        'DgvMaq.Columns(8).HeaderText = "Serie"
-        'DgvMaq.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        'DgvMaq.Columns(9).HeaderText = "Modelo"
-        'DgvMaq.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        'DgvMaq.Columns(10).HeaderText = "Marca"
-        'DgvMaq.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        'DgvMaq.Columns(11).HeaderText = "Descripción"
-        'DgvMaq.Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'DgvMaq.Columns(12).HeaderText = "Area"
-        'DgvMaq.Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        'DgvMaq.Columns(13).HeaderText = "Año de adq."
-        'DgvMaq.Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+    End Sub
 
-        'Rutina para altura de las filas
+    ''' <summary>
+    ''' Formato para el datagridview
+    ''' </summary>
+    Private Sub FormatDgv()
+
+        'Sort Descending
+        DgvMaq.Sort(DgvMaq.Columns("Id"), System.ComponentModel.ListSortDirection.Ascending)
+
+        'Size mode para las columnas
+        'DgvMaq.Columns("Foto").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        'DgvMaq.Columns("Foto").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Id").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Id").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Serie").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Serie").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Modelo").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Modelo").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Marca").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Marca").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Descripción").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvMaq.Columns("Descripción").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Area").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Area").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvMaq.Columns("Año de adq.").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvMaq.Columns("Año de adq.").SortMode = DataGridViewColumnSortMode.Programmatic
+
+        'Rutina para configurar la altura de las filas
         For Each filas As DataGridViewRow In DgvMaq.Rows
-
-            'Altura
-            filas.Height = 150
-
+            filas.Height = 240
         Next
 
         'Cambio de tipo para la columna que almacena la fotografía
-        DgvMaq.Columns(1).ValueType = GetType(DataGridViewImageColumn)
-        DgvMaq.Columns(1).Width = 180
+        DgvMaq.Columns("Foto").ValueType = GetType(DataGridViewImageColumn)
+        DgvMaq.Columns("Foto").Width = 200
 
         'Rutina para configurar el tamaño de la foto
         For Each col As DataGridViewImageColumn In DgvMaq.Columns
-
-            'Configuración para las columnas del tipo Image
             col.ImageLayout = DataGridViewImageCellLayout.Stretch
-
             Exit For
-
         Next
-
-        DgvMaq.Refresh()
 
     End Sub
 

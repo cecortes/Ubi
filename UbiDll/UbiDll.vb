@@ -481,7 +481,7 @@ Public Class Consulta
     Public _dtvCbo As New DataView      'ComboBox
     Public _dtsDgv As New DataSet       'Datagridview
     Public _dtvDgv As New DataView      'Datagridview
-    Public _dgvCode As New DataSet      'Datagrid Only HardCode
+    Public dgvCode As New DataSet      'Datagrid Only HardCode
 
 #End Region
 
@@ -1111,7 +1111,11 @@ Public Class Consulta
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo ncesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla maquinaria
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
     ''' </summary>
     Public Sub DgvAllMaq()
 
@@ -1121,15 +1125,15 @@ Public Class Consulta
         Dim resultado As New Datos
 
         'Init Tabla, hardcode MAQREP
-        _dgvCode.Tables.Add("MAQ")
-        _dgvCode.Tables("MAQ").Columns.Add("Id", GetType(Integer()))
-        _dgvCode.Tables("MAQ").Columns.Add("FOTO", GetType(Byte()))
-        _dgvCode.Tables("MAQ").Columns.Add("SERIE", GetType(String))
-        _dgvCode.Tables("MAQ").Columns.Add("MODELO", GetType(String))
-        _dgvCode.Tables("MAQ").Columns.Add("MARCA", GetType(String))
-        _dgvCode.Tables("MAQ").Columns.Add("DESCRIPCION", GetType(String))
-        _dgvCode.Tables("MAQ").Columns.Add("AREA", GetType(String))
-        _dgvCode.Tables("MAQ").Columns.Add("YEAR", GetType(String))
+        dgvCode.Tables.Add("MAQ")
+        dgvCode.Tables("MAQ").Columns.Add("Foto", GetType(Byte()))
+        dgvCode.Tables("MAQ").Columns.Add("Id", GetType(Integer))
+        dgvCode.Tables("MAQ").Columns.Add("Serie", GetType(String))
+        dgvCode.Tables("MAQ").Columns.Add("Modelo", GetType(String))
+        dgvCode.Tables("MAQ").Columns.Add("Marca", GetType(String))
+        dgvCode.Tables("MAQ").Columns.Add("Descripción", GetType(String))
+        dgvCode.Tables("MAQ").Columns.Add("Area", GetType(String))
+        dgvCode.Tables("MAQ").Columns.Add("Año de adq.", GetType(String))
 
         'Control de excepción
         Try
@@ -1151,8 +1155,8 @@ Public Class Consulta
             While reader.Read()
 
                 'Captura de datos en el objeto
-                resultado.idmaq = reader("idmaq")
                 resultado.foto_maq = reader("foto_maq")
+                resultado.idmaq = reader("idmaq")
                 resultado.serie_maq = reader("serie_maq")
                 resultado.modelo_maq = reader("modelo_maq")
                 resultado.marca_maq = reader("marca_maq")
@@ -1160,14 +1164,8 @@ Public Class Consulta
                 resultado.area_maq = reader("area_maq")
                 resultado.yyadq_maq = reader("yyadq_maq")
 
-                'Pasamos el dato a una variable local
-                'Dim p As String = resultado.foto_maq
-
-                ' Convert Base64 String to byte[]
-                'Dim imageBytes As Byte() = Convert.FromBase64String(p)
-
                 'Agregamos el arreglo byte para la foto y los demás datos
-                _dgvCode.Tables("MAQREP").Rows.Add(resultado.idmaq, resultado.foto_maq, resultado.serie_maq, resultado.modelo_maq, resultado.marca_maq, resultado.desc_maq, resultado.area_maq, resultado.yyadq_maq)
+                dgvCode.Tables("MAQ").Rows.Add(resultado.foto_maq, resultado.idmaq, resultado.serie_maq, resultado.modelo_maq, resultado.marca_maq, resultado.desc_maq, resultado.area_maq, resultado.yyadq_maq)
 
             End While
 

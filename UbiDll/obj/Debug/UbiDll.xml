@@ -110,7 +110,11 @@ UbiDll
 </member>
 <member name="M:UbiDll.Consulta.DgvAllMaq">
  <summary>
- 
+ Crea una tabla harcode en el dataset
+ Crea las columnas del tipo ncesario para los datos
+ Realiza una consulta para obtener los datos de la tabla maquinaria
+ Mediante un reader almacena los datos
+ Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">

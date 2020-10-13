@@ -495,6 +495,14 @@ UbiSoft
  <param name="pic">Objeto Imágen</param>
  <returns>Bin as Memory Stream</returns>
 </member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
 <member name="M:UbiSoft.ScrMaqNewFromDevice.AddMaqData">
  <summary>
  Captura los valores de los textbox
@@ -505,6 +513,11 @@ UbiSoft
 <member name="M:UbiSoft.ScrMaqNewFromDevice.GetAllMaq">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.FormatDgv">
+ <summary>
+ Formato para el datagridview
  </summary>
 </member>
 <member name="M:UbiSoft.ScrMaqNewFromDevice.ScrMaqNewFromDevice_Load(System.Object,System.EventArgs)">

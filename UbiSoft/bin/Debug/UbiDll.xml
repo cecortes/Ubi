@@ -108,6 +108,11 @@ UbiDll
  Se encarga de consultar la tabla de maquinaria y llenar el DGV con el resultado
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.DgvAllMaq">
+ <summary>
+ 
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

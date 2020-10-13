@@ -1,4 +1,3 @@
-D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.Splash.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.Resources.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbproj.GenerateResource.cache
@@ -61,3 +60,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigProdDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigProdEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigMaqNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrMaqNewFromDevice.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
