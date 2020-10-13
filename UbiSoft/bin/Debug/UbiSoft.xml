@@ -559,6 +559,27 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqNewFromDevice.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar el insert
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigProdDel.FillUnidades">
  <summary>
  Carga al cbo la consulta de la tabla prod_uni

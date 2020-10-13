@@ -441,6 +441,42 @@ Public Class ScrMaqNewFromDevice
 
     End Sub
 
+    ''' <summary>
+    ''' Cierra el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbClose_Click(sender As Object, e As EventArgs) Handles PbClose.Click
+
+        'Close
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para limpiar los campos de texto
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clear
+        ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar el insert
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Insert
+        AddMaqData()
+
+    End Sub
+
 #End Region
 
 End Class
