@@ -230,7 +230,7 @@ Public Class ScrConfigProdDel
         datos.lp_3 = TxtLp3.Text
         datos.lp_4 = TxtLp4.Text
 
-        'Insert 
+        'Delete 
         If (del.DelProd(datos)) Then
 
             'Msg Usr

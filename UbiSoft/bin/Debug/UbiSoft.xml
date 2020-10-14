@@ -365,6 +365,66 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigMaqDel.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.GetAllMaq">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de maquinaria
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.ScrConfigMaqDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la tabla maquinaria en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.DgvMaqui_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.BtnDevice_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para borrar desde dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigMaqEdit.ImgToBin(System.Drawing.Image)">
  <summary>
  Convierte la imágen recibida a formato RAW Binario
