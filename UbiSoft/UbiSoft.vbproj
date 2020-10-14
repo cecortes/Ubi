@@ -98,6 +98,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoDel.Designer.vb">
+      <DependentUpon>ScrConfigAutoDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoEdit.Designer.vb">
+      <DependentUpon>ScrConfigAutoEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoNew.Designer.vb">
+      <DependentUpon>ScrConfigAutoNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrConfigAutoNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Clientes\ScrCfgCli.Designer.vb">
       <DependentUpon>ScrCfgCli.vb</DependentUpon>
     </Compile>
@@ -188,10 +206,10 @@
     <Compile Include="Screens\Config\ScrConfigAdv.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigAutos.Designer.vb">
+    <Compile Include="Screens\Config\Autos\ScrConfigAutos.Designer.vb">
       <DependentUpon>ScrConfigAutos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigAutos.vb">
+    <Compile Include="Screens\Config\Autos\ScrConfigAutos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Config\ScrConfigCli.Designer.vb">
@@ -348,7 +366,7 @@
     <EmbeddedResource Include="Screens\Config\ScrConfigAdv.resx">
       <DependentUpon>ScrConfigAdv.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Config\ScrConfigAutos.resx">
+    <EmbeddedResource Include="Screens\Config\Autos\ScrConfigAutos.resx">
       <DependentUpon>ScrConfigAutos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\ScrConfigCli.resx">
