@@ -189,6 +189,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdMaq(UbiDll.Datos)">
+ <summary>
+ Realiza la actualización de datos en la tabla maquinaria
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Eliminar.DelUsr(UbiDll.Datos)">
  <summary>
  Se encarga de eliminar al usuario por medio de la key recibida como parámetro

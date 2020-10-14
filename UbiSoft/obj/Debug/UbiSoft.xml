@@ -365,6 +365,74 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.GetAllMaq">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.ScrConfigMaqEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la tabla maquinaria en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.DgvMaqui_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigMaqNew.AbrirImagen">
  <summary>
  Muestra el cuadro para abrir archivo

@@ -1822,6 +1822,64 @@ Public Class Actualizar
 
 #End Region
 
+#Region "MAQUINARIA"
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla maquinaria
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdMaq(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE maquinaria SET foto_maq=@foto_maq, serie_maq=@serie_maq, modelo_maq=@modelo_maq, marca_maq=@marca_maq, desc_maq=@desc_maq, area_maq=@area_maq, yyadq_maq=@yyadq_maq WHERE idmaq=@idmaq", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.AddWithValue("@foto_maq", datos.foto_maq)
+            _adaptador.UpdateCommand.Parameters.Add("@idmaq", MySqlDbType.Int32, 11).Value = datos.idmaq
+            _adaptador.UpdateCommand.Parameters.Add("@serie_maq", MySqlDbType.String, 45).Value = datos.serie_maq
+            _adaptador.UpdateCommand.Parameters.Add("@modelo_maq", MySqlDbType.String, 45).Value = datos.modelo_maq
+            _adaptador.UpdateCommand.Parameters.Add("@marca_maq", MySqlDbType.String, 45).Value = datos.marca_maq
+            _adaptador.UpdateCommand.Parameters.Add("@desc_maq", MySqlDbType.String, 200).Value = datos.desc_maq
+            _adaptador.UpdateCommand.Parameters.Add("@area_maq", MySqlDbType.String, 45).Value = datos.area_maq
+            _adaptador.UpdateCommand.Parameters.Add("@yyadq_maq", MySqlDbType.Int32, 11).Value = datos.yyadq_maq
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Eliminar
