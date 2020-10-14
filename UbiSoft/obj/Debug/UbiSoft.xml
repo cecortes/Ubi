@@ -676,6 +676,20 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.GetMaqSerie">
+ <summary>
+ Captura el serial del textbox
+ Lo pasa a datos
+ Realiza una consulta en la tabla maquinaria para obtener los datos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.DelMaqData">
+ <summary>
+ Captura el id de la maquinaria del cuadro de texto
+ Pasa el id a datos
+ Realiza el delete de la tabla maquinaria
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrMaqDelFromDevice.ScrMaqDelFromDevice_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los puertos seriales
@@ -715,7 +729,22 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrMaqDelFromDevice.TxtSerie_TextChanged(System.Object,System.EventArgs)">
  <summary>
- 
+ Llama al método para realizar la consulta por medio del serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.DgvMaqui_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar el delete
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

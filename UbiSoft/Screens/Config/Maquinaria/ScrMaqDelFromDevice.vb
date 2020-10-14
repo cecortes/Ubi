@@ -283,6 +283,58 @@ Public Class ScrMaqDelFromDevice
 
     End Sub
 
+    ''' <summary>
+    ''' Captura el serial del textbox
+    ''' Lo pasa a datos
+    ''' Realiza una consulta en la tabla maquinaria para obtener los datos
+    ''' </summary>
+    Private Sub GetMaqSerie()
+
+        'Privadas
+        Dim maq As New Datos
+
+        'Consulta para datos del cliente
+        datos.serie_maq = TxtSerie.Text
+        maq = consulta.GetMaqRfid(datos)
+
+        'Textbox
+        TxtId.Text = maq.idmaq
+        TxtSerie.Text = maq.serie_maq
+        TxtAdq.Text = maq.yyadq_maq
+        TxtModelo.Text = maq.modelo_maq
+        TxtMarca.Text = maq.marca_maq
+        TxtDesc.Text = maq.desc_maq
+        TxtArea.Text = maq.area_maq
+
+        'Img
+        PbFoto.Image = BinToImg(maq.foto_maq)
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el id de la maquinaria del cuadro de texto
+    ''' Pasa el id a datos
+    ''' Realiza el delete de la tabla maquinaria
+    ''' </summary>
+    Private Sub DelMaqData()
+
+        'Captura
+        datos.idmaq = TxtId.Text
+
+        'Delete 
+        If (del.DelMaq(datos)) Then
+
+            'Msg Usr
+            MsgBox("Maquinaria eliminada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            GetAllMaq()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -364,15 +416,53 @@ Public Class ScrMaqDelFromDevice
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Llama al método para realizar la consulta por medio del serial
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub TxtSerie_TextChanged(sender As Object, e As EventArgs) Handles TxtSerie.TextChanged
-        MsgBox("k")
+
+        'Consulta
+        GetMaqSerie()
+
     End Sub
 
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvMaqui_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvMaqui.CellMouseClick
 
+        'Privadas
+        Dim fila As Integer = DgvMaqui.Rows(e.RowIndex).Index
+
+        'Datos
+        TxtId.Text = DgvMaqui.Item(1, fila).Value
+        TxtSerie.Text = DgvMaqui.Item(2, fila).Value
+        TxtModelo.Text = DgvMaqui.Item(3, fila).Value
+        TxtMarca.Text = DgvMaqui.Item(4, fila).Value
+        TxtDesc.Text = DgvMaqui.Item(5, fila).Value
+        TxtArea.Text = DgvMaqui.Item(6, fila).Value
+        TxtAdq.Text = DgvMaqui.Item(7, fila).Value
+
+        'Conversión BinToImg
+        PbFoto.Image = BinToImg(DgvMaqui.Item(0, fila).Value)
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar el delete
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Delete
+        DelMaqData()
+
+    End Sub
 
 #End Region
 
