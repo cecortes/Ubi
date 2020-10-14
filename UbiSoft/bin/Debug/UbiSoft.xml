@@ -396,6 +396,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigMaqDel.DelMaqData">
+ <summary>
+ Captura el id de la maquinaria del cuadro de texto
+ Pasa el id a datos
+ Realiza el delete de la tabla maquinaria
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigMaqDel.ScrConfigMaqDel_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la tabla maquinaria en el Dgv
@@ -421,6 +428,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigMaqDel.BtnDevice_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra la pantalla para borrar desde dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar el delete
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
@@ -601,6 +615,107 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigMaqNew.BtnDevice_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra la pantalla para captura de datos desde el dispositivo lector RFID
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.GetRfid(System.String)">
+ <summary>
+ El método delegado como tal, tiene como nombre el mismo que usa Invoke
+ Obtiene el RFID recibido por el lector en la consola
+ Pasa el RFID al cuadro de texto reservado para tal
+ </summary>
+ <param name="dato">Cadena de texto</param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.FillSerial">
+ <summary>
+ Se encarga de listar todos los puertos seriales
+ Los carga en el combo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.ConectSerial">
+ <summary>
+ Se encarga de configurar el Serial y abrir el puerto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.GetAllMaq">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de usuarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.ScrMaqDelFromDevice_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los puertos seriales
+ Llama al método para cargar la maquinaria en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.CboPto_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de capturar el nombre del puerto en la variable que le corresponde
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.BtnSerial_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para la conexión serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Recibe los datos seriales hasta recibir una nueva línea LN.
+ Invoca al método delegado para pasar el RFID al textbox.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrMaqDelFromDevice.TxtSerie_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ 
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

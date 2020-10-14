@@ -169,6 +169,7 @@ Public Class ScrConfigMaqEdit
     Private Sub ClearTxt()
 
         'Text
+        TxtId.Text = ""
         TxtSerie.Text = ""
         TxtAdq.Text = ""
         TxtModelo.Text = ""

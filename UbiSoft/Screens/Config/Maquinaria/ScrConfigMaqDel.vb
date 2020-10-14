@@ -148,6 +148,7 @@ Public Class ScrConfigMaqDel
     Private Sub ClearTxt()
 
         'Text
+        TxtId.Text = ""
         TxtSerie.Text = ""
         TxtAdq.Text = ""
         TxtModelo.Text = ""
@@ -171,14 +172,14 @@ Public Class ScrConfigMaqDel
         datos.idmaq = TxtId.Text
 
         'Delete 
-        If (del.DelProd(datos)) Then
+        If (del.DelMaq(datos)) Then
 
             'Msg Usr
-            MsgBox("Producto borrado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("Maquinaria eliminada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             'Re inicia los valores
             ClearTxt()
-            FillCatego()
+            GetAllMaq()
 
         End If
 

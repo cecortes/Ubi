@@ -244,6 +244,7 @@ Public Class ScrMaqEditFromDevice
     Private Sub ClearTxt()
 
         'Text
+        TxtId.Text = ""
         TxtSerie.Text = ""
         TxtAdq.Text = ""
         TxtModelo.Text = ""

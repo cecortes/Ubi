@@ -1184,6 +1184,67 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de una maquinaria en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetMaqRfid(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM maquinaria WHERE serie_maq = @serie_maq", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@serie_maq", MySqlDbType.String, 45).Value = Datos.serie_maq
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.foto_maq = reader("foto_maq")
+                resultado.idmaq = reader("idmaq")
+                resultado.serie_maq = reader("serie_maq")
+                resultado.modelo_maq = reader("modelo_maq")
+                resultado.marca_maq = reader("marca_maq")
+                resultado.desc_maq = reader("desc_maq")
+                resultado.area_maq = reader("area_maq")
+                resultado.yyadq_maq = reader("yyadq_maq")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class
