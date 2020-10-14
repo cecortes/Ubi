@@ -9,7 +9,7 @@ Public Class ScrConfigMaqEdit
     'UbiDll
     Dim datos As New Datos
     Dim consulta As New Consulta
-    'Dim add As New Agregar
+    Dim upd As New Actualizar
     Dim errorMsg As New ErrorMsg
 
 #End Region
@@ -181,6 +181,78 @@ Public Class ScrConfigMaqEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores de los textbox
+    ''' Llama al método para convertir la imágen a binario
+    ''' Realiza el update en la tabla de maquinaria
+    ''' </summary>
+    Private Sub UpdMaqData()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+        Dim arrayBin As Byte()
+
+        'Validación textos
+        If String.IsNullOrEmpty(TxtSerie.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtMarca.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtDesc.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtArea.Text) Then
+
+            'Flag
+            flgErr = True
+
+        End If
+
+        If flgErr Then
+
+            'Usuario
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
+
+        'Captura 
+        datos.serie_maq = TxtSerie.Text
+        datos.idmaq = TxtId.Text
+        datos.modelo_maq = TxtModelo.Text
+        datos.marca_maq = TxtMarca.Text
+        datos.desc_maq = TxtDesc.Text
+        datos.area_maq = TxtArea.Text
+        datos.yyadq_maq = TxtAdq.Text
+        datos.foto_maq = arrayBin
+
+        'Insert
+        If upd.UpdMaq(datos) Then
+
+            'Msg Usr
+            MsgBox("Nueva maquinaria agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+
+            'Carga el Dgv
+            GetAllMaq()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -244,6 +316,30 @@ Public Class ScrConfigMaqEdit
 
         'Clear
         ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar el update
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Update
+        UpdMaqData()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para edición desde dispositivo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnDevice_Click(sender As Object, e As EventArgs) Handles BtnDevice.Click
+
+        'Scr
+        ScrMaqEditFromDevice.Show()
 
     End Sub
 

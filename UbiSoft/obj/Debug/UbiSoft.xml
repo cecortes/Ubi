@@ -403,6 +403,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.UpdMaqData">
+ <summary>
+ Captura los valores de los textbox
+ Llama al método para convertir la imágen a binario
+ Realiza el update en la tabla de maquinaria
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigMaqEdit.ScrConfigMaqEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la tabla maquinaria en el Dgv
@@ -429,6 +436,20 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigMaqEdit.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar el update
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigMaqEdit.BtnDevice_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para edición desde dispositivo
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
