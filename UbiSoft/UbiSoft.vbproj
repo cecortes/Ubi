@@ -140,6 +140,12 @@
     <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrMaqEditFromDevice.Designer.vb">
+      <DependentUpon>ScrMaqEditFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Maquinaria\ScrMaqEditFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.Designer.vb">
       <DependentUpon>ScrMaqNewFromDevice.vb</DependentUpon>
     </Compile>
@@ -303,8 +309,14 @@
     <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliNew.resx">
       <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqEdit.resx">
+      <DependentUpon>ScrConfigMaqEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqNew.resx">
       <DependentUpon>ScrConfigMaqNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Maquinaria\ScrMaqEditFromDevice.resx">
+      <DependentUpon>ScrMaqEditFromDevice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.resx">
       <DependentUpon>ScrMaqNewFromDevice.vb</DependentUpon>
