@@ -241,7 +241,7 @@ Public Class ScrConfigMaqEdit
         If upd.UpdMaq(datos) Then
 
             'Msg Usr
-            MsgBox("Nueva maquinaria agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("Maquinaria editada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             'Re inicia los valores
             ClearTxt()
