@@ -748,6 +748,29 @@ Public Class Datos
 
 #End Region
 
+#Region "inventario_cat"
+
+#Region "DATAMEMBERS"
+
+    Private _cat_inventario As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property cat_inventario() As String
+        Get
+            Return _cat_inventario
+        End Get
+        Set(ByVal value As String)
+            _cat_inventario = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
@@ -1715,6 +1738,14 @@ Public Class Consulta
         Return resultado
 
     End Function
+
+#End Region
+
+
+
+#Region "inventario"
+
+
 
 #End Region
 
