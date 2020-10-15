@@ -157,6 +157,80 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.FillDgvAutos">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de autos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.FillCboTpo">
+ <summary>
+ Llena el cbo con idauto_tipos de la tabla auto_tipos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.ScrConfigAutoEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la tabla autos en el dgv
+ Carga la tabla auto_tipos en el cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.DgvAutos_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigAutoNew.FillCboTpo">
  <summary>
  Llena el cbo con idauto_tipos de la tabla auto_tipos

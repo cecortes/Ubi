@@ -1534,7 +1534,7 @@ Public Class Consulta
                 resultado.ubi_auto = reader("ubi_auto")
 
                 'Agregamos el arreglo byte para la foto y los demás datos
-                dgvCode.Tables("MAQ").Rows.Add(resultado.foto_auto, resultado.placas_auto, resultado.marca_auto, resultado.modelo_auto, resultado.year_auto, resultado.motor_auto, resultado.poliza_auto, resultado.verif_auto, resultado.tipo_auto, resultado.capa_auto, resultado.refri_auto, resultado.gps_auto, resultado.tag_auto, resultado.ubi_auto)
+                dgvCode.Tables("AUT").Rows.Add(resultado.foto_auto, resultado.placas_auto, resultado.marca_auto, resultado.modelo_auto, resultado.year_auto, resultado.motor_auto, resultado.poliza_auto, resultado.verif_auto, resultado.tipo_auto, resultado.capa_auto, resultado.refri_auto, resultado.gps_auto, resultado.tag_auto, resultado.ubi_auto)
 
             End While
 
