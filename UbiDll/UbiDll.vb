@@ -645,6 +645,109 @@ Public Class Datos
 
 #End Region
 
+#Region "inventario"
+
+#Region "DATAMEMBERS"
+
+    Private _foto_inv As Byte()
+    Private _id_inv As Integer
+    Private _cat_inv As String
+    Private _codint_inv As String
+    Private _codcom_inv As String
+    Private _tag_inv As String
+    Private _desc_inv As String
+    Private _cost_inv As Decimal
+    Private _area_inv As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property foto_inv() As Byte()
+        Get
+            Return _foto_inv
+        End Get
+        Set(ByVal value As Byte())
+            _foto_inv = value
+        End Set
+    End Property
+
+    Public Property id_inv() As Integer
+        Get
+            Return _id_inv
+        End Get
+        Set(ByVal value As Integer)
+            _id_inv = value
+        End Set
+    End Property
+
+    Public Property cat_inv() As String
+        Get
+            Return _cat_inv
+        End Get
+        Set(ByVal value As String)
+            _cat_inv = value
+        End Set
+    End Property
+
+    Public Property codint_inv() As String
+        Get
+            Return _codint_inv
+        End Get
+        Set(ByVal value As String)
+            _codint_inv = value
+        End Set
+    End Property
+
+    Public Property codcom_inv() As String
+        Get
+            Return _codcom_inv
+        End Get
+        Set(ByVal value As String)
+            _codcom_inv = value
+        End Set
+    End Property
+
+    Public Property tag_inv() As String
+        Get
+            Return _tag_inv
+        End Get
+        Set(ByVal value As String)
+            _tag_inv = value
+        End Set
+    End Property
+
+    Public Property desc_inv() As String
+        Get
+            Return _desc_inv
+        End Get
+        Set(ByVal value As String)
+            _desc_inv = value
+        End Set
+    End Property
+
+    Public Property cost_inv() As Decimal
+        Get
+            Return _cost_inv
+        End Get
+        Set(ByVal value As Decimal)
+            _cost_inv = value
+        End Set
+    End Property
+
+    Public Property area_inv() As String
+        Get
+            Return _area_inv
+        End Get
+        Set(ByVal value As String)
+            _area_inv = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
