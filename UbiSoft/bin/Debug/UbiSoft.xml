@@ -157,6 +157,66 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigAutoNew.FillCboTpo">
+ <summary>
+ Llena el cbo con idauto_tipos de la tabla auto_tipos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.OpenExcel">
+ <summary>
+ Abre el diálogo para capturar el path del excel
+ Lo pasa como parámetro al método para llenar el dgvProd
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.FillDgvAuto(System.String@,System.Windows.Forms.DataGridView)">
+ <summary>
+ Recibe el path y el objeto datagrid como parámetros
+ Llena el dgv que recibe como parámetro con los datos del excel
+ </summary>
+ <param name="path"></param>
+ <param name="dgv"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.ScrConfigAutoNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llena el cbo con el tipo de auto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.BtnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ LLama al método para abrir el excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto y el dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrCfgCli.AbrirFormPanel``1">
  <summary>
  Se encarga de crear un nuevo objeto del tipo Form

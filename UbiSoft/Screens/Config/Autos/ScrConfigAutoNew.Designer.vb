@@ -22,11 +22,19 @@ Partial Class ScrConfigAutoNew
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
+        Me.ChkFrio = New System.Windows.Forms.CheckBox()
+        Me.ChkGps = New System.Windows.Forms.CheckBox()
+        Me.TxtUbi = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TxtTag = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TxtCapa = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.CboTpo = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TxtVeri = New System.Windows.Forms.TextBox()
@@ -46,18 +54,10 @@ Partial Class ScrConfigAutoNew
         Me.PbFoto = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PnlData = New System.Windows.Forms.Panel()
-        Me.TxtCapa = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TxtTag = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TxtUbi = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.ChkGps = New System.Windows.Forms.CheckBox()
-        Me.ChkFrio = New System.Windows.Forms.CheckBox()
-        Me.DgvMaq = New System.Windows.Forms.DataGridView()
         Me.BtnOk = New System.Windows.Forms.Button()
         Me.BtnClear = New System.Windows.Forms.Button()
         Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.DgvAuto = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -74,7 +74,7 @@ Partial Class ScrConfigAutoNew
         Me.PnlTop.SuspendLayout()
         CType(Me.PbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlData.SuspendLayout()
-        CType(Me.DgvMaq, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvAuto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -111,6 +111,106 @@ Partial Class ScrConfigAutoNew
         Me.PnlTop.Name = "PnlTop"
         Me.PnlTop.Size = New System.Drawing.Size(984, 314)
         Me.PnlTop.TabIndex = 0
+        '
+        'ChkFrio
+        '
+        Me.ChkFrio.AutoSize = True
+        Me.ChkFrio.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ChkFrio.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ChkFrio.Font = New System.Drawing.Font("Ebrima", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkFrio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.ChkFrio.Location = New System.Drawing.Point(17, 273)
+        Me.ChkFrio.Name = "ChkFrio"
+        Me.ChkFrio.Size = New System.Drawing.Size(162, 29)
+        Me.ChkFrio.TabIndex = 39
+        Me.ChkFrio.Text = "Cámara de Frío"
+        Me.ChkFrio.UseVisualStyleBackColor = True
+        '
+        'ChkGps
+        '
+        Me.ChkGps.AutoSize = True
+        Me.ChkGps.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ChkGps.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ChkGps.Font = New System.Drawing.Font("Ebrima", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkGps.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.ChkGps.Location = New System.Drawing.Point(264, 273)
+        Me.ChkGps.Name = "ChkGps"
+        Me.ChkGps.Size = New System.Drawing.Size(68, 29)
+        Me.ChkGps.TabIndex = 38
+        Me.ChkGps.Text = "GPS"
+        Me.ChkGps.UseVisualStyleBackColor = True
+        '
+        'TxtUbi
+        '
+        Me.TxtUbi.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtUbi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtUbi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtUbi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtUbi.Location = New System.Drawing.Point(646, 271)
+        Me.TxtUbi.MaxLength = 100
+        Me.TxtUbi.Name = "TxtUbi"
+        Me.TxtUbi.Size = New System.Drawing.Size(140, 31)
+        Me.TxtUbi.TabIndex = 37
+        Me.TxtUbi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(593, 268)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(47, 28)
+        Me.Label12.TabIndex = 36
+        Me.Label12.Text = "Ubi:"
+        '
+        'TxtTag
+        '
+        Me.TxtTag.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtTag.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtTag.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtTag.Location = New System.Drawing.Point(646, 226)
+        Me.TxtTag.MaxLength = 100
+        Me.TxtTag.Name = "TxtTag"
+        Me.TxtTag.Size = New System.Drawing.Size(140, 31)
+        Me.TxtTag.TabIndex = 35
+        Me.TxtTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(587, 223)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(53, 28)
+        Me.Label11.TabIndex = 34
+        Me.Label11.Text = "TAG:"
+        '
+        'TxtCapa
+        '
+        Me.TxtCapa.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtCapa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCapa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCapa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtCapa.Location = New System.Drawing.Point(646, 182)
+        Me.TxtCapa.MaxLength = 100
+        Me.TxtCapa.Name = "TxtCapa"
+        Me.TxtCapa.Size = New System.Drawing.Size(140, 31)
+        Me.TxtCapa.TabIndex = 33
+        Me.TxtCapa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(532, 179)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(108, 28)
+        Me.Label10.TabIndex = 32
+        Me.Label10.Text = "Capacidad:"
         '
         'CboTpo
         '
@@ -332,162 +432,12 @@ Partial Class ScrConfigAutoNew
         Me.PnlData.Controls.Add(Me.BtnOk)
         Me.PnlData.Controls.Add(Me.BtnClear)
         Me.PnlData.Controls.Add(Me.BtnSearch)
-        Me.PnlData.Controls.Add(Me.DgvMaq)
+        Me.PnlData.Controls.Add(Me.DgvAuto)
         Me.PnlData.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PnlData.Location = New System.Drawing.Point(0, 314)
         Me.PnlData.Name = "PnlData"
         Me.PnlData.Size = New System.Drawing.Size(984, 349)
         Me.PnlData.TabIndex = 1
-        '
-        'TxtCapa
-        '
-        Me.TxtCapa.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtCapa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCapa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCapa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtCapa.Location = New System.Drawing.Point(646, 182)
-        Me.TxtCapa.MaxLength = 100
-        Me.TxtCapa.Name = "TxtCapa"
-        Me.TxtCapa.Size = New System.Drawing.Size(140, 31)
-        Me.TxtCapa.TabIndex = 33
-        Me.TxtCapa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(532, 179)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(108, 28)
-        Me.Label10.TabIndex = 32
-        Me.Label10.Text = "Capacidad:"
-        '
-        'TxtTag
-        '
-        Me.TxtTag.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtTag.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtTag.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtTag.Location = New System.Drawing.Point(646, 226)
-        Me.TxtTag.MaxLength = 100
-        Me.TxtTag.Name = "TxtTag"
-        Me.TxtTag.Size = New System.Drawing.Size(140, 31)
-        Me.TxtTag.TabIndex = 35
-        Me.TxtTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(587, 223)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(53, 28)
-        Me.Label11.TabIndex = 34
-        Me.Label11.Text = "TAG:"
-        '
-        'TxtUbi
-        '
-        Me.TxtUbi.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtUbi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtUbi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtUbi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtUbi.Location = New System.Drawing.Point(646, 271)
-        Me.TxtUbi.MaxLength = 100
-        Me.TxtUbi.Name = "TxtUbi"
-        Me.TxtUbi.Size = New System.Drawing.Size(140, 31)
-        Me.TxtUbi.TabIndex = 37
-        Me.TxtUbi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(593, 268)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(47, 28)
-        Me.Label12.TabIndex = 36
-        Me.Label12.Text = "Ubi:"
-        '
-        'ChkGps
-        '
-        Me.ChkGps.AutoSize = True
-        Me.ChkGps.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ChkGps.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ChkGps.Font = New System.Drawing.Font("Ebrima", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkGps.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.ChkGps.Location = New System.Drawing.Point(264, 273)
-        Me.ChkGps.Name = "ChkGps"
-        Me.ChkGps.Size = New System.Drawing.Size(68, 29)
-        Me.ChkGps.TabIndex = 38
-        Me.ChkGps.Text = "GPS"
-        Me.ChkGps.UseVisualStyleBackColor = True
-        '
-        'ChkFrio
-        '
-        Me.ChkFrio.AutoSize = True
-        Me.ChkFrio.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ChkFrio.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ChkFrio.Font = New System.Drawing.Font("Ebrima", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkFrio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.ChkFrio.Location = New System.Drawing.Point(17, 273)
-        Me.ChkFrio.Name = "ChkFrio"
-        Me.ChkFrio.Size = New System.Drawing.Size(162, 29)
-        Me.ChkFrio.TabIndex = 39
-        Me.ChkFrio.Text = "Cámara de Frío"
-        Me.ChkFrio.UseVisualStyleBackColor = True
-        '
-        'DgvMaq
-        '
-        Me.DgvMaq.AllowUserToAddRows = False
-        Me.DgvMaq.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvMaq.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DgvMaq.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DgvMaq.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvMaq.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvMaq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvMaq.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvMaq.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DgvMaq.EnableHeadersVisualStyles = False
-        Me.DgvMaq.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.DgvMaq.Location = New System.Drawing.Point(3, 6)
-        Me.DgvMaq.Name = "DgvMaq"
-        Me.DgvMaq.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvMaq.RowHeadersWidth = 51
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvMaq.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DgvMaq.RowTemplate.Height = 24
-        Me.DgvMaq.Size = New System.Drawing.Size(978, 265)
-        Me.DgvMaq.TabIndex = 1
         '
         'BtnOk
         '
@@ -530,6 +480,56 @@ Partial Class ScrConfigAutoNew
         Me.BtnSearch.Size = New System.Drawing.Size(60, 60)
         Me.BtnSearch.TabIndex = 42
         Me.BtnSearch.UseVisualStyleBackColor = False
+        '
+        'DgvAuto
+        '
+        Me.DgvAuto.AllowUserToAddRows = False
+        Me.DgvAuto.AllowUserToDeleteRows = False
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvAuto.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvAuto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvAuto.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvAuto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DgvAuto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAuto.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13})
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvAuto.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DgvAuto.EnableHeadersVisualStyles = False
+        Me.DgvAuto.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.DgvAuto.Location = New System.Drawing.Point(3, 6)
+        Me.DgvAuto.Name = "DgvAuto"
+        Me.DgvAuto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvAuto.RowHeadersWidth = 51
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvAuto.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DgvAuto.RowTemplate.Height = 24
+        Me.DgvAuto.Size = New System.Drawing.Size(978, 265)
+        Me.DgvAuto.TabIndex = 1
         '
         'Column1
         '
@@ -648,7 +648,7 @@ Partial Class ScrConfigAutoNew
         Me.PnlTop.PerformLayout()
         CType(Me.PbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlData.ResumeLayout(False)
-        CType(Me.DgvMaq, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvAuto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -681,7 +681,7 @@ Partial Class ScrConfigAutoNew
     Friend WithEvents Label12 As Label
     Friend WithEvents TxtTag As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents DgvMaq As DataGridView
+    Friend WithEvents DgvAuto As DataGridView
     Friend WithEvents BtnOk As Button
     Friend WithEvents BtnClear As Button
     Friend WithEvents BtnSearch As Button
