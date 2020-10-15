@@ -152,6 +152,36 @@
     <Compile Include="Screens\Config\Clientes\ScrConfigCliNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvDel.Designer.vb">
+      <DependentUpon>ScrConfigInvDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvEdit.Designer.vb">
+      <DependentUpon>ScrConfigInvEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvNew.Designer.vb">
+      <DependentUpon>ScrConfigInvNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrConfigInvNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrInvDelFromDevice.Designer.vb">
+      <DependentUpon>ScrInvDelFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrInvDelFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrInvEditFromDevice.Designer.vb">
+      <DependentUpon>ScrInvEditFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Inventario\ScrInvEditFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Maquinaria\ScrConfigMaqDel.Designer.vb">
       <DependentUpon>ScrConfigMaqDel.vb</DependentUpon>
     </Compile>
@@ -230,10 +260,10 @@
     <Compile Include="Screens\Config\ScrConfigCli.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigInv.Designer.vb">
+    <Compile Include="Screens\Config\Inventario\ScrConfigInv.Designer.vb">
       <DependentUpon>ScrConfigInv.vb</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigInv.vb">
+    <Compile Include="Screens\Config\Inventario\ScrConfigInv.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Config\ScrConfigList.Designer.vb">
@@ -360,6 +390,15 @@
     <EmbeddedResource Include="Screens\Config\Clientes\ScrConfigCliNew.resx">
       <DependentUpon>ScrConfigCliNew.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrConfigInvDel.resx">
+      <DependentUpon>ScrConfigInvDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrConfigInvEdit.resx">
+      <DependentUpon>ScrConfigInvEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrConfigInvNew.resx">
+      <DependentUpon>ScrConfigInvNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqDel.resx">
       <DependentUpon>ScrConfigMaqDel.vb</DependentUpon>
     </EmbeddedResource>
@@ -399,7 +438,7 @@
     <EmbeddedResource Include="Screens\Config\ScrConfigCli.resx">
       <DependentUpon>ScrConfigCli.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Config\ScrConfigInv.resx">
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrConfigInv.resx">
       <DependentUpon>ScrConfigInv.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\ScrConfigList.resx">
@@ -542,6 +581,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rfid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

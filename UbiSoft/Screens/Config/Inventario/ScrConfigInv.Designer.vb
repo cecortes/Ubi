@@ -23,7 +23,7 @@ Partial Class ScrConfigInv
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScrConfigInv))
-        Me.PnlBottom = New System.Windows.Forms.Panel()
+        Me.PnlWrp = New System.Windows.Forms.Panel()
         Me.PnlOpt = New System.Windows.Forms.Panel()
         Me.BtnDel = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BtnEdit = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -31,14 +31,14 @@ Partial Class ScrConfigInv
         Me.PnlOpt.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PnlBottom
+        'PnlWrp
         '
-        Me.PnlBottom.BackColor = System.Drawing.Color.Transparent
-        Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlBottom.Location = New System.Drawing.Point(0, 65)
-        Me.PnlBottom.Name = "PnlBottom"
-        Me.PnlBottom.Size = New System.Drawing.Size(984, 663)
-        Me.PnlBottom.TabIndex = 13
+        Me.PnlWrp.BackColor = System.Drawing.Color.Transparent
+        Me.PnlWrp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlWrp.Location = New System.Drawing.Point(0, 65)
+        Me.PnlWrp.Name = "PnlWrp"
+        Me.PnlWrp.Size = New System.Drawing.Size(984, 663)
+        Me.PnlWrp.TabIndex = 13
         '
         'PnlOpt
         '
@@ -111,7 +111,7 @@ Partial Class ScrConfigInv
         Me.BtnNew.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.BtnNew.BackColor = System.Drawing.Color.Transparent
         Me.BtnNew.BackgroundImage = CType(resources.GetObject("BtnNew.BackgroundImage"), System.Drawing.Image)
-        Me.BtnNew.ButtonText = "Nuevo Entrada"
+        Me.BtnNew.ButtonText = "Nueva Entrada"
         Me.BtnNew.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnNew.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
@@ -134,7 +134,7 @@ Partial Class ScrConfigInv
         Me.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 728)
-        Me.Controls.Add(Me.PnlBottom)
+        Me.Controls.Add(Me.PnlWrp)
         Me.Controls.Add(Me.PnlOpt)
         Me.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -146,7 +146,7 @@ Partial Class ScrConfigInv
 
     End Sub
 
-    Friend WithEvents PnlBottom As Panel
+    Friend WithEvents PnlWrp As Panel
     Friend WithEvents PnlOpt As Panel
     Friend WithEvents BtnDel As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents BtnEdit As Bunifu.Framework.UI.BunifuThinButton2
