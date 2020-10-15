@@ -483,8 +483,8 @@ Public Class Datos
     Private _verif_auto As String
     Private _tipo_auto As String
     Private _capa_auto As String
-    Private _refri_auto As Boolean
-    Private _gps_auto As Boolean
+    Private _refri_auto As String
+    Private _gps_auto As String
     Private _tag_auto As String
     Private _ubi_auto As String
 
@@ -582,20 +582,20 @@ Public Class Datos
         End Set
     End Property
 
-    Public Property refri_auto() As Boolean
+    Public Property refri_auto() As String
         Get
             Return _refri_auto
         End Get
-        Set(ByVal value As Boolean)
+        Set(ByVal value As String)
             _refri_auto = value
         End Set
     End Property
 
-    Public Property gps_auto() As Boolean
+    Public Property gps_auto() As String
         Get
             Return _gps_auto
         End Get
-        Set(ByVal value As Boolean)
+        Set(ByVal value As String)
             _gps_auto = value
         End Set
     End Property
@@ -1736,8 +1736,8 @@ Public Class Agregar
             _adaptador.InsertCommand.Parameters.Add("@verif_auto", MySqlDbType.String, 45).Value = datos.verif_auto
             _adaptador.InsertCommand.Parameters.Add("@tipo_auto", MySqlDbType.String, 45).Value = datos.tipo_auto
             _adaptador.InsertCommand.Parameters.Add("@capa_auto", MySqlDbType.String, 45).Value = datos.capa_auto
-            _adaptador.InsertCommand.Parameters.Add("@refri_auto", MySqlDbType.TinyBlob, 1).Value = datos.refri_auto
-            _adaptador.InsertCommand.Parameters.Add("@gps_auto", MySqlDbType.TinyBlob, 1).Value = datos.gps_auto
+            _adaptador.InsertCommand.Parameters.Add("@refri_auto", MySqlDbType.String, 45).Value = datos.refri_auto
+            _adaptador.InsertCommand.Parameters.Add("@gps_auto", MySqlDbType.String, 45).Value = datos.gps_auto
             _adaptador.InsertCommand.Parameters.Add("@tag_auto", MySqlDbType.String, 45).Value = datos.tag_auto
             _adaptador.InsertCommand.Parameters.Add("@ubi_auto", MySqlDbType.String, 45).Value = datos.ubi_auto
 
