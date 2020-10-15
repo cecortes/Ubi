@@ -469,6 +469,182 @@ Public Class Datos
 
 #End Region
 
+#Region "autos"
+
+#Region "DATAMEMBERS"
+
+    Private _foto_auto As Byte()
+    Private _placas_auto As String
+    Private _marca_auto As String
+    Private _modelo_auto As String
+    Private _year_auto As String
+    Private _motor_auto As String
+    Private _poliza_auto As String
+    Private _verif_auto As String
+    Private _tipo_auto As String
+    Private _capa_auto As String
+    Private _refri_auto As Boolean
+    Private _gps_auto As Boolean
+    Private _tag_auto As String
+    Private _ubi_auto As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property foto_auto() As Byte()
+        Get
+            Return _foto_auto
+        End Get
+        Set(ByVal value As Byte())
+            _foto_auto = value
+        End Set
+    End Property
+
+    Public Property placas_auto() As String
+        Get
+            Return _placas_auto
+        End Get
+        Set(ByVal value As String)
+            _placas_auto = value
+        End Set
+    End Property
+
+    Public Property marca_auto() As String
+        Get
+            Return _marca_auto
+        End Get
+        Set(ByVal value As String)
+            _marca_auto = value
+        End Set
+    End Property
+
+    Public Property modelo_auto() As String
+        Get
+            Return _modelo_auto
+        End Get
+        Set(ByVal value As String)
+            _modelo_auto = value
+        End Set
+    End Property
+
+    Public Property year_auto() As String
+        Get
+            Return _year_auto
+        End Get
+        Set(ByVal value As String)
+            _year_auto = value
+        End Set
+    End Property
+
+    Public Property motor_auto() As String
+        Get
+            Return _motor_auto
+        End Get
+        Set(ByVal value As String)
+            _motor_auto = value
+        End Set
+    End Property
+
+    Public Property poliza_auto() As String
+        Get
+            Return _poliza_auto
+        End Get
+        Set(ByVal value As String)
+            _poliza_auto = value
+        End Set
+    End Property
+
+    Public Property verif_auto() As String
+        Get
+            Return _verif_auto
+        End Get
+        Set(ByVal value As String)
+            _verif_auto = value
+        End Set
+    End Property
+
+    Public Property tipo_auto() As String
+        Get
+            Return _tipo_auto
+        End Get
+        Set(ByVal value As String)
+            _tipo_auto = value
+        End Set
+    End Property
+
+    Public Property capa_auto() As String
+        Get
+            Return _capa_auto
+        End Get
+        Set(ByVal value As String)
+            _capa_auto = value
+        End Set
+    End Property
+
+    Public Property refri_auto() As Boolean
+        Get
+            Return _refri_auto
+        End Get
+        Set(ByVal value As Boolean)
+            _refri_auto = value
+        End Set
+    End Property
+
+    Public Property gps_auto() As Boolean
+        Get
+            Return _gps_auto
+        End Get
+        Set(ByVal value As Boolean)
+            _gps_auto = value
+        End Set
+    End Property
+
+    Public Property tag_auto() As String
+        Get
+            Return _tag_auto
+        End Get
+        Set(ByVal value As String)
+            _tag_auto = value
+        End Set
+    End Property
+
+    Public Property ubi_auto() As String
+        Get
+            Return _ubi_auto
+        End Get
+        Set(ByVal value As String)
+            _ubi_auto = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
+#Region "auto_tipos"
+
+#Region "DATAMEMBERS"
+
+    Private _idauto_tipos As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property idauto_tipos() As String
+        Get
+            Return _idauto_tipos
+        End Get
+        Set(ByVal value As String)
+            _idauto_tipos = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta

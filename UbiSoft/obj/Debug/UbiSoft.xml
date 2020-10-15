@@ -127,12 +127,22 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.pick">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.PnlBckG">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.proveedor">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.rfid">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -1354,6 +1364,45 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfig.BtnAvanzada_Click(System.Object,System.EventArgs)">
  <summary>
  Abre el formulario de configuración avanzada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutos.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
+<member name="M:UbiSoft.ScrConfigAutos.CerrarFormPanel">
+ <summary>
+ Método para recorrer los paneles abiertos y cerrarlos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigAutos.BtnNew_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para agregar vehículos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutos.BtnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para editar vehículos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutos.BtnDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para borrar vehículos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

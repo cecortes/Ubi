@@ -65,3 +65,6 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigMaqEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigMaqDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrMaqEditFromDevice.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrMaqDelFromDevice.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoDel.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoEdit.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoNew.resources

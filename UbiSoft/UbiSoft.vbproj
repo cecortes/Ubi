@@ -98,6 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Config\Autos\ScrAutoDelFromDevice.Designer.vb">
+      <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrAutoDelFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrAutoEditFromDevice.Designer.vb">
+      <DependentUpon>ScrAutoEditFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\Autos\ScrAutoEditFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Autos\ScrConfigAutoDel.Designer.vb">
       <DependentUpon>ScrConfigAutoDel.vb</DependentUpon>
     </Compile>
@@ -321,6 +333,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Config\Autos\ScrConfigAutoDel.resx">
+      <DependentUpon>ScrConfigAutoDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Autos\ScrConfigAutoEdit.resx">
+      <DependentUpon>ScrConfigAutoEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Autos\ScrConfigAutoNew.resx">
+      <DependentUpon>ScrConfigAutoNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Clientes\ScrCfgCli.resx">
       <DependentUpon>ScrCfgCli.vb</DependentUpon>
     </EmbeddedResource>
@@ -509,6 +530,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\camara %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rfid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
