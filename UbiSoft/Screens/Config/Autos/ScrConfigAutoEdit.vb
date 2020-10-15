@@ -353,13 +353,14 @@ Public Class ScrConfigAutoEdit
         End If
 
         'Insert
-        If upd.NewAuto(datos) Then
+        If upd.UpdAuto(datos) Then
 
             'Msg Usr
             MsgBox("Vehículo editado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             'Re inicia los valores
             ClearTxt()
+            FillDgvAutos()
 
         End If
 

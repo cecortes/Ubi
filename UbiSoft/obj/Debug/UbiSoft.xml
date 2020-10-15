@@ -200,6 +200,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.UpdAutoData">
+ <summary>
+ Captura los valores de los textbox
+ Llama al método para convertir la imágen a binario
+ Realiza el update en la tabla de autos
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigAutoEdit.ScrConfigAutoEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la tabla autos en el dgv
@@ -234,6 +241,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigAutoEdit.BtnDevice_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra la pantalla para el dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de realizar el update
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
