@@ -1423,6 +1423,48 @@ Public Class Consulta
 
 #End Region
 
+#Region "auto_tipos"
+
+    ''' <summary>
+    ''' Se encarga de consultar a auto_tipos y llenar al cbo correspondiente con el idauto_tipos
+    ''' </summary>
+    Public Sub GetAutoTipos()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM auto_tipos", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "autoTpo")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+#End Region
+
 End Class
 
 Public Class Agregar
