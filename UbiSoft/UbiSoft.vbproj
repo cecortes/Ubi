@@ -333,6 +333,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Config\Autos\ScrAutoDelFromDevice.resx">
+      <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Autos\ScrAutoEditFromDevice.resx">
       <DependentUpon>ScrAutoEditFromDevice.vb</DependentUpon>
     </EmbeddedResource>

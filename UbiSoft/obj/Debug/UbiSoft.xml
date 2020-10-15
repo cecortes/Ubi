@@ -157,6 +157,89 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.GetRfid(System.String)">
+ <summary>
+ El método delegado como tal, tiene como nombre el mismo que usa Invoke
+ Obtiene el RFID recibido por el lector en la consola
+ Pasa el RFID al cuadro de texto reservado para tal
+ </summary>
+ <param name="dato">Cadena de texto</param>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.FillSerial">
+ <summary>
+ Se encarga de listar todos los puertos seriales
+ Los carga en el combo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.ConectSerial">
+ <summary>
+ Se encarga de configurar el Serial y abrir el puerto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.FillDgvAutos">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de autos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.ScrAutoDelFromDevice_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los puertos seriales
+ Llama al método para cargar los autos en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.BtnSerial_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para la conexión serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.CboPto_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de capturar el nombre del puerto en la variable que le corresponde
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Recibe los datos seriales hasta recibir una nueva línea LN.
+ Invoca al método delegado para pasar el RFID al textbox.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAutoDelFromDevice.DgvAutos_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAutoEditFromDevice.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke
@@ -326,6 +409,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigAutoDel.DelAutoData">
+ <summary>
+ Captura la placa del vehículo del cuadro de texto
+ Pasa la placa a datos
+ Realiza el delete de la tabla autos
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigAutoDel.ScrConfigAutoDel_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para cargar los autos en el Dgv
@@ -351,6 +441,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigAutoDel.BtnDevice_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra la pantalla del dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigAutoDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de borrar al auto de la tabla autos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

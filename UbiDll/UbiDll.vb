@@ -1553,6 +1553,66 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un vehículo en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetAutoRfid(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM autos WHERE tag_auto = @tag_auto", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@tag_auto", MySqlDbType.String, 45).Value = Datos.tag_auto
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.foto_auto = reader("foto_auto")
+                resultado.placas_auto = reader("placas_auto")
+                resultado.marca_auto = reader("marca_auto")
+                resultado.modelo_auto = reader("modelo_auto")
+                resultado.year_auto = reader("year_auto")
+                resultado.motor_auto = reader("motor_auto")
+                resultado.tag_auto = reader("tag_auto")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class

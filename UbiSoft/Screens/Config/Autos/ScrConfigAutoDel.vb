@@ -204,7 +204,7 @@ Public Class ScrConfigAutoDel
         datos.placas_auto = TxtPlaca.Text
 
         'Delete 
-        If (del.DelMaq(datos)) Then
+        If (del.DelAuto(datos)) Then
 
             'Msg Usr
             MsgBox("Vehículo eliminado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")

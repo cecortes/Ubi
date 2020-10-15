@@ -69,3 +69,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAutoNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAutoEditFromDevice.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAutoDelFromDevice.resources
