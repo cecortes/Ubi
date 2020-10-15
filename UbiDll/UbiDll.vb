@@ -1465,6 +1465,96 @@ Public Class Consulta
 
 #End Region
 
+#Region "autos"
+
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo ncesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla autos
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub DgvAllAutos()
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode MAQREP
+        dgvCode.Tables.Add("AUT")
+        dgvCode.Tables("AUT").Columns.Add("Foto", GetType(Byte()))
+        dgvCode.Tables("AUT").Columns.Add("Placas", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Marca", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Modelo", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Año", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Motor", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Póliza", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Verificación", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Tipo", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Capacidad", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Refrigeración", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("Gps", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("TAG", GetType(String))
+        dgvCode.Tables("AUT").Columns.Add("UBI", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM autos", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.foto_auto = reader("foto_auto")
+                resultado.placas_auto = reader("placas_auto")
+                resultado.marca_auto = reader("marca_auto")
+                resultado.modelo_auto = reader("modelo_auto")
+                resultado.year_auto = reader("year_auto")
+                resultado.motor_auto = reader("motor_auto")
+                resultado.poliza_auto = reader("poliza_auto")
+                resultado.verif_auto = reader("verif_auto")
+                resultado.tipo_auto = reader("tipo_auto")
+                resultado.capa_auto = reader("capa_auto")
+                resultado.refri_auto = reader("refri_auto")
+                resultado.gps_auto = reader("gps_auto")
+                resultado.tag_auto = reader("tag_auto")
+                resultado.ubi_auto = reader("ubi_auto")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("MAQ").Rows.Add(resultado.foto_auto, resultado.placas_auto, resultado.marca_auto, resultado.modelo_auto, resultado.year_auto, resultado.motor_auto, resultado.poliza_auto, resultado.verif_auto, resultado.tipo_auto, resultado.capa_auto, resultado.refri_auto, resultado.gps_auto, resultado.tag_auto, resultado.ubi_auto)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
+#End Region
+
 End Class
 
 Public Class Agregar
