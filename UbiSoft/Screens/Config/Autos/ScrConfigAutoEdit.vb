@@ -241,6 +241,130 @@ Public Class ScrConfigAutoEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores de los textbox
+    ''' Llama al método para convertir la imágen a binario
+    ''' Realiza el update en la tabla de autos
+    ''' </summary>
+    Private Sub UpdAutoData()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+        Dim arrayBin As Byte()
+
+        'Validación textos
+        If String.IsNullOrEmpty(TxtPlaca.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtMarca.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtModelo.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtAno.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtMotor.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtPol.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtVeri.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtCapa.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtTag.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtUbi.Text) Then
+
+            'Flag
+            flgErr = True
+
+        End If
+
+        If flgErr Then
+
+            'Usuario
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
+
+        'Captura
+        datos.foto_auto = arrayBin
+        datos.placas_auto = TxtPlaca.Text
+        datos.marca_auto = TxtMarca.Text
+        datos.modelo_auto = TxtModelo.Text
+        datos.year_auto = TxtAno.Text
+        datos.motor_auto = TxtMotor.Text
+        datos.poliza_auto = TxtPol.Text
+        datos.verif_auto = TxtVeri.Text
+        datos.tipo_auto = CboTpo.Text
+        datos.capa_auto = TxtCapa.Text
+        datos.tag_auto = TxtTag.Text
+        datos.ubi_auto = TxtUbi.Text
+
+        'CHK
+        If ChkFrio.Checked Then
+
+            datos.refri_auto = "SI"
+
+        Else
+
+            datos.refri_auto = "NO"
+
+        End If
+
+        If ChkGps.Checked Then
+
+            datos.gps_auto = "SI"
+
+        Else
+
+            datos.gps_auto = "NO"
+
+        End If
+
+        'Insert
+        If upd.NewAuto(datos) Then
+
+            'Msg Usr
+            MsgBox("Vehículo editado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -338,6 +462,30 @@ Public Class ScrConfigAutoEdit
 
         'Clear
         ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para el dispositivo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnDevice_Click(sender As Object, e As EventArgs) Handles BtnDevice.Click
+
+        'Scr
+        ScrAutoEditFromDevice.Show()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método encargado de realizar el update
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Upd
+        UpdAutoData()
 
     End Sub
 

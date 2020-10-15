@@ -231,6 +231,13 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigAutoEdit.BtnDevice_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para el dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigAutoNew.FillCboTpo">
  <summary>
  Llena el cbo con idauto_tipos de la tabla auto_tipos

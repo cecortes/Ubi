@@ -2313,6 +2313,70 @@ Public Class Actualizar
 
 #End Region
 
+#Region "AUTOS"
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla autos
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdAuto(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE autos SET foto_auto=@foto_auto, marca_auto=@marca_auto, modelo_auto=@modelo_auto, year_auto=@year_auto, motor_auto=@motor_auto, poliza_auto=@poliza_auto, verif_auto=@verif_auto, tipo_auto=@tipo_auto, capa_auto=@capa_auto, refri_auto=@refri_auto, gps_auto=@gps_auto, tag_auto=@tag_auto, ubi_auto=@ubi_auto WHERE placas_auto=@placas_auto", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.AddWithValue("@foto_auto", datos.foto_maq)
+            _adaptador.UpdateCommand.Parameters.Add("@placas_auto", MySqlDbType.String, 45).Value = datos.placas_auto
+            _adaptador.UpdateCommand.Parameters.Add("@marca_auto", MySqlDbType.String, 45).Value = datos.marca_auto
+            _adaptador.UpdateCommand.Parameters.Add("@modelo_auto", MySqlDbType.String, 45).Value = datos.modelo_auto
+            _adaptador.UpdateCommand.Parameters.Add("@year_auto", MySqlDbType.String, 45).Value = datos.year_auto
+            _adaptador.UpdateCommand.Parameters.Add("@motor_auto", MySqlDbType.String, 45).Value = datos.motor_auto
+            _adaptador.UpdateCommand.Parameters.Add("@poliza_auto", MySqlDbType.String, 45).Value = datos.poliza_auto
+            _adaptador.UpdateCommand.Parameters.Add("@verif_auto", MySqlDbType.String, 45).Value = datos.verif_auto
+            _adaptador.UpdateCommand.Parameters.Add("@tipo_auto", MySqlDbType.String, 45).Value = datos.tipo_auto
+            _adaptador.UpdateCommand.Parameters.Add("@capa_auto", MySqlDbType.String, 45).Value = datos.capa_auto
+            _adaptador.UpdateCommand.Parameters.Add("@refri_auto", MySqlDbType.String, 45).Value = datos.refri_auto
+            _adaptador.UpdateCommand.Parameters.Add("@gps_auto", MySqlDbType.String, 45).Value = datos.gps_auto
+            _adaptador.UpdateCommand.Parameters.Add("@tag_auto", MySqlDbType.String, 45).Value = datos.tag_auto
+            _adaptador.UpdateCommand.Parameters.Add("@ubi_auto", MySqlDbType.String, 45).Value = datos.ubi_auto
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Eliminar
