@@ -253,6 +253,75 @@ Public Class ScrAutoDelFromDevice
 
     End Sub
 
+    ''' <summary>
+    ''' Captura el tag del textbox
+    ''' Lo pasa a datos
+    ''' Realiza una consulta en la tabla autos para obtener los datos
+    ''' </summary>
+    Private Sub GetAutoTag()
+
+        'Privadas
+        Dim auto As New Datos
+
+        'Consulta para datos del cliente
+        datos.tag_auto = TxtTag.Text
+        auto = consulta.GetAutoRfid(datos)
+
+        'Textbox
+        TxtPlaca.Text = auto.placas_auto
+        TxtMarca.Text = auto.marca_auto
+        TxtModelo.Text = auto.modelo_auto
+        TxtAno.Text = auto.year_auto
+        TxtMotor.Text = auto.motor_auto
+        TxtTag.Text = auto.tag_auto
+
+        'Img
+        PbFoto.Image = BinToImg(auto.foto_auto)
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los cuadros de texto
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Text
+        TxtPlaca.Text = ""
+        TxtMarca.Text = ""
+        TxtModelo.Text = ""
+        TxtAno.Text = ""
+        TxtMotor.Text = ""
+        TxtTag.Text = ""
+
+        'Img
+        PbFoto.Image = My.Resources.pick
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura la placa del vehículo del cuadro de texto
+    ''' Pasa la placa a datos
+    ''' Realiza el delete de la tabla autos
+    ''' </summary>
+    Private Sub DelAutoData()
+
+        'Captura
+        datos.placas_auto = TxtPlaca.Text
+
+        'Delete 
+        If (del.DelAuto(datos)) Then
+
+            'Msg Usr
+            MsgBox("Vehículo eliminado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            FillDgvAutos()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -342,6 +411,42 @@ Public Class ScrAutoDelFromDevice
 
         'Conversión BinToImg
         PbFoto.Image = BinToImg(DgvAutos.Item(0, fila).Value)
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta del TAG en la tabla autos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub TxtTag_TextChanged(sender As Object, e As EventArgs) Handles TxtTag.TextChanged
+
+        'Consulta
+        GetAutoTag()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método encargado de borrar al auto de la tabla autos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Del
+        DelAutoData()
+
+    End Sub
+
+    ''' <summary>
+    ''' Cierra el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbClose_Click(sender As Object, e As EventArgs) Handles PbClose.Click
+
+        'Close
+        Me.Close()
 
     End Sub
 
