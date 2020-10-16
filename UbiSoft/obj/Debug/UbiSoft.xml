@@ -607,7 +607,7 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigAutoNew.OpenExcel">
  <summary>
  Abre el diálogo para capturar el path del excel
- Lo pasa como parámetro al método para llenar el dgvProd
+ Lo pasa como parámetro al método para llenar el dgv
  </summary>
 </member>
 <member name="M:UbiSoft.ScrConfigAutoNew.FillDgvAuto(System.String@,System.Windows.Forms.DataGridView)">
@@ -895,6 +895,66 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigCliNew.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Limpia los valores de los textbox y del datagrid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.FillCboCat">
+ <summary>
+ Llena el cbo con cat_inventario de la tabla inventario_cat
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.OpenExcel">
+ <summary>
+ Abre el diálogo para capturar el path del excel
+ Lo pasa como parámetro al método para llenar el dgv
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.FillDgvInv(System.String@,System.Windows.Forms.DataGridView)">
+ <summary>
+ Recibe el path y el objeto datagrid como parámetros
+ Llena el dgv que recibe como parámetro con los datos del excel
+ </summary>
+ <param name="path"></param>
+ <param name="dgv"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.ScrConfigInvNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga las categorías en el cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.BtnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ LLama al método para abrir el excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Limpia los cuadros de texto y el dgv
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

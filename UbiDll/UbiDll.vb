@@ -2091,6 +2091,64 @@ Public Class Agregar
 
 #End Region
 
+#Region "INVENTARIO"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla inventario
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewInv(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO inventario (foto_inv, cat_inv, codint_inv, codcom_inv, tag_inv, desc_inv, cost_inv, area_inv) VALUES (@foto_inv, @cat_inv, @codint_inv, @codcom_inv, @tag_inv, @desc_inv, @cost_inv, @area_inv)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.AddWithValue("@foto_inv", datos.foto_inv)
+            _adaptador.InsertCommand.Parameters.Add("@cat_inv", MySqlDbType.String, 45).Value = datos.cat_inv
+            _adaptador.InsertCommand.Parameters.Add("@codint_inv", MySqlDbType.String, 45).Value = datos.codint_inv
+            _adaptador.InsertCommand.Parameters.Add("@codcom_inv", MySqlDbType.String, 45).Value = datos.codcom_inv
+            _adaptador.InsertCommand.Parameters.Add("@tag_inv", MySqlDbType.String, 45).Value = datos.tag_inv
+            _adaptador.InsertCommand.Parameters.Add("@desc_inv", MySqlDbType.String, 100).Value = datos.desc_inv
+            _adaptador.InsertCommand.Parameters.Add("@cost_inv", MySqlDbType.Decimal, 10, 2).Value = datos.cost_inv
+            _adaptador.InsertCommand.Parameters.Add("@area_inv", MySqlDbType.String, 45).Value = datos.area_inv
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar

@@ -69,7 +69,7 @@ Public Class ScrConfigAutoNew
 
     ''' <summary>
     ''' Abre el diálogo para capturar el path del excel
-    ''' Lo pasa como parámetro al método para llenar el dgvProd
+    ''' Lo pasa como parámetro al método para llenar el dgv
     ''' </summary>
     Private Sub OpenExcel()
 
