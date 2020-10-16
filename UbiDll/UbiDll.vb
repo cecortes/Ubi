@@ -1861,6 +1861,69 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un inventario en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetInvRfid(ByVal Datos As Datos) As Datos
+
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM inventario WHERE tag_inv = @tag_inv", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@tag_inv", MySqlDbType.String, 45).Value = Datos.tag_inv
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.foto_inv = reader("foto_inv")
+                resultado.id_inv = reader("id_inv")
+                resultado.cat_inv = reader("cat_inv")
+                resultado.codint_inv = reader("codint_inv")
+                resultado.codcom_inv = reader("codcom_inv")
+                resultado.tag_inv = reader("tag_inv")
+                resultado.desc_inv = reader("desc_inv")
+                resultado.cost_inv = reader("cost_inv")
+                resultado.area_inv = reader("area_inv")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class

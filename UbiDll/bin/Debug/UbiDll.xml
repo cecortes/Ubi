@@ -159,6 +159,13 @@ UbiDll
  Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetInvRfid(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener los datos de un inventario en particular y regresarlo como datos
+ </summary>
+ <param name="Datos"></param>
+ <returns>Resultado como objeto de Datos</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
