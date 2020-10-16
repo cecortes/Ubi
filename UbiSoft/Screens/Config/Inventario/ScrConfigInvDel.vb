@@ -172,7 +172,7 @@ Public Class ScrConfigInvDel
         datos.id_inv = id
 
         'Delete 
-        If (del.DelAuto(datos)) Then
+        If (del.DelInv(datos)) Then
 
             'Msg Usr
             MsgBox("Inventario eliminado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
