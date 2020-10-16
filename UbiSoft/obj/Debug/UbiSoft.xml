@@ -930,6 +930,25 @@ UbiSoft
  Llena el cbo con cat_inventario de la tabla inventario_cat
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigInvEdit.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.UpdInvData">
+ <summary>
+ Captura los valores de los textbox
+ Llama al método para convertir la imágen a binario
+ Realiza el update en la tabla de inventario
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigInvEdit.ScrConfigInvEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la tabla autos en el dgv
@@ -942,6 +961,35 @@ UbiSoft
  <summary>
  Obtiene los datos de la fila / celda seleccionada
  Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.BtnDevice_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para el dispositivo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de realizar el update
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

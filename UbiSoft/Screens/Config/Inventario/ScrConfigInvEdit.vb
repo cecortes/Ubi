@@ -12,6 +12,8 @@ Public Class ScrConfigInvEdit
     Dim upd As New Actualizar
     Dim errorMsg As New ErrorMsg
 
+    Dim id As Integer = 0
+
 #End Region
 
 #Region "Funciones y Métodos"
@@ -173,6 +175,126 @@ Public Class ScrConfigInvEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Muestra el cuadro para abrir archivo
+    ''' Aplica los filtros necesarios
+    ''' Regresa el archivo seleccionado
+    ''' </summary>
+    Private Sub AbrirImagen()
+        'Privadas
+        Dim imagen As New OpenFileDialog
+
+        'Open
+        imagen.Filter = "JPEGs|*.jpg|PNGs|*.png|Bitmaps|*.bmp|AllFiles|*.*"
+
+        'Validación
+        If imagen.ShowDialog() = DialogResult.OK Then
+
+            PbFoto.Image = Image.FromFile(imagen.FileName)
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los cuadros de texto
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Text
+        TxtInt.Text = ""
+        TxtCom.Text = ""
+        TxtTag.Text = ""
+        TxtDesc.Text = ""
+        TxtCost.Text = ""
+        TxtArea.Text = ""
+
+        'Control de errores
+        Try
+
+            'Index
+            CboTpo.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+        'Img
+        PbFoto.Image = My.Resources.inventario
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura los valores de los textbox
+    ''' Llama al método para convertir la imágen a binario
+    ''' Realiza el update en la tabla de inventario
+    ''' </summary>
+    Private Sub UpdInvData()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+        Dim arrayBin As Byte()
+
+        'Validación textos
+        If String.IsNullOrEmpty(TxtInt.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtDesc.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtCost.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtArea.Text) Then
+
+            'Flag
+            flgErr = True
+
+        End If
+
+        If flgErr Then
+
+            'Usuario
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
+
+        'Captura
+        datos.foto_inv = arrayBin
+        datos.id_inv = id
+        datos.cat_inv = CboTpo.Text
+        datos.codint_inv = TxtInt.Text
+        datos.codcom_inv = TxtCom.Text
+        datos.tag_inv = TxtTag.Text
+        datos.desc_inv = TxtDesc.Text
+        datos.cost_inv = TxtCost.Text
+        datos.area_inv = TxtArea.Text
+
+        'Update
+        If upd.UpdInv(datos) Then
+
+            'Msg Usr
+            MsgBox("Inventario actualizado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            FillDgvInv()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -205,6 +327,7 @@ Public Class ScrConfigInvEdit
         Dim fila As Integer = DgvInv.Rows(e.RowIndex).Index
 
         'Datos
+        id = DgvInv.Item(1, fila).Value
         CboTpo.Text = DgvInv.Item(2, fila).Value
         TxtInt.Text = DgvInv.Item(3, fila).Value
         TxtCom.Text = DgvInv.Item(4, fila).Value
@@ -215,6 +338,55 @@ Public Class ScrConfigInvEdit
 
         'Conversión BinToImg
         PbFoto.Image = BinToImg(DgvInv.Item(0, fila).Value)
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para cargar la imágen
+    ''' Muestra la imágen seleccionada en el picture box
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbFoto_Click(sender As Object, e As EventArgs) Handles PbFoto.Click
+
+        'Abrir
+        AbrirImagen()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para limpiar los campos de texto
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clear
+        ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para el dispositivo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnDevice_Click(sender As Object, e As EventArgs) Handles BtnDevice.Click
+
+        'Scr
+        ScrInvEditFromDevice.Show()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método encargado de realizar el update
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Upd
+        UpdInvData()
 
     End Sub
 
