@@ -199,11 +199,16 @@ Public Class ScrConfigAutoNew
 
         'Privadas
         Dim contAdd As Integer = 0
+        Dim arrayBin As Byte()
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
 
         'Rutina para recorrer las filas del datagridview
         For Each filas As DataGridViewRow In DgvAuto.Rows
 
             'Captura
+            datos.foto_auto = arrayBin
             datos.placas_auto = filas.Cells(0).Value
             datos.marca_auto = filas.Cells(1).Value
             datos.modelo_auto = filas.Cells(2).Value
