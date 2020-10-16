@@ -29,6 +29,9 @@ Partial Class ScrConfigInvEdit
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.DgvInv = New System.Windows.Forms.DataGridView()
         Me.PnlBottom = New System.Windows.Forms.Panel()
+        Me.BtnDevice = New System.Windows.Forms.Button()
+        Me.BtnOk = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
         Me.TxtArea = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtCost = New System.Windows.Forms.TextBox()
@@ -45,9 +48,6 @@ Partial Class ScrConfigInvEdit
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PbFoto = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BtnDevice = New System.Windows.Forms.Button()
-        Me.BtnOk = New System.Windows.Forms.Button()
-        Me.BtnClear = New System.Windows.Forms.Button()
         Me.PnlTop.SuspendLayout()
         CType(Me.DgvInv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBottom.SuspendLayout()
@@ -61,7 +61,7 @@ Partial Class ScrConfigInvEdit
         Me.PnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTop.Location = New System.Drawing.Point(0, 0)
         Me.PnlTop.Name = "PnlTop"
-        Me.PnlTop.Size = New System.Drawing.Size(984, 350)
+        Me.PnlTop.Size = New System.Drawing.Size(984, 340)
         Me.PnlTop.TabIndex = 2
         '
         'DgvInv
@@ -111,7 +111,7 @@ Partial Class ScrConfigInvEdit
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.DgvInv.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvInv.RowTemplate.Height = 240
-        Me.DgvInv.Size = New System.Drawing.Size(960, 317)
+        Me.DgvInv.Size = New System.Drawing.Size(960, 270)
         Me.DgvInv.TabIndex = 1
         '
         'PnlBottom
@@ -137,10 +137,55 @@ Partial Class ScrConfigInvEdit
         Me.PnlBottom.Controls.Add(Me.PbFoto)
         Me.PnlBottom.Controls.Add(Me.Label2)
         Me.PnlBottom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlBottom.Location = New System.Drawing.Point(0, 350)
+        Me.PnlBottom.Location = New System.Drawing.Point(0, 340)
         Me.PnlBottom.Name = "PnlBottom"
-        Me.PnlBottom.Size = New System.Drawing.Size(984, 313)
+        Me.PnlBottom.Size = New System.Drawing.Size(984, 323)
         Me.PnlBottom.TabIndex = 3
+        '
+        'BtnDevice
+        '
+        Me.BtnDevice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnDevice.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnDevice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnDevice.FlatAppearance.BorderSize = 2
+        Me.BtnDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BtnDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDevice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnDevice.Image = Global.UbiSoft.My.Resources.Resources.rfid
+        Me.BtnDevice.Location = New System.Drawing.Point(152, 250)
+        Me.BtnDevice.Name = "BtnDevice"
+        Me.BtnDevice.Size = New System.Drawing.Size(60, 60)
+        Me.BtnDevice.TabIndex = 50
+        Me.BtnDevice.UseVisualStyleBackColor = False
+        '
+        'BtnOk
+        '
+        Me.BtnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnOk.Location = New System.Drawing.Point(902, 250)
+        Me.BtnOk.Name = "BtnOk"
+        Me.BtnOk.Size = New System.Drawing.Size(60, 60)
+        Me.BtnOk.TabIndex = 49
+        Me.BtnOk.UseVisualStyleBackColor = False
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
+        Me.BtnClear.Location = New System.Drawing.Point(12, 251)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(60, 60)
+        Me.BtnClear.TabIndex = 48
+        Me.BtnClear.UseVisualStyleBackColor = False
         '
         'TxtArea
         '
@@ -333,51 +378,6 @@ Partial Class ScrConfigInvEdit
         Me.Label2.Size = New System.Drawing.Size(57, 28)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Foto:"
-        '
-        'BtnDevice
-        '
-        Me.BtnDevice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnDevice.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDevice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnDevice.FlatAppearance.BorderSize = 2
-        Me.BtnDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.BtnDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDevice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnDevice.Image = Global.UbiSoft.My.Resources.Resources.rfid
-        Me.BtnDevice.Location = New System.Drawing.Point(152, 240)
-        Me.BtnDevice.Name = "BtnDevice"
-        Me.BtnDevice.Size = New System.Drawing.Size(60, 60)
-        Me.BtnDevice.TabIndex = 50
-        Me.BtnDevice.UseVisualStyleBackColor = False
-        '
-        'BtnOk
-        '
-        Me.BtnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnOk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnOk.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnOk.Location = New System.Drawing.Point(902, 240)
-        Me.BtnOk.Name = "BtnOk"
-        Me.BtnOk.Size = New System.Drawing.Size(60, 60)
-        Me.BtnOk.TabIndex = 49
-        Me.BtnOk.UseVisualStyleBackColor = False
-        '
-        'BtnClear
-        '
-        Me.BtnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnClear.Image = Global.UbiSoft.My.Resources.Resources.borrar
-        Me.BtnClear.Location = New System.Drawing.Point(12, 241)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(60, 60)
-        Me.BtnClear.TabIndex = 48
-        Me.BtnClear.UseVisualStyleBackColor = False
         '
         'ScrConfigInvEdit
         '

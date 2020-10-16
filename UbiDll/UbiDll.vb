@@ -2717,7 +2717,66 @@ Public Class Actualizar
             _adaptador.UpdateCommand.Parameters.Add("@tag_auto", MySqlDbType.String, 45).Value = datos.tag_auto
             _adaptador.UpdateCommand.Parameters.Add("@ubi_auto", MySqlDbType.String, 45).Value = datos.ubi_auto
 
-            'Insert
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "INVENTARIO"
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla inventario
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdInv(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE inventario SET foto_inv=@foto_inv, cat_inv=@cat_inv, codint_inv=@codint_inv, codcom_inv=@codcom_inv, tag_inv=@tag_inv, desc_inv=@desc_inv, cost_inv=@cost_inv, area_inv=@area_inv WHERE id_inv=@id_inv", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.AddWithValue("@foto_inv", datos.foto_inv)
+            _adaptador.UpdateCommand.Parameters.Add("@id_inv", MySqlDbType.Int32, 11).Value = datos.id_inv
+            _adaptador.UpdateCommand.Parameters.Add("@cat_inv", MySqlDbType.String, 45).Value = datos.cat_inv
+            _adaptador.UpdateCommand.Parameters.Add("@codint_inv", MySqlDbType.String, 45).Value = datos.codint_inv
+            _adaptador.UpdateCommand.Parameters.Add("@codcom_inv", MySqlDbType.String, 45).Value = datos.codcom_inv
+            _adaptador.UpdateCommand.Parameters.Add("@tag_inv", MySqlDbType.String, 45).Value = datos.tag_inv
+            _adaptador.UpdateCommand.Parameters.Add("@desc_inv", MySqlDbType.String, 100).Value = datos.desc_inv
+            _adaptador.UpdateCommand.Parameters.Add("@cost_inv", MySqlDbType.Decimal, 10, 2).Value = datos.cost_inv
+            _adaptador.UpdateCommand.Parameters.Add("@area_inv", MySqlDbType.String, 45).Value = datos.area_inv
+
+            'Update
             con._conexion.Open()
             _adaptador.UpdateCommand.Connection = con._conexion
             _adaptador.UpdateCommand.ExecuteNonQuery()

@@ -899,6 +899,53 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigInvEdit.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.FillDgvInv">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de inventario
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.FillCboCat">
+ <summary>
+ Llena el cbo con cat_inventario de la tabla inventario_cat
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.ScrConfigInvEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la tabla autos en el dgv
+ Carga la tabla inventario_cat en el cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigInvEdit.DgvInv_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigInvNew.FillCboCat">
  <summary>
  Llena el cbo con cat_inventario de la tabla inventario_cat
