@@ -399,6 +399,12 @@
     <EmbeddedResource Include="Screens\Config\Inventario\ScrConfigInvNew.resx">
       <DependentUpon>ScrConfigInvNew.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrInvDelFromDevice.resx">
+      <DependentUpon>ScrInvDelFromDevice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\Inventario\ScrInvEditFromDevice.resx">
+      <DependentUpon>ScrInvEditFromDevice.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrConfigMaqDel.resx">
       <DependentUpon>ScrConfigMaqDel.vb</DependentUpon>
     </EmbeddedResource>
