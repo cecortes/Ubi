@@ -1157,6 +1157,129 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.GetRfid(System.String)">
+ <summary>
+ El método delegado como tal, tiene como nombre el mismo que usa Invoke
+ Obtiene el RFID recibido por el lector en la consola
+ Pasa el RFID al cuadro de texto reservado para tal
+ </summary>
+ <param name="dato">Cadena de texto</param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.FillSerial">
+ <summary>
+ Se encarga de listar todos los puertos seriales
+ Los carga en el combo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.ConectSerial">
+ <summary>
+ Se encarga de configurar el Serial y abrir el puerto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.FillDgvInv">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de inventario
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.GetInvTag">
+ <summary>
+ Captura el tag del textbox
+ Lo pasa a datos
+ Realiza una consulta en la tabla inventario para obtener los datos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.DelInvData">
+ <summary>
+ Captura el id del inventario
+ Pasa la id a datos
+ Realiza el delete de la tabla inventario
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.ScrInvDelFromDevice_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los puertos seriales
+ Llama al método para cargar los autos en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.BtnSerial_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para la conexión serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.CboPto_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de capturar el nombre del puerto en la variable que le corresponde
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Recibe los datos seriales hasta recibir una nueva línea LN.
+ Invoca al método delegado para pasar el RFID al textbox.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.TxtTag_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta del TAG en la tabla autos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.DgvInv_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrInvDelFromDevice.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de realizar el delete
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrInvEditFromDevice.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke

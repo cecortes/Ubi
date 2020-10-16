@@ -262,12 +262,12 @@ Public Class ScrInvDelFromDevice
         id = inv.id_inv
 
         'Textbox
-        TxtInt.Text = inv.placas_auto
-        TxtCom.Text = inv.marca_auto
-        TxtTag.Text = inv.modelo_auto
+        TxtInt.Text = inv.codint_inv
+        TxtCom.Text = inv.codcom_inv
+        TxtTag.Text = inv.tag_inv
 
         'Img
-        PbFoto.Image = BinToImg(inv.foto_auto)
+        PbFoto.Image = BinToImg(inv.foto_inv)
 
     End Sub
 
@@ -315,11 +315,15 @@ Public Class ScrInvDelFromDevice
 #Region "Eventos"
 
     ''' <summary>
+    ''' Carga los puertos seriales
     ''' Llama al método para cargar los autos en el Dgv
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub ScrInvDelFromDevice_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'Serial
+        FillSerial()
 
         'Dgv
         FillDgvInv()
@@ -386,6 +390,51 @@ Public Class ScrInvDelFromDevice
 
     End Sub
 
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvInv_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvInv.CellMouseClick
+
+        'Privadas
+        Dim fila As Integer = DgvInv.Rows(e.RowIndex).Index
+
+        'Datos
+        id = DgvInv.Item(1, fila).Value
+        TxtInt.Text = DgvInv.Item(3, fila).Value
+        TxtCom.Text = DgvInv.Item(4, fila).Value
+        TxtTag.Text = DgvInv.Item(5, fila).Value
+
+        'Conversión BinToImg
+        PbFoto.Image = BinToImg(DgvInv.Item(0, fila).Value)
+
+    End Sub
+
+    ''' <summary>
+    ''' Cierra el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbClose_Click(sender As Object, e As EventArgs) Handles PbClose.Click
+
+        'Close
+        Me.Close()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método encargado de realizar el delete
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Del
+        DelInvData()
+
+    End Sub
 
 #End Region
 
