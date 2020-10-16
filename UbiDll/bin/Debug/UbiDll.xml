@@ -150,6 +150,15 @@ UbiDll
  Se encarga de consultar a inventario_cat y llenar al cbo correspondiente con el cat_inventario
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.DgvAllInv">
+ <summary>
+ Crea una tabla harcode en el dataset
+ Crea las columnas del tipo ncesario para los datos
+ Realiza una consulta para obtener los datos de la tabla autos
+ Mediante un reader almacena los datos
+ Genera una nueva fila en el dataset con todos los datos
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

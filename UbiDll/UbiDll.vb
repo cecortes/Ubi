@@ -1785,7 +1785,81 @@ Public Class Consulta
 
 #Region "inventario"
 
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo ncesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla autos
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub DgvAllInv()
 
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode MAQREP
+        dgvCode.Tables.Add("INV")
+        dgvCode.Tables("INV").Columns.Add("Foto", GetType(Byte()))
+        dgvCode.Tables("INV").Columns.Add("Id", GetType(Integer))
+        dgvCode.Tables("INV").Columns.Add("Categoría", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("Interno", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("Comercial", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("TAG", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("Descripción", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("Valor", GetType(String))
+        dgvCode.Tables("INV").Columns.Add("Area", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM inventario", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.foto_inv = reader("foto_inv")
+                resultado.id_inv = reader("id_inv")
+                resultado.cat_inv = reader("cat_inv")
+                resultado.codint_inv = reader("codint_inv")
+                resultado.codcom_inv = reader("codcom_inv")
+                resultado.tag_inv = reader("tag_inv")
+                resultado.desc_inv = reader("desc_inv")
+                resultado.cost_inv = reader("cost_inv")
+                resultado.area_inv = reader("area_inv")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("INV").Rows.Add(resultado.foto_inv, resultado.id_inv, resultado.cat_inv, resultado.codint_inv, resultado.codcom_inv, resultado.tag_inv, resultado.desc_inv, resultado.cost_inv, resultado.area_inv)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
 
 #End Region
 
