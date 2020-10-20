@@ -218,6 +218,24 @@
     <Compile Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaDel.Designer.vb">
+      <DependentUpon>ScrConfigPrimaDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaEdit.Designer.vb">
+      <DependentUpon>ScrConfigPrimaEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaNew.Designer.vb">
+      <DependentUpon>ScrConfigPrimaNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrimaNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Productos\ScrConfigProdDel.Designer.vb">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
     </Compile>
@@ -284,10 +302,10 @@
     <Compile Include="Screens\Config\ScrConfigPack.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigPrima.Designer.vb">
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrima.Designer.vb">
       <DependentUpon>ScrConfigPrima.vb</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Config\ScrConfigPrima.vb">
+    <Compile Include="Screens\Config\MateriaPrima\ScrConfigPrima.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Config\Productos\ScrConfigProd.Designer.vb">
@@ -423,6 +441,15 @@
     <EmbeddedResource Include="Screens\Config\Maquinaria\ScrMaqNewFromDevice.resx">
       <DependentUpon>ScrMaqNewFromDevice.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\MateriaPrima\ScrConfigPrimaDel.resx">
+      <DependentUpon>ScrConfigPrimaDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\MateriaPrima\ScrConfigPrimaEdit.resx">
+      <DependentUpon>ScrConfigPrimaEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Config\MateriaPrima\ScrConfigPrimaNew.resx">
+      <DependentUpon>ScrConfigPrimaNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProdDel.resx">
       <DependentUpon>ScrConfigProdDel.vb</DependentUpon>
     </EmbeddedResource>
@@ -456,7 +483,7 @@
     <EmbeddedResource Include="Screens\Config\ScrConfigPack.resx">
       <DependentUpon>ScrConfigPack.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Config\ScrConfigPrima.resx">
+    <EmbeddedResource Include="Screens\Config\MateriaPrima\ScrConfigPrima.resx">
       <DependentUpon>ScrConfigPrima.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Productos\ScrConfigProd.resx">
@@ -590,6 +617,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolsas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -75,11 +75,16 @@ Public Class ScrConfigMaqNew
 
         'Privadas
         Dim contAdd As Integer = 0
+        Dim arrayBin As Byte()
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
 
         'Rutina para recorrer las filas del datagridview
         For Each filas As DataGridViewRow In DgvMaq.Rows
 
             'Captura
+            datos.foto_maq = arrayBin
             datos.serie_maq = filas.Cells(0).Value
             datos.modelo_maq = filas.Cells(1).Value
             datos.marca_maq = filas.Cells(2).Value

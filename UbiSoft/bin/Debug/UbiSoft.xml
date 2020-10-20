@@ -37,6 +37,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.bolsas">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.borrar">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -2522,6 +2527,45 @@ UbiSoft
  <summary>
  Llama al método para cerrar los paneles
  Muestra el panel para borrar maquinaria
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrima.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
+<member name="M:UbiSoft.ScrConfigPrima.CerrarFormPanel">
+ <summary>
+ Método para recorrer los paneles abiertos y cerrarlos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrima.BtnNew_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para agregar materia prima
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrima.BtnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para editar materia prima
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrima.BtnDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cerrar los paneles
+ Muestra el panel para borrar materia prima
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
