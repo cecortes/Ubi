@@ -771,6 +771,69 @@ Public Class Datos
 
 #End Region
 
+#Region "prima"
+
+#Region "DATAMEMBERS"
+
+    Private _prima_foto As Byte()
+    Private _prima_interno As String
+    Private _prima_comercial As String
+    Private _prima_tag As String
+    Private _prima_desc As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property prima_foto() As Byte()
+        Get
+            Return _prima_foto
+        End Get
+        Set(ByVal value As Byte())
+            _prima_foto = value
+        End Set
+    End Property
+
+    Public Property prima_interno() As String
+        Get
+            Return _prima_interno
+        End Get
+        Set(ByVal value As String)
+            _prima_interno = value
+        End Set
+    End Property
+
+    Public Property prima_comercial() As String
+        Get
+            Return _prima_comercial
+        End Get
+        Set(ByVal value As String)
+            _prima_comercial = value
+        End Set
+    End Property
+
+    Public Property prima_tag() As String
+        Get
+            Return _prima_tag
+        End Get
+        Set(ByVal value As String)
+            _prima_tag = value
+        End Set
+    End Property
+
+    Public Property prima_desc() As String
+        Get
+            Return _prima_desc
+        End Get
+        Set(ByVal value As String)
+            _prima_desc = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
