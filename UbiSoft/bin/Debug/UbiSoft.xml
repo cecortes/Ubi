@@ -2060,6 +2060,19 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.FillSerial">
+ <summary>
+ Se encarga de listar todos los puertos seriales
+ Los carga en el combo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.ScrConfigPrimaNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los puertos seriales
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigProdDel.FillUnidades">
  <summary>
  Carga al cbo la consulta de la tabla prod_uni

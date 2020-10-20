@@ -776,6 +776,7 @@ Public Class Datos
 #Region "DATAMEMBERS"
 
     Private _prima_foto As Byte()
+    Private _prima_nombre As String
     Private _prima_interno As String
     Private _prima_comercial As String
     Private _prima_tag As String
@@ -791,6 +792,15 @@ Public Class Datos
         End Get
         Set(ByVal value As Byte())
             _prima_foto = value
+        End Set
+    End Property
+
+    Public Property prima_nombre() As String
+        Get
+            Return _prima_nombre
+        End Get
+        Set(ByVal value As String)
+            _prima_nombre = value
         End Set
     End Property
 
