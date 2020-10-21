@@ -2444,7 +2444,7 @@ Public Class Agregar
             _adaptador.InsertCommand = New MySqlCommand("INSERT INTO prima (prima_foto, prima_nombre, prima_interno, prima_comercial, prima_tag, prima_desc) VALUES (@prima_foto, @prima_nombre, @prima_interno, @prima_comercial, @prima_tag, @prima_desc)", con._conexion)
 
             'Parámetros
-            _adaptador.InsertCommand.Parameters.AddWithValue("@prima_foto", datos.foto_inv)
+            _adaptador.InsertCommand.Parameters.AddWithValue("@prima_foto", datos.prima_foto)
             _adaptador.InsertCommand.Parameters.Add("@prima_nombre", MySqlDbType.String, 45).Value = datos.prima_nombre
             _adaptador.InsertCommand.Parameters.Add("@prima_interno", MySqlDbType.String, 45).Value = datos.prima_interno
             _adaptador.InsertCommand.Parameters.Add("@prima_comercial", MySqlDbType.String, 45).Value = datos.prima_comercial

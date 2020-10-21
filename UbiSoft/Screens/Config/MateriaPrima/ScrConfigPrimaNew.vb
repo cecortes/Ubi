@@ -304,7 +304,7 @@ Public Class ScrConfigPrimaNew
             datos.prima_desc = filas.Cells(4).Value
 
             'Insert & Consulta por keys repetidas
-            If (add.NewInv(datos) And consulta.ChkPrimaKey(datos)) Then
+            If (add.NewPrima(datos) And consulta.ChkPrimaKey(datos)) Then
 
                 'Incrementamos el contador
                 contAdd += 1
