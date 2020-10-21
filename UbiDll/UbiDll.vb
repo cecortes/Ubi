@@ -2035,8 +2035,9 @@ Public Class Consulta
 
             'Validación
             If (String.IsNullOrEmpty(key)) Then
+            Else
 
-                'Flag to false
+                'Flg to false
                 flg = False
 
             End If

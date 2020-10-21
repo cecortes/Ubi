@@ -304,10 +304,15 @@ Public Class ScrConfigPrimaNew
             datos.prima_desc = filas.Cells(4).Value
 
             'Insert & Consulta por keys repetidas
-            If (add.NewInv(datos)) Then
+            If (add.NewInv(datos) And consulta.ChkPrimaKey(datos)) Then
 
                 'Incrementamos el contador
                 contAdd += 1
+
+            Else
+
+                'Usuario
+                MsgBox("La materia prima " + datos.prima_nombre + " ya existe en la base de datos", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             End If
 
@@ -449,7 +454,7 @@ Public Class ScrConfigPrimaNew
         Else
 
             'Método para insert de los campos de texto
-            AddPrimaData()
+            'AddPrimaData()
 
         End If
 

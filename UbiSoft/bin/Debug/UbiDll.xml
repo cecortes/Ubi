@@ -166,6 +166,16 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
+<member name="M:UbiDll.Consulta.ChkPrimaKey(UbiDll.Datos)">
+ <summary>
+ Consulta la tabla prima
+ Obtiene el prima_nombre
+ Si existe devuelve false
+ Si no existe devuelve true
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
