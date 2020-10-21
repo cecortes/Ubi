@@ -2076,7 +2076,7 @@ Public Class Consulta
         'Init Tabla, hardcode MAQREP
         dgvCode.Tables.Add("PRIMA")
         dgvCode.Tables("PRIMA").Columns.Add("Foto", GetType(Byte()))
-        dgvCode.Tables("PRIMA").Columns.Add("Nombre", GetType(Integer))
+        dgvCode.Tables("PRIMA").Columns.Add("Nombre", GetType(String))
         dgvCode.Tables("PRIMA").Columns.Add("Interno", GetType(String))
         dgvCode.Tables("PRIMA").Columns.Add("Comercial", GetType(String))
         dgvCode.Tables("PRIMA").Columns.Add("TAG", GetType(String))

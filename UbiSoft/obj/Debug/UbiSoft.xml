@@ -2060,6 +2060,66 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.GetRfid(System.String)">
+ <summary>
+ El método delegado como tal, tiene como nombre el mismo que usa Invoke
+ Obtiene el RFID recibido por el lector en la consola
+ Pasa el RFID al cuadro de texto reservado para tal
+ </summary>
+ <param name="dato">Cadena de texto</param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.FillSerial">
+ <summary>
+ Se encarga de listar todos los puertos seriales
+ Los carga en el combo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.ConectSerial">
+ <summary>
+ Se encarga de configurar el Serial y abrir el puerto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.FillDgvPrima">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de prima
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.ScrConfigPrimaEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los puertos seriales
+ Llama al método para cargar las materias primas en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrConfigPrimaNew.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke
