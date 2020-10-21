@@ -2059,6 +2059,76 @@ Public Class Consulta
 
     End Function
 
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo ncesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla prima
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub DgvAllPrima()
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode MAQREP
+        dgvCode.Tables.Add("PRIMA")
+        dgvCode.Tables("PRIMA").Columns.Add("Foto", GetType(Byte()))
+        dgvCode.Tables("PRIMA").Columns.Add("Nombre", GetType(Integer))
+        dgvCode.Tables("PRIMA").Columns.Add("Interno", GetType(String))
+        dgvCode.Tables("PRIMA").Columns.Add("Comercial", GetType(String))
+        dgvCode.Tables("PRIMA").Columns.Add("TAG", GetType(String))
+        dgvCode.Tables("PRIMA").Columns.Add("Descripción", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM prima", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.prima_foto = reader("prima_foto")
+                resultado.prima_nombre = reader("prima_nombre")
+                resultado.prima_interno = reader("prima_interno")
+                resultado.prima_comercial = reader("prima_comercial")
+                resultado.prima_tag = reader("prima_tag")
+                resultado.prima_desc = reader("prima_desc")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PRIMA").Rows.Add(resultado.prima_foto, resultado.prima_nombre, resultado.prima_interno, resultado.prima_comercial, resultado.prima_tag, resultado.prima_desc)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
 #End Region
 
 End Class
