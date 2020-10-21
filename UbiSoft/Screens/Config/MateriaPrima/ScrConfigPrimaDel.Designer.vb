@@ -231,6 +231,7 @@ Partial Class ScrConfigPrimaDel
         Me.TxtDesc.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDesc.Enabled = False
         Me.TxtDesc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtDesc.Location = New System.Drawing.Point(534, 74)
         Me.TxtDesc.MaxLength = 100
@@ -255,6 +256,7 @@ Partial Class ScrConfigPrimaDel
         Me.TxtTag.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtTag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTag.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtTag.Enabled = False
         Me.TxtTag.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtTag.Location = New System.Drawing.Point(332, 195)
         Me.TxtTag.MaxLength = 100
@@ -279,6 +281,7 @@ Partial Class ScrConfigPrimaDel
         Me.TxtComer.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtComer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtComer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtComer.Enabled = False
         Me.TxtComer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtComer.Location = New System.Drawing.Point(332, 145)
         Me.TxtComer.MaxLength = 100
@@ -303,6 +306,7 @@ Partial Class ScrConfigPrimaDel
         Me.TxtInt.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtInt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtInt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtInt.Enabled = False
         Me.TxtInt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtInt.Location = New System.Drawing.Point(332, 92)
         Me.TxtInt.MaxLength = 100
@@ -327,6 +331,7 @@ Partial Class ScrConfigPrimaDel
         Me.TxtNom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.TxtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtNom.Enabled = False
         Me.TxtNom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.TxtNom.Location = New System.Drawing.Point(332, 43)
         Me.TxtNom.MaxLength = 100
