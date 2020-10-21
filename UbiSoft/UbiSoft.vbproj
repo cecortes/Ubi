@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Admin\ScrAdmin.Designer.vb">
+      <DependentUpon>ScrAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\ScrAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Autos\ScrAutoDelFromDevice.Designer.vb">
       <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
     </Compile>
@@ -381,6 +387,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Admin\ScrAdmin.resx">
+      <DependentUpon>ScrAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Autos\ScrAutoDelFromDevice.resx">
       <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
     </EmbeddedResource>

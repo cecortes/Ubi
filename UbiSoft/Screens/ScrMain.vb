@@ -132,7 +132,7 @@
     ''' <param name="e"></param>
     Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmin.Click
 
-        'ScrAdmin.Show()
+        ScrAdmin.Show()
         Me.Close()
 
     End Sub
