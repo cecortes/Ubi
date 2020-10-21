@@ -2124,6 +2124,13 @@ UbiSoft
  Realiza una consulta en la tabla prima para obtener los datos
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.UpdPrimaData">
+ <summary>
+ Captura los valores de los textbox
+ Llama al método para convertir la imágen a binario
+ Realiza el update en la tabla de prima
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigPrimaEdit.ScrConfigPrimaEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los puertos seriales
@@ -2180,6 +2187,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrConfigPrimaEdit.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Se encarga de llamar al método para limpiar los text
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de realizar el update
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
