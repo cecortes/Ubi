@@ -303,11 +303,16 @@ Public Class ScrConfigPrimaNew
             datos.prima_tag = filas.Cells(3).Value
             datos.prima_desc = filas.Cells(4).Value
 
-            'Insert & Consulta por keys repetidas
-            If (add.NewPrima(datos) And consulta.ChkPrimaKey(datos)) Then
+            'Consulta
+            If consulta.ChkPrimaKey(datos) Then
 
-                'Incrementamos el contador
-                contAdd += 1
+                'Insert
+                If (add.NewPrima(datos)) Then
+
+                    'Incrementamos el contador
+                    contAdd += 1
+
+                End If
 
             Else
 
@@ -318,7 +323,7 @@ Public Class ScrConfigPrimaNew
 
         Next
 
-        'Validación de todos las insert & update
+        'Validación de todos las insert & check
         If (DgvPrima.Rows.Count = contAdd) Then
 
             'Usuario
@@ -333,6 +338,78 @@ Public Class ScrConfigPrimaNew
 
         'Limpiar Dgv
         DgvPrima.Rows.Clear()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura los valores de los textbox
+    ''' Llama al método para convertir la imágen a binario
+    ''' Realiza la inserción en la tabla de prima
+    ''' </summary>
+    Private Sub AddPrimaData()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+        Dim arrayBin As Byte()
+
+        'Validación textos
+        If String.IsNullOrEmpty(TxtNom.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtInt.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtDesc.Text) Then
+
+            'Flag
+            flgErr = True
+
+        End If
+
+        If flgErr Then
+
+            'Usuario
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
+
+        'Captura
+        datos.prima_foto = arrayBin
+        datos.prima_nombre = TxtNom.Text
+        datos.prima_interno = TxtInt.Text
+        datos.prima_comercial = TxtComer.Text
+        datos.prima_tag = TxtTag.Text
+        datos.prima_desc = TxtDesc.Text
+
+        'Consulta
+        If consulta.ChkPrimaKey(datos) Then
+
+            'Insert
+            If (add.NewPrima(datos)) Then
+
+                'Usuario
+                MsgBox("Nueva materia prima agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                'Re inicia los valores
+                ClearTxt()
+
+            End If
+
+        Else
+
+            'Usuario
+            MsgBox("La materia prima " + datos.prima_nombre + " ya existe en la base de datos", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
 
     End Sub
 
@@ -454,7 +531,7 @@ Public Class ScrConfigPrimaNew
         Else
 
             'Método para insert de los campos de texto
-            'AddPrimaData()
+            AddPrimaData()
 
         End If
 
