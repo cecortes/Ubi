@@ -2421,6 +2421,63 @@ Public Class Agregar
 
 #End Region
 
+#Region "PRIMA"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla prima
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewPrima(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO prima (prima_foto, prima_nombre, prima_interno, prima_comercial, prima_tag, prima_desc) VALUES (@prima_foto, @prima_nombre, @prima_interno, @prima_comercial, @prima_tag, @prima_desc)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.AddWithValue("@prima_foto", datos.foto_inv)
+            _adaptador.InsertCommand.Parameters.Add("@prima_nombre", MySqlDbType.String, 45).Value = datos.prima_nombre
+            _adaptador.InsertCommand.Parameters.Add("@prima_interno", MySqlDbType.String, 45).Value = datos.prima_interno
+            _adaptador.InsertCommand.Parameters.Add("@prima_comercial", MySqlDbType.String, 45).Value = datos.prima_comercial
+            _adaptador.InsertCommand.Parameters.Add("@prima_tag", MySqlDbType.String, 45).Value = datos.prima_tag
+            _adaptador.InsertCommand.Parameters.Add("@prima_desc", MySqlDbType.String, 100).Value = datos.prima_desc
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+
+#End Region
+
 End Class
 
 Public Class Actualizar
