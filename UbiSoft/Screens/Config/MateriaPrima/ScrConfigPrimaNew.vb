@@ -279,6 +279,58 @@ Public Class ScrConfigPrimaNew
 
     End Sub
 
+    ''' <summary>
+    ''' Captura los valores del dgv en la clase datos
+    ''' Agrega las materias primas cargadas por medio del archivo de excel al datagridview
+    ''' </summary>
+    Private Sub AddPrimaDgv()
+
+        'Privadas
+        Dim contAdd As Integer = 0
+        Dim arrayBin As Byte()
+
+        'Conversión Img to Bin
+        arrayBin = ImgToBin(PbFoto.Image)
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvPrima.Rows
+
+            'Captura
+            datos.prima_foto = arrayBin
+            datos.prima_nombre = filas.Cells(0).Value
+            datos.prima_interno = filas.Cells(1).Value
+            datos.prima_comercial = filas.Cells(2).Value
+            datos.prima_tag = filas.Cells(3).Value
+            datos.prima_desc = filas.Cells(4).Value
+
+            'Insert & Consulta por keys repetidas
+            If (add.NewInv(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Validación de todos las insert & update
+        If (DgvPrima.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todas las materias primas han sido agregadas con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Uno o más items no pudieron agregarse a la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvPrima.Rows.Clear()
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -377,6 +429,29 @@ Public Class ScrConfigPrimaNew
 
         'Clr
         ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida que el dgv no tenga datos, en caso de ser así llama al método para la inserción por lista
+    ''' En caso contrario realiza la inserción por medio de los cuadros de texto
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Validación
+        If (DgvPrima.Rows.Count > 0) Then
+
+            'Método para insert por medio de la tabla
+            AddPrimaDgv()
+
+        Else
+
+            'Método para insert de los campos de texto
+            AddPrimaData()
+
+        End If
 
     End Sub
 

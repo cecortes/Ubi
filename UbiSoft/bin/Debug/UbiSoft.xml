@@ -2060,15 +2060,114 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.GetRfid(System.String)">
+ <summary>
+ El método delegado como tal, tiene como nombre el mismo que usa Invoke
+ Obtiene el RFID recibido por el lector en la consola
+ Pasa el RFID al cuadro de texto reservado para tal
+ </summary>
+ <param name="dato">Cadena de texto</param>
+</member>
 <member name="M:UbiSoft.ScrConfigPrimaNew.FillSerial">
  <summary>
  Se encarga de listar todos los puertos seriales
  Los carga en el combo
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.ConectSerial">
+ <summary>
+ Se encarga de configurar el Serial y abrir el puerto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.ImgToBin(System.Drawing.Image)">
+ <summary>
+ Convierte la imágen recibida a formato RAW Binario
+ Regresa un arreglo de tipo Byte()
+ </summary>
+ <param name="pic">Objeto Imágen</param>
+ <returns>Bin as Memory Stream</returns>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.BinToImg(System.Byte[])">
+ <summary>
+ Convierte el arreglo Byte() recibido a Imágen
+ Regresa una imágen
+ </summary>
+ <param name="Imagen">Image filetype</param>
+ <returns></returns>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.AbrirImagen">
+ <summary>
+ Muestra el cuadro para abrir archivo
+ Aplica los filtros necesarios
+ Regresa el archivo seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.OpenExcel">
+ <summary>
+ Abre el diálogo para capturar el path del excel
+ Lo pasa como parámetro al método para llenar el dgv
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.FillDgvPrima(System.String@,System.Windows.Forms.DataGridView)">
+ <summary>
+ Recibe el path y el objeto datagrid como parámetros
+ Llena el dgv que recibe como parámetro con los datos del excel
+ </summary>
+ <param name="path"></param>
+ <param name="dgv"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigPrimaNew.ScrConfigPrimaNew_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los puertos seriales
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.BtnSerial_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para la conexión serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.CboPto_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de capturar el nombre del puerto en la variable que le corresponde
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Recibe los datos seriales hasta recibir una nueva línea LN.
+ Invoca al método delegado para pasar el RFID al textbox.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.BtnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ LLama al método para abrir el excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de llamar al método para limpiar los text
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

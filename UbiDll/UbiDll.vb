@@ -1999,6 +1999,67 @@ Public Class Consulta
 
 #End Region
 
+#Region "prima"
+
+    ''' <summary>
+    ''' Consulta la tabla prima
+    ''' Obtiene el prima_nombre
+    ''' Si existe devuelve false
+    ''' Si no existe devuelve true
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function ChkPrimaKey(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim con As New Conexion
+        Dim key As String
+        Dim flg As Boolean = True
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT prima_nombre FROM prima WHERE prima_nombre = @prima_nombre", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@prima_nombre", MySqlDbType.String, 45).Value = datos.prima_nombre
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            key = _adaptador.SelectCommand.ExecuteScalar()
+
+            'Validación
+            If (String.IsNullOrEmpty(key)) Then
+
+                'Flag to false
+                flg = False
+
+            End If
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            con._conexion.Close()
+
+        End Try
+
+        'Return
+        Return flg
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Agregar
