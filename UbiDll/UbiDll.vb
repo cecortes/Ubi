@@ -2129,6 +2129,66 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de una materia prima en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetPrimaRfid(ByVal Datos As Datos) As Datos
+
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM prima WHERE prima_tag = @prima_tag", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@prima_tag", MySqlDbType.String, 45).Value = Datos.prima_tag
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.prima_foto = reader("prima_foto")
+                resultado.prima_nombre = reader("prima_nombre")
+                resultado.prima_interno = reader("prima_interno")
+                resultado.prima_comercial = reader("prima_comercial")
+                resultado.prima_tag = reader("prima_tag")
+                resultado.prima_desc = reader("prima_desc")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class

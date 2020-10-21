@@ -258,6 +258,23 @@ Public Class ScrConfigPrimaEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Limpia los cuadros de texto
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Text
+        TxtNom.Text = ""
+        TxtInt.Text = ""
+        TxtComer.Text = ""
+        TxtTag.Text = ""
+        TxtDesc.Text = ""
+
+        'Img
+        PbFoto.Image = My.Resources.bolsas
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -275,6 +292,79 @@ Public Class ScrConfigPrimaEdit
 
         'Dgv
         FillDgvPrima()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para la conexión serial
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSerial_Click(sender As Object, e As EventArgs) Handles BtnSerial.Click
+
+        'Serial
+        ConectSerial()
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de capturar el nombre del puerto en la variable que le corresponde
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboPto_TextChanged(sender As Object, e As EventArgs) Handles CboPto.TextChanged
+
+        'Locales
+        Dim Ports As String() = IO.Ports.SerialPort.GetPortNames()
+
+        'Validación
+        If Ports.Length > 0 Then
+
+            'Captura
+            spName = CboPto.SelectedItem.ToString
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Recibe los datos seriales hasta recibir una nueva línea LN.
+    ''' Invoca al método delegado para pasar el RFID al textbox.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub SerialPort_DataReceived(sender As Object, e As Ports.SerialDataReceivedEventArgs) Handles SerialPort.DataReceived
+
+        'COM
+        Dim str As String = SerialPort.ReadLine
+
+        'Invoke, llama al método delegado y le pasa como argumento una cadena con el dato recibido.
+        Invoke(delegadoRFID, str)
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para cargar la imágen
+    ''' Muestra la imágen seleccionada en el picture box
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub PbFoto_Click(sender As Object, e As EventArgs) Handles PbFoto.Click
+
+        'Abrir
+        AbrirImagen()
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de llamar al método para limpiar los text
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clr
+        ClearTxt()
 
     End Sub
 

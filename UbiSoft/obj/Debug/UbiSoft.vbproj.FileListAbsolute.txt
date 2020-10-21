@@ -77,3 +77,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrInvEditFromDevice.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaNew.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
