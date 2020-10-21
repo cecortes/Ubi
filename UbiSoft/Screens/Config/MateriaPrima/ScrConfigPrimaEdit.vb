@@ -275,6 +275,32 @@ Public Class ScrConfigPrimaEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Captura el tag del textbox
+    ''' Lo pasa a datos
+    ''' Realiza una consulta en la tabla prima para obtener los datos
+    ''' </summary>
+    Private Sub GetPrimaTag()
+
+        'Privadas
+        Dim prima As New Datos
+
+        'Consulta para datos del cliente
+        datos.prima_tag = TxtTag.Text
+        prima = consulta.GetPrimaRfid(datos)
+
+        'Textbox
+        TxtNom.Text = prima.prima_nombre
+        TxtInt.Text = prima.prima_interno
+        TxtComer.Text = prima.prima_comercial
+        TxtTag.Text = prima.prima_tag
+        TxtDesc.Text = prima.prima_desc
+
+        'Img
+        PbFoto.Image = BinToImg(prima.prima_foto)
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -340,6 +366,41 @@ Public Class ScrConfigPrimaEdit
 
         'Invoke, llama al método delegado y le pasa como argumento una cadena con el dato recibido.
         Invoke(delegadoRFID, str)
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta del TAG en la tabla prima
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub TxtTag_TextChanged(sender As Object, e As EventArgs) Handles TxtTag.TextChanged
+
+        'Consulta
+        GetPrimaTag()
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvPrima_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvPrima.CellMouseClick
+
+        'Privadas
+        Dim fila As Integer = DgvPrima.Rows(e.RowIndex).Index
+
+        'Datos
+        TxtNom.Text = DgvPrima.Item(1, fila).Value
+        TxtInt.Text = DgvPrima.Item(2, fila).Value
+        TxtComer.Text = DgvPrima.Item(3, fila).Value
+        TxtTag.Text = DgvPrima.Item(4, fila).Value
+        TxtDesc.Text = DgvPrima.Item(5, fila).Value
+
+        'Conversión BinToImg
+        PbFoto.Image = BinToImg(DgvPrima.Item(0, fila).Value)
 
     End Sub
 

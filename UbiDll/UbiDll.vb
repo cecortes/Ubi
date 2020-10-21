@@ -2605,7 +2605,6 @@ Public Class Agregar
 
     End Function
 
-
 #End Region
 
 End Class
@@ -3160,6 +3159,62 @@ Public Class Actualizar
             _adaptador.UpdateCommand.Parameters.Add("@desc_inv", MySqlDbType.String, 100).Value = datos.desc_inv
             _adaptador.UpdateCommand.Parameters.Add("@cost_inv", MySqlDbType.Decimal, 10, 2).Value = datos.cost_inv
             _adaptador.UpdateCommand.Parameters.Add("@area_inv", MySqlDbType.String, 45).Value = datos.area_inv
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "PRIMA"
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla prima
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdPrima(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE prima SET prima_foto=@prima_foto, prima_nombre=@prima_nombre, prima_interno=@prima_interno, prima_comercial=@prima_comercial, prima_tag=@prima_tag, prima_desc=@prima_desc WHERE prima_nombre=@prima_nombre", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.AddWithValue("@prima_foto", datos.prima_foto)
+            _adaptador.UpdateCommand.Parameters.Add("@prima_nombre", MySqlDbType.String, 45).Value = datos.prima_nombre
+            _adaptador.UpdateCommand.Parameters.Add("@prima_interno", MySqlDbType.String, 45).Value = datos.prima_interno
+            _adaptador.UpdateCommand.Parameters.Add("@prima_comercial", MySqlDbType.String, 45).Value = datos.prima_comercial
+            _adaptador.UpdateCommand.Parameters.Add("@prima_tag", MySqlDbType.String, 45).Value = datos.prima_tag
+            _adaptador.UpdateCommand.Parameters.Add("@prima_desc", MySqlDbType.String, 100).Value = datos.prima_desc
 
             'Update
             con._conexion.Open()

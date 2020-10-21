@@ -2112,10 +2112,74 @@ UbiSoft
  Formato para el datagridview
  </summary>
 </member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.GetPrimaTag">
+ <summary>
+ Captura el tag del textbox
+ Lo pasa a datos
+ Realiza una consulta en la tabla prima para obtener los datos
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrConfigPrimaEdit.ScrConfigPrimaEdit_Load(System.Object,System.EventArgs)">
  <summary>
  Carga los puertos seriales
  Llama al método para cargar las materias primas en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.BtnSerial_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para la conexión serial
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.CboPto_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de capturar el nombre del puerto en la variable que le corresponde
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ <summary>
+ Recibe los datos seriales hasta recibir una nueva línea LN.
+ Invoca al método delegado para pasar el RFID al textbox.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.TxtTag_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta del TAG en la tabla prima
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.DgvPrima_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.PbFoto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar la imágen
+ Muestra la imágen seleccionada en el picture box
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrConfigPrimaEdit.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de llamar al método para limpiar los text
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
