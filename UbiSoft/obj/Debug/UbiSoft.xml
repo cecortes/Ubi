@@ -167,6 +167,77 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrAdmin.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
+<member name="M:UbiSoft.ScrAdmin.CerrarFormPanel">
+ <summary>
+ Método para recorrer los paneles abiertos y cerrarlos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAdmin.ScrAdmin_Load(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.AltaPropiasItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el panel para alta cuentas propias
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.BajaPropiasItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el panel para baja cuentas propias
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.AltaExtItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.BajaExtItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAutoDelFromDevice.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke

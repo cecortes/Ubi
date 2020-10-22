@@ -98,6 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Admin\Bancos\ScrPropiasDel.Designer.vb">
+      <DependentUpon>ScrPropiasDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrPropiasDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrPropiasNew.Designer.vb">
+      <DependentUpon>ScrPropiasNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrPropiasNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Admin\ScrAdmin.Designer.vb">
       <DependentUpon>ScrAdmin.vb</DependentUpon>
     </Compile>
@@ -387,6 +399,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrPropiasDel.resx">
+      <DependentUpon>ScrPropiasDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrPropiasNew.resx">
+      <DependentUpon>ScrPropiasNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Admin\ScrAdmin.resx">
       <DependentUpon>ScrAdmin.vb</DependentUpon>
     </EmbeddedResource>

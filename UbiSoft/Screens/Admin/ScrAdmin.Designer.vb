@@ -36,6 +36,13 @@ Partial Class ScrAdmin
         Me.BancosToolItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.NominaItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.PnlMenu = New System.Windows.Forms.Panel()
+        Me.CuentasPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AltaPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BajaPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CuentasExtItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AltaExtItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BajaExtItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PnlWrp = New System.Windows.Forms.Panel()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,7 +129,7 @@ Partial Class ScrAdmin
         '
         'MenuStrip
         '
-        Me.MenuStrip.BackColor = System.Drawing.Color.Black
+        Me.MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.MenuStrip.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MenuStrip.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -137,43 +144,44 @@ Partial Class ScrAdmin
         '
         Me.ReportesItm.BackColor = System.Drawing.Color.Transparent
         Me.ReportesItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ReportesItm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.ReportesItm.ForeColor = System.Drawing.Color.Black
         Me.ReportesItm.Name = "ReportesItm"
         Me.ReportesItm.Size = New System.Drawing.Size(91, 37)
         Me.ReportesItm.Text = "Reportes"
         '
         'CuentasPorCobrarItm
         '
-        Me.CuentasPorCobrarItm.BackColor = System.Drawing.Color.Black
+        Me.CuentasPorCobrarItm.BackColor = System.Drawing.Color.Transparent
         Me.CuentasPorCobrarItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CuentasPorCobrarItm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CuentasPorCobrarItm.ForeColor = System.Drawing.Color.Black
         Me.CuentasPorCobrarItm.Name = "CuentasPorCobrarItm"
         Me.CuentasPorCobrarItm.Size = New System.Drawing.Size(174, 37)
         Me.CuentasPorCobrarItm.Text = "Cuentas por Cobrar"
         '
         'CuentasPorPagarItm
         '
-        Me.CuentasPorPagarItm.BackColor = System.Drawing.Color.Black
+        Me.CuentasPorPagarItm.BackColor = System.Drawing.Color.Transparent
         Me.CuentasPorPagarItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CuentasPorPagarItm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CuentasPorPagarItm.ForeColor = System.Drawing.Color.Black
         Me.CuentasPorPagarItm.Name = "CuentasPorPagarItm"
         Me.CuentasPorPagarItm.Size = New System.Drawing.Size(166, 37)
         Me.CuentasPorPagarItm.Text = "Cuentas por Pagar"
         '
         'BancosToolItm
         '
-        Me.BancosToolItm.BackColor = System.Drawing.Color.Black
+        Me.BancosToolItm.BackColor = System.Drawing.Color.Transparent
+        Me.BancosToolItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CuentasPropiasItm, Me.CuentasExtItm})
         Me.BancosToolItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BancosToolItm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.BancosToolItm.ForeColor = System.Drawing.Color.Black
         Me.BancosToolItm.Name = "BancosToolItm"
         Me.BancosToolItm.Size = New System.Drawing.Size(78, 37)
         Me.BancosToolItm.Text = "Bancos"
         '
         'NominaItm
         '
-        Me.NominaItm.BackColor = System.Drawing.Color.Black
+        Me.NominaItm.BackColor = System.Drawing.Color.Transparent
         Me.NominaItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NominaItm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.NominaItm.ForeColor = System.Drawing.Color.Black
         Me.NominaItm.Name = "NominaItm"
         Me.NominaItm.Size = New System.Drawing.Size(85, 37)
         Me.NominaItm.Text = "Nómina"
@@ -188,6 +196,55 @@ Partial Class ScrAdmin
         Me.PnlMenu.Size = New System.Drawing.Size(1024, 41)
         Me.PnlMenu.TabIndex = 5
         '
+        'CuentasPropiasItm
+        '
+        Me.CuentasPropiasItm.BackColor = System.Drawing.Color.Transparent
+        Me.CuentasPropiasItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaPropiasItm, Me.BajaPropiasItm})
+        Me.CuentasPropiasItm.ForeColor = System.Drawing.Color.Black
+        Me.CuentasPropiasItm.Name = "CuentasPropiasItm"
+        Me.CuentasPropiasItm.Size = New System.Drawing.Size(225, 28)
+        Me.CuentasPropiasItm.Text = "Cuentas Propias"
+        '
+        'AltaPropiasItm
+        '
+        Me.AltaPropiasItm.Name = "AltaPropiasItm"
+        Me.AltaPropiasItm.Size = New System.Drawing.Size(224, 28)
+        Me.AltaPropiasItm.Text = "Alta de Cuentas"
+        '
+        'BajaPropiasItm
+        '
+        Me.BajaPropiasItm.Name = "BajaPropiasItm"
+        Me.BajaPropiasItm.Size = New System.Drawing.Size(224, 28)
+        Me.BajaPropiasItm.Text = "Baja de Cuentas"
+        '
+        'CuentasExtItm
+        '
+        Me.CuentasExtItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaExtItm, Me.BajaExtItm})
+        Me.CuentasExtItm.Name = "CuentasExtItm"
+        Me.CuentasExtItm.Size = New System.Drawing.Size(225, 28)
+        Me.CuentasExtItm.Text = "Cuentas Externas"
+        '
+        'AltaExtItm
+        '
+        Me.AltaExtItm.Name = "AltaExtItm"
+        Me.AltaExtItm.Size = New System.Drawing.Size(224, 28)
+        Me.AltaExtItm.Text = "Alta de Cuentas"
+        '
+        'BajaExtItm
+        '
+        Me.BajaExtItm.Name = "BajaExtItm"
+        Me.BajaExtItm.Size = New System.Drawing.Size(224, 28)
+        Me.BajaExtItm.Text = "Baja de Cuentas"
+        '
+        'PnlWrp
+        '
+        Me.PnlWrp.BackColor = System.Drawing.Color.Transparent
+        Me.PnlWrp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlWrp.Location = New System.Drawing.Point(0, 81)
+        Me.PnlWrp.Name = "PnlWrp"
+        Me.PnlWrp.Size = New System.Drawing.Size(1024, 687)
+        Me.PnlWrp.TabIndex = 6
+        '
         'ScrAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -196,6 +253,7 @@ Partial Class ScrAdmin
         Me.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 768)
+        Me.Controls.Add(Me.PnlWrp)
         Me.Controls.Add(Me.PnlMenu)
         Me.Controls.Add(Me.PnlTop)
         Me.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -234,4 +292,11 @@ Partial Class ScrAdmin
     Friend WithEvents CuentasPorPagarItm As ToolStripMenuItem
     Friend WithEvents BancosToolItm As ToolStripMenuItem
     Friend WithEvents NominaItm As ToolStripMenuItem
+    Friend WithEvents CuentasPropiasItm As ToolStripMenuItem
+    Friend WithEvents AltaPropiasItm As ToolStripMenuItem
+    Friend WithEvents BajaPropiasItm As ToolStripMenuItem
+    Friend WithEvents CuentasExtItm As ToolStripMenuItem
+    Friend WithEvents AltaExtItm As ToolStripMenuItem
+    Friend WithEvents BajaExtItm As ToolStripMenuItem
+    Friend WithEvents PnlWrp As Panel
 End Class
