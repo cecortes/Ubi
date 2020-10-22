@@ -844,6 +844,109 @@ Public Class Datos
 
 #End Region
 
+#Region "ctapropia"
+
+#Region "DATAMEMBERS"
+
+    Private _propia_nom As String
+    Private _propia_banco As String
+    Private _propia_keybanco As String
+    Private _propia_nocuenta As String
+    Private _propia_noplaza As String
+    Private _propia_nosuc As String
+    Private _propia_tipo As String
+    Private _propia_clabe As String
+    Private _propia_abb As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property propia_nom() As String
+        Get
+            Return _propia_nom
+        End Get
+        Set(ByVal value As String)
+            _propia_nom = value
+        End Set
+    End Property
+
+    Public Property propia_banco() As String
+        Get
+            Return _propia_banco
+        End Get
+        Set(ByVal value As String)
+            _propia_banco = value
+        End Set
+    End Property
+
+    Public Property propia_keybanco() As String
+        Get
+            Return _propia_keybanco
+        End Get
+        Set(ByVal value As String)
+            _propia_keybanco = value
+        End Set
+    End Property
+
+    Public Property propia_nocuenta() As String
+        Get
+            Return _propia_nocuenta
+        End Get
+        Set(ByVal value As String)
+            _propia_nocuenta = value
+        End Set
+    End Property
+
+    Public Property propia_noplaza() As String
+        Get
+            Return _propia_noplaza
+        End Get
+        Set(ByVal value As String)
+            _propia_noplaza = value
+        End Set
+    End Property
+
+    Public Property propia_nosuc() As String
+        Get
+            Return _propia_nosuc
+        End Get
+        Set(ByVal value As String)
+            _propia_nosuc = value
+        End Set
+    End Property
+
+    Public Property propia_tipo() As String
+        Get
+            Return _propia_tipo
+        End Get
+        Set(ByVal value As String)
+            _propia_tipo = value
+        End Set
+    End Property
+
+    Public Property propia_clabe() As String
+        Get
+            Return _propia_clabe
+        End Get
+        Set(ByVal value As String)
+            _propia_clabe = value
+        End Set
+    End Property
+
+    Public Property propia_abb() As String
+        Get
+            Return _propia_abb
+        End Get
+        Set(ByVal value As String)
+            _propia_abb = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
