@@ -186,10 +186,10 @@ Public Class ScrPropiasNew
         datos.propia_abb = TxtAbb.Text
 
         'Insert
-        If add.NewInv(datos) Then
+        If add.NewPropia(datos) Then
 
             'Msg Usr
-            MsgBox("Nuevo inventario agregado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("Nueva cuenta propia agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             'Re inicia los valores
             ClearTxt()

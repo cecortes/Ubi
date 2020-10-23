@@ -187,6 +187,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrPropiasNew.AddPropia">
+ <summary>
+ Captura los valores de los textbox
+ Captura los valores de los cbo
+ Realiza la inserción en la tabla de ctapropia
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrPropiasNew.ScrPropiasNew_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para cargar las cuentas propias en el Dgv
@@ -197,6 +204,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrPropiasNew.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para limpiar los campos de texto y reiniciar los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la insercción
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

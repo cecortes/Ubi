@@ -2809,7 +2809,7 @@ Public Class Agregar
             con.Con_Global()
 
             'Query
-            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO propia (propia_nom, propia_banco, propia_keybanco, propia_nocuenta, propia_noplaza, propia_nosuc, propia_tipo, propia_clabe, propia_abb) VALUES (@propia_nom, @propia_banco, @propia_keybanco, @propia_nocuenta, @propia_noplaza, @propia_nosuc, @propia_tipo, @propia_clabe, @propia_abb)", con._conexion)
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO ctapropia (propia_nom, propia_banco, propia_keybanco, propia_nocuenta, propia_noplaza, propia_nosuc, propia_tipo, propia_clabe, propia_abb) VALUES (@propia_nom, @propia_banco, @propia_keybanco, @propia_nocuenta, @propia_noplaza, @propia_nosuc, @propia_tipo, @propia_clabe, @propia_abb)", con._conexion)
 
             'Parámetros
             _adaptador.InsertCommand.Parameters.Add("@propia_nom", MySqlDbType.String, 100).Value = datos.propia_nom
