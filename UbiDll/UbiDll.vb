@@ -2789,6 +2789,65 @@ Public Class Agregar
 
 #End Region
 
+#Region "CTAPROPIA"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla ctapropia
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewPropia(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO propia (propia_nom, propia_banco, propia_keybanco, propia_nocuenta, propia_noplaza, propia_nosuc, propia_tipo, propia_clabe, propia_abb) VALUES (@propia_nom, @propia_banco, @propia_keybanco, @propia_nocuenta, @propia_noplaza, @propia_nosuc, @propia_tipo, @propia_clabe, @propia_abb)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@propia_nom", MySqlDbType.String, 100).Value = datos.propia_nom
+            _adaptador.InsertCommand.Parameters.Add("@propia_banco", MySqlDbType.String, 100).Value = datos.propia_banco
+            _adaptador.InsertCommand.Parameters.Add("@propia_keybanco", MySqlDbType.String, 4).Value = datos.propia_keybanco
+            _adaptador.InsertCommand.Parameters.Add("@propia_nocuenta", MySqlDbType.String, 45).Value = datos.propia_nocuenta
+            _adaptador.InsertCommand.Parameters.Add("@propia_noplaza", MySqlDbType.String, 45).Value = datos.propia_noplaza
+            _adaptador.InsertCommand.Parameters.Add("@propia_nosuc", MySqlDbType.String, 45).Value = datos.propia_nosuc
+            _adaptador.InsertCommand.Parameters.Add("@propia_tipo", MySqlDbType.String, 45).Value = datos.propia_tipo
+            _adaptador.InsertCommand.Parameters.Add("@propia_clabe", MySqlDbType.String, 45).Value = datos.propia_clabe
+            _adaptador.InsertCommand.Parameters.Add("@propia_abb", MySqlDbType.String, 45).Value = datos.propia_abb
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar

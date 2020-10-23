@@ -167,6 +167,40 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrPropiasNew.FillDgvPropia">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de ctapropia
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.FormatCbo">
+ <summary>
+ Formato para poner a o los índices de los cbo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.ScrPropiasNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar las cuentas propias en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPropiasNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto y reiniciar los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAdmin.AbrirFormPanel``1">
  <summary>
  Se encarga de crear un nuevo objeto del tipo Form
