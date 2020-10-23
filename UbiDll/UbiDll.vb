@@ -1494,7 +1494,6 @@ Public Class Consulta
     ''' <summary>
     ''' Se encarga de obtener el último id de la tabla y lo regresa como resultado
     ''' </summary>
-    ''' <param name="Datos"></param>
     ''' <returns>Password as string</returns>
     Public Function GetLastId() As Integer
         'Variables locales
@@ -2291,6 +2290,86 @@ Public Class Consulta
         Return resultado
 
     End Function
+
+#End Region
+
+#Region "ctapropia"
+
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo ncesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla ctapropia
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub DgvAllCtaPropia()
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode PROPIA
+        dgvCode.Tables.Add("PROPIA")
+        dgvCode.Tables("PROPIA").Columns.Add("Nombre", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("Banco", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("Id SAT", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("No. de Cuenta", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("Plaza", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("Sucursal", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("Tipo", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("CLABE", GetType(String))
+        dgvCode.Tables("PROPIA").Columns.Add("ABB", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM ctapropia", con._conexion)
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.propia_nom = reader("propia_nom")
+                resultado.propia_banco = reader("propia_banco")
+                resultado.propia_keybanco = reader("propia_keybanco")
+                resultado.propia_nocuenta = reader("propia_nocuenta")
+                resultado.propia_noplaza = reader("propia_noplaza")
+                resultado.propia_nosuc = reader("propia_nosuc")
+                resultado.propia_tipo = reader("propia_tipo")
+                resultado.propia_clabe = reader("propia_clabe")
+                resultado.propia_abb = reader("propia_abb")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PROPIA").Rows.Add(resultado.propia_nom, resultado.propia_banco, resultado.propia_keybanco, resultado.propia_nocuenta, resultado.propia_noplaza, resultado.propia_nosuc, resultado.propia_tipo, resultado.propia_clabe, resultado.propia_abb)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
 
 #End Region
 

@@ -100,7 +100,6 @@ UbiDll
  <summary>
  Se encarga de obtener el último id de la tabla y lo regresa como resultado
  </summary>
- <param name="Datos"></param>
  <returns>Password as string</returns>
 </member>
 <member name="M:UbiDll.Consulta.GetAllMaq">
@@ -191,6 +190,15 @@ UbiDll
  </summary>
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
+</member>
+<member name="M:UbiDll.Consulta.DgvAllCtaPropia">
+ <summary>
+ Crea una tabla harcode en el dataset
+ Crea las columnas del tipo ncesario para los datos
+ Realiza una consulta para obtener los datos de la tabla ctapropia
+ Mediante un reader almacena los datos
+ Genera una nueva fila en el dataset con todos los datos
+ </summary>
 </member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
