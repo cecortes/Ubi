@@ -120,7 +120,6 @@ Public Class ScrPropiasNew
 
         'Privadas
         Dim flgErr As Boolean = False
-        Dim arrayBin As Byte()
 
         'Validación textos
         If String.IsNullOrEmpty(TxtNombre.Text) Then
@@ -193,6 +192,8 @@ Public Class ScrPropiasNew
 
             'Re inicia los valores
             ClearTxt()
+            'Dgv
+            FillDgvPropia()
 
         End If
 
