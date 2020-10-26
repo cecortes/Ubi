@@ -346,6 +346,16 @@ UbiSoft
  Carga al cbo la consulta de la tabla proveedors
  </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaNew.FillDgvExt">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de ctasexterna
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrExternaNew.ScrExternaNew_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la información en los cbo

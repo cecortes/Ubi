@@ -2737,6 +2737,75 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de una cuenta externa en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetExtProv(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM ctasexterna WHERE ext_nomprov = @ext_nomprov", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ext_nomprov", MySqlDbType.String, 45).Value = Datos.ext_nomprov
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.ext_nomprov = reader("ext_nomprov").ToString
+                resultado.ext_rfc = reader("ext_rfc").ToString
+                resultado.ext_mail = reader("ext_mail").ToString
+                resultado.ext_tel = reader("ext_tel")
+                resultado.ext_nom = reader("ext_nom")
+                resultado.ext_banco = reader("ext_banco")
+                resultado.ext_keybanco = reader("ext_keybanco")
+                resultado.ext_nocuenta = reader("ext_nocuenta")
+                resultado.ext_noplaza = reader("ext_noplaza")
+                resultado.ext_nosuc = reader("ext_nosuc")
+                resultado.ext_tipo = reader("ext_tipo")
+                resultado.ext_clabe = reader("ext_clabe")
+                resultado.ext_abb = reader("ext_abb")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class

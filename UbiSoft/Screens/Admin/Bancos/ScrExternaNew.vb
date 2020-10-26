@@ -95,29 +95,37 @@ Public Class ScrExternaNew
     Private Sub FormatDgv()
 
         'Sort Descending
-        DgvPropia.Sort(DgvPropia.Columns("Nombre"), System.ComponentModel.ListSortDirection.Ascending)
+        DgvExt.Sort(DgvExt.Columns("Proveedor"), System.ComponentModel.ListSortDirection.Ascending)
 
         'Size mode para las columnas
-        DgvPropia.Columns("Nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Nombre").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("Banco").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Banco").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("Id SAT").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Id SAT").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("No. de Cuenta").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("No. de Cuenta").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("Plaza").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Plaza").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("Sucursal").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Sucursal").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("Tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("Tipo").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("CLABE").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DgvPropia.Columns("CLABE").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvPropia.Columns("ABB").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DgvPropia.Columns("ABB").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Proveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Proveedor").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("RFC").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("RFC").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Mail").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Mail").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Tel.").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Tel.").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Beneficiario").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Beneficiario").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Banco").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Banco").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Id. SAT").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Id. SAT").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Cuenta").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Cuenta").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Plaza").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Plaza").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Sucursal").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Sucursal").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Tipo").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("CLABE").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvExt.Columns("CLABE").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("ABB").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("ABB").SortMode = DataGridViewColumnSortMode.Programmatic
 
-        DgvPropia.Refresh()
+        DgvExt.Refresh()
 
     End Sub
 
@@ -138,6 +146,9 @@ Public Class ScrExternaNew
 
         'Proveedores
         FillProv()
+
+        'Dgv
+        FillDgvExt()
 
     End Sub
 
