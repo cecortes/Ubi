@@ -120,7 +120,7 @@ Public Class ScrExternaNew
         DgvExt.Columns("Sucursal").SortMode = DataGridViewColumnSortMode.Programmatic
         DgvExt.Columns("Tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         DgvExt.Columns("Tipo").SortMode = DataGridViewColumnSortMode.Programmatic
-        DgvExt.Columns("CLABE").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvExt.Columns("CLABE").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         DgvExt.Columns("CLABE").SortMode = DataGridViewColumnSortMode.Programmatic
         DgvExt.Columns("ABB").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         DgvExt.Columns("ABB").SortMode = DataGridViewColumnSortMode.Programmatic
@@ -141,6 +141,7 @@ Public Class ScrExternaNew
         TxtCuenta.Text = ""
         TxtSuc.Text = ""
         TxtClabe.Text = ""
+        TxtTel.Text = ""
         TxtPlaza.Text = ""
         TxtAbb.Text = ""
 
@@ -222,26 +223,30 @@ Public Class ScrExternaNew
         satBanco(1).Trim()
 
         'Captura
-        datos.propia_nom = TxtNombre.Text
-        datos.propia_banco = satBanco(0)
-        datos.propia_keybanco = satBanco(1)
-        datos.propia_nocuenta = TxtCuenta.Text
-        datos.propia_noplaza = TxtPlaza.Text
-        datos.propia_nosuc = TxtSuc.Text
-        datos.propia_tipo = CboTpo.Text
-        datos.propia_clabe = TxtClabe.Text
-        datos.propia_abb = TxtAbb.Text
+        datos.ext_nomprov = CboProv.Text
+        datos.ext_rfc = TxtRfc.Text
+        datos.ext_mail = TxtMail.Text
+        datos.ext_tel = TxtTel.Text
+        datos.ext_nom = TxtNombre.Text
+        datos.ext_banco = satBanco(0)
+        datos.ext_keybanco = satBanco(1)
+        datos.ext_nocuenta = TxtCuenta.Text
+        datos.ext_noplaza = TxtPlaza.Text
+        datos.ext_nosuc = TxtSuc.Text
+        datos.ext_tipo = CboTpo.Text
+        datos.ext_clabe = TxtClabe.Text
+        datos.ext_abb = TxtAbb.Text
 
         'Insert
-        If add.NewPropia(datos) Then
+        If add.NewExt(datos) Then
 
             'Msg Usr
-            MsgBox("Nueva cuenta propia agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("Nueva cuenta externa agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
             'Re inicia los valores
             ClearTxt()
             'Dgv
-            FillDgvPropia()
+            FillDgvExt()
 
         End If
 
@@ -340,7 +345,25 @@ Public Class ScrExternaNew
 
     End Sub
 
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvExt_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvExt.CellMouseClick
 
+        'Privadas
+        Dim fila As Integer = DgvExt.Rows(e.RowIndex).Index
+
+        'Datos
+        CboProv.Text = DgvExt.Item(0, fila).Value
+        'TxtBanco.Text = DgvExt.Item(1, fila).Value
+        'TxtCuenta.Text = DgvExt.Item(3, fila).Value
+        'TxtTpo.Text = DgvExt.Item(6, fila).Value
+        'TxtClabe.Text = DgvExt.Item(7, fila).Value
+
+    End Sub
 
 #End Region
 

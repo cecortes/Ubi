@@ -361,6 +361,13 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaNew.AddExt">
+ <summary>
+ Captura los valores de los textbox
+ Captura los valores de los cbo
+ Realiza la inserción en la tabla de ctasexterna
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrExternaNew.ScrExternaNew_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la información en los cbo
@@ -380,6 +387,21 @@ UbiSoft
 <member name="M:UbiSoft.ScrExternaNew.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para limpiar los campos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la insercción
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.DgvExt_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

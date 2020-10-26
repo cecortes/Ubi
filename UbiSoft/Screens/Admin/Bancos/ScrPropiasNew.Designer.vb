@@ -22,10 +22,10 @@ Partial Class ScrPropiasNew
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -96,7 +96,7 @@ Partial Class ScrPropiasNew
         Me.CboBanco.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.CboBanco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.CboBanco.FormattingEnabled = True
-        Me.CboBanco.Items.AddRange(New Object() {"BANAMEX Banco Nacional de México - 002", "BANCOMEXT Banco Nacional de Comercio Exterior - 006 ", "BANOBRAS Banco Nacional de Obras y Servicios Públicos - 009", "BBVA BANCOMER BBVA Bancomer, S.A. - 012 ", "SANTANDER Banco Santander (México), S.A. - 014", "BANJERCITO Banco Nacional del Ejército, Fuerza Aérea y Armada - 019", "HSBC HSBC México, S.A. - 021 ", "BAJIO Banco del Bajío, S.A. - 030", "IXE IXE Banco, S.A. - 032 ", "INBURSA Banco Inbursa, S.A. - 036", "INTERACCIONES Banco Interacciones, S.A. - 037", "MIFEL Banca Mifel, S.A. - 042", "SCOTIABANK Scotiabank Inverlat, S.A.  - 044", "BANREGIO Banco Regional de Monterrey, S.A. - 058", "INVEX Banco Invex, S.A. - 059", "BANSI Bansi, S.A. - 060", "AFIRME Banca Afirme, S.A. - 062", "BANORTE Banco Mercantil del Norte, S.A. - 072", "THE ROYAL BANK The Royal Bank of Scotland México, S.A. - 102", "AMERICAN EXPRESS American Express Bank (México), S.A. - 103", "BAMSA Bank of America México, S.A. - 106", "TOKYO Bank of Tokyo-Mitsubishi UFJ (México), S.A. - 108", "JP MORGAN Banco J.P. Morgan, S.A. - 110", "BMONEX Banco Monex, S.A. - 112", "VE POR MAS Banco Ve Por Mas, S.A. - 113", "ING ING Bank (México), S.A. - 116", "DEUTSCHE Deutsche Bank México, S.A. - 124", "CREDIT SUISSE Banco Credit Suisse (México), S.A. - 126", "AZTECA Banco Azteca, S.A. - 127", "AUTOFIN Banco Autofin México, S.A. - 128", "BARCLAYS Barclays Bank México, S.A. - 129", "COMPARTAMOS Banco Compartamos, S.A. - 130", "BANCO FAMSA Banco Ahorro Famsa, S.A. - 131", "BMULTIVA Banco Multiva, S.A. - 132", "ACTINVER Banco Actinver, S.A. - 133", "WAL-MART Banco Wal-Mart de México Adelante, S.A. - 134", "NAFIN Nacional Financiera, Sociedad Nacional de Crédito - 135", "INTERBANCO Inter Banco, S.A. - 136", "BANCOPPEL BanCoppel, S.A. - 137", "ABC CAPITAL ABC Capital, S.A. - 138", "UBS BANK UBS Bank México, S.A. - 139", "CONSUBANCO Consubanco, S.A. - 140", "VOLKSWAGEN Volkswagen Bank, S.A. - 141", "CIBANCO CIBanco, S.A. - 143", "BBASE Banco Base, S.A. - 145", "BANSEFI Banco del Ahorro Nacional y Servicios Financieros - 166", "HIPOTECARIA FEDERAL Sociedad Hipotecaria Federal - 168", "MONEXCB Monex Casa de Bolsa, S.A. de C.V. - 600", "GBM GBM Grupo Bursátil Mexicano, S.A. de C.V. - 601", "MASARI Masari Casa de Bolsa, S.A. - 602", "VALUE Value, S.A. de C.V. - 605", "ESTRUCTURADORES Estructuradores del Mercado de Valores Casa de Bolsa, S.A. de C.V" &
+        Me.CboBanco.Items.AddRange(New Object() {"BANAMEX Banco Nacional de México - 002", "BANCOMEXT Banco Nacional de Comercio Exterior - 006 ", "BANOBRAS Banco Nacional de Obras y Servicios Públicos - 009", "BBVA BANCOMER BBVA Bancomer, S.A. - 012 ", "SANTANDER Banco Santander (México), S.A. - 014", "BANJERCITO Banco Nacional del Ejército, Fuerza Aérea y Armada - 019", "HSBC HSBC México, S.A. - 021 ", "BAJIO Banco del Bajío, S.A. - 030", "IXE IXE Banco, S.A. - 032 ", "INBURSA Banco Inbursa, S.A. - 036", "INTERACCIONES Banco Interacciones, S.A. - 037", "MIFEL Banca Mifel, S.A. - 042", "SCOTIABANK Scotiabank Inverlat, S.A.  - 044", "BANREGIO Banco Regional de Monterrey, S.A. - 058", "INVEX Banco Invex, S.A. - 059", "BANSI Bansi, S.A. - 060", "AFIRME Banca Afirme, S.A. - 062", "BANORTE Banco Mercantil del Norte, S.A. - 072", "THE ROYAL BANK The Royal Bank of Scotland México, S.A. - 102", "AMERICAN EXPRESS American Express Bank (México), S.A. - 103", "BAMSA Bank of America México, S.A. - 106", "TOKYO Bank of Tokyo Mitsubishi UFJ (México), S.A. - 108", "JP MORGAN Banco J.P. Morgan, S.A. - 110", "BMONEX Banco Monex, S.A. - 112", "VE POR MAS Banco Ve Por Mas, S.A. - 113", "ING ING Bank (México), S.A. - 116", "DEUTSCHE Deutsche Bank México, S.A. - 124", "CREDIT SUISSE Banco Credit Suisse (México), S.A. - 126", "AZTECA Banco Azteca, S.A. - 127", "AUTOFIN Banco Autofin México, S.A. - 128", "BARCLAYS Barclays Bank México, S.A. - 129", "COMPARTAMOS Banco Compartamos, S.A. - 130", "BANCO FAMSA Banco Ahorro Famsa, S.A. - 131", "BMULTIVA Banco Multiva, S.A. - 132", "ACTINVER Banco Actinver, S.A. - 133", "WAL-MART Banco Wal-Mart de México Adelante, S.A. - 134", "NAFIN Nacional Financiera, Sociedad Nacional de Crédito - 135", "INTERBANCO Inter Banco, S.A. - 136", "BANCOPPEL BanCoppel, S.A. - 137", "ABC CAPITAL ABC Capital, S.A. - 138", "UBS BANK UBS Bank México, S.A. - 139", "CONSUBANCO Consubanco, S.A. - 140", "VOLKSWAGEN Volkswagen Bank, S.A. - 141", "CIBANCO CIBanco, S.A. - 143", "BBASE Banco Base, S.A. - 145", "BANSEFI Banco del Ahorro Nacional y Servicios Financieros - 166", "HIPOTECARIA FEDERAL Sociedad Hipotecaria Federal - 168", "MONEXCB Monex Casa de Bolsa, S.A. de C.V. - 600", "GBM GBM Grupo Bursátil Mexicano, S.A. de C.V. - 601", "MASARI Masari Casa de Bolsa, S.A. - 602", "VALUE Value, S.A. de C.V. - 605", "ESTRUCTURADORES Estructuradores del Mercado de Valores Casa de Bolsa, S.A. de C.V" &
                 ". - 606", "TIBER Casa de Cambio Tiber, S.A. de C.V. - 607", "VECTOR Vector Casa de Bolsa, S.A. de C.V. - 608", "B&B B y B, Casa de Cambio, S.A. de C.V. - 610", "ACCIVAL Acciones y Valores Banamex, S.A. de C.V. - 614", "MERRILL LYNCH Merrill Lynch México, S.A. de C.V. - 615", "FINAMEX Casa de Bolsa Finamex, S.A. de C.V. - 616", "VALMEX Valores Mexicanos Casa de Bolsa, S.A. de C.V. - 617", "UNICA Unica Casa de Cambio, S.A. de C.V. - 618", "MAPFRE MAPFRE Tepeyac, S.A. - 619", "PROFUTURO Profuturo G.N.P., S.A. de C.V. - 620", "CB ACTINVER Actinver Casa de Bolsa, S.A. de C.V. - 621", "OACTIN OPERADORA ACTINVER, S.A. DE C.V. - 622", "SKANDIA Skandia Vida, S.A. de C.V. - 623", "CBDEUTSCHE Deutsche Securities, S.A. de C.V. - 626", "ZURICH Zurich Compañía de Seguros, S.A. - 627", "ZURICHVI Zurich Vida, Compañía de Seguros, S.A. - 628", "SU CASITA Hipotecaria Su Casita, S.A. de C.V. - 629", "CB INTERCAM Intercam Casa de Bolsa, S.A. de C.V. - 630", "CI BOLSA CI Casa de Bolsa, S.A. de C.V. - 631", "BULLTICK CB Bulltick Casa de Bolsa, S.A., de C.V. - 632", "STERLING Sterling Casa de Cambio, S.A. de C.V. - 633", "FINCOMUN Fincomún, Servicios Financieros Comunitarios, S.A. de C.V. - 634", "HDI SEGUROS HDI Seguros, S.A. de C.V. - 636", "ORDER Order Express Casa de Cambio, S.A. de C.V - 637", "AKALA Akala, S.A. de C.V., Sociedad Financiera Popular - 638", "CB JPMORGAN J.P. Morgan Casa de Bolsa, S.A. de C.V. - 640", "REFORMA Operadora de Recursos Reforma, S.A. de C.V. - 642", "STP Sistema de Transferencias y Pagos STP, S.A. de C.V. - 646", "TELECOMM Telecomunicaciones de México - 647", "EVERCORE Evercore Casa de Bolsa, S.A. de C.V. - 648", "SKANDIA Skandia Operadora de Fondos, S.A. de C.V. - 649", "SEGMTY Seguros Monterrey New York Life, S.A de C.V - 651", "ASEA Solución Asea, S.A. de C.V., Sociedad Financiera Popular - 652", "KUSPIT Kuspit Casa de Bolsa, S.A. de C.V. - 653", "SOFIEXPRESS J.P. SOFIEXPRESS, S.A. de C.V., S.F.P. - 655", "UNAGRA UNAGRA, S.A. de C.V., S.F.P. - 656", "OPCIONES EMPRESARIALES DEL NOROESTE, S.A. DE C.V. - 659", "CLS Cls Bank International - 901", "INDEVAL SD. Indeval, S.A. de C.V. - 902", "LIBERTAD Libertad Servicios Financieros, S.A. De C.V - 670"})
         Me.CboBanco.Location = New System.Drawing.Point(349, 112)
         Me.CboBanco.Name = "CboBanco"
@@ -322,34 +322,34 @@ Partial Class ScrPropiasNew
         '
         Me.DgvPropia.AllowUserToAddRows = False
         Me.DgvPropia.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvPropia.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvPropia.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvPropia.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvPropia.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPropia.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPropia.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DgvPropia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPropia.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPropia.DefaultCellStyle = DataGridViewCellStyle7
         Me.DgvPropia.EnableHeadersVisualStyles = False
         Me.DgvPropia.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.DgvPropia.Location = New System.Drawing.Point(3, 3)
@@ -357,13 +357,13 @@ Partial Class ScrPropiasNew
         Me.DgvPropia.ReadOnly = True
         Me.DgvPropia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DgvPropia.RowHeadersWidth = 51
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvPropia.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvPropia.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DgvPropia.RowTemplate.Height = 30
         Me.DgvPropia.Size = New System.Drawing.Size(1018, 316)
         Me.DgvPropia.TabIndex = 2
