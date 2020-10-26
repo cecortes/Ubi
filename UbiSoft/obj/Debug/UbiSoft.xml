@@ -324,14 +324,32 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrAdmin.AltaExtItm_Click(System.Object,System.EventArgs)">
  <summary>
- 
+ Muestra el panel para alta cuentas externas
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
 </member>
 <member name="M:UbiSoft.ScrAdmin.BajaExtItm_Click(System.Object,System.EventArgs)">
  <summary>
- 
+ Muestra el panel para baja cuentas externas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.FormatCbo">
+ <summary>
+ Formato para poner a o los índices de los cbo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.FillProv">
+ <summary>
+ Carga al cbo la consulta de la tabla proveedors
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.ScrExternaNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la información en los cbo
+ Carga la información en los dgv
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

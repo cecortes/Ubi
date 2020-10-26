@@ -74,6 +74,11 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
+<member name="M:UbiDll.Consulta.GetAllProv">
+ <summary>
+ Se encarga de consultar a proveedores y llenar al cbo correspondiente con el razon_prov
+ </summary>
+</member>
 <member name="M:UbiDll.Consulta.GetUniProd">
  <summary>
  Se encarga de consultar a prod_uni y llenar al cbo correspondiente con el tipo_uni

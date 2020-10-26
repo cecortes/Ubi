@@ -210,20 +210,26 @@ Public Class ScrAdmin
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Muestra el panel para alta cuentas externas
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub AltaExtItm_Click(sender As Object, e As EventArgs) Handles AltaExtItm.Click
 
+        'Open
+        AbrirFormPanel(Of ScrExternaNew)()
+
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Muestra el panel para baja cuentas externas
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BajaExtItm_Click(sender As Object, e As EventArgs) Handles BajaExtItm.Click
+
+        'Open
+        AbrirFormPanel(Of ScrExternaDel)()
 
     End Sub
 
