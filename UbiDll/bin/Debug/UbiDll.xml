@@ -377,6 +377,13 @@ UbiDll
  <param name="datos"> Resultado del borrado </param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Eliminar.DelPropia(UbiDll.Datos)">
+ <summary>
+ Se encarga de eliminar a la cuenta propia por medio de la key recibida como parámetro
+ </summary>
+ <param name="datos"> Resultado del borrado </param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.ErrorMsg.ErrorCode(System.Int32)">
  <summary>
  Se encarga de mostrar al usuario el mensaje de acuerdo al tipo de error

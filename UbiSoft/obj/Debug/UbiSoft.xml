@@ -167,6 +167,43 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrPropiasDel.FillDgvPropia">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de ctapropia
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.ScrPropiasDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para cargar las cuentas propias en el Dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.DgvPropia_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrPropiasNew.FillDgvPropia">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de ctapropia

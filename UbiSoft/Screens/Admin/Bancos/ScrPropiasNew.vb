@@ -1,6 +1,5 @@
 ﻿'Imports
 Imports UbiDll
-Imports System.IO
 
 Public Class ScrPropiasNew
 
