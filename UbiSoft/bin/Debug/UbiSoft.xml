@@ -182,6 +182,12 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrPropiasDel.DelPropia">
+ <summary>
+ Captura la key propia_nocuenta
+ Realiza el borrado en la tabla de ctapropia
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrPropiasDel.ScrPropiasDel_Load(System.Object,System.EventArgs)">
  <summary>
  Llama al método para cargar las cuentas propias en el Dgv
@@ -200,6 +206,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrPropiasDel.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para limpiar los campos de texto
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPropiasDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de borrar la cuenta
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

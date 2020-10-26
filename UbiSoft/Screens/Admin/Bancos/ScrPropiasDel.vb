@@ -80,6 +80,30 @@ Public Class ScrPropiasDel
 
     End Sub
 
+    ''' <summary>
+    ''' Captura la key propia_nocuenta
+    ''' Realiza el borrado en la tabla de ctapropia
+    ''' </summary>
+    Private Sub DelPropia()
+
+        'Captura
+        datos.propia_nocuenta = TxtCuenta.Text
+
+        'Delete
+        If del.DelPropia(datos) Then
+
+            'Msg Usr
+            MsgBox("Cuenta propia eliminada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            'Dgv
+            FillDgvPropia()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -125,6 +149,18 @@ Public Class ScrPropiasDel
 
         'Clr
         ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método encargado de borrar la cuenta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Del
+        DelPropia()
 
     End Sub
 
