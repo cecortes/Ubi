@@ -356,10 +356,30 @@ UbiSoft
  Formato para el datagridview
  </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaNew.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrExternaNew.ScrExternaNew_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la información en los cbo
  Carga la información en los dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.CboProv_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Realiza un consulta por medio de la Dll
+ Actualiza los cbo y textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

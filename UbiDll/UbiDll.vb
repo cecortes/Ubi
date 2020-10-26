@@ -3283,6 +3283,69 @@ Public Class Agregar
 
 #End Region
 
+#Region "CTASEXTERNA"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla ctasexterna
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewExt(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand = New MySqlCommand("INSERT INTO ctasexterna (ext_nomprov, ext_rfc, ext_mail, ext_tel, ext_nom, ext_banco, ext_keybanco, ext_nocuenta, ext_noplaza, ext_nosuc, ext_tipo, ext_clabe, ext_abb) VALUES (@ext_nomprov, @ext_rfc, @ext_mail, @ext_tel, @ext_nom, @ext_banco, @ext_keybanco, @ext_nocuenta, @ext_noplaza, @ext_nosuc, @ext_tipo, @ext_clabe, @ext_abb)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@ext_nomprov", MySqlDbType.String, 45).Value = datos.ext_nomprov
+            _adaptador.InsertCommand.Parameters.Add("@ext_rfc", MySqlDbType.String, 45).Value = datos.ext_rfc
+            _adaptador.InsertCommand.Parameters.Add("@ext_mail", MySqlDbType.String, 45).Value = datos.ext_mail
+            _adaptador.InsertCommand.Parameters.Add("@ext_tel", MySqlDbType.String, 45).Value = datos.ext_tel
+            _adaptador.InsertCommand.Parameters.Add("@ext_nom", MySqlDbType.String, 100).Value = datos.ext_nom
+            _adaptador.InsertCommand.Parameters.Add("@ext_banco", MySqlDbType.String, 100).Value = datos.ext_banco
+            _adaptador.InsertCommand.Parameters.Add("@ext_keybanco", MySqlDbType.String, 4).Value = datos.ext_keybanco
+            _adaptador.InsertCommand.Parameters.Add("@ext_nocuenta", MySqlDbType.String, 45).Value = datos.ext_nocuenta
+            _adaptador.InsertCommand.Parameters.Add("@ext_noplaza", MySqlDbType.String, 45).Value = datos.ext_noplaza
+            _adaptador.InsertCommand.Parameters.Add("@ext_nosuc", MySqlDbType.String, 45).Value = datos.ext_nosuc
+            _adaptador.InsertCommand.Parameters.Add("@ext_tipo", MySqlDbType.String, 45).Value = datos.ext_tipo
+            _adaptador.InsertCommand.Parameters.Add("@ext_clabe", MySqlDbType.String, 45).Value = datos.ext_clabe
+            _adaptador.InsertCommand.Parameters.Add("@ext_abb", MySqlDbType.String, 45).Value = datos.ext_abb
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar

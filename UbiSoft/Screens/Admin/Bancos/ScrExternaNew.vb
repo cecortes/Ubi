@@ -129,6 +129,124 @@ Public Class ScrExternaNew
 
     End Sub
 
+    ''' <summary>
+    ''' Limpia los cuadros de texto
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Text
+        TxtRfc.Text = ""
+        TxtMail.Text = ""
+        TxtNombre.Text = ""
+        TxtCuenta.Text = ""
+        TxtSuc.Text = ""
+        TxtClabe.Text = ""
+        TxtPlaza.Text = ""
+        TxtAbb.Text = ""
+
+        'Cbo
+        FormatCbo()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura los valores de los textbox
+    ''' Captura los valores de los cbo
+    ''' Realiza la inserción en la tabla de ctasexterna
+    ''' </summary>
+    Private Sub AddExt()
+
+        'Privadas
+        Dim flgErr As Boolean = False
+
+        'Validación textos
+        If String.IsNullOrEmpty(TxtRfc.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtNombre.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(CboProv.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(CboBanco.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtCuenta.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtSuc.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtClabe.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(TxtPlaza.Text) Then
+
+            'Flag
+            flgErr = True
+
+        ElseIf String.IsNullOrEmpty(CboTpo.Text) Then
+
+            'Flag
+            flgErr = True
+
+        End If
+
+        If flgErr Then
+
+            'Usuario
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Separacion Banco y SAT
+        Dim satBanco() As String = Split(CboBanco.Text, "-")
+        satBanco(0).Trim()
+        satBanco(1).Trim()
+
+        'Captura
+        datos.propia_nom = TxtNombre.Text
+        datos.propia_banco = satBanco(0)
+        datos.propia_keybanco = satBanco(1)
+        datos.propia_nocuenta = TxtCuenta.Text
+        datos.propia_noplaza = TxtPlaza.Text
+        datos.propia_nosuc = TxtSuc.Text
+        datos.propia_tipo = CboTpo.Text
+        datos.propia_clabe = TxtClabe.Text
+        datos.propia_abb = TxtAbb.Text
+
+        'Insert
+        If add.NewPropia(datos) Then
+
+            'Msg Usr
+            MsgBox("Nueva cuenta propia agregada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+            'Dgv
+            FillDgvPropia()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -151,6 +269,78 @@ Public Class ScrExternaNew
         FillDgvExt()
 
     End Sub
+
+    ''' <summary>
+    ''' Realiza un consulta por medio de la Dll
+    ''' Actualiza los cbo y textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboProv_TextChanged(sender As Object, e As EventArgs) Handles CboProv.TextChanged
+
+        'Captura
+        datos.ext_nomprov = CboProv.Text
+
+        'Consulta mediante Dll
+        Dim ctaexterna As Datos = consulta.GetExtProv(datos)
+
+        'Textos y datos
+        TxtRfc.Text = ctaexterna.ext_rfc
+        TxtMail.Text = ctaexterna.ext_mail
+        TxtNombre.Text = ctaexterna.ext_nom
+
+        'Validación por null
+
+        If (String.IsNullOrEmpty(ctaexterna.ext_banco)) Then
+        Else
+
+            CboBanco.Text = ctaexterna.ext_banco
+
+        End If
+
+        TxtCuenta.Text = ctaexterna.ext_nocuenta
+        TxtSuc.Text = ctaexterna.ext_nosuc
+        TxtClabe.Text = ctaexterna.ext_clabe
+        TxtPlaza.Text = ctaexterna.ext_noplaza
+
+        'Validación por null
+
+        If (String.IsNullOrEmpty(ctaexterna.ext_tipo)) Then
+        Else
+
+            CboTpo.Text = ctaexterna.ext_tipo
+
+        End If
+
+        TxtAbb.Text = ctaexterna.ext_abb
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para limpiar los campos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clr
+        ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la insercción
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Add
+        AddExt()
+
+    End Sub
+
+
 
 #End Region
 
