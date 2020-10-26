@@ -1040,6 +1040,149 @@ Public Class Datos
 
 #End Region
 
+#Region "ctasexterna"
+
+#Region "DATAMEMBERS"
+
+    Private _ext_nomprov As String
+    Private _ext_rfc As String
+    Private _ext_mail As String
+    Private _ext_tel As String
+    Private _ext_nom As String
+    Private _ext_banco As String
+    Private _ext_keybanco As String
+    Private _ext_nocuenta As String
+    Private _ext_noplaza As String
+    Private _ext_nosuc As String
+    Private _ext_tipo As String
+    Private _ext_clabe As String
+    Private _ext_abb As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property ext_nomprov() As String
+        Get
+            Return _ext_nomprov
+        End Get
+        Set(ByVal value As String)
+            _ext_nomprov = value
+        End Set
+    End Property
+
+    Public Property ext_rfc() As String
+        Get
+            Return _ext_rfc
+        End Get
+        Set(ByVal value As String)
+            _ext_rfc = value
+        End Set
+    End Property
+
+    Public Property ext_mail() As String
+        Get
+            Return _ext_mail
+        End Get
+        Set(ByVal value As String)
+            _ext_mail = value
+        End Set
+    End Property
+
+    Public Property ext_tel() As String
+        Get
+            Return _ext_tel
+        End Get
+        Set(ByVal value As String)
+            _ext_tel = value
+        End Set
+    End Property
+
+    Public Property ext_nom() As String
+        Get
+            Return _ext_nom
+        End Get
+        Set(ByVal value As String)
+            _ext_nom = value
+        End Set
+    End Property
+
+    Public Property ext_banco() As String
+        Get
+            Return _ext_banco
+        End Get
+        Set(ByVal value As String)
+            _ext_banco = value
+        End Set
+    End Property
+
+    Public Property ext_keybanco() As String
+        Get
+            Return _ext_keybanco
+        End Get
+        Set(ByVal value As String)
+            _ext_keybanco = value
+        End Set
+    End Property
+
+    Public Property ext_nocuenta() As String
+        Get
+            Return _ext_nocuenta
+        End Get
+        Set(ByVal value As String)
+            _ext_nocuenta = value
+        End Set
+    End Property
+
+    Public Property ext_noplaza() As String
+        Get
+            Return _ext_noplaza
+        End Get
+        Set(ByVal value As String)
+            _ext_noplaza = value
+        End Set
+    End Property
+
+    Public Property ext_nosuc() As String
+        Get
+            Return _ext_nosuc
+        End Get
+        Set(ByVal value As String)
+            _ext_nosuc = value
+        End Set
+    End Property
+
+    Public Property ext_tipo() As String
+        Get
+            Return _ext_tipo
+        End Get
+        Set(ByVal value As String)
+            _ext_tipo = value
+        End Set
+    End Property
+
+    Public Property ext_clabe() As String
+        Get
+            Return _ext_clabe
+        End Get
+        Set(ByVal value As String)
+            _ext_clabe = value
+        End Set
+    End Property
+
+    Public Property ext_abb() As String
+        Get
+            Return _ext_abb
+        End Get
+        Set(ByVal value As String)
+            _ext_abb = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
