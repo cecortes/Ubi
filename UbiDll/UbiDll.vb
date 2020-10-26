@@ -270,6 +270,99 @@ Public Class Datos
 
 #End Region
 
+#Region "proveedores"
+
+#Region "DATAMEMBERS"
+
+    Private _rfc_prov As String
+    Private _razon_prov As String
+    Private _mail_prov As String
+    Private _tel_prov As String
+    Private _dir_prov As String
+    Private _edo_prov As String
+    Private _ciudad_prov As String
+    Private _contacto_prov As String
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property rfc_prov() As String
+        Get
+            Return _rfc_prov
+        End Get
+        Set(ByVal value As String)
+            _rfc_prov = value
+        End Set
+    End Property
+
+    Public Property razon_prov() As String
+        Get
+            Return _razon_prov
+        End Get
+        Set(ByVal value As String)
+            _razon_prov = value
+        End Set
+    End Property
+
+    Public Property mail_prov() As String
+        Get
+            Return _mail_prov
+        End Get
+        Set(ByVal value As String)
+            _mail_prov = value
+        End Set
+    End Property
+
+    Public Property tel_prov() As String
+        Get
+            Return _tel_prov
+        End Get
+        Set(ByVal value As String)
+            _tel_prov = value
+        End Set
+    End Property
+
+    Public Property dir_prov() As String
+        Get
+            Return _dir_prov
+        End Get
+        Set(ByVal value As String)
+            _dir_prov = value
+        End Set
+    End Property
+
+    Public Property edo_prov() As String
+        Get
+            Return _edo_prov
+        End Get
+        Set(ByVal value As String)
+            _edo_prov = value
+        End Set
+    End Property
+
+    Public Property ciudad_prov() As String
+        Get
+            Return _ciudad_prov
+        End Get
+        Set(ByVal value As String)
+            _ciudad_prov = value
+        End Set
+    End Property
+
+    Public Property contacto_prov() As String
+        Get
+            Return _contacto_prov
+        End Get
+        Set(ByVal value As String)
+            _contacto_prov = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 #Region "prod_uni"
 
 #Region "DATAMEMBERS"

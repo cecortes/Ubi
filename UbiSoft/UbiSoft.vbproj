@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Admin\Bancos\ScrExternaDel.Designer.vb">
+      <DependentUpon>ScrExternaDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrExternaDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Admin\Bancos\ScrPropiasDel.Designer.vb">
       <DependentUpon>ScrPropiasDel.vb</DependentUpon>
     </Compile>
@@ -114,6 +120,12 @@
       <DependentUpon>ScrAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="Screens\Admin\ScrAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrExternaNew.Designer.vb">
+      <DependentUpon>ScrExternaNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrExternaNew.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Config\Autos\ScrAutoDelFromDevice.Designer.vb">
@@ -399,6 +411,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrExternaDel.resx">
+      <DependentUpon>ScrExternaDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrExternaNew.resx">
+      <DependentUpon>ScrExternaNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Admin\Bancos\ScrPropiasDel.resx">
       <DependentUpon>ScrPropiasDel.vb</DependentUpon>
     </EmbeddedResource>
