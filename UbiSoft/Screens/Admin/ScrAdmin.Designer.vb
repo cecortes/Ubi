@@ -34,15 +34,18 @@ Partial Class ScrAdmin
         Me.CuentasPorCobrarItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.CuentasPorPagarItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.BancosToolItm = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NominaItm = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PnlMenu = New System.Windows.Forms.Panel()
         Me.CuentasPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltaPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaPropiasItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.CuentasExtItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltaExtItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaExtItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NominaItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PnlMenu = New System.Windows.Forms.Panel()
         Me.PnlWrp = New System.Windows.Forms.Panel()
+        Me.ConciliacionItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EdoCuentaBancarioItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LibroMayorBancosItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -170,31 +173,12 @@ Partial Class ScrAdmin
         'BancosToolItm
         '
         Me.BancosToolItm.BackColor = System.Drawing.Color.Transparent
-        Me.BancosToolItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CuentasPropiasItm, Me.CuentasExtItm})
+        Me.BancosToolItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CuentasPropiasItm, Me.CuentasExtItm, Me.ConciliacionItm})
         Me.BancosToolItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BancosToolItm.ForeColor = System.Drawing.Color.Black
         Me.BancosToolItm.Name = "BancosToolItm"
         Me.BancosToolItm.Size = New System.Drawing.Size(78, 37)
         Me.BancosToolItm.Text = "Bancos"
-        '
-        'NominaItm
-        '
-        Me.NominaItm.BackColor = System.Drawing.Color.Transparent
-        Me.NominaItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NominaItm.ForeColor = System.Drawing.Color.Black
-        Me.NominaItm.Name = "NominaItm"
-        Me.NominaItm.Size = New System.Drawing.Size(85, 37)
-        Me.NominaItm.Text = "Nómina"
-        '
-        'PnlMenu
-        '
-        Me.PnlMenu.BackColor = System.Drawing.Color.Transparent
-        Me.PnlMenu.Controls.Add(Me.MenuStrip)
-        Me.PnlMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnlMenu.Location = New System.Drawing.Point(0, 40)
-        Me.PnlMenu.Name = "PnlMenu"
-        Me.PnlMenu.Size = New System.Drawing.Size(1024, 41)
-        Me.PnlMenu.TabIndex = 5
         '
         'CuentasPropiasItm
         '
@@ -236,6 +220,25 @@ Partial Class ScrAdmin
         Me.BajaExtItm.Size = New System.Drawing.Size(224, 28)
         Me.BajaExtItm.Text = "Baja de Cuentas"
         '
+        'NominaItm
+        '
+        Me.NominaItm.BackColor = System.Drawing.Color.Transparent
+        Me.NominaItm.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NominaItm.ForeColor = System.Drawing.Color.Black
+        Me.NominaItm.Name = "NominaItm"
+        Me.NominaItm.Size = New System.Drawing.Size(85, 37)
+        Me.NominaItm.Text = "Nómina"
+        '
+        'PnlMenu
+        '
+        Me.PnlMenu.BackColor = System.Drawing.Color.Transparent
+        Me.PnlMenu.Controls.Add(Me.MenuStrip)
+        Me.PnlMenu.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlMenu.Location = New System.Drawing.Point(0, 40)
+        Me.PnlMenu.Name = "PnlMenu"
+        Me.PnlMenu.Size = New System.Drawing.Size(1024, 41)
+        Me.PnlMenu.TabIndex = 5
+        '
         'PnlWrp
         '
         Me.PnlWrp.BackColor = System.Drawing.Color.Transparent
@@ -244,6 +247,25 @@ Partial Class ScrAdmin
         Me.PnlWrp.Name = "PnlWrp"
         Me.PnlWrp.Size = New System.Drawing.Size(1024, 687)
         Me.PnlWrp.TabIndex = 6
+        '
+        'ConciliacionItm
+        '
+        Me.ConciliacionItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EdoCuentaBancarioItm, Me.LibroMayorBancosItm})
+        Me.ConciliacionItm.Name = "ConciliacionItm"
+        Me.ConciliacionItm.Size = New System.Drawing.Size(225, 28)
+        Me.ConciliacionItm.Text = "Conciliación"
+        '
+        'EdoCuentaBancarioItm
+        '
+        Me.EdoCuentaBancarioItm.Name = "EdoCuentaBancarioItm"
+        Me.EdoCuentaBancarioItm.Size = New System.Drawing.Size(258, 28)
+        Me.EdoCuentaBancarioItm.Text = "Edo. Cuenta Bancario"
+        '
+        'LibroMayorBancosItm
+        '
+        Me.LibroMayorBancosItm.Name = "LibroMayorBancosItm"
+        Me.LibroMayorBancosItm.Size = New System.Drawing.Size(258, 28)
+        Me.LibroMayorBancosItm.Text = "Libro Mayor Bancos"
         '
         'ScrAdmin
         '
@@ -299,4 +321,7 @@ Partial Class ScrAdmin
     Friend WithEvents AltaExtItm As ToolStripMenuItem
     Friend WithEvents BajaExtItm As ToolStripMenuItem
     Friend WithEvents PnlWrp As Panel
+    Friend WithEvents ConciliacionItm As ToolStripMenuItem
+    Friend WithEvents EdoCuentaBancarioItm As ToolStripMenuItem
+    Friend WithEvents LibroMayorBancosItm As ToolStripMenuItem
 End Class
