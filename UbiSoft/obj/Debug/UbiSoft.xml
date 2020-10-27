@@ -177,9 +177,42 @@ UbiSoft
  Carga al cbo la consulta de la tabla proveedors
  </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaDel.FormatDgv">
+ <summary>
+ Formato para el datagridview
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.ClearTxt">
+ <summary>
+ Limpia los cuadros de texto
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrExternaDel.ScrExternaDel_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la información en los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.CboProv_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Realiza un consulta por medio de la Dll
+ Llena el dgv con el resultado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.DgvExt_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Obtiene los datos de la fila / celda seleccionada
+ Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para limpiar los campos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

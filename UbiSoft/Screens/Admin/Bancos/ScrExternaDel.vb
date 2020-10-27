@@ -70,6 +70,63 @@ Public Class ScrExternaDel
 
     End Sub
 
+    ''' <summary>
+    ''' Formato para el datagridview
+    ''' </summary>
+    Private Sub FormatDgv()
+
+        'Sort Descending
+        DgvExt.Sort(DgvExt.Columns("Proveedor"), System.ComponentModel.ListSortDirection.Ascending)
+
+        'Size mode para las columnas
+        DgvExt.Columns("Proveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Proveedor").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("RFC").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("RFC").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Mail").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Mail").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Tel.").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Tel.").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Beneficiario").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Beneficiario").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Banco").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Banco").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Id. SAT").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Id. SAT").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Cuenta").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Cuenta").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Plaza").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Plaza").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Sucursal").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Sucursal").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("Tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("Tipo").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("CLABE").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("CLABE").SortMode = DataGridViewColumnSortMode.Programmatic
+        DgvExt.Columns("ABB").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DgvExt.Columns("ABB").SortMode = DataGridViewColumnSortMode.Programmatic
+
+        DgvExt.Refresh()
+
+    End Sub
+
+    ''' <summary>
+    ''' Limpia los cuadros de texto
+    ''' </summary>
+    Private Sub ClearTxt()
+
+        'Text
+        TxtRfc.Text = ""
+        TxtNombre.Text = ""
+        TxtCuenta.Text = ""
+        TxtSuc.Text = ""
+        TxtClabe.Text = ""
+
+        'Cbo
+        FormatCbo()
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -87,6 +144,65 @@ Public Class ScrExternaDel
         'Proveedores
         FillProv()
 
+
+    End Sub
+
+    ''' <summary>
+    ''' Realiza un consulta por medio de la Dll
+    ''' Llena el dgv con el resultado
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboProv_TextChanged(sender As Object, e As EventArgs) Handles CboProv.TextChanged
+
+        'Captura
+        datos.ext_nomprov = CboProv.Text
+
+        'Reset
+        consulta.dgvCode.Reset()
+
+        'Consulta
+        consulta.DgvCtaExt(datos)
+
+        'Datagrid
+        DgvExt.DataSource = consulta.dgvCode.Tables("EXTERNA")
+
+        'Formato al Dgv
+        FormatDgv()
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos de la fila / celda seleccionada
+    ''' Carga los valores en los textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvExt_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DgvExt.CellMouseClick
+
+        'Privadas
+        Dim fila As Integer = DgvExt.Rows(e.RowIndex).Index
+
+        'Datos
+        TxtRfc.Text = DgvExt.Item(1, fila).Value
+        TxtNombre.Text = DgvExt.Item(4, fila).Value
+        CboBanco.Text = DgvExt.Item(5, fila).Value
+        TxtCuenta.Text = DgvExt.Item(7, fila).Value
+        TxtSuc.Text = DgvExt.Item(9, fila).Value
+        CboTpo.Text = DgvExt.Item(10, fila).Value
+        TxtClabe.Text = DgvExt.Item(11, fila).Value
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para limpiar los campos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        'Clr
+        ClearTxt()
 
     End Sub
 
