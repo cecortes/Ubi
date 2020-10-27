@@ -104,6 +104,12 @@
     <Compile Include="Screens\Admin\Bancos\ScrExternaDel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrLibroBancos.Designer.vb">
+      <DependentUpon>ScrLibroBancos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrLibroBancos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Admin\Bancos\ScrPropiasDel.Designer.vb">
       <DependentUpon>ScrPropiasDel.vb</DependentUpon>
     </Compile>
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Admin\Bancos\ScrExternaNew.resx">
       <DependentUpon>ScrExternaNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrLibroBancos.resx">
+      <DependentUpon>ScrLibroBancos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Admin\Bancos\ScrPropiasDel.resx">
       <DependentUpon>ScrPropiasDel.vb</DependentUpon>

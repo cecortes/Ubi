@@ -1,6 +1,4 @@
-﻿
-
-Public Class ScrAdmin
+﻿Public Class ScrAdmin
 
 #Region "Variables"
 
@@ -230,6 +228,27 @@ Public Class ScrAdmin
 
         'Open
         AbrirFormPanel(Of ScrExternaDel)()
+
+    End Sub
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub EdoCuentaBancarioItm_Click(sender As Object, e As EventArgs) Handles EdoCuentaBancarioItm.Click
+
+    End Sub
+
+    ''' <summary>
+    ''' Abre el formulario para LibroMayorBancos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub LibroMayorBancosItm_Click(sender As Object, e As EventArgs) Handles LibroMayorBancosItm.Click
+
+        'Libro Mayor Bancos
+        ScrLibroBancos.Show()
 
     End Sub
 

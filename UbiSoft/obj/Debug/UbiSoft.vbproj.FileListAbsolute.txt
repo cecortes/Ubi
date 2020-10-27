@@ -83,3 +83,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPropiasNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPropiasDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrExternaDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrExternaNew.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrLibroBancos.resources

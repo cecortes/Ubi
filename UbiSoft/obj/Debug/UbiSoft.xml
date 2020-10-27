@@ -230,6 +230,34 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrLibroBancos.ScrLibroBancos_Load(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrPropiasDel.FillDgvPropia">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de ctapropia
@@ -395,6 +423,20 @@ UbiSoft
 <member name="M:UbiSoft.ScrAdmin.BajaExtItm_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra el panel para baja cuentas externas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.EdoCuentaBancarioItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAdmin.LibroMayorBancosItm_Click(System.Object,System.EventArgs)">
+ <summary>
+ Abre el formulario para LibroMayorBancos
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

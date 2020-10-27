@@ -40,12 +40,12 @@ Partial Class ScrAdmin
         Me.CuentasExtItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltaExtItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaExtItm = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NominaItm = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PnlMenu = New System.Windows.Forms.Panel()
-        Me.PnlWrp = New System.Windows.Forms.Panel()
         Me.ConciliacionItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.EdoCuentaBancarioItm = New System.Windows.Forms.ToolStripMenuItem()
         Me.LibroMayorBancosItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NominaItm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PnlMenu = New System.Windows.Forms.Panel()
+        Me.PnlWrp = New System.Windows.Forms.Panel()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,13 +192,13 @@ Partial Class ScrAdmin
         'AltaPropiasItm
         '
         Me.AltaPropiasItm.Name = "AltaPropiasItm"
-        Me.AltaPropiasItm.Size = New System.Drawing.Size(224, 28)
+        Me.AltaPropiasItm.Size = New System.Drawing.Size(217, 28)
         Me.AltaPropiasItm.Text = "Alta de Cuentas"
         '
         'BajaPropiasItm
         '
         Me.BajaPropiasItm.Name = "BajaPropiasItm"
-        Me.BajaPropiasItm.Size = New System.Drawing.Size(224, 28)
+        Me.BajaPropiasItm.Size = New System.Drawing.Size(217, 28)
         Me.BajaPropiasItm.Text = "Baja de Cuentas"
         '
         'CuentasExtItm
@@ -211,14 +211,33 @@ Partial Class ScrAdmin
         'AltaExtItm
         '
         Me.AltaExtItm.Name = "AltaExtItm"
-        Me.AltaExtItm.Size = New System.Drawing.Size(224, 28)
+        Me.AltaExtItm.Size = New System.Drawing.Size(217, 28)
         Me.AltaExtItm.Text = "Alta de Cuentas"
         '
         'BajaExtItm
         '
         Me.BajaExtItm.Name = "BajaExtItm"
-        Me.BajaExtItm.Size = New System.Drawing.Size(224, 28)
+        Me.BajaExtItm.Size = New System.Drawing.Size(217, 28)
         Me.BajaExtItm.Text = "Baja de Cuentas"
+        '
+        'ConciliacionItm
+        '
+        Me.ConciliacionItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EdoCuentaBancarioItm, Me.LibroMayorBancosItm})
+        Me.ConciliacionItm.Name = "ConciliacionItm"
+        Me.ConciliacionItm.Size = New System.Drawing.Size(225, 28)
+        Me.ConciliacionItm.Text = "Conciliación"
+        '
+        'EdoCuentaBancarioItm
+        '
+        Me.EdoCuentaBancarioItm.Name = "EdoCuentaBancarioItm"
+        Me.EdoCuentaBancarioItm.Size = New System.Drawing.Size(258, 28)
+        Me.EdoCuentaBancarioItm.Text = "Edo. Cuenta Bancario"
+        '
+        'LibroMayorBancosItm
+        '
+        Me.LibroMayorBancosItm.Name = "LibroMayorBancosItm"
+        Me.LibroMayorBancosItm.Size = New System.Drawing.Size(258, 28)
+        Me.LibroMayorBancosItm.Text = "Libro Mayor Bancos"
         '
         'NominaItm
         '
@@ -247,25 +266,6 @@ Partial Class ScrAdmin
         Me.PnlWrp.Name = "PnlWrp"
         Me.PnlWrp.Size = New System.Drawing.Size(1024, 687)
         Me.PnlWrp.TabIndex = 6
-        '
-        'ConciliacionItm
-        '
-        Me.ConciliacionItm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EdoCuentaBancarioItm, Me.LibroMayorBancosItm})
-        Me.ConciliacionItm.Name = "ConciliacionItm"
-        Me.ConciliacionItm.Size = New System.Drawing.Size(225, 28)
-        Me.ConciliacionItm.Text = "Conciliación"
-        '
-        'EdoCuentaBancarioItm
-        '
-        Me.EdoCuentaBancarioItm.Name = "EdoCuentaBancarioItm"
-        Me.EdoCuentaBancarioItm.Size = New System.Drawing.Size(258, 28)
-        Me.EdoCuentaBancarioItm.Text = "Edo. Cuenta Bancario"
-        '
-        'LibroMayorBancosItm
-        '
-        Me.LibroMayorBancosItm.Name = "LibroMayorBancosItm"
-        Me.LibroMayorBancosItm.Size = New System.Drawing.Size(258, 28)
-        Me.LibroMayorBancosItm.Text = "Libro Mayor Bancos"
         '
         'ScrAdmin
         '
