@@ -4516,7 +4516,7 @@ Public Class Eliminar
             _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM ctasexterna WHERE ext_nocuenta=@ext_nocuenta", con._conexion)
 
             'Parámetros
-            _adaptador.DeleteCommand.Parameters.Add("@propia_nocuext_nocuentaenta", MySqlDbType.String, 45).Value = datos.ext_nocuenta
+            _adaptador.DeleteCommand.Parameters.Add("@ext_nocuenta", MySqlDbType.String, 45).Value = datos.ext_nocuenta
 
             'Delete
             con._conexion.Open()

@@ -187,6 +187,12 @@ UbiSoft
  Limpia los cuadros de texto
  </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaDel.DelExterna">
+ <summary>
+ Captura la key ext_nocuenta
+ Realiza el borrado en la tabla de ctasexterna
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrExternaDel.ScrExternaDel_Load(System.Object,System.EventArgs)">
  <summary>
  Carga la información en los cbo
@@ -213,6 +219,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrExternaDel.BtnClear_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para limpiar los campos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.BtnOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para borrar ctasexterna
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

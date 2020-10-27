@@ -127,6 +127,43 @@ Public Class ScrExternaDel
 
     End Sub
 
+    ''' <summary>
+    ''' Captura la key ext_nocuenta
+    ''' Realiza el borrado en la tabla de ctasexterna
+    ''' </summary>
+    Private Sub DelExterna()
+
+        'Captura
+        datos.ext_nocuenta = TxtCuenta.Text
+
+        'Delete
+        If del.DelExt(datos) Then
+
+            'Msg Usr
+            MsgBox("Cuenta externa eliminada", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Re inicia los valores
+            ClearTxt()
+
+            'Captura
+            datos.ext_nomprov = CboProv.Text
+
+            'Reset
+            consulta.dgvCode.Reset()
+
+            'Consulta
+            consulta.DgvCtaExt(datos)
+
+            'Datagrid
+            DgvExt.DataSource = consulta.dgvCode.Tables("EXTERNA")
+
+            'Formato al Dgv
+            FormatDgv()
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -203,6 +240,18 @@ Public Class ScrExternaDel
 
         'Clr
         ClearTxt()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para borrar ctasexterna
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnOk_Click(sender As Object, e As EventArgs) Handles BtnOk.Click
+
+        'Del
+        DelExterna()
 
     End Sub
 
