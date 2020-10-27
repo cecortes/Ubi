@@ -2806,6 +2806,91 @@ Public Class Consulta
 
     End Function
 
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo necesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla ctasexterna
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub DgvCtaExt(ByVal Datos As Datos)
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode CTASEXTERNA
+        dgvCode.Tables.Add("EXTERNA")
+        dgvCode.Tables("EXTERNA").Columns.Add("Proveedor", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("RFC", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Mail", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Tel.", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Beneficiario", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Banco", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Id. SAT", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Cuenta", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Plaza", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Sucursal", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Tipo", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("Clabe", GetType(String))
+        dgvCode.Tables("EXTERNA").Columns.Add("ABB", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM ctasexterna WHERE ext_nomprov = @ext_nomprov", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ext_nomprov", MySqlDbType.String, 45).Value = Datos.ext_nomprov
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.ext_nomprov = reader("ext_nomprov")
+                resultado.ext_rfc = reader("ext_rfc")
+                resultado.ext_mail = reader("ext_mail")
+                resultado.ext_tel = reader("ext_tel")
+                resultado.ext_nom = reader("ext_nom")
+                resultado.ext_banco = reader("ext_banco")
+                resultado.ext_keybanco = reader("ext_keybanco")
+                resultado.ext_nocuenta = reader("ext_nocuenta")
+                resultado.ext_noplaza = reader("ext_noplaza")
+                resultado.ext_nosuc = reader("ext_nosuc")
+                resultado.ext_tipo = reader("ext_tipo")
+                resultado.ext_clabe = reader("ext_clabe")
+                resultado.ext_abb = reader("ext_abb")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("EXTERNA").Rows.Add(resultado.ext_nomprov, resultado.ext_rfc, resultado.ext_mail, resultado.ext_tel, resultado.ext_nom, resultado.ext_banco, resultado.ext_keybanco, resultado.ext_nocuenta, resultado.ext_noplaza, resultado.ext_nosuc, resultado.ext_tipo, resultado.ext_clabe, resultado.ext_abb)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+            reader.Close()
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
 #End Region
 
 End Class

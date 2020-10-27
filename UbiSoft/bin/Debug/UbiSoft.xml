@@ -167,6 +167,23 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrExternaDel.FormatCbo">
+ <summary>
+ Formato para poner a o los índices de los cbo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.FillProv">
+ <summary>
+ Carga al cbo la consulta de la tabla proveedors
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrExternaDel.ScrExternaDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga la información en los cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrPropiasDel.FillDgvPropia">
  <summary>
  Se encarga de llenar el datagrid con todas las entradas de la tabla de ctapropia
