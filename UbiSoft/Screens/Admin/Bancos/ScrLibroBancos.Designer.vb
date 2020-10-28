@@ -29,12 +29,20 @@ Partial Class ScrLibroBancos
         Me.PbClose = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PbLogoMin = New System.Windows.Forms.PictureBox()
+        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.PnlMenu = New System.Windows.Forms.Panel()
+        Me.AltaItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Bajatem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EdicionItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PnlWrp = New System.Windows.Forms.Panel()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip.SuspendLayout()
+        Me.PnlMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -111,6 +119,56 @@ Partial Class ScrLibroBancos
         Me.PbLogoMin.TabIndex = 0
         Me.PbLogoMin.TabStop = False
         '
+        'MenuStrip
+        '
+        Me.MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.MenuStrip.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MenuStrip.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaItem, Me.Bajatem, Me.EdicionItem})
+        Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip.Name = "MenuStrip"
+        Me.MenuStrip.Size = New System.Drawing.Size(1024, 41)
+        Me.MenuStrip.TabIndex = 5
+        Me.MenuStrip.Text = "Menu"
+        '
+        'PnlMenu
+        '
+        Me.PnlMenu.BackColor = System.Drawing.Color.Transparent
+        Me.PnlMenu.Controls.Add(Me.MenuStrip)
+        Me.PnlMenu.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlMenu.Location = New System.Drawing.Point(0, 40)
+        Me.PnlMenu.Name = "PnlMenu"
+        Me.PnlMenu.Size = New System.Drawing.Size(1024, 41)
+        Me.PnlMenu.TabIndex = 6
+        '
+        'AltaItem
+        '
+        Me.AltaItem.Name = "AltaItem"
+        Me.AltaItem.Size = New System.Drawing.Size(54, 37)
+        Me.AltaItem.Text = "Alta"
+        '
+        'Bajatem
+        '
+        Me.Bajatem.Name = "Bajatem"
+        Me.Bajatem.Size = New System.Drawing.Size(56, 37)
+        Me.Bajatem.Text = "Baja"
+        '
+        'EdicionItem
+        '
+        Me.EdicionItem.Name = "EdicionItem"
+        Me.EdicionItem.Size = New System.Drawing.Size(79, 37)
+        Me.EdicionItem.Text = "Edición"
+        '
+        'PnlWrp
+        '
+        Me.PnlWrp.BackColor = System.Drawing.Color.Transparent
+        Me.PnlWrp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlWrp.Location = New System.Drawing.Point(0, 81)
+        Me.PnlWrp.Name = "PnlWrp"
+        Me.PnlWrp.Size = New System.Drawing.Size(1024, 687)
+        Me.PnlWrp.TabIndex = 7
+        '
         'ScrLibroBancos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -119,6 +177,8 @@ Partial Class ScrLibroBancos
         Me.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 768)
+        Me.Controls.Add(Me.PnlWrp)
+        Me.Controls.Add(Me.PnlMenu)
         Me.Controls.Add(Me.PnlTop)
         Me.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -133,6 +193,10 @@ Partial Class ScrLibroBancos
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip.ResumeLayout(False)
+        Me.MenuStrip.PerformLayout()
+        Me.PnlMenu.ResumeLayout(False)
+        Me.PnlMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -144,4 +208,10 @@ Partial Class ScrLibroBancos
     Friend WithEvents PbClose As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PbLogoMin As PictureBox
+    Friend WithEvents MenuStrip As MenuStrip
+    Friend WithEvents PnlMenu As Panel
+    Friend WithEvents AltaItem As ToolStripMenuItem
+    Friend WithEvents Bajatem As ToolStripMenuItem
+    Friend WithEvents EdicionItem As ToolStripMenuItem
+    Friend WithEvents PnlWrp As Panel
 End Class

@@ -98,6 +98,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Screens\Admin\Bancos\ScrBancosDel.Designer.vb">
+      <DependentUpon>ScrBancosDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrBancosDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrBancosEdit.Designer.vb">
+      <DependentUpon>ScrBancosEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrBancosEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrBancosNew.Designer.vb">
+      <DependentUpon>ScrBancosNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Admin\Bancos\ScrBancosNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Admin\Bancos\ScrExternaDel.Designer.vb">
       <DependentUpon>ScrExternaDel.vb</DependentUpon>
     </Compile>
@@ -417,6 +435,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrBancosDel.resx">
+      <DependentUpon>ScrBancosDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrBancosEdit.resx">
+      <DependentUpon>ScrBancosEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Admin\Bancos\ScrBancosNew.resx">
+      <DependentUpon>ScrBancosNew.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Admin\Bancos\ScrExternaDel.resx">
       <DependentUpon>ScrExternaDel.vb</DependentUpon>
     </EmbeddedResource>
@@ -674,6 +701,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bolsas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

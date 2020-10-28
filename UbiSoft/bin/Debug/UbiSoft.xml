@@ -22,6 +22,11 @@ UbiSoft
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.anadir">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.BackBottom">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -167,6 +172,79 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:UbiSoft.ScrBancosNew.InitDtp">
+ <summary>
+ Inicia el dtp con la fecha del sistema
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.SoloNumeros(System.Windows.Forms.KeyPressEventArgs@)">
+ <summary>
+ Funcion para que solo permite el ingreso de caracteres tipo numerico
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.ClearText">
+ <summary>
+ Re inicia los controles necesarios
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.AddReg">
+ <summary>
+ Valida que los datos debe haber sean númericos
+ 
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.ScrBancosNew_Load(System.Object,System.EventArgs)">
+ <summary>
+ Inicia el dtp con la fecha del sistema
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.TxtDebe_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Llama al método encargado de validar que sea dígito
+ Deshabilita al control contrario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.TxtHaber_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Llama al método encargado de validar que sea dígito
+ Deshabilita al control contrario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.TxtHaber_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Habilita al control contrario si el texto es nulo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.TxtDebe_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Habilita al control contrario si el texto es nulo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para reiniciar los controles
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.BtnAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método encargado de agregar una línea al dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrExternaDel.FormatCbo">
  <summary>
  Formato para poner a o los índices de los cbo
@@ -230,6 +308,16 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrLibroBancos.AbrirFormPanel``1">
+ <summary>
+ Se encarga de crear un nuevo objeto del tipo Form
+ Busca el formulario recibido como parámetro en la colección
+ Asigna la creación del formulario recibido al objeto creado
+ Le asigna los parámetros necesarios para mostrarlo
+ Lo muestra y lo trae al frente
+ </summary>
+ <typeparam name="MiForm"></typeparam>
+</member>
 <member name="M:UbiSoft.ScrLibroBancos.ScrLibroBancos_Load(System.Object,System.EventArgs)">
  <summary>
  
@@ -254,6 +342,27 @@ UbiSoft
 <member name="M:UbiSoft.ScrLibroBancos.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.AltaItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el panel de Alta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.Bajatem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el panel de Baja
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrLibroBancos.EdicionItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra el panel de Edición
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
