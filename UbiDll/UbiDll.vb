@@ -1183,6 +1183,69 @@ Public Class Datos
 
 #End Region
 
+#Region "banco_diario"
+
+#Region "DATAMEMBERS"
+
+    Private _bancodiario_id As Integer
+    Private _bancodiario_fecha As String
+    Private _bancodiario_cpto As String
+    Private _bancodiario_debe As Decimal
+    Private _bancodiario_haber As Decimal
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property bancodiario_id() As Integer
+        Get
+            Return _bancodiario_id
+        End Get
+        Set(ByVal value As Integer)
+            _bancodiario_id = value
+        End Set
+    End Property
+
+    Public Property bancodiario_fecha() As String
+        Get
+            Return _bancodiario_fecha
+        End Get
+        Set(ByVal value As String)
+            _bancodiario_fecha = value
+        End Set
+    End Property
+
+    Public Property bancodiario_cpto() As String
+        Get
+            Return _bancodiario_cpto
+        End Get
+        Set(ByVal value As String)
+            _bancodiario_cpto = value
+        End Set
+    End Property
+
+    Public Property bancodiario_debe() As Decimal
+        Get
+            Return _bancodiario_debe
+        End Get
+        Set(ByVal value As Decimal)
+            _bancodiario_debe = value
+        End Set
+    End Property
+
+    Public Property bancodiario_haber() As Decimal
+        Get
+            Return _bancodiario_haber
+        End Get
+        Set(ByVal value As Decimal)
+            _bancodiario_haber = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
