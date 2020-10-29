@@ -188,10 +188,17 @@ UbiSoft
  Re inicia los controles necesarios
  </summary>
 </member>
-<member name="M:UbiSoft.ScrBancosNew.AddReg">
+<member name="M:UbiSoft.ScrBancosNew.AddDgvReg">
  <summary>
- Valida que los datos debe haber sean númericos
- 
+ Valida los valores necesarios
+ Agrega una nueva fila al dgv
+ Llama al método para calcular el saldo
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrBancosNew.CalcSaldo">
+ <summary>
+ Recorre el dgv para calcular el saldo entre debe y haber
+ Actualiza el valor del saldo al final del dgv
  </summary>
 </member>
 <member name="M:UbiSoft.ScrBancosNew.ScrBancosNew_Load(System.Object,System.EventArgs)">

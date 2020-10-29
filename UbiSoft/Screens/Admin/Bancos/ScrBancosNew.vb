@@ -1,6 +1,15 @@
-﻿Public Class ScrBancosNew
+﻿'Imports
+Imports UbiDll
+
+Public Class ScrBancosNew
 
 #Region "Variables"
+
+    'UbiDll
+    Dim datos As New Datos
+    Dim consulta As New Consulta
+    Dim add As New Agregar
+    Dim errorMsg As New ErrorMsg
 
 #End Region
 
@@ -59,13 +68,86 @@
     End Sub
 
     ''' <summary>
-    ''' Valida que los datos debe haber sean númericos
-    ''' 
+    ''' Valida los valores necesarios
+    ''' Agrega una nueva fila al dgv
+    ''' Llama al método para calcular el saldo
     ''' </summary>
-    Private Sub AddReg()
+    Private Sub AddDgvReg()
 
         'Validación
+        If String.IsNullOrEmpty(TxtCpto.Text) Then
 
+            'Usuario
+            MsgBox("El concepto no puede estar vacío", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            'Break
+            Return
+
+        End If
+
+        'Row
+        DgvDiaro.Rows.Add(DtpFecha.Value.ToShortDateString, TxtCpto.Text, TxtDebe.Text, TxtHaber.Text)
+
+        'Saldo
+        CalcSaldo()
+
+    End Sub
+
+    ''' <summary>
+    ''' Recorre el dgv para calcular el saldo entre debe y haber
+    ''' Actualiza el valor del saldo al final del dgv
+    ''' </summary>
+    Private Sub CalcSaldo()
+
+        'Locales
+        Dim debeT As Decimal = 0.0
+        Dim haberT As Decimal = 0.0
+        Dim saldoT As Decimal = 0.0
+        Dim flgSaldo As Boolean = False
+
+        'Rutina Captura de Valores
+        For Each fila As DataGridViewRow In DgvDiaro.Rows
+
+            Dim debe As String = ""
+            Dim haber As String = ""
+
+            'Captura
+            If String.IsNullOrEmpty(fila.Cells(2).Value) Then
+
+                debe = "0.0"
+
+            Else
+
+                debe = fila.Cells(2).Value
+
+            End If
+
+            If String.IsNullOrEmpty(fila.Cells(3).Value) Then
+
+                haber = "0.0"
+
+            Else
+
+                haber = fila.Cells(3).Value
+
+            End If
+
+            'Manejo de errores
+            Try
+
+                'Conversión
+                debeT += Convert.ToDecimal(debe)
+                haberT += Convert.ToDecimal(haber)
+
+            Catch ex As Exception
+
+            End Try
+
+        Next
+
+        'Saldo Total
+        saldoT = debeT - haberT
+        TxtSaldo.Text = saldoT
 
     End Sub
 
@@ -169,7 +251,7 @@
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
 
         'Registro
-        AddReg()
+        AddDgvReg()
 
     End Sub
 
