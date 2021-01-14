@@ -10,7 +10,6 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.exe
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.xml
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.pdb
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrMain.resources
-D:\GITHUB\Ubi\UbiSoft\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbproj.CopyComplete
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.Login.resources
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiDll.dll
