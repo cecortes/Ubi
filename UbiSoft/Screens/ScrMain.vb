@@ -184,7 +184,7 @@
     ''' <param name="e"></param>
     Private Sub BtnVentas_Click(sender As Object, e As EventArgs) Handles BtnVentas.Click
 
-        'ScrVentas.Show()
+        ScrVentas.Show()
         Me.Close()
 
     End Sub

@@ -433,6 +433,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Screens\Ventas\ScrVentas.Designer.vb">
+      <DependentUpon>ScrVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Screens\Admin\Bancos\ScrBancosDel.resx">
@@ -599,6 +605,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Ventas\ScrVentas.resx">
+      <DependentUpon>ScrVentas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
