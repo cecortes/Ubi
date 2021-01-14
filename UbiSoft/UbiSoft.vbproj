@@ -433,10 +433,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Screens\Ventas\ScrPtoVenta.Designer.vb">
+      <DependentUpon>ScrPtoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrPtoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentaConsul.Designer.vb">
+      <DependentUpon>ScrVentaConsul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentaConsul.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Ventas\ScrVentas.Designer.vb">
       <DependentUpon>ScrVentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Screens\Ventas\ScrVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentasDel.Designer.vb">
+      <DependentUpon>ScrVentasDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentasDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentasEdit.Designer.vb">
+      <DependentUpon>ScrVentasEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Ventas\ScrVentasEdit.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
