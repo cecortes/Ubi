@@ -738,5 +738,17 @@
   <ItemGroup>
     <None Include="Resources\anadir.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapiz128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar128.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

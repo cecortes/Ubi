@@ -57,6 +57,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.caja128">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.camara__1_">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -77,6 +82,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.eliminar128">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.excel">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -88,6 +98,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.inventario">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.lapiz128">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -158,6 +173,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.rfid">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.search128">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property caja128() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("caja128", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property camara__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("camara (1)", resourceCulture)
@@ -173,6 +183,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property eliminar128() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("eliminar128", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property excel() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("excel", resourceCulture)
@@ -196,6 +216,16 @@ Namespace My.Resources
         Friend ReadOnly Property inventario() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("inventario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property lapiz128() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lapiz128", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -336,6 +366,16 @@ Namespace My.Resources
         Friend ReadOnly Property rfid() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rfid", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property search128() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("search128", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

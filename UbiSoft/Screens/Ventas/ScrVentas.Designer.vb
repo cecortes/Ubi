@@ -34,12 +34,33 @@ Partial Class ScrVentas
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PnlMenu = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.pbDel = New System.Windows.Forms.PictureBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.pbConsul = New System.Windows.Forms.PictureBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.pbEdit = New System.Windows.Forms.PictureBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.pbCaja = New System.Windows.Forms.PictureBox()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlMenu.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        CType(Me.pbDel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.pbConsul, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        CType(Me.pbEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
+        CType(Me.pbCaja, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -155,11 +176,110 @@ Partial Class ScrVentas
         'PnlMenu
         '
         Me.PnlMenu.BackColor = System.Drawing.Color.Transparent
+        Me.PnlMenu.Controls.Add(Me.Panel6)
+        Me.PnlMenu.Controls.Add(Me.Panel5)
         Me.PnlMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PnlMenu.Location = New System.Drawing.Point(150, 190)
         Me.PnlMenu.Name = "PnlMenu"
         Me.PnlMenu.Size = New System.Drawing.Size(724, 428)
         Me.PnlMenu.TabIndex = 9
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.Panel10)
+        Me.Panel6.Controls.Add(Me.Panel9)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel6.Location = New System.Drawing.Point(362, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(362, 428)
+        Me.Panel6.TabIndex = 1
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.pbDel)
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel10.Location = New System.Drawing.Point(0, 214)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(362, 214)
+        Me.Panel10.TabIndex = 1
+        '
+        'pbDel
+        '
+        Me.pbDel.Image = Global.UbiSoft.My.Resources.Resources.eliminar128
+        Me.pbDel.Location = New System.Drawing.Point(123, 30)
+        Me.pbDel.Name = "pbDel"
+        Me.pbDel.Size = New System.Drawing.Size(155, 155)
+        Me.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbDel.TabIndex = 0
+        Me.pbDel.TabStop = False
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.pbConsul)
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel9.Location = New System.Drawing.Point(0, 0)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(362, 214)
+        Me.Panel9.TabIndex = 0
+        '
+        'pbConsul
+        '
+        Me.pbConsul.Image = Global.UbiSoft.My.Resources.Resources.search128
+        Me.pbConsul.Location = New System.Drawing.Point(112, 31)
+        Me.pbConsul.Name = "pbConsul"
+        Me.pbConsul.Size = New System.Drawing.Size(155, 155)
+        Me.pbConsul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbConsul.TabIndex = 0
+        Me.pbConsul.TabStop = False
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.Panel8)
+        Me.Panel5.Controls.Add(Me.Panel7)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(362, 428)
+        Me.Panel5.TabIndex = 0
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.pbEdit)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel8.Location = New System.Drawing.Point(0, 214)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(362, 214)
+        Me.Panel8.TabIndex = 1
+        '
+        'pbEdit
+        '
+        Me.pbEdit.Image = Global.UbiSoft.My.Resources.Resources.lapiz128
+        Me.pbEdit.Location = New System.Drawing.Point(104, 30)
+        Me.pbEdit.Name = "pbEdit"
+        Me.pbEdit.Size = New System.Drawing.Size(155, 155)
+        Me.pbEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbEdit.TabIndex = 0
+        Me.pbEdit.TabStop = False
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.pbCaja)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel7.Location = New System.Drawing.Point(0, 0)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(362, 214)
+        Me.Panel7.TabIndex = 0
+        '
+        'pbCaja
+        '
+        Me.pbCaja.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbCaja.Image = Global.UbiSoft.My.Resources.Resources.caja128
+        Me.pbCaja.Location = New System.Drawing.Point(104, 31)
+        Me.pbCaja.Name = "pbCaja"
+        Me.pbCaja.Size = New System.Drawing.Size(155, 155)
+        Me.pbCaja.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbCaja.TabIndex = 0
+        Me.pbCaja.TabStop = False
         '
         'ScrVentas
         '
@@ -188,6 +308,17 @@ Partial Class ScrVentas
         CType(Me.PbMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlMenu.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        CType(Me.pbDel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        CType(Me.pbConsul, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        CType(Me.pbEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        CType(Me.pbCaja, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -204,4 +335,14 @@ Partial Class ScrVentas
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents PnlMenu As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents pbCaja As PictureBox
+    Friend WithEvents pbConsul As PictureBox
+    Friend WithEvents pbDel As PictureBox
+    Friend WithEvents pbEdit As PictureBox
 End Class
