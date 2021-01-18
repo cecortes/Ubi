@@ -87,3 +87,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrBancosDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrBancosEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrBancosNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentas.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPtoVenta.resources

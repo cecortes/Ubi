@@ -3896,6 +3896,27 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrPtoVenta.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrVentas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -3913,6 +3934,34 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentas.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentas.pbCaja_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla de punto de venta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentas.pbConsul_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para consultar ventas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentas.pbEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para editar las ventas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentas.pbDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la pantalla para borrar ventas
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

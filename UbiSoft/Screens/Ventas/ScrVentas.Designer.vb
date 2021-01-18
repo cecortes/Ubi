@@ -205,6 +205,7 @@ Partial Class ScrVentas
         '
         'pbDel
         '
+        Me.pbDel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbDel.Image = Global.UbiSoft.My.Resources.Resources.eliminar128
         Me.pbDel.Location = New System.Drawing.Point(123, 30)
         Me.pbDel.Name = "pbDel"
@@ -224,6 +225,7 @@ Partial Class ScrVentas
         '
         'pbConsul
         '
+        Me.pbConsul.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbConsul.Image = Global.UbiSoft.My.Resources.Resources.search128
         Me.pbConsul.Location = New System.Drawing.Point(112, 31)
         Me.pbConsul.Name = "pbConsul"
@@ -253,6 +255,7 @@ Partial Class ScrVentas
         '
         'pbEdit
         '
+        Me.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbEdit.Image = Global.UbiSoft.My.Resources.Resources.lapiz128
         Me.pbEdit.Location = New System.Drawing.Point(104, 30)
         Me.pbEdit.Name = "pbEdit"

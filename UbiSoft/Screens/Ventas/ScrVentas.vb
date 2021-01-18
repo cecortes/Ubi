@@ -53,5 +53,45 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Muestra la pantalla de punto de venta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub pbCaja_Click(sender As Object, e As EventArgs) Handles pbCaja.Click
+        ScrPtoVenta.Show()
+        Me.Close()
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para consultar ventas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub pbConsul_Click(sender As Object, e As EventArgs) Handles pbConsul.Click
+        ScrVentaConsul.Show()
+        Me.Close()
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para editar las ventas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub pbEdit_Click(sender As Object, e As EventArgs) Handles pbEdit.Click
+        ScrVentasEdit.Show()
+        Me.Close()
+    End Sub
+
+    ''' <summary>
+    ''' Muestra la pantalla para borrar ventas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub pbDel_Click(sender As Object, e As EventArgs) Handles pbDel.Click
+        ScrVentasDel.Show()
+        Me.Close()
+    End Sub
+
 #End Region
 End Class

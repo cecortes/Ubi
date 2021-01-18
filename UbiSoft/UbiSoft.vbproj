@@ -630,6 +630,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Ventas\ScrPtoVenta.resx">
+      <DependentUpon>ScrPtoVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Ventas\ScrVentas.resx">
       <DependentUpon>ScrVentas.vb</DependentUpon>
     </EmbeddedResource>
