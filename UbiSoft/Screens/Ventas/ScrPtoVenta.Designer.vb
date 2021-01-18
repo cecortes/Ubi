@@ -22,6 +22,15 @@ Partial Class ScrPtoVenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
         Me.PbMax = New System.Windows.Forms.PictureBox()
@@ -49,6 +58,27 @@ Partial Class ScrPtoVenta
         Me.PnlProd = New System.Windows.Forms.Panel()
         Me.CboProd = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblCat = New System.Windows.Forms.Label()
+        Me.LblPrecio = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LblUni = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TxtCanti = New System.Windows.Forms.TextBox()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.PnlSep = New System.Windows.Forms.Panel()
+        Me.PnlDgv = New System.Windows.Forms.Panel()
+        Me.DgvProd = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LblTot = New System.Windows.Forms.Label()
+        Me.BtnAlta = New System.Windows.Forms.Button()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +87,8 @@ Partial Class ScrPtoVenta
         CType(Me.PbLogoMin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCli.SuspendLayout()
         Me.PnlProd.SuspendLayout()
+        Me.PnlDgv.SuspendLayout()
+        CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -348,12 +380,21 @@ Partial Class ScrPtoVenta
         'PnlProd
         '
         Me.PnlProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(106, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.PnlProd.Controls.Add(Me.BtnAdd)
+        Me.PnlProd.Controls.Add(Me.TxtCanti)
+        Me.PnlProd.Controls.Add(Me.Label14)
+        Me.PnlProd.Controls.Add(Me.LblUni)
+        Me.PnlProd.Controls.Add(Me.Label13)
+        Me.PnlProd.Controls.Add(Me.Label12)
+        Me.PnlProd.Controls.Add(Me.LblPrecio)
+        Me.PnlProd.Controls.Add(Me.LblCat)
+        Me.PnlProd.Controls.Add(Me.Label11)
         Me.PnlProd.Controls.Add(Me.Label5)
         Me.PnlProd.Controls.Add(Me.CboProd)
         Me.PnlProd.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlProd.Location = New System.Drawing.Point(0, 234)
         Me.PnlProd.Name = "PnlProd"
-        Me.PnlProd.Size = New System.Drawing.Size(1024, 224)
+        Me.PnlProd.Size = New System.Drawing.Size(1024, 114)
         Me.PnlProd.TabIndex = 7
         '
         'CboProd
@@ -380,6 +421,285 @@ Partial Class ScrPtoVenta
         Me.Label5.TabIndex = 38
         Me.Label5.Text = "Producto:"
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(22, 74)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 28)
+        Me.Label11.TabIndex = 39
+        Me.Label11.Text = "Categoría:"
+        '
+        'LblCat
+        '
+        Me.LblCat.AutoSize = True
+        Me.LblCat.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblCat.Location = New System.Drawing.Point(293, 77)
+        Me.LblCat.Name = "LblCat"
+        Me.LblCat.Size = New System.Drawing.Size(40, 25)
+        Me.LblCat.TabIndex = 40
+        Me.LblCat.Text = "NA"
+        '
+        'LblPrecio
+        '
+        Me.LblPrecio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblPrecio.AutoSize = True
+        Me.LblPrecio.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPrecio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblPrecio.Location = New System.Drawing.Point(879, 19)
+        Me.LblPrecio.Name = "LblPrecio"
+        Me.LblPrecio.Size = New System.Drawing.Size(66, 25)
+        Me.LblPrecio.TabIndex = 41
+        Me.LblPrecio.Text = "$ 0.00"
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(765, 16)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(76, 28)
+        Me.Label12.TabIndex = 42
+        Me.Label12.Text = "Precio:"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(542, 16)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(84, 28)
+        Me.Label13.TabIndex = 43
+        Me.Label13.Text = "Unidad:"
+        '
+        'LblUni
+        '
+        Me.LblUni.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblUni.AutoSize = True
+        Me.LblUni.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUni.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblUni.Location = New System.Drawing.Point(662, 19)
+        Me.LblUni.Name = "LblUni"
+        Me.LblUni.Size = New System.Drawing.Size(40, 25)
+        Me.LblUni.TabIndex = 42
+        Me.LblUni.Text = "NA"
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(517, 74)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(101, 28)
+        Me.Label14.TabIndex = 44
+        Me.Label14.Text = "Cantidad:"
+        '
+        'TxtCanti
+        '
+        Me.TxtCanti.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtCanti.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtCanti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCanti.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCanti.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtCanti.Location = New System.Drawing.Point(624, 74)
+        Me.TxtCanti.MaxLength = 100
+        Me.TxtCanti.Name = "TxtCanti"
+        Me.TxtCanti.Size = New System.Drawing.Size(112, 31)
+        Me.TxtCanti.TabIndex = 45
+        Me.TxtCanti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnAdd.Location = New System.Drawing.Point(770, 63)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(47, 42)
+        Me.BtnAdd.TabIndex = 39
+        Me.BtnAdd.UseVisualStyleBackColor = False
+        '
+        'PnlSep
+        '
+        Me.PnlSep.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlSep.Location = New System.Drawing.Point(0, 348)
+        Me.PnlSep.Name = "PnlSep"
+        Me.PnlSep.Size = New System.Drawing.Size(1024, 10)
+        Me.PnlSep.TabIndex = 8
+        '
+        'PnlDgv
+        '
+        Me.PnlDgv.BackColor = System.Drawing.Color.Transparent
+        Me.PnlDgv.Controls.Add(Me.BtnAlta)
+        Me.PnlDgv.Controls.Add(Me.LblTot)
+        Me.PnlDgv.Controls.Add(Me.Label15)
+        Me.PnlDgv.Controls.Add(Me.DgvProd)
+        Me.PnlDgv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlDgv.Location = New System.Drawing.Point(0, 358)
+        Me.PnlDgv.Name = "PnlDgv"
+        Me.PnlDgv.Size = New System.Drawing.Size(1024, 410)
+        Me.PnlDgv.TabIndex = 9
+        '
+        'DgvProd
+        '
+        Me.DgvProd.AllowUserToAddRows = False
+        Me.DgvProd.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.DgvProd.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvProd.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvProd.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.DgvProd.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvProd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvProd.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvProd.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvProd.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DgvProd.DoubleBuffered = True
+        Me.DgvProd.EnableHeadersVisualStyles = False
+        Me.DgvProd.GridColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.DgvProd.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.DgvProd.HeaderForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.DgvProd.Location = New System.Drawing.Point(0, 7)
+        Me.DgvProd.Name = "DgvProd"
+        Me.DgvProd.ReadOnly = True
+        Me.DgvProd.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvProd.RowHeadersWidth = 51
+        Me.DgvProd.RowTemplate.Height = 24
+        Me.DgvProd.Size = New System.Drawing.Size(1024, 333)
+        Me.DgvProd.TabIndex = 4
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column1.HeaderText = "Nombre Producto"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column2.HeaderText = "Categoría"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 111
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column3.HeaderText = "Unidades"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 108
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Column4.HeaderText = "Cantidad"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 106
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Column5.HeaderText = "Precio Unitario"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 137
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Column6.HeaderText = "Sub Total"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(702, 358)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(125, 28)
+        Me.Label15.TabIndex = 45
+        Me.Label15.Text = "Total venta:"
+        '
+        'LblTot
+        '
+        Me.LblTot.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblTot.AutoSize = True
+        Me.LblTot.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblTot.Location = New System.Drawing.Point(833, 361)
+        Me.LblTot.Name = "LblTot"
+        Me.LblTot.Size = New System.Drawing.Size(66, 25)
+        Me.LblTot.TabIndex = 46
+        Me.LblTot.Text = "$ 0.00"
+        '
+        'BtnAlta
+        '
+        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnAlta.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAlta.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAlta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAlta.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAlta.Location = New System.Drawing.Point(27, 353)
+        Me.BtnAlta.Name = "BtnAlta"
+        Me.BtnAlta.Size = New System.Drawing.Size(232, 42)
+        Me.BtnAlta.TabIndex = 47
+        Me.BtnAlta.Text = "Procesar Venta"
+        Me.BtnAlta.UseVisualStyleBackColor = False
+        '
         'ScrPtoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -388,6 +708,8 @@ Partial Class ScrPtoVenta
         Me.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 768)
+        Me.Controls.Add(Me.PnlDgv)
+        Me.Controls.Add(Me.PnlSep)
         Me.Controls.Add(Me.PnlProd)
         Me.Controls.Add(Me.pnlCli)
         Me.Controls.Add(Me.PnlTop)
@@ -408,6 +730,9 @@ Partial Class ScrPtoVenta
         Me.pnlCli.PerformLayout()
         Me.PnlProd.ResumeLayout(False)
         Me.PnlProd.PerformLayout()
+        Me.PnlDgv.ResumeLayout(False)
+        Me.PnlDgv.PerformLayout()
+        CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -439,4 +764,25 @@ Partial Class ScrPtoVenta
     Friend WithEvents PnlProd As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents CboProd As ComboBox
+    Friend WithEvents LblCat As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents LblUni As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents LblPrecio As Label
+    Friend WithEvents TxtCanti As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents BtnAdd As Button
+    Friend WithEvents PnlSep As Panel
+    Friend WithEvents PnlDgv As Panel
+    Friend WithEvents DgvProd As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnAlta As Button
+    Friend WithEvents LblTot As Label
+    Friend WithEvents Label15 As Label
 End Class
