@@ -633,6 +633,9 @@
     <EmbeddedResource Include="Screens\Ventas\ScrPtoVenta.resx">
       <DependentUpon>ScrPtoVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Ventas\ScrVentaConsul.resx">
+      <DependentUpon>ScrVentaConsul.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Ventas\ScrVentas.resx">
       <DependentUpon>ScrVentas.vb</DependentUpon>
     </EmbeddedResource>
