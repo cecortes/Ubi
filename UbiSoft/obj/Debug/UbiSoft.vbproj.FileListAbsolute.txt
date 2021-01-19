@@ -89,3 +89,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrBancosNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentas.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPtoVenta.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentaConsul.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasEdit.resources

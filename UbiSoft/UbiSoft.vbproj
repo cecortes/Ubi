@@ -639,6 +639,9 @@
     <EmbeddedResource Include="Screens\Ventas\ScrVentas.resx">
       <DependentUpon>ScrVentas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Ventas\ScrVentasEdit.resx">
+      <DependentUpon>ScrVentasEdit.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />
