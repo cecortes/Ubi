@@ -11,6 +11,9 @@ Public Class ScrPtoVenta
     Dim consulProd As New Consulta
     Dim errMsg As New ErrorMsg
 
+    Dim folioVta As String = ""
+    Dim totalVta As Decimal = 0.00
+
 #End Region
 
 #Region "Funciones y Métodos"
@@ -188,6 +191,95 @@ Public Class ScrPtoVenta
         LblPrecio.Text = producto.lp_1.ToString     'Precio fijado
         LblUni.Text = producto.pack_prod
         LblCat.Text = producto.cat_prod
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida los datos antes de capturarlos
+    ''' Captura los datos necesarios y los agrega en el dgv
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+
+        'Validación
+        If String.IsNullOrEmpty(CboRfc.Text) Then
+
+            MsgBox("Seleccione un RFC válido...", MsgBoxStyle.Exclamation,
+                  "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        If String.IsNullOrEmpty(CboProd.Text) Then
+
+            MsgBox("Seleccione un producto válido...", MsgBoxStyle.Exclamation,
+                  "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        If String.IsNullOrEmpty(TxtCanti.Text) Then
+
+            MsgBox("La cantidad no puede estar vacía...", MsgBoxStyle.Exclamation,
+                  "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Variables del sub total
+        Dim cantidadInt = 0
+        Dim precioDec As Decimal = 0.0
+        Dim subDec As Decimal = 0.0
+
+        'Control Excepciones
+        Try
+
+            'Conversión de unidades
+            cantidadInt = Integer.Parse(TxtCanti.Text)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox("La cantidad debe ser entera...", MsgBoxStyle.Exclamation,
+                  "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End Try
+
+        Try
+
+            'Eliminar $
+            Dim precio As String = LblPrecio.Text
+            precio = precio.Replace("$", "")
+
+            'Conversión de unidades
+            precioDec = Decimal.Parse(precio)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox(ex.ToString, MsgBoxStyle.Exclamation,
+                  "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End Try
+
+        'Cálculo del sub total
+        subDec = precioDec * cantidadInt
+        Dim subTotal As String = subDec.ToString("#,###,###.00")
+
+        'Cálculo del TOTAL
+        totalVta += subDec
+        LblTot.Text = totalVta.ToString("#,###,###.00")
+
+        'DGV
+        DgvProd.Rows.Add(CboProd.Text, LblCat.Text, LblUni.Text, TxtCanti.Text, LblPrecio.Text, subTotal)
 
     End Sub
 

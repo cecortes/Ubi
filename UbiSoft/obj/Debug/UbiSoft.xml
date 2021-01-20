@@ -3956,6 +3956,14 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrPtoVenta.BtnAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida los datos antes de capturarlos
+ Captura los datos necesarios y los agrega en el dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

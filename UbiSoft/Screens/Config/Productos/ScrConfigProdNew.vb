@@ -118,7 +118,8 @@ Public Class ScrConfigProdNew
         'Usr
         If flgErr Then
 
-            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation, "UbiSoft by Ubicamatic - 2020(C)")
+            MsgBox("Uno o varios campos no válidos, favor de verificar", MsgBoxStyle.Exclamation,
+                   "UbiSoft by Ubicamatic - 2020(C)")
 
             Return
 
