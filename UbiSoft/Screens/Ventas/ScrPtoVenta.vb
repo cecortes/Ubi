@@ -283,5 +283,14 @@ Public Class ScrPtoVenta
 
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles BtnAlta.Click
+
+    End Sub
+
 #End Region
 End Class

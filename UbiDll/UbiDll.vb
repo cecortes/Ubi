@@ -1246,6 +1246,149 @@ Public Class Datos
 
 #End Region
 
+#Region "ventas"
+
+#Region "DATAMEMBERS"
+
+    Private _ventas_folio As String
+    Private _ventas_date As String
+    Private _ventas_usr As String
+    Private _ventas_rfc As String
+    Private _ventas_nom As String
+    Private _ventas_mail As String
+    Private _ventas_prod As String
+    Private _ventas_cat As String
+    Private _ventas_uni As String
+    Private _ventas_canti As Integer
+    Private _ventas_pu As Decimal
+    Private _ventas_sub As Decimal
+    Private _ventas_tot As Decimal
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property ventas_folio() As String
+        Get
+            Return _ventas_folio
+        End Get
+        Set(ByVal value As String)
+            _ventas_folio = value
+        End Set
+    End Property
+
+    Public Property ventas_date() As String
+        Get
+            Return _ventas_date
+        End Get
+        Set(ByVal value As String)
+            _ventas_date = value
+        End Set
+    End Property
+
+    Public Property ventas_usr() As String
+        Get
+            Return _ventas_usr
+        End Get
+        Set(ByVal value As String)
+            _ventas_usr = value
+        End Set
+    End Property
+
+    Public Property ventas_rfc() As String
+        Get
+            Return _ventas_rfc
+        End Get
+        Set(ByVal value As String)
+            _ventas_rfc = value
+        End Set
+    End Property
+
+    Public Property ventas_nom() As String
+        Get
+            Return _ventas_nom
+        End Get
+        Set(ByVal value As String)
+            _ventas_nom = value
+        End Set
+    End Property
+
+    Public Property ventas_mail() As String
+        Get
+            Return _ventas_mail
+        End Get
+        Set(ByVal value As String)
+            _ventas_mail = value
+        End Set
+    End Property
+
+    Public Property ventas_prod() As String
+        Get
+            Return _ventas_prod
+        End Get
+        Set(ByVal value As String)
+            _ventas_prod = value
+        End Set
+    End Property
+
+    Public Property ventas_cat() As String
+        Get
+            Return _ventas_cat
+        End Get
+        Set(ByVal value As String)
+            _ventas_cat = value
+        End Set
+    End Property
+
+    Public Property ventas_uni() As String
+        Get
+            Return _ventas_uni
+        End Get
+        Set(ByVal value As String)
+            _ventas_uni = value
+        End Set
+    End Property
+
+    Public Property ventas_canti() As Integer
+        Get
+            Return _ventas_canti
+        End Get
+        Set(ByVal value As Integer)
+            _ventas_canti = value
+        End Set
+    End Property
+
+    Public Property ventas_pu() As Decimal
+        Get
+            Return _ventas_pu
+        End Get
+        Set(ByVal value As Decimal)
+            _ventas_pu = value
+        End Set
+    End Property
+
+    Public Property ventas_sub() As Decimal
+        Get
+            Return _ventas_sub
+        End Get
+        Set(ByVal value As Decimal)
+            _ventas_sub = value
+        End Set
+    End Property
+
+    Public Property ventas_tot() As Decimal
+        Get
+            Return _ventas_tot
+        End Get
+        Set(ByVal value As Decimal)
+            _ventas_tot = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
