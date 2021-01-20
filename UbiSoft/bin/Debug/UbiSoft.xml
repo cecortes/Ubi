@@ -3896,6 +3896,31 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrPtoVenta.FillCboRfc">
+ <summary>
+ Consulta clientes
+ Llena el cbo con los resultados
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.FillProd">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.GetCliente(System.String)">
+ <summary>
+ Realiza la consulta del rfc seleccionado en el cbo
+ Captura el resultado en los textbox y labels
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.ScrPtoVenta_Load(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para extraer a los rfc de los clientes
+ Llama al método para extraer los nombres de productos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrPtoVenta.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -3913,6 +3938,20 @@ UbiSoft
 <member name="M:UbiSoft.ScrPtoVenta.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.CboRfc_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta del cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrPtoVenta.CboProd_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Obtiene los datos del producto mediante un método de consulta
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
@@ -3983,6 +4022,27 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentas.pbDel_Click(System.Object,System.EventArgs)">
  <summary>
  Muestra la pantalla para borrar ventas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

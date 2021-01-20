@@ -56,19 +56,22 @@ Partial Class ScrPtoVenta
         Me.CboRfc = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PnlProd = New System.Windows.Forms.Panel()
-        Me.CboProd = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.LblCat = New System.Windows.Forms.Label()
-        Me.LblPrecio = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.LblUni = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TxtCanti = New System.Windows.Forms.TextBox()
         Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.TxtCanti = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LblUni = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LblPrecio = New System.Windows.Forms.Label()
+        Me.LblCat = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CboProd = New System.Windows.Forms.ComboBox()
         Me.PnlSep = New System.Windows.Forms.Panel()
         Me.PnlDgv = New System.Windows.Forms.Panel()
+        Me.BtnAlta = New System.Windows.Forms.Button()
+        Me.LblTot = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.DgvProd = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,9 +79,6 @@ Partial Class ScrPtoVenta
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.LblTot = New System.Windows.Forms.Label()
-        Me.BtnAlta = New System.Windows.Forms.Button()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,7 +196,7 @@ Partial Class ScrPtoVenta
         Me.LblEstado.AutoSize = True
         Me.LblEstado.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblEstado.Location = New System.Drawing.Point(793, 157)
+        Me.LblEstado.Location = New System.Drawing.Point(734, 157)
         Me.LblEstado.Name = "LblEstado"
         Me.LblEstado.Size = New System.Drawing.Size(40, 25)
         Me.LblEstado.TabIndex = 50
@@ -220,7 +220,7 @@ Partial Class ScrPtoVenta
         Me.LblDir.AutoSize = True
         Me.LblDir.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblDir.Location = New System.Drawing.Point(793, 115)
+        Me.LblDir.Location = New System.Drawing.Point(734, 115)
         Me.LblDir.Name = "LblDir"
         Me.LblDir.Size = New System.Drawing.Size(40, 25)
         Me.LblDir.TabIndex = 48
@@ -244,7 +244,7 @@ Partial Class ScrPtoVenta
         Me.LblContacto.AutoSize = True
         Me.LblContacto.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblContacto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblContacto.Location = New System.Drawing.Point(793, 75)
+        Me.LblContacto.Location = New System.Drawing.Point(734, 75)
         Me.LblContacto.Name = "LblContacto"
         Me.LblContacto.Size = New System.Drawing.Size(40, 25)
         Me.LblContacto.TabIndex = 46
@@ -397,111 +397,19 @@ Partial Class ScrPtoVenta
         Me.PnlProd.Size = New System.Drawing.Size(1024, 114)
         Me.PnlProd.TabIndex = 7
         '
-        'CboProd
+        'BtnAdd
         '
-        Me.CboProd.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboProd.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboProd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboProd.FormattingEnabled = True
-        Me.CboProd.Location = New System.Drawing.Point(131, 18)
-        Me.CboProd.Name = "CboProd"
-        Me.CboProd.Size = New System.Drawing.Size(400, 31)
-        Me.CboProd.TabIndex = 27
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(22, 16)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(103, 28)
-        Me.Label5.TabIndex = 38
-        Me.Label5.Text = "Producto:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(22, 74)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(108, 28)
-        Me.Label11.TabIndex = 39
-        Me.Label11.Text = "Categoría:"
-        '
-        'LblCat
-        '
-        Me.LblCat.AutoSize = True
-        Me.LblCat.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.LblCat.Location = New System.Drawing.Point(293, 77)
-        Me.LblCat.Name = "LblCat"
-        Me.LblCat.Size = New System.Drawing.Size(40, 25)
-        Me.LblCat.TabIndex = 40
-        Me.LblCat.Text = "NA"
-        '
-        'LblPrecio
-        '
-        Me.LblPrecio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblPrecio.AutoSize = True
-        Me.LblPrecio.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPrecio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.LblPrecio.Location = New System.Drawing.Point(879, 19)
-        Me.LblPrecio.Name = "LblPrecio"
-        Me.LblPrecio.Size = New System.Drawing.Size(66, 25)
-        Me.LblPrecio.TabIndex = 41
-        Me.LblPrecio.Text = "$ 0.00"
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(765, 16)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 28)
-        Me.Label12.TabIndex = 42
-        Me.Label12.Text = "Precio:"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(542, 16)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(84, 28)
-        Me.Label13.TabIndex = 43
-        Me.Label13.Text = "Unidad:"
-        '
-        'LblUni
-        '
-        Me.LblUni.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblUni.AutoSize = True
-        Me.LblUni.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUni.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.LblUni.Location = New System.Drawing.Point(662, 19)
-        Me.LblUni.Name = "LblUni"
-        Me.LblUni.Size = New System.Drawing.Size(40, 25)
-        Me.LblUni.TabIndex = 42
-        Me.LblUni.Text = "NA"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(517, 74)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(101, 28)
-        Me.Label14.TabIndex = 44
-        Me.Label14.Text = "Cantidad:"
+        Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnAdd.Location = New System.Drawing.Point(770, 63)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(47, 42)
+        Me.BtnAdd.TabIndex = 39
+        Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'TxtCanti
         '
@@ -517,19 +425,111 @@ Partial Class ScrPtoVenta
         Me.TxtCanti.TabIndex = 45
         Me.TxtCanti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnAdd
+        'Label14
         '
-        Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnAdd.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnAdd.Location = New System.Drawing.Point(770, 63)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(47, 42)
-        Me.BtnAdd.TabIndex = 39
-        Me.BtnAdd.UseVisualStyleBackColor = False
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(517, 74)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(101, 28)
+        Me.Label14.TabIndex = 44
+        Me.Label14.Text = "Cantidad:"
+        '
+        'LblUni
+        '
+        Me.LblUni.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblUni.AutoSize = True
+        Me.LblUni.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUni.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblUni.Location = New System.Drawing.Point(662, 19)
+        Me.LblUni.Name = "LblUni"
+        Me.LblUni.Size = New System.Drawing.Size(40, 25)
+        Me.LblUni.TabIndex = 42
+        Me.LblUni.Text = "NA"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(542, 16)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(84, 28)
+        Me.Label13.TabIndex = 43
+        Me.Label13.Text = "Unidad:"
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(765, 16)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(76, 28)
+        Me.Label12.TabIndex = 42
+        Me.Label12.Text = "Precio:"
+        '
+        'LblPrecio
+        '
+        Me.LblPrecio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblPrecio.AutoSize = True
+        Me.LblPrecio.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPrecio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblPrecio.Location = New System.Drawing.Point(879, 19)
+        Me.LblPrecio.Name = "LblPrecio"
+        Me.LblPrecio.Size = New System.Drawing.Size(66, 25)
+        Me.LblPrecio.TabIndex = 41
+        Me.LblPrecio.Text = "$ 0.00"
+        '
+        'LblCat
+        '
+        Me.LblCat.AutoSize = True
+        Me.LblCat.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.LblCat.Location = New System.Drawing.Point(293, 77)
+        Me.LblCat.Name = "LblCat"
+        Me.LblCat.Size = New System.Drawing.Size(40, 25)
+        Me.LblCat.TabIndex = 40
+        Me.LblCat.Text = "NA"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(22, 74)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(108, 28)
+        Me.Label11.TabIndex = 39
+        Me.Label11.Text = "Categoría:"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(22, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(103, 28)
+        Me.Label5.TabIndex = 38
+        Me.Label5.Text = "Producto:"
+        '
+        'CboProd
+        '
+        Me.CboProd.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboProd.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboProd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboProd.FormattingEnabled = True
+        Me.CboProd.Location = New System.Drawing.Point(131, 18)
+        Me.CboProd.Name = "CboProd"
+        Me.CboProd.Size = New System.Drawing.Size(400, 31)
+        Me.CboProd.TabIndex = 27
         '
         'PnlSep
         '
@@ -551,6 +551,46 @@ Partial Class ScrPtoVenta
         Me.PnlDgv.Name = "PnlDgv"
         Me.PnlDgv.Size = New System.Drawing.Size(1024, 410)
         Me.PnlDgv.TabIndex = 9
+        '
+        'BtnAlta
+        '
+        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnAlta.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAlta.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAlta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnAlta.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAlta.Location = New System.Drawing.Point(27, 353)
+        Me.BtnAlta.Name = "BtnAlta"
+        Me.BtnAlta.Size = New System.Drawing.Size(232, 42)
+        Me.BtnAlta.TabIndex = 47
+        Me.BtnAlta.Text = "Procesar Venta"
+        Me.BtnAlta.UseVisualStyleBackColor = False
+        '
+        'LblTot
+        '
+        Me.LblTot.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblTot.AutoSize = True
+        Me.LblTot.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblTot.Location = New System.Drawing.Point(833, 361)
+        Me.LblTot.Name = "LblTot"
+        Me.LblTot.Size = New System.Drawing.Size(66, 25)
+        Me.LblTot.TabIndex = 46
+        Me.LblTot.Text = "$ 0.00"
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(702, 358)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(125, 28)
+        Me.Label15.TabIndex = 45
+        Me.Label15.Text = "Total venta:"
         '
         'DgvProd
         '
@@ -659,46 +699,6 @@ Partial Class ScrPtoVenta
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(702, 358)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(125, 28)
-        Me.Label15.TabIndex = 45
-        Me.Label15.Text = "Total venta:"
-        '
-        'LblTot
-        '
-        Me.LblTot.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblTot.AutoSize = True
-        Me.LblTot.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblTot.Location = New System.Drawing.Point(833, 361)
-        Me.LblTot.Name = "LblTot"
-        Me.LblTot.Size = New System.Drawing.Size(66, 25)
-        Me.LblTot.TabIndex = 46
-        Me.LblTot.Text = "$ 0.00"
-        '
-        'BtnAlta
-        '
-        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnAlta.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnAlta.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAlta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnAlta.Image = Global.UbiSoft.My.Resources.Resources.ok32
-        Me.BtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAlta.Location = New System.Drawing.Point(27, 353)
-        Me.BtnAlta.Name = "BtnAlta"
-        Me.BtnAlta.Size = New System.Drawing.Size(232, 42)
-        Me.BtnAlta.TabIndex = 47
-        Me.BtnAlta.Text = "Procesar Venta"
-        Me.BtnAlta.UseVisualStyleBackColor = False
         '
         'ScrPtoVenta
         '

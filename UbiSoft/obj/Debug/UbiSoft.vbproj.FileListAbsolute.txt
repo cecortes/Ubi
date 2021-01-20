@@ -90,3 +90,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentas.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPtoVenta.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentaConsul.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasEdit.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasDel.resources
