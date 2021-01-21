@@ -1251,7 +1251,7 @@ Public Class Datos
 #Region "DATAMEMBERS"
 
     Private _ventas_folio As String
-    Private _ventas_date As String
+    Private _ventas_date As Date
     Private _ventas_usr As String
     Private _ventas_rfc As String
     Private _ventas_nom As String
@@ -1277,11 +1277,11 @@ Public Class Datos
         End Set
     End Property
 
-    Public Property ventas_date() As String
+    Public Property ventas_date() As Date
         Get
             Return _ventas_date
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _ventas_date = value
         End Set
     End Property

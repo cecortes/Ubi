@@ -21,5 +21,4 @@ D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbproj.CopyComplete
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.dll
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.xml
 D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.pdb
-D:\GITHUB\Ubi\UbiDll\obj\Debug\UbiDll.vbprojAssemblyReference.cache
 D:\GITHUB\Ubi\UbiDll\bin\Debug\System.Numerics.Vectors.dll
