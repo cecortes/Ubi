@@ -358,6 +358,31 @@ Public Class ScrPtoVenta
         'Limpiar Dgv
         DgvProd.Rows.Clear()
 
+        'Clear and Reset
+        TxtCanti.Text = ""
+        LblTot.Text = "$ 0.00"
+        folioVta = ""
+        totalVta = 0.00
+
+        'Control de errores
+        Try
+
+            'Index
+            CboRfc.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+
+            'Index
+            CboProd.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
 #End Region
