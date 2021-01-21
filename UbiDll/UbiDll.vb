@@ -2030,7 +2030,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -2154,7 +2156,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try

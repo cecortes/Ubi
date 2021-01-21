@@ -4084,6 +4084,11 @@ UbiSoft
  Actualiza los elementos necesarios text y labels
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.GetVtaAll">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de ventas de acuerdo al folio
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

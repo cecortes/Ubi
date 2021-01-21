@@ -7,6 +7,7 @@ Public Class ScrVentasEdit
     'Dll
     Dim datos As New Datos
     Dim ventaDetalle As New Datos
+    Dim consulta As New Consulta
     Dim consulFol As New Consulta
     Dim consulProd As New Consulta
     Dim consulVta As New Consulta
@@ -95,6 +96,32 @@ Public Class ScrVentasEdit
         LblFecha.Text = ventaDetalle.ventas_date
         LblUsr.Text = ventaDetalle.ventas_usr
         LblTot.Text = "$" + ventaDetalle.ventas_tot.ToString("#,###,###.00")
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de llenar el datagrid con todas las entradas de la tabla de ventas de acuerdo al folio
+    ''' </summary>
+    Private Sub GetVtaAll()
+
+        'Reset
+        consulta._dtsDgv.Reset()
+
+        'Consulta
+        consulta.GetAllVta(datos)
+
+        'Datagrid
+        DgvVta.DataSource = consulta._dtvDgv
+
+        'Formato Dgv
+        DgvVta.Columns(0).HeaderText = "Nombre Producto"
+        DgvVta.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+
+        'DgvCliEdit.Columns(15).Visible = False
+        'DgvCliEdit.Columns(16).Visible = False
+        'DgvCliEdit.Columns(17).HeaderText = "Contacto"
+        'DgvCliEdit.Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        'DgvCliEdit.Refresh()
 
     End Sub
 
@@ -188,6 +215,9 @@ Public Class ScrVentasEdit
 
         'Detalle de Venta
         GetDetailVenta()
+
+        'Dgv
+        GetVtaAll()
 
     End Sub
 
