@@ -3964,6 +3964,17 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrPtoVenta.BtnAlta_Click(System.Object,System.EventArgs)">
+ <summary>
+ Genera folio de ventas
+ Recorre el dgv con los datos para capturarlos
+ Realiza la insercción en la tabla ventas
+ Verifica la insercción de todos los elementos mediante la comparación del contador de filas
+ Limpia los datos necesarios y re inicia las variables
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

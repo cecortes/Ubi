@@ -3659,24 +3659,24 @@ Public Class Agregar
             'Query
             _adaptador.InsertCommand =
                 New MySqlCommand("INSERT INTO ventas 
-                (folio, date_vta, usr_vta, rfc_vta, nom_vta, mail_vta, prod_vta, cat_vta, uni_vta, canti_vta, pu_vta, sub_vta, tot_vta) 
+                (ventas_folio, ventas_date, ventas_usr, ventas_rfc, ventas_nom, ventas_mail, ventas_prod, ventas_cat, ventas_uni, ventas_canti, ventas_pu, ventas_sub, ventas_tot) 
                 VALUES 
-                (@folio,@date_vta,@usr_vta,@rfc_vta,@nom_vta,@mail_vta,@prod_vta,@cat_vta,@uni_vta,@canti_vta,@pu_vta,@sub_vta,@tot_vta)", con._conexion)
+                (@ventas_folio,@ventas_date,@ventas_usr,@ventas_rfc,@ventas_nom,@ventas_mail,@ventas_prod,@ventas_cat,@ventas_uni,@ventas_canti,@ventas_pu,@ventas_sub,@ventas_tot)", con._conexion)
 
             'Parámetros
-            _adaptador.InsertCommand.Parameters.Add("@folio", MySqlDbType.String, 45).Value = datos.ventas_folio
-            _adaptador.InsertCommand.Parameters.Add("@date_vta", MySqlDbType.String, 45).Value = datos.ventas_date
-            _adaptador.InsertCommand.Parameters.Add("@usr_vta", MySqlDbType.String, 45).Value = datos.ventas_usr
-            _adaptador.InsertCommand.Parameters.Add("@rfc_vta", MySqlDbType.String, 45).Value = datos.ventas_rfc
-            _adaptador.InsertCommand.Parameters.Add("@nom_vta", MySqlDbType.String, 45).Value = datos.ventas_nom
-            _adaptador.InsertCommand.Parameters.Add("@mail_vta", MySqlDbType.String, 45).Value = datos.ventas_mail
-            _adaptador.InsertCommand.Parameters.Add("@prod_vta", MySqlDbType.String, 45).Value = datos.ventas_prod
-            _adaptador.InsertCommand.Parameters.Add("@cat_vta", MySqlDbType.String, 45).Value = datos.ventas_cat
-            _adaptador.InsertCommand.Parameters.Add("@uni_vta", MySqlDbType.String, 45).Value = datos.ventas_uni
-            _adaptador.InsertCommand.Parameters.Add("@canti_vta", MySqlDbType.Int32, 11).Value = datos.ventas_canti
-            _adaptador.InsertCommand.Parameters.Add("@pu_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_pu
-            _adaptador.InsertCommand.Parameters.Add("@sub_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_sub
-            _adaptador.InsertCommand.Parameters.Add("@tot_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_tot
+            _adaptador.InsertCommand.Parameters.Add("@ventas_folio", MySqlDbType.String, 45).Value = datos.ventas_folio
+            _adaptador.InsertCommand.Parameters.Add("@ventas_date", MySqlDbType.String, 45).Value = datos.ventas_date
+            _adaptador.InsertCommand.Parameters.Add("@ventas_usr", MySqlDbType.String, 45).Value = datos.ventas_usr
+            _adaptador.InsertCommand.Parameters.Add("@ventas_rfc", MySqlDbType.String, 45).Value = datos.ventas_rfc
+            _adaptador.InsertCommand.Parameters.Add("@ventas_nom", MySqlDbType.String, 45).Value = datos.ventas_nom
+            _adaptador.InsertCommand.Parameters.Add("@ventas_mail", MySqlDbType.String, 45).Value = datos.ventas_mail
+            _adaptador.InsertCommand.Parameters.Add("@ventas_prod", MySqlDbType.String, 45).Value = datos.ventas_prod
+            _adaptador.InsertCommand.Parameters.Add("@ventas_cat", MySqlDbType.String, 45).Value = datos.ventas_cat
+            _adaptador.InsertCommand.Parameters.Add("@ventas_uni", MySqlDbType.String, 45).Value = datos.ventas_uni
+            _adaptador.InsertCommand.Parameters.Add("@ventas_canti", MySqlDbType.Int32, 11).Value = datos.ventas_canti
+            _adaptador.InsertCommand.Parameters.Add("@ventas_pu", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_pu
+            _adaptador.InsertCommand.Parameters.Add("@ventas_sub", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_sub
+            _adaptador.InsertCommand.Parameters.Add("@ventas_tot", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_tot
 
             'Insert
             con._conexion.Open()

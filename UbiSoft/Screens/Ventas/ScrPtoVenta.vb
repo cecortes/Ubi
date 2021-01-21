@@ -9,6 +9,7 @@ Public Class ScrPtoVenta
     Dim datos As New Datos
     Dim consulCli As New Consulta
     Dim consulProd As New Consulta
+    Dim add As New Agregar
     Dim errMsg As New ErrorMsg
 
     Dim folioVta As String = ""
@@ -284,11 +285,78 @@ Public Class ScrPtoVenta
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Genera folio de ventas
+    ''' Recorre el dgv con los datos para capturarlos
+    ''' Realiza la insercción en la tabla ventas
+    ''' Verifica la insercción de todos los elementos mediante la comparación del contador de filas
+    ''' Limpia los datos necesarios y re inicia las variables
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles BtnAlta.Click
+
+        'Folio
+        folioVta = Now.Year.ToString + Now.Month.ToString + Now.Day.ToString
+        folioVta += Now.Hour.ToString + Now.Minute.ToString + Now.Second.ToString
+        folioVta += CboRfc.Text
+
+        'Fecha
+        Dim dateNow As String = Date.Now.ToShortDateString
+
+        'Usuario
+        Dim usuario As String = "god@gmail.com"
+
+        'Datos del cliente
+        Dim rfc As String = CboRfc.Text
+        Dim cli As String = TxtNombre.Text
+        Dim mailCli As String = LblMail.Text
+
+        'Contador
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvProd.Rows
+
+            'Captura
+            datos.ventas_folio = folioVta
+            datos.ventas_date = dateNow
+            datos.ventas_usr = usuario
+            datos.ventas_rfc = rfc
+            datos.ventas_nom = cli
+            datos.ventas_mail = mailCli
+            datos.ventas_prod = filas.Cells(0).Value
+            datos.ventas_cat = filas.Cells(1).Value
+            datos.ventas_uni = filas.Cells(2).Value
+            datos.ventas_canti = filas.Cells(3).Value
+            datos.ventas_pu = filas.Cells(4).Value
+            datos.ventas_sub = filas.Cells(5).Value
+            datos.ventas_tot = Decimal.Parse(LblTot.Text)
+
+            'Insert & Update
+            If (add.NewVenta(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Validación de todos las insert & update
+        If (DgvProd.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todos las ventas fueron agregados con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Una o más ventas no pudieron agregarse a la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvProd.Rows.Clear()
 
     End Sub
 

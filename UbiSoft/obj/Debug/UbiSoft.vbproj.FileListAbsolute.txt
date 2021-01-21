@@ -28,7 +28,6 @@ D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiDll.pdb
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\UbiDll.xml
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\MySql.Data.xml
-D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.exe.config
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfig.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigUsr.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigAdv.resources
@@ -91,3 +90,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPtoVenta.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentaConsul.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasDel.resources
+D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.Numerics.Vectors.dll
