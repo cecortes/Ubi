@@ -22,15 +22,15 @@ Partial Class ScrVentasEdit
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
         Me.PbMax = New System.Windows.Forms.PictureBox()
@@ -42,16 +42,11 @@ Partial Class ScrVentasEdit
         Me.CboFol = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PnlDatos = New System.Windows.Forms.Panel()
-        Me.LblEstado = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.LblDir = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.LblContacto = New System.Windows.Forms.Label()
+        Me.TxtRfc = New System.Windows.Forms.TextBox()
+        Me.LblFecha = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.LblCiudad = New System.Windows.Forms.Label()
+        Me.LblUsr = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.LblTel = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.LblMail = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -79,7 +74,7 @@ Partial Class ScrVentasEdit
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.CboProd = New System.Windows.Forms.ComboBox()
-        Me.TxtRfc = New System.Windows.Forms.TextBox()
+        Me.BtnAdd = New System.Windows.Forms.Button()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,17 +198,13 @@ Partial Class ScrVentasEdit
         '
         'PnlDatos
         '
+        Me.PnlDatos.Controls.Add(Me.LblTot)
         Me.PnlDatos.Controls.Add(Me.TxtRfc)
-        Me.PnlDatos.Controls.Add(Me.LblEstado)
-        Me.PnlDatos.Controls.Add(Me.Label10)
-        Me.PnlDatos.Controls.Add(Me.LblDir)
-        Me.PnlDatos.Controls.Add(Me.Label9)
-        Me.PnlDatos.Controls.Add(Me.LblContacto)
+        Me.PnlDatos.Controls.Add(Me.Label16)
+        Me.PnlDatos.Controls.Add(Me.LblFecha)
         Me.PnlDatos.Controls.Add(Me.Label8)
-        Me.PnlDatos.Controls.Add(Me.LblCiudad)
+        Me.PnlDatos.Controls.Add(Me.LblUsr)
         Me.PnlDatos.Controls.Add(Me.Label7)
-        Me.PnlDatos.Controls.Add(Me.LblTel)
-        Me.PnlDatos.Controls.Add(Me.Label2)
         Me.PnlDatos.Controls.Add(Me.LblMail)
         Me.PnlDatos.Controls.Add(Me.Label4)
         Me.PnlDatos.Controls.Add(Me.Label3)
@@ -225,65 +216,31 @@ Partial Class ScrVentasEdit
         Me.PnlDatos.Size = New System.Drawing.Size(1024, 195)
         Me.PnlDatos.TabIndex = 9
         '
-        'LblEstado
+        'TxtRfc
         '
-        Me.LblEstado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblEstado.AutoSize = True
-        Me.LblEstado.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblEstado.Location = New System.Drawing.Point(783, 152)
-        Me.LblEstado.Name = "LblEstado"
-        Me.LblEstado.Size = New System.Drawing.Size(40, 25)
-        Me.LblEstado.TabIndex = 66
-        Me.LblEstado.Text = "NA"
+        Me.TxtRfc.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtRfc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtRfc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtRfc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtRfc.Location = New System.Drawing.Point(70, 16)
+        Me.TxtRfc.MaxLength = 100
+        Me.TxtRfc.Name = "TxtRfc"
+        Me.TxtRfc.Size = New System.Drawing.Size(320, 31)
+        Me.TxtRfc.TabIndex = 67
+        Me.TxtRfc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label10
+        'LblFecha
         '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(528, 149)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(80, 28)
-        Me.Label10.TabIndex = 65
-        Me.Label10.Text = "Estado:"
-        '
-        'LblDir
-        '
-        Me.LblDir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblDir.AutoSize = True
-        Me.LblDir.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblDir.Location = New System.Drawing.Point(783, 110)
-        Me.LblDir.Name = "LblDir"
-        Me.LblDir.Size = New System.Drawing.Size(40, 25)
-        Me.LblDir.TabIndex = 64
-        Me.LblDir.Text = "NA"
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(501, 107)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(107, 28)
-        Me.Label9.TabIndex = 63
-        Me.Label9.Text = "Dirección:"
-        '
-        'LblContacto
-        '
-        Me.LblContacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblContacto.AutoSize = True
-        Me.LblContacto.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblContacto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblContacto.Location = New System.Drawing.Point(783, 70)
-        Me.LblContacto.Name = "LblContacto"
-        Me.LblContacto.Size = New System.Drawing.Size(40, 25)
-        Me.LblContacto.TabIndex = 62
-        Me.LblContacto.Text = "NA"
+        Me.LblFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblFecha.AutoSize = True
+        Me.LblFecha.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblFecha.Location = New System.Drawing.Point(783, 73)
+        Me.LblFecha.Name = "LblFecha"
+        Me.LblFecha.Size = New System.Drawing.Size(40, 25)
+        Me.LblFecha.TabIndex = 62
+        Me.LblFecha.Text = "NA"
         '
         'Label8
         '
@@ -291,22 +248,22 @@ Partial Class ScrVentasEdit
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(506, 67)
+        Me.Label8.Location = New System.Drawing.Point(537, 70)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(102, 28)
+        Me.Label8.Size = New System.Drawing.Size(71, 28)
         Me.Label8.TabIndex = 61
-        Me.Label8.Text = "Contacto:"
+        Me.Label8.Text = "Fecha:"
         '
-        'LblCiudad
+        'LblUsr
         '
-        Me.LblCiudad.AutoSize = True
-        Me.LblCiudad.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblCiudad.Location = New System.Drawing.Point(196, 152)
-        Me.LblCiudad.Name = "LblCiudad"
-        Me.LblCiudad.Size = New System.Drawing.Size(40, 25)
-        Me.LblCiudad.TabIndex = 60
-        Me.LblCiudad.Text = "NA"
+        Me.LblUsr.AutoSize = True
+        Me.LblUsr.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblUsr.Location = New System.Drawing.Point(196, 152)
+        Me.LblUsr.Name = "LblUsr"
+        Me.LblUsr.Size = New System.Drawing.Size(40, 25)
+        Me.LblUsr.TabIndex = 60
+        Me.LblUsr.Text = "NA"
         '
         'Label7
         '
@@ -315,31 +272,9 @@ Partial Class ScrVentasEdit
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(12, 149)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 28)
+        Me.Label7.Size = New System.Drawing.Size(168, 28)
         Me.Label7.TabIndex = 59
-        Me.Label7.Text = "Ciudad:"
-        '
-        'LblTel
-        '
-        Me.LblTel.AutoSize = True
-        Me.LblTel.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblTel.Location = New System.Drawing.Point(196, 110)
-        Me.LblTel.Name = "LblTel"
-        Me.LblTel.Size = New System.Drawing.Size(40, 25)
-        Me.LblTel.TabIndex = 58
-        Me.LblTel.Text = "NA"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(12, 107)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 28)
-        Me.Label2.TabIndex = 57
-        Me.Label2.Text = "Teléfono:"
+        Me.Label7.Text = "Asesor de venta:"
         '
         'LblMail
         '
@@ -414,29 +349,29 @@ Partial Class ScrVentasEdit
         '
         Me.DgvProd.AllowUserToAddRows = False
         Me.DgvProd.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.DgvProd.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.DgvProd.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle28
         Me.DgvProd.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.DgvProd.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvProd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvProd.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvProd.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
         Me.DgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvProd.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvProd.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvProd.DefaultCellStyle = DataGridViewCellStyle36
         Me.DgvProd.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvProd.DoubleBuffered = True
         Me.DgvProd.EnableHeadersVisualStyles = False
@@ -455,8 +390,8 @@ Partial Class ScrVentasEdit
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle30
         Me.Column1.HeaderText = "Nombre Producto"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
@@ -465,8 +400,8 @@ Partial Class ScrVentasEdit
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle31
         Me.Column2.HeaderText = "Categoría"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
@@ -476,8 +411,8 @@ Partial Class ScrVentasEdit
         'Column3
         '
         Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle32
         Me.Column3.HeaderText = "Unidades"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
@@ -487,8 +422,8 @@ Partial Class ScrVentasEdit
         'Column4
         '
         Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle33
         Me.Column4.HeaderText = "Cantidad"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
@@ -498,8 +433,8 @@ Partial Class ScrVentasEdit
         'Column5
         '
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle34
         Me.Column5.HeaderText = "Precio Unitario"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
@@ -509,8 +444,8 @@ Partial Class ScrVentasEdit
         'Column6
         '
         Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle35
         Me.Column6.HeaderText = "Sub Total"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -519,8 +454,7 @@ Partial Class ScrVentasEdit
         'PnlAdd
         '
         Me.PnlAdd.BackColor = System.Drawing.Color.Transparent
-        Me.PnlAdd.Controls.Add(Me.LblTot)
-        Me.PnlAdd.Controls.Add(Me.Label16)
+        Me.PnlAdd.Controls.Add(Me.BtnAdd)
         Me.PnlAdd.Controls.Add(Me.BtnAlta)
         Me.PnlAdd.Controls.Add(Me.TxtCanti)
         Me.PnlAdd.Controls.Add(Me.Label14)
@@ -543,7 +477,7 @@ Partial Class ScrVentasEdit
         Me.LblTot.AutoSize = True
         Me.LblTot.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblTot.Location = New System.Drawing.Point(160, 147)
+        Me.LblTot.Location = New System.Drawing.Point(814, 152)
         Me.LblTot.Name = "LblTot"
         Me.LblTot.Size = New System.Drawing.Size(66, 25)
         Me.LblTot.TabIndex = 59
@@ -554,7 +488,7 @@ Partial Class ScrVentasEdit
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(29, 144)
+        Me.Label16.Location = New System.Drawing.Point(683, 149)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(125, 28)
         Me.Label16.TabIndex = 58
@@ -562,14 +496,14 @@ Partial Class ScrVentasEdit
         '
         'BtnAlta
         '
-        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.BtnAlta.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.BtnAlta.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAlta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.BtnAlta.Image = Global.UbiSoft.My.Resources.Resources.ok32
         Me.BtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAlta.Location = New System.Drawing.Point(777, 76)
+        Me.BtnAlta.Location = New System.Drawing.Point(34, 138)
         Me.BtnAlta.Name = "BtnAlta"
         Me.BtnAlta.Size = New System.Drawing.Size(219, 42)
         Me.BtnAlta.TabIndex = 57
@@ -696,19 +630,19 @@ Partial Class ScrVentasEdit
         Me.CboProd.Size = New System.Drawing.Size(400, 31)
         Me.CboProd.TabIndex = 46
         '
-        'TxtRfc
+        'BtnAdd
         '
-        Me.TxtRfc.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtRfc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtRfc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtRfc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtRfc.Location = New System.Drawing.Point(70, 16)
-        Me.TxtRfc.MaxLength = 100
-        Me.TxtRfc.Name = "TxtRfc"
-        Me.TxtRfc.Size = New System.Drawing.Size(320, 31)
-        Me.TxtRfc.TabIndex = 67
-        Me.TxtRfc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnAdd.Image = Global.UbiSoft.My.Resources.Resources.ok32
+        Me.BtnAdd.Location = New System.Drawing.Point(777, 76)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(47, 42)
+        Me.BtnAdd.TabIndex = 58
+        Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'ScrVentasEdit
         '
@@ -759,16 +693,10 @@ Partial Class ScrVentasEdit
     Friend WithEvents Label6 As Label
     Friend WithEvents CboFol As ComboBox
     Friend WithEvents PnlDatos As Panel
-    Friend WithEvents LblEstado As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents LblDir As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents LblContacto As Label
+    Friend WithEvents LblFecha As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents LblCiudad As Label
+    Friend WithEvents LblUsr As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents LblTel As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents LblMail As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -797,4 +725,5 @@ Partial Class ScrVentasEdit
     Friend WithEvents LblTot As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents TxtRfc As TextBox
+    Friend WithEvents BtnAdd As Button
 End Class

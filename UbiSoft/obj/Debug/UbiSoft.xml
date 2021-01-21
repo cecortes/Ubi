@@ -4073,7 +4073,15 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrVentasEdit.FillFolios">
  <summary>
- Carga al cbo los folios de la consulta de la tabla ventas
+ Carga al cbo los folios distintos de la consulta de la tabla ventas
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.GetDetailVenta">
+ <summary>
+ Captura el folio de la venta
+ Consulta a la tabla ventas para obtner los datos
+ Almacena el objeto resultante dentro de una variable global
+ Actualiza los elementos necesarios text y labels
  </summary>
 </member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
@@ -4108,6 +4116,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentasEdit.CboProd_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
  Obtiene los datos del producto mediante un método de consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.CboFol_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Obtiene los datos del folio de ventas mediante un método de consulta
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

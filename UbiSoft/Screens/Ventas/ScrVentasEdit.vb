@@ -86,12 +86,15 @@ Public Class ScrVentasEdit
         datos.ventas_folio = CboFol.Text
 
         'Consulta mediante Dll devuelve un objeto Datos
-        ventaDetalle = consulVta.GetProd(datos)
+        ventaDetalle = consulVta.GetVtaDetail(datos)
 
         'Textos y datos
-        LblPrecio.Text = producto.lp_1.ToString     'Precio fijado
-        LblUni.Text = producto.pack_prod
-        LblCat.Text = producto.cat_prod
+        TxtRfc.Text = ventaDetalle.ventas_rfc
+        TxtNombre.Text = ventaDetalle.ventas_nom
+        LblMail.Text = ventaDetalle.ventas_mail
+        LblFecha.Text = ventaDetalle.ventas_date
+        LblUsr.Text = ventaDetalle.ventas_usr
+        LblTot.Text = "$" + ventaDetalle.ventas_tot.ToString("#,###,###.00")
 
     End Sub
 
