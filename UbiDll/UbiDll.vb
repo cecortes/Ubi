@@ -3665,7 +3665,7 @@ Public Class Agregar
 
             'Parámetros
             _adaptador.InsertCommand.Parameters.Add("@ventas_folio", MySqlDbType.String, 45).Value = datos.ventas_folio
-            _adaptador.InsertCommand.Parameters.Add("@ventas_date", MySqlDbType.String, 45).Value = datos.ventas_date
+            _adaptador.InsertCommand.Parameters.Add("@ventas_date", MySqlDbType.Date).Value = datos.ventas_date
             _adaptador.InsertCommand.Parameters.Add("@ventas_usr", MySqlDbType.String, 45).Value = datos.ventas_usr
             _adaptador.InsertCommand.Parameters.Add("@ventas_rfc", MySqlDbType.String, 45).Value = datos.ventas_rfc
             _adaptador.InsertCommand.Parameters.Add("@ventas_nom", MySqlDbType.String, 45).Value = datos.ventas_nom
