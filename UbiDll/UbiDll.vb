@@ -3109,6 +3109,48 @@ Public Class Consulta
 
 #End Region
 
+#Region "ventas"
+
+    ''' <summary>
+    ''' Se encarga de consultar a ventas y llenar al cbo correspondiente con ventas_folio
+    ''' </summary>
+    Public Sub GetFolioVta()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM ventas", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "ventas_folio")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+#End Region
+
 End Class
 
 Public Class Agregar

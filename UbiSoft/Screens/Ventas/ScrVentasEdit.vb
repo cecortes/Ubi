@@ -6,7 +6,7 @@ Public Class ScrVentasEdit
 
     'Dll
     Dim datos As New Datos
-    Dim consulCli As New Consulta
+    Dim consulFol As New Consulta
     Dim consulProd As New Consulta
     Dim errMsg As New ErrorMsg
 
