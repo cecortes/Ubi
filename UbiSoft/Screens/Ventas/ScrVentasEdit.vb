@@ -1,9 +1,47 @@
-﻿Public Class ScrVentasEdit
+﻿'Imports
+Imports UbiDll
+
+Public Class ScrVentasEdit
 #Region "Variables"
+
+    'Dll
+    Dim datos As New Datos
+    Dim consulCli As New Consulta
+    Dim consulProd As New Consulta
+    Dim errMsg As New ErrorMsg
 
 #End Region
 
 #Region "Funciones y Métodos"
+
+    ''' <summary>
+    ''' Carga al cbo la consulta de la tabla productos
+    ''' </summary>
+    Public Sub FillProd()
+
+        'Reset
+        consulProd._dtsCbo.Reset()
+
+        'Consulta
+        consulProd.GetNomProd()
+
+        'Dataset 
+        CboProd.DataSource = consulProd._dtsCbo.Tables("nomProd")
+
+        'Datos
+        CboProd.DisplayMember = "nom_prod"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboProd.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
 #End Region
 
@@ -49,6 +87,39 @@
     Private Sub PbMin_Click(sender As Object, e As EventArgs) Handles PbMin.Click
 
         Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    ''' <summary>
+    ''' Carga los folios de la tabla de ventas
+    ''' Carga los productos de la tabla de productos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ScrVentasEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'Cbo
+        FillProd()
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos del producto mediante un método de consulta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboProd_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboProd.SelectedValueChanged
+
+        'Captura
+        datos.nom_prod = CboProd.Text
+
+        'Consulta mediante Dll
+        Dim producto As Datos = consulProd.GetProd(datos)
+
+        'Textos y datos
+        LblPrecio.Text = producto.lp_1.ToString     'Precio fijado
+        LblUni.Text = producto.pack_prod
+        LblCat.Text = producto.cat_prod
 
     End Sub
 

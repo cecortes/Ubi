@@ -4066,6 +4066,11 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.FillProd">
+ <summary>
+ Carga al cbo la consulta de la tabla productos
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4083,6 +4088,21 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentasEdit.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.ScrVentasEdit_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los folios de la tabla de ventas
+ Carga los productos de la tabla de productos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.CboProd_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Obtiene los datos del producto mediante un método de consulta
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
