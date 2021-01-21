@@ -142,6 +142,45 @@ Public Class ScrVentasEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Recorre las filas del DGV para sumar los subtotales
+    ''' Convierte los valores a decimal
+    ''' Almacena el resultado en una variable
+    ''' Da formato para actualizar la etiqueta Total
+    ''' </summary>
+    Private Sub CalculaTotal()
+
+        'Locales
+        Dim subTotStr As String = ""
+        Dim subTotDec As Decimal = 0.0
+        Dim totalDec As Decimal = 0.00
+
+        'Recorre el DGV
+        For Each filas As DataGridViewRow In DgvVta.Rows
+
+            'Subtotal
+            subTotStr = filas.Cells(5).Value
+
+            'Control de errores Decimal Parse
+            Try
+
+                'Conversión
+                subTotDec = Decimal.Parse(subTotStr)
+
+            Catch ex As Exception
+
+            End Try
+
+            'Cálculo del Total
+            totalDec += subTotDec
+
+        Next
+
+        'Etiqueta Total
+        LblTot.Text = totalDec.ToString("$ #,###,##0.00")
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -230,11 +269,23 @@ Public Class ScrVentasEdit
     ''' <param name="e"></param>
     Private Sub CboFol_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboFol.SelectedValueChanged
 
+        'Dgv
+        GetVtaAll()
+
         'Detalle de Venta
         GetDetailVenta()
 
-        'Dgv
-        GetVtaAll()
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para calcular el total de las ventas del DGV
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvVta_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles DgvVta.RowsRemoved
+
+        'Cálculo del Total
+        CalculaTotal()
 
     End Sub
 

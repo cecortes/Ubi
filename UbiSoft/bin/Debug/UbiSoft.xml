@@ -4089,6 +4089,14 @@ UbiSoft
  Se encarga de llenar el datagrid con todas las entradas de la tabla de ventas de acuerdo al folio
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.CalculaTotal">
+ <summary>
+ Recorre las filas del DGV para sumar los subtotales
+ Convierte los valores a decimal
+ Almacena el resultado en una variable
+ Da formato para actualizar la etiqueta Total
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4128,6 +4136,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentasEdit.CboFol_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
  Obtiene los datos del folio de ventas mediante un método de consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.DgvVta_RowsRemoved(System.Object,System.Windows.Forms.DataGridViewRowsRemovedEventArgs)">
+ <summary>
+ Llama al método para calcular el total de las ventas del DGV
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
