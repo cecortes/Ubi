@@ -1743,7 +1743,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -3221,6 +3223,51 @@ Public Class Consulta
 
     End Function
 
+    ''' <summary>
+    ''' Se encarga de consultar la tabla de ventas y llenar el DGV con el resultado
+    ''' </summary>
+    Public Sub GetAllVta(ByVal Datos As Datos)
+
+        'Privadas
+        Dim con As New Conexion
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT ventas_prod, ventas_cat, ventas_uni, ventas_canti, ventas_pu, ventas_sub FROM ventas WHERE ventas_folio = @ventas_folio", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ventas_folio", MySqlDbType.String, 45).Value = Datos.ventas_folio
+
+            'Pasamos el resultado al DataSet
+            _adaptador.Fill(_dtsDgv)
+
+            'Pasamos la tabla al DataView
+            _dtvDgv.Table = _dtsDgv.Tables(0)
+
+            'Open Conection
+            con._conexion.Open()
+
+            'Query
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close conection
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
 #End Region
 
 End Class
