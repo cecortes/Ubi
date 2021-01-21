@@ -3112,6 +3112,9 @@ Public Class Consulta
 #Region "ventas"
 
     ''' <summary>
+    ''' *****************************************
+    ''' *** SOLO VALORES DISTINTOS DE FOLIOS ****
+    ''' *****************************************
     ''' Se encarga de consultar a ventas y llenar al cbo correspondiente con ventas_folio
     ''' </summary>
     Public Sub GetFolioVta()
@@ -3126,7 +3129,7 @@ Public Class Consulta
             con.Con_Global()
 
             'MySql
-            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM ventas", con._conexion)
+            _adaptador.SelectCommand = New MySqlCommand("SELECT DISTINCT(ventas_folio) FROM ventas", con._conexion)
             _adaptador.Fill(_dtsCbo)
 
             'Cbo

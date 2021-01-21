@@ -4071,6 +4071,11 @@ UbiSoft
  Carga al cbo la consulta de la tabla productos
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.FillFolios">
+ <summary>
+ Carga al cbo los folios de la consulta de la tabla ventas
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

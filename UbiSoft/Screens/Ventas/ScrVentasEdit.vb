@@ -43,6 +43,35 @@ Public Class ScrVentasEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Carga al cbo los folios de la consulta de la tabla ventas
+    ''' </summary>
+    Public Sub FillFolios()
+
+        'Reset
+        consulFol._dtsCbo.Reset()
+
+        'Consulta
+        consulFol.GetFolioVta()
+
+        'Dataset 
+        CboFol.DataSource = consulFol._dtsCbo.Tables("ventas_folio")
+
+        'Datos
+        CboFol.DisplayMember = "ventas_folio"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboFol.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -99,6 +128,7 @@ Public Class ScrVentasEdit
     Private Sub ScrVentasEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'Cbo
+        FillFolios()
         FillProd()
 
     End Sub
