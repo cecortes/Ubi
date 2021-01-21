@@ -1250,6 +1250,7 @@ Public Class Datos
 
 #Region "DATAMEMBERS"
 
+    Private _ventas_id As Integer
     Private _ventas_folio As String
     Private _ventas_date As Date
     Private _ventas_usr As String
@@ -1267,6 +1268,15 @@ Public Class Datos
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property ventas_id() As Integer
+        Get
+            Return _ventas_id
+        End Get
+        Set(ByVal value As Integer)
+            _ventas_id = value
+        End Set
+    End Property
 
     Public Property ventas_folio() As String
         Get
