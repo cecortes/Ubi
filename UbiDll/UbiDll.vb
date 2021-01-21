@@ -3637,6 +3637,73 @@ Public Class Agregar
 
 #End Region
 
+#Region "VENTAS"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla ventas
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewVenta(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand =
+                New MySqlCommand("INSERT INTO ventas 
+                (folio, date_vta, usr_vta, rfc_vta, nom_vta, mail_vta, prod_vta, cat_vta, uni_vta, canti_vta, pu_vta, sub_vta, tot_vta) 
+                VALUES 
+                (@folio,@date_vta,@usr_vta,@rfc_vta,@nom_vta,@mail_vta,@prod_vta,@cat_vta,@uni_vta,@canti_vta,@pu_vta,@sub_vta,@tot_vta)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@folio", MySqlDbType.String, 45).Value = datos.ventas_folio
+            _adaptador.InsertCommand.Parameters.Add("@date_vta", MySqlDbType.String, 45).Value = datos.ventas_date
+            _adaptador.InsertCommand.Parameters.Add("@usr_vta", MySqlDbType.String, 45).Value = datos.ventas_usr
+            _adaptador.InsertCommand.Parameters.Add("@rfc_vta", MySqlDbType.String, 45).Value = datos.ventas_rfc
+            _adaptador.InsertCommand.Parameters.Add("@nom_vta", MySqlDbType.String, 45).Value = datos.ventas_nom
+            _adaptador.InsertCommand.Parameters.Add("@mail_vta", MySqlDbType.String, 45).Value = datos.ventas_mail
+            _adaptador.InsertCommand.Parameters.Add("@prod_vta", MySqlDbType.String, 45).Value = datos.ventas_prod
+            _adaptador.InsertCommand.Parameters.Add("@cat_vta", MySqlDbType.String, 45).Value = datos.ventas_cat
+            _adaptador.InsertCommand.Parameters.Add("@uni_vta", MySqlDbType.String, 45).Value = datos.ventas_uni
+            _adaptador.InsertCommand.Parameters.Add("@canti_vta", MySqlDbType.Int32, 11).Value = datos.ventas_canti
+            _adaptador.InsertCommand.Parameters.Add("@pu_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_pu
+            _adaptador.InsertCommand.Parameters.Add("@sub_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_sub
+            _adaptador.InsertCommand.Parameters.Add("@tot_vta", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_tot
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar
