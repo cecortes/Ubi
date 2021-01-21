@@ -44,7 +44,7 @@ Public Class ScrVentasEdit
     End Sub
 
     ''' <summary>
-    ''' Carga al cbo los folios de la consulta de la tabla ventas
+    ''' Carga al cbo los folios distintos de la consulta de la tabla ventas
     ''' </summary>
     Public Sub FillFolios()
 
