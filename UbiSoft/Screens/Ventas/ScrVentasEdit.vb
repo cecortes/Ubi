@@ -115,13 +115,30 @@ Public Class ScrVentasEdit
 
         'Formato Dgv
         DgvVta.Columns(0).HeaderText = "Nombre Producto"
-        DgvVta.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-
-        'DgvCliEdit.Columns(15).Visible = False
-        'DgvCliEdit.Columns(16).Visible = False
-        'DgvCliEdit.Columns(17).HeaderText = "Contacto"
-        'DgvCliEdit.Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        'DgvCliEdit.Refresh()
+        DgvVta.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvVta.Columns(1).HeaderText = "Categoría"
+        DgvVta.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvVta.Columns(2).HeaderText = "Unidades"
+        DgvVta.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvVta.Columns(3).HeaderText = "Cantidad"
+        DgvVta.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvVta.Columns(4).HeaderText = "Precio Unitario"
+        DgvVta.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvVta.Columns(5).HeaderText = "Sub Total"
+        DgvVta.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvVta.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvVta.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvVta.Refresh()
 
     End Sub
 
