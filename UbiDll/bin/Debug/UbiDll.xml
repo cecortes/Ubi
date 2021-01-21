@@ -232,9 +232,18 @@ UbiDll
 </member>
 <member name="M:UbiDll.Consulta.GetFolioVta">
  <summary>
- SOLO VALORES DISTINTOS DE FOLIOS
+ *****************************************
+ *** SOLO VALORES DISTINTOS DE FOLIOS ****
+ *****************************************
  Se encarga de consultar a ventas y llenar al cbo correspondiente con ventas_folio
  </summary>
+</member>
+<member name="M:UbiDll.Consulta.GetVtaDetail(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener los datos de un folio de venta en particular y regresarlo como datos
+ </summary>
+ <param name="Datos"></param>
+ <returns>Resultado como objeto de Datos</returns>
 </member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>

@@ -6,8 +6,10 @@ Public Class ScrVentasEdit
 
     'Dll
     Dim datos As New Datos
+    Dim ventaDetalle As New Datos
     Dim consulFol As New Consulta
     Dim consulProd As New Consulta
+    Dim consulVta As New Consulta
     Dim errMsg As New ErrorMsg
 
 #End Region
@@ -69,6 +71,27 @@ Public Class ScrVentasEdit
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el folio de la venta
+    ''' Consulta a la tabla ventas para obtner los datos
+    ''' Almacena el objeto resultante dentro de una variable global
+    ''' Actualiza los elementos necesarios text y labels
+    ''' </summary>
+    Public Sub GetDetailVenta()
+
+        'Captura
+        datos.ventas_folio = CboFol.Text
+
+        'Consulta mediante Dll devuelve un objeto Datos
+        ventaDetalle = consulVta.GetProd(datos)
+
+        'Textos y datos
+        LblPrecio.Text = producto.lp_1.ToString     'Precio fijado
+        LblUni.Text = producto.pack_prod
+        LblCat.Text = producto.cat_prod
 
     End Sub
 
@@ -150,6 +173,18 @@ Public Class ScrVentasEdit
         LblPrecio.Text = producto.lp_1.ToString     'Precio fijado
         LblUni.Text = producto.pack_prod
         LblCat.Text = producto.cat_prod
+
+    End Sub
+
+    ''' <summary>
+    ''' Obtiene los datos del folio de ventas mediante un método de consulta
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboFol_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboFol.SelectedValueChanged
+
+        'Detalle de Venta
+        GetDetailVenta()
 
     End Sub
 
