@@ -48,23 +48,22 @@ Partial Class ScrVentaConsul
         Me.PnlMain = New System.Windows.Forms.Panel()
         Me.TCtMain = New System.Windows.Forms.TabControl()
         Me.periodo = New System.Windows.Forms.TabPage()
-        Me.folio = New System.Windows.Forms.TabPage()
-        Me.cliente = New System.Windows.Forms.TabPage()
-        Me.producto = New System.Windows.Forms.TabPage()
-        Me.DtpInicial = New Bunifu.Framework.UI.BunifuDatepicker()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.DgvPeriod = New System.Windows.Forms.DataGridView()
+        Me.BtnSrchPer = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DtpFinal = New Bunifu.Framework.UI.BunifuDatepicker()
-        Me.BtnSrchPer = New System.Windows.Forms.Button()
-        Me.DgvPeriod = New System.Windows.Forms.DataGridView()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.DtpInicial = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.cliente = New System.Windows.Forms.TabPage()
+        Me.DgvCli = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CboRfc = New System.Windows.Forms.ComboBox()
         Me.BtnSrchCli = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DtpFinCli = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DtpIniCli = New Bunifu.Framework.UI.BunifuDatepicker()
-        Me.CboRfc = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DgvCli = New System.Windows.Forms.DataGridView()
+        Me.folio = New System.Windows.Forms.TabPage()
         Me.DgvFolios = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CboFol = New System.Windows.Forms.ComboBox()
@@ -73,6 +72,7 @@ Partial Class ScrVentaConsul
         Me.DtpFinFol = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DtpIniFol = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.producto = New System.Windows.Forms.TabPage()
         Me.DgvProd = New System.Windows.Forms.DataGridView()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CboProd = New System.Windows.Forms.ComboBox()
@@ -90,12 +90,12 @@ Partial Class ScrVentaConsul
         Me.PnlMain.SuspendLayout()
         Me.TCtMain.SuspendLayout()
         Me.periodo.SuspendLayout()
-        Me.folio.SuspendLayout()
-        Me.cliente.SuspendLayout()
-        Me.producto.SuspendLayout()
         CType(Me.DgvPeriod, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cliente.SuspendLayout()
         CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.folio.SuspendLayout()
         CType(Me.DgvFolios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.producto.SuspendLayout()
         CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -214,126 +214,6 @@ Partial Class ScrVentaConsul
         Me.periodo.Text = "Por Periódo"
         Me.periodo.UseVisualStyleBackColor = True
         '
-        'folio
-        '
-        Me.folio.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
-        Me.folio.Controls.Add(Me.DgvFolios)
-        Me.folio.Controls.Add(Me.Label6)
-        Me.folio.Controls.Add(Me.CboFol)
-        Me.folio.Controls.Add(Me.BtnSrchFol)
-        Me.folio.Controls.Add(Me.Label7)
-        Me.folio.Controls.Add(Me.DtpFinFol)
-        Me.folio.Controls.Add(Me.Label8)
-        Me.folio.Controls.Add(Me.DtpIniFol)
-        Me.folio.Location = New System.Drawing.Point(4, 32)
-        Me.folio.Name = "folio"
-        Me.folio.Padding = New System.Windows.Forms.Padding(3)
-        Me.folio.Size = New System.Drawing.Size(1016, 692)
-        Me.folio.TabIndex = 1
-        Me.folio.Text = "Por Folio"
-        Me.folio.UseVisualStyleBackColor = True
-        '
-        'cliente
-        '
-        Me.cliente.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
-        Me.cliente.Controls.Add(Me.DgvCli)
-        Me.cliente.Controls.Add(Me.Label5)
-        Me.cliente.Controls.Add(Me.CboRfc)
-        Me.cliente.Controls.Add(Me.BtnSrchCli)
-        Me.cliente.Controls.Add(Me.Label3)
-        Me.cliente.Controls.Add(Me.DtpFinCli)
-        Me.cliente.Controls.Add(Me.Label4)
-        Me.cliente.Controls.Add(Me.DtpIniCli)
-        Me.cliente.Location = New System.Drawing.Point(4, 32)
-        Me.cliente.Name = "cliente"
-        Me.cliente.Size = New System.Drawing.Size(1016, 692)
-        Me.cliente.TabIndex = 2
-        Me.cliente.Text = "Por Cliente"
-        Me.cliente.UseVisualStyleBackColor = True
-        '
-        'producto
-        '
-        Me.producto.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
-        Me.producto.Controls.Add(Me.DgvProd)
-        Me.producto.Controls.Add(Me.Label9)
-        Me.producto.Controls.Add(Me.CboProd)
-        Me.producto.Controls.Add(Me.BtnSrchProd)
-        Me.producto.Controls.Add(Me.Label10)
-        Me.producto.Controls.Add(Me.DtpFinProd)
-        Me.producto.Controls.Add(Me.Label11)
-        Me.producto.Controls.Add(Me.DtpIniProd)
-        Me.producto.Location = New System.Drawing.Point(4, 32)
-        Me.producto.Name = "producto"
-        Me.producto.Size = New System.Drawing.Size(1016, 692)
-        Me.producto.TabIndex = 3
-        Me.producto.Text = "Por Producto"
-        Me.producto.UseVisualStyleBackColor = True
-        '
-        'DtpInicial
-        '
-        Me.DtpInicial.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.DtpInicial.BorderRadius = 0
-        Me.DtpInicial.ForeColor = System.Drawing.Color.White
-        Me.DtpInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpInicial.FormatCustom = Nothing
-        Me.DtpInicial.Location = New System.Drawing.Point(21, 41)
-        Me.DtpInicial.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.DtpInicial.Name = "DtpInicial"
-        Me.DtpInicial.Size = New System.Drawing.Size(245, 44)
-        Me.DtpInicial.TabIndex = 0
-        Me.DtpInicial.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(16, 7)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(74, 28)
-        Me.Label13.TabIndex = 44
-        Me.Label13.Text = "Inicial:"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(331, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 28)
-        Me.Label2.TabIndex = 46
-        Me.Label2.Text = "Final:"
-        '
-        'DtpFinal
-        '
-        Me.DtpFinal.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.DtpFinal.BorderRadius = 0
-        Me.DtpFinal.ForeColor = System.Drawing.Color.White
-        Me.DtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFinal.FormatCustom = Nothing
-        Me.DtpFinal.Location = New System.Drawing.Point(336, 41)
-        Me.DtpFinal.Margin = New System.Windows.Forms.Padding(4, 9, 4, 9)
-        Me.DtpFinal.Name = "DtpFinal"
-        Me.DtpFinal.Size = New System.Drawing.Size(245, 44)
-        Me.DtpFinal.TabIndex = 45
-        Me.DtpFinal.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
-        '
-        'BtnSrchPer
-        '
-        Me.BtnSrchPer.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnSrchPer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSrchPer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSrchPer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.BtnSrchPer.Image = Global.UbiSoft.My.Resources.Resources.lupa
-        Me.BtnSrchPer.Location = New System.Drawing.Point(866, 25)
-        Me.BtnSrchPer.Name = "BtnSrchPer"
-        Me.BtnSrchPer.Size = New System.Drawing.Size(60, 60)
-        Me.BtnSrchPer.TabIndex = 47
-        Me.BtnSrchPer.UseVisualStyleBackColor = False
-        '
         'DgvPeriod
         '
         Me.DgvPeriod.AllowUserToAddRows = False
@@ -368,7 +248,7 @@ Partial Class ScrVentaConsul
         Me.DgvPeriod.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvPeriod.EnableHeadersVisualStyles = False
         Me.DgvPeriod.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.DgvPeriod.Location = New System.Drawing.Point(21, 138)
+        Me.DgvPeriod.Location = New System.Drawing.Point(21, 108)
         Me.DgvPeriod.Name = "DgvPeriod"
         Me.DgvPeriod.ReadOnly = True
         Me.DgvPeriod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -381,8 +261,165 @@ Partial Class ScrVentaConsul
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.DgvPeriod.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvPeriod.RowTemplate.Height = 240
-        Me.DgvPeriod.Size = New System.Drawing.Size(981, 534)
+        Me.DgvPeriod.Size = New System.Drawing.Size(981, 564)
         Me.DgvPeriod.TabIndex = 48
+        '
+        'BtnSrchPer
+        '
+        Me.BtnSrchPer.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSrchPer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSrchPer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSrchPer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSrchPer.Image = Global.UbiSoft.My.Resources.Resources.lupa
+        Me.BtnSrchPer.Location = New System.Drawing.Point(942, 21)
+        Me.BtnSrchPer.Name = "BtnSrchPer"
+        Me.BtnSrchPer.Size = New System.Drawing.Size(60, 60)
+        Me.BtnSrchPer.TabIndex = 47
+        Me.BtnSrchPer.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(331, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(62, 28)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "Final:"
+        '
+        'DtpFinal
+        '
+        Me.DtpFinal.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.DtpFinal.BorderRadius = 0
+        Me.DtpFinal.ForeColor = System.Drawing.Color.White
+        Me.DtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFinal.FormatCustom = Nothing
+        Me.DtpFinal.Location = New System.Drawing.Point(336, 41)
+        Me.DtpFinal.Margin = New System.Windows.Forms.Padding(4, 9, 4, 9)
+        Me.DtpFinal.Name = "DtpFinal"
+        Me.DtpFinal.Size = New System.Drawing.Size(235, 40)
+        Me.DtpFinal.TabIndex = 45
+        Me.DtpFinal.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(16, 7)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(74, 28)
+        Me.Label13.TabIndex = 44
+        Me.Label13.Text = "Inicial:"
+        '
+        'DtpInicial
+        '
+        Me.DtpInicial.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.DtpInicial.BorderRadius = 0
+        Me.DtpInicial.ForeColor = System.Drawing.Color.White
+        Me.DtpInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpInicial.FormatCustom = Nothing
+        Me.DtpInicial.Location = New System.Drawing.Point(21, 41)
+        Me.DtpInicial.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.DtpInicial.Name = "DtpInicial"
+        Me.DtpInicial.Size = New System.Drawing.Size(235, 40)
+        Me.DtpInicial.TabIndex = 0
+        Me.DtpInicial.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
+        '
+        'cliente
+        '
+        Me.cliente.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
+        Me.cliente.Controls.Add(Me.DgvCli)
+        Me.cliente.Controls.Add(Me.Label5)
+        Me.cliente.Controls.Add(Me.CboRfc)
+        Me.cliente.Controls.Add(Me.BtnSrchCli)
+        Me.cliente.Controls.Add(Me.Label3)
+        Me.cliente.Controls.Add(Me.DtpFinCli)
+        Me.cliente.Controls.Add(Me.Label4)
+        Me.cliente.Controls.Add(Me.DtpIniCli)
+        Me.cliente.Location = New System.Drawing.Point(4, 32)
+        Me.cliente.Name = "cliente"
+        Me.cliente.Size = New System.Drawing.Size(1016, 692)
+        Me.cliente.TabIndex = 2
+        Me.cliente.Text = "Por Cliente"
+        Me.cliente.UseVisualStyleBackColor = True
+        '
+        'DgvCli
+        '
+        Me.DgvCli.AllowUserToAddRows = False
+        Me.DgvCli.AllowUserToDeleteRows = False
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvCli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvCli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvCli.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvCli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DgvCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvCli.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DgvCli.EnableHeadersVisualStyles = False
+        Me.DgvCli.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.DgvCli.Location = New System.Drawing.Point(21, 138)
+        Me.DgvCli.Name = "DgvCli"
+        Me.DgvCli.ReadOnly = True
+        Me.DgvCli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvCli.RowHeadersWidth = 51
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvCli.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DgvCli.RowTemplate.Height = 240
+        Me.DgvCli.Size = New System.Drawing.Size(981, 534)
+        Me.DgvCli.TabIndex = 55
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(673, 7)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(159, 28)
+        Me.Label5.TabIndex = 54
+        Me.Label5.Text = "RFC del Cliente:"
+        '
+        'CboRfc
+        '
+        Me.CboRfc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboRfc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboRfc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboRfc.FormattingEnabled = True
+        Me.CboRfc.Location = New System.Drawing.Point(611, 41)
+        Me.CboRfc.Name = "CboRfc"
+        Me.CboRfc.Size = New System.Drawing.Size(286, 31)
+        Me.CboRfc.TabIndex = 53
         '
         'BtnSrchCli
         '
@@ -449,79 +486,24 @@ Partial Class ScrVentaConsul
         Me.DtpIniCli.TabIndex = 48
         Me.DtpIniCli.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
         '
-        'CboRfc
+        'folio
         '
-        Me.CboRfc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboRfc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboRfc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboRfc.FormattingEnabled = True
-        Me.CboRfc.Location = New System.Drawing.Point(611, 41)
-        Me.CboRfc.Name = "CboRfc"
-        Me.CboRfc.Size = New System.Drawing.Size(286, 31)
-        Me.CboRfc.TabIndex = 53
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(673, 7)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(159, 28)
-        Me.Label5.TabIndex = 54
-        Me.Label5.Text = "RFC del Cliente:"
-        '
-        'DgvCli
-        '
-        Me.DgvCli.AllowUserToAddRows = False
-        Me.DgvCli.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvCli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DgvCli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DgvCli.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvCli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DgvCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvCli.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DgvCli.EnableHeadersVisualStyles = False
-        Me.DgvCli.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.DgvCli.Location = New System.Drawing.Point(21, 138)
-        Me.DgvCli.Name = "DgvCli"
-        Me.DgvCli.ReadOnly = True
-        Me.DgvCli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvCli.RowHeadersWidth = 51
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvCli.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DgvCli.RowTemplate.Height = 240
-        Me.DgvCli.Size = New System.Drawing.Size(981, 534)
-        Me.DgvCli.TabIndex = 55
+        Me.folio.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
+        Me.folio.Controls.Add(Me.DgvFolios)
+        Me.folio.Controls.Add(Me.Label6)
+        Me.folio.Controls.Add(Me.CboFol)
+        Me.folio.Controls.Add(Me.BtnSrchFol)
+        Me.folio.Controls.Add(Me.Label7)
+        Me.folio.Controls.Add(Me.DtpFinFol)
+        Me.folio.Controls.Add(Me.Label8)
+        Me.folio.Controls.Add(Me.DtpIniFol)
+        Me.folio.Location = New System.Drawing.Point(4, 32)
+        Me.folio.Name = "folio"
+        Me.folio.Padding = New System.Windows.Forms.Padding(3)
+        Me.folio.Size = New System.Drawing.Size(1016, 692)
+        Me.folio.TabIndex = 1
+        Me.folio.Text = "Por Folio"
+        Me.folio.UseVisualStyleBackColor = True
         '
         'DgvFolios
         '
@@ -661,6 +643,24 @@ Partial Class ScrVentaConsul
         Me.DtpIniFol.Size = New System.Drawing.Size(245, 44)
         Me.DtpIniFol.TabIndex = 56
         Me.DtpIniFol.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
+        '
+        'producto
+        '
+        Me.producto.BackgroundImage = Global.UbiSoft.My.Resources.Resources.background
+        Me.producto.Controls.Add(Me.DgvProd)
+        Me.producto.Controls.Add(Me.Label9)
+        Me.producto.Controls.Add(Me.CboProd)
+        Me.producto.Controls.Add(Me.BtnSrchProd)
+        Me.producto.Controls.Add(Me.Label10)
+        Me.producto.Controls.Add(Me.DtpFinProd)
+        Me.producto.Controls.Add(Me.Label11)
+        Me.producto.Controls.Add(Me.DtpIniProd)
+        Me.producto.Location = New System.Drawing.Point(4, 32)
+        Me.producto.Name = "producto"
+        Me.producto.Size = New System.Drawing.Size(1016, 692)
+        Me.producto.TabIndex = 3
+        Me.producto.Text = "Por Producto"
+        Me.producto.UseVisualStyleBackColor = True
         '
         'DgvProd
         '
@@ -828,15 +828,15 @@ Partial Class ScrVentaConsul
         Me.TCtMain.ResumeLayout(False)
         Me.periodo.ResumeLayout(False)
         Me.periodo.PerformLayout()
-        Me.folio.ResumeLayout(False)
-        Me.folio.PerformLayout()
+        CType(Me.DgvPeriod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cliente.ResumeLayout(False)
         Me.cliente.PerformLayout()
+        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.folio.ResumeLayout(False)
+        Me.folio.PerformLayout()
+        CType(Me.DgvFolios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.producto.ResumeLayout(False)
         Me.producto.PerformLayout()
-        CType(Me.DgvPeriod, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvFolios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

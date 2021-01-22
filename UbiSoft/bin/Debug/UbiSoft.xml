@@ -3975,6 +3975,13 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.FormatDtp">
+ <summary>
+ Se encarga de darle formato a los date time picker del formulario
+ Cambia el color de fondo cuando hover en ambos dtp
+ Carga los valores iniciales en sus respectivas variables globales.
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -3992,6 +3999,42 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentaConsul.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.ScrVentaConsul_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga las fechas actuales en los Dtp
+ Llama al método para el formato de los DTP
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchPer_MouseHover(System.Object,System.EventArgs)">
+ <summary>
+ Cambia el color de fondo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchPer_MouseLeave(System.Object,System.EventArgs)">
+ <summary>
+ Regresa el color de fondo original
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.DtpInicial_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Captura el valor seleccionado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.DtpInicial_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ 
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
