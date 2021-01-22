@@ -4147,5 +4147,20 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.DgvVtaAdd_RowsAdded(System.Object,System.Windows.Forms.DataGridViewRowsAddedEventArgs)">
+ <summary>
+ Llama al método para calcular el total
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.BtnAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida los datos antes de capturarlos
+ Captura los datos necesarios y los agrega en el dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 </members>
 </doc>
