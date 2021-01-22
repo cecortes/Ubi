@@ -688,7 +688,7 @@ Partial Class ScrVentasEdit
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
-        Me.Column5.Width = 150
+        Me.Column5.Width = 137
         '
         'Column6
         '
@@ -699,7 +699,6 @@ Partial Class ScrVentasEdit
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Width = 109
         '
         'ScrVentasEdit
         '

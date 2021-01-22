@@ -2216,7 +2216,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -2351,7 +2353,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -4965,6 +4969,58 @@ Public Class Eliminar
 
             'Parámetros
             _adaptador.DeleteCommand.Parameters.Add("@ext_nocuenta", MySqlDbType.String, 45).Value = datos.ext_nocuenta
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Resultado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "VENTAS"
+
+    ''' <summary>
+    ''' Se encarga de eliminar al folio por medio de la key recibida como parámetro
+    ''' </summary>
+    ''' <param name="datos"> Resultado del borrado </param>
+    ''' <returns></returns>
+    Public Function DelFolio(ByVal datos As Datos) As Boolean
+
+        'Variables Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM ventas WHERE ventas_folio=@ventas_folio", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@ventas_folio", MySqlDbType.String, 45).Value = datos.ventas_folio
 
             'Delete
             con._conexion.Open()

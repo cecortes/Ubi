@@ -209,6 +209,18 @@ Public Class ScrVentasEdit
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de borrar el folio de la tabla de ventas
+    ''' </summary>
+    Private Sub DelFolioVta()
+
+        'Captura del folio
+        datos.ventas_folio = CboFol.Text
+
+
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -436,6 +448,19 @@ Public Class ScrVentasEdit
 
         'Clear Text
         TxtCanti.Text = ""
+
+    End Sub
+
+    ''' <summary>
+    ''' Borra el folio de la tabla de ventas
+    ''' Alta del folio en la tabla de ventas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles BtnAlta.Click
+
+        'Borrar folio
+        DelFolioVta()
 
     End Sub
 
