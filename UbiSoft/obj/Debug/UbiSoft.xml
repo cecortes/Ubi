@@ -4045,6 +4045,29 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrVentasDel.FillFolios">
+ <summary>
+ Carga al cbo los folios distintos de la consulta de la tabla ventas
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.GetDetailVenta">
+ <summary>
+ Captura el folio de la venta
+ Consulta a la tabla ventas para obtner los datos
+ Almacena el objeto resultante dentro de una variable global
+ Actualiza los elementos necesarios text y labels
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.GetVtaAll">
+ <summary>
+ Se encarga de llenar el datagrid con todas las entradas de la tabla de ventas de acuerdo al folio
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.DelFolioVta">
+ <summary>
+ Se encarga de borrar el folio de la tabla de ventas
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasDel.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4062,6 +4085,27 @@ UbiSoft
 <member name="M:UbiSoft.ScrVentasDel.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.ScrVentasDel_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los folios en el cbo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.CboFol_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Obtiene los datos del folio de ventas mediante un método de consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasDel.BtnClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Se encarga de llamar al método para borrar folios
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
