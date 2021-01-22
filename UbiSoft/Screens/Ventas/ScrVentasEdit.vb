@@ -11,6 +11,8 @@ Public Class ScrVentasEdit
     Dim consulFol As New Consulta
     Dim consulProd As New Consulta
     Dim consulVta As New Consulta
+    Dim del As New Eliminar
+    Dim add As New Agregar
     Dim errMsg As New ErrorMsg
 
 #End Region
@@ -216,8 +218,120 @@ Public Class ScrVentasEdit
 
         'Captura del folio
         datos.ventas_folio = CboFol.Text
+        Dim folioVta = datos.ventas_folio
 
+        'Delete 
+        If (del.DelFolio(datos)) Then
 
+            'Msg Usr
+            'MsgBox("Folio de venta eliminado", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Captura de los generales del folio
+        Dim dateNow As String = Date.Now.ToShortDateString
+        Dim usuario As String = "god@gmail.com"
+        Dim rfc As String = TxtRfc.Text
+        Dim cli As String = TxtNombre.Text
+        Dim mailCli As String = LblMail.Text
+
+        'Captura de los campos constantes del folio
+        datos.ventas_folio = folioVta
+        datos.ventas_date = dateNow
+        datos.ventas_usr = usuario
+        datos.ventas_rfc = rfc
+        datos.ventas_nom = cli
+        datos.ventas_mail = mailCli
+        Dim totStr As String = LblTot.Text
+        totStr = totStr.Replace("$", "")
+        datos.ventas_tot = Decimal.Parse(totStr)
+
+        'Contador
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview DgvVta
+        For Each filas As DataGridViewRow In DgvVta.Rows
+
+            'Captura
+            datos.ventas_prod = filas.Cells(0).Value
+            datos.ventas_cat = filas.Cells(1).Value
+            datos.ventas_uni = filas.Cells(2).Value
+            datos.ventas_canti = filas.Cells(3).Value
+            datos.ventas_pu = filas.Cells(4).Value
+            datos.ventas_sub = filas.Cells(5).Value
+
+            'Insert & Update
+            If (add.NewVenta(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Rutina para recorrer las filas del datagridview DgvVta
+        For Each filas As DataGridViewRow In DgvVtaAdd.Rows
+
+            'Captura
+            datos.ventas_prod = filas.Cells(0).Value
+            datos.ventas_cat = filas.Cells(1).Value
+            datos.ventas_uni = filas.Cells(2).Value
+            datos.ventas_canti = filas.Cells(3).Value
+            datos.ventas_pu = filas.Cells(4).Value
+            datos.ventas_sub = filas.Cells(5).Value
+
+            'Insert & Update
+            If (add.NewVenta(datos)) Then
+
+                'Incrementamos el contador
+                contAdd += 1
+
+            End If
+
+        Next
+
+        'Contadores de filas
+        Dim contDgvVta As Integer = DgvVta.Rows.Count
+        Dim contDgvVtaAdd As Integer = DgvVtaAdd.Rows.Count
+
+        'Validación de todos las insert & update
+        If (contAdd = contDgvVta + contDgvVtaAdd) Then
+
+            'Usuario
+            MsgBox("Todos las ventas fueron editadas con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Una o más ventas no pudieron editarse en la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Clear and Reset
+        consulta._dtsDgv.Reset()
+        DgvVta.DataSource = consulta._dtvDgv
+        DgvVtaAdd.Rows.Clear()
+        TxtCanti.Text = ""
+
+        'Control de errores
+        Try
+
+            'Index
+            CboFol.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+
+            'Index
+            CboProd.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

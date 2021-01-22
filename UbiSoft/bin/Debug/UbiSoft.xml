@@ -4097,6 +4097,11 @@ UbiSoft
  Da formato para actualizar la etiqueta Total
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentasEdit.DelFolioVta">
+ <summary>
+ Se encarga de borrar el folio de la tabla de ventas
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentasEdit.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4158,6 +4163,14 @@ UbiSoft
  <summary>
  Valida los datos antes de capturarlos
  Captura los datos necesarios y los agrega en el dgv
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentasEdit.BtnAlta_Click(System.Object,System.EventArgs)">
+ <summary>
+ Borra el folio de la tabla de ventas
+ Alta del folio en la tabla de ventas
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
