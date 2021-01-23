@@ -3982,6 +3982,16 @@ UbiSoft
  Carga los valores iniciales en sus respectivas variables globales.
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.GetPeriodoVtas">
+ <summary>
+ Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.FormatDgv">
+ <summary>
+ Se encarga de aplicar el formato al DGV
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4025,16 +4035,23 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:UbiSoft.ScrVentaConsul.DtpInicial_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+<member name="M:UbiSoft.ScrVentaConsul.DtpInicial_onValueChanged(System.Object,System.EventArgs)">
  <summary>
  Captura el valor seleccionado
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:UbiSoft.ScrVentaConsul.DtpInicial_onValueChanged(System.Object,System.EventArgs)">
+<member name="M:UbiSoft.ScrVentaConsul.DtpFinal_onValueChanged(System.Object,System.EventArgs)">
  <summary>
- 
+ Captura el valor seleccionado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchPer_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta en el DGV
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

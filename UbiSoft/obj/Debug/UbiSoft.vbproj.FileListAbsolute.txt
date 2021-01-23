@@ -75,7 +75,6 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrInvEditFromDevice.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaDel.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrConfigPrimaNew.resources
-D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAdmin.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPropiasNew.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrPropiasDel.resources
@@ -91,3 +90,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentaConsul.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasEdit.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrVentasDel.resources
 D:\GITHUB\Ubi\UbiSoft\bin\Debug\System.Numerics.Vectors.dll
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache

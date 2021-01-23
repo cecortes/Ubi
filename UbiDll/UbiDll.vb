@@ -1250,8 +1250,8 @@ Public Class Datos
 
 #Region "DATAMEMBERS"
 
-    Private _periodo_ini As String
-    Private _periodo_fin As String
+    Private _periodo_ini As Date
+    Private _periodo_fin As Date
     Private _ventas_id As Integer
     Private _ventas_folio As String
     Private _ventas_date As Date
@@ -1271,20 +1271,20 @@ Public Class Datos
 
 #Region "PROPIEDADES"
 
-    Public Property periodo_fin() As String
+    Public Property periodo_fin() As Date
         Get
             Return _periodo_fin
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _periodo_fin = value
         End Set
     End Property
 
-    Public Property periodo_ini() As String
+    Public Property periodo_ini() As Date
         Get
             Return _periodo_ini
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _periodo_ini = value
         End Set
     End Property
@@ -3318,7 +3318,7 @@ Public Class Consulta
         'Init Tabla, hardcode PERVTA
         dgvCode.Tables.Add("PERVTA")
         dgvCode.Tables("PERVTA").Columns.Add("Folio", GetType(String))
-        dgvCode.Tables("PERVTA").Columns.Add("Fecha", GetType(String))
+        dgvCode.Tables("PERVTA").Columns.Add("Fecha", GetType(Date))
         dgvCode.Tables("PERVTA").Columns.Add("RFC", GetType(String))
         dgvCode.Tables("PERVTA").Columns.Add("Cliente", GetType(String))
         dgvCode.Tables("PERVTA").Columns.Add("Correo", GetType(String))
@@ -3332,8 +3332,7 @@ Public Class Consulta
 
             'MySql 
             _adaptador.SelectCommand =
-                New MySqlCommand("SELECT DISTINCT(ventas_folio) FROM ventas WHERE ventas_date >= @ventas_date AND ventas_date <= @ini AND ventas_folio = @fin", con._conexion)
-            _adaptador.SelectCommand.Parameters.Add("@ventas_folio", MySqlDbType.String, 45).Value = Datos.ventas_folio
+                New MySqlCommand("SELECT DISTINCT ventas_folio, ventas_date, ventas_rfc, ventas_nom, ventas_mail, ventas_tot FROM ventas WHERE ventas_date >= @ini AND ventas_date <= @fin", con._conexion)
             _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.periodo_ini
             _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.periodo_fin
 

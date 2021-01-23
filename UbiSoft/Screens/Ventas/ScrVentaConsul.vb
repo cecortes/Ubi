@@ -1,6 +1,14 @@
-﻿Public Class ScrVentaConsul
+﻿'Imports
+Imports UbiDll
+
+Public Class ScrVentaConsul
 
 #Region "Variables"
+
+    'UbiDll
+    Dim datos As New Datos
+    Dim consulta As New Consulta
+    Dim errorMsg As New ErrorMsg
 
     Dim dateIniPer As String = ""
     Dim dateFinPer As String = ""
@@ -29,6 +37,56 @@
         DtpFinal.Value = Date.Now.ToShortDateString
         dateIniPer = DtpInicial.Value.ToShortDateString
         dateFinPer = DtpFinal.Value.ToShortDateString
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
+    ''' </summary>
+    Private Sub GetPeriodoVtas()
+
+        'Captura Periódo inicial y final
+        datos.periodo_ini = dateIniPer
+        datos.periodo_fin = dateFinPer
+
+        'Reset
+        consulta.dgvCode.Reset()
+
+        'Consulta
+        consulta.GetPerVtas(datos)
+
+        'Datagrid
+        DgvPeriod.DataSource = consulta.dgvCode.Tables("PERVTA")
+
+        'Formato al Dgv
+        FormatDgv()
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de aplicar el formato al DGV
+    ''' </summary>
+    Private Sub FormatDgv()
+
+        'Formato
+        DgvPeriod.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvPeriod.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvPeriod.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(1).SortMode = DataGridViewColumnSortMode.Automatic
+        DgvPeriod.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvPeriod.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvPeriod.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvPeriod.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvPeriod.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvPeriod.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvPeriod.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvPeriod.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvPeriod.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvPeriod.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
     End Sub
 
@@ -137,6 +195,18 @@
 
         'Captura
         dateFinPer = DtpFinal.Value.ToShortDateString
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta en el DGV
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSrchPer_Click(sender As Object, e As EventArgs) Handles BtnSrchPer.Click
+
+        'Dgv
+        GetPeriodoVtas()
 
     End Sub
 
