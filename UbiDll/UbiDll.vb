@@ -3438,9 +3438,10 @@ Public Class Consulta
 
             'MySql 
             _adaptador.SelectCommand =
-                New MySqlCommand("SELECT DISTINCT ventas_folio, ventas_date, ventas_rfc, ventas_nom, ventas_mail, ventas_tot FROM ventas WHERE ventas_date >= @ini AND ventas_date <= @fin", con._conexion)
+                New MySqlCommand("SELECT DISTINCT ventas_folio, ventas_date, ventas_rfc, ventas_nom, ventas_mail, ventas_tot FROM ventas WHERE ventas_date >= @ini AND ventas_date <= @fin AND ventas_rfc = @ventas_rfc", con._conexion)
             _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.cliente_ini
             _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.cliente_fin
+            _adaptador.SelectCommand.Parameters.Add("@ventas_rfc", MySqlDbType.String, 45).Value = Datos.ventas_rfc
 
             'Open Conection
             con._conexion.Open()

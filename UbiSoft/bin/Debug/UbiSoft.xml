@@ -3998,6 +3998,11 @@ UbiSoft
  Se encarga de aplicar el formato al DGV
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.GetClientesVtas">
+ <summary>
+ Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -4085,7 +4090,14 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrVentaConsul.BtnSrchPer_Click(System.Object,System.EventArgs)">
  <summary>
- Llama al método para realizar la consulta en el DGV
+ Llama al método para realizar la consulta por Periódo en el DGV
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchCli_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta por Clientes en el DGV
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

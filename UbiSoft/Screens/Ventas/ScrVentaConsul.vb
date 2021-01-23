@@ -139,18 +139,19 @@ Public Class ScrVentaConsul
     ''' </summary>
     Private Sub GetClientesVtas()
 
-        'Captura Periódo inicial y final
-        datos.periodo_ini = dateIniPer
-        datos.periodo_fin = dateFinPer
+        'Captura Periódo inicial, final y rfc
+        datos.rfc_cli = CboRfc.Text
+        datos.cliente_ini = dateIniCli
+        datos.cliente_fin = dateFinCli
 
         'Reset
         consulCliDgv.dgvCode.Reset()
 
         'Consulta
-        consulCliDgv.GetPerVtas(datos)
+        consulCliDgv.GetCliVtas(datos)
 
         'Datagrid
-        DgvCli.DataSource = consulCliDgv.dgvCode.Tables("PERVTA")
+        DgvCli.DataSource = consulCliDgv.dgvCode.Tables("CLIVTA")
 
         'Formato al Dgv
         'FormatDgvCli()
