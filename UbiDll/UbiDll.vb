@@ -2641,7 +2641,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -2776,7 +2778,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -2833,7 +2837,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -2916,7 +2922,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -3379,6 +3387,84 @@ Public Class Consulta
 
                 'Agregamos el arreglo byte para la foto y los demás datos
                 dgvCode.Tables("PERVTA").Rows.Add(resultado.ventas_folio, resultado.ventas_date, resultado.ventas_rfc, resultado.ventas_nom, resultado.ventas_mail, total)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo necesario para los datos
+    ''' Realiza una consulta para obtener los datos de la tabla ventas
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
+    ''' </summary>
+    Public Sub GetCliVtas(ByVal Datos As Datos)
+
+        'Privadas
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Init Tabla, hardcode PERVTA
+        dgvCode.Tables.Add("CLIVTA")
+        dgvCode.Tables("CLIVTA").Columns.Add("Folio", GetType(String))
+        dgvCode.Tables("CLIVTA").Columns.Add("Fecha", GetType(Date))
+        dgvCode.Tables("CLIVTA").Columns.Add("RFC", GetType(String))
+        dgvCode.Tables("CLIVTA").Columns.Add("Cliente", GetType(String))
+        dgvCode.Tables("CLIVTA").Columns.Add("Correo", GetType(String))
+        dgvCode.Tables("CLIVTA").Columns.Add("Total", GetType(String))
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT DISTINCT ventas_folio, ventas_date, ventas_rfc, ventas_nom, ventas_mail, ventas_tot FROM ventas WHERE ventas_date >= @ini AND ventas_date <= @fin", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.cliente_ini
+            _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.cliente_fin
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.ventas_folio = reader("ventas_folio")
+                resultado.ventas_date = reader("ventas_date")
+                resultado.ventas_rfc = reader("ventas_rfc")
+                resultado.ventas_nom = reader("ventas_nom")
+                resultado.ventas_mail = reader("ventas_mail")
+                resultado.ventas_tot = reader("ventas_tot")
+
+                'Type Parse
+                Dim total As String = (resultado.ventas_tot).ToString("$ #,###,##0.00")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("CLIVTA").Rows.Add(resultado.ventas_folio, resultado.ventas_date, resultado.ventas_rfc, resultado.ventas_nom, resultado.ventas_mail, total)
 
             End While
 
