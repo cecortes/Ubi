@@ -260,7 +260,7 @@ Partial Class ScrVentaConsul
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.DgvPeriod.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DgvPeriod.RowTemplate.Height = 35
+        Me.DgvPeriod.RowTemplate.Height = 25
         Me.DgvPeriod.Size = New System.Drawing.Size(981, 564)
         Me.DgvPeriod.TabIndex = 48
         '

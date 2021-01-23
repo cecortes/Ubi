@@ -80,7 +80,7 @@ Public Class ScrVentaConsul
         DgvPeriod.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         DgvPeriod.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         DgvPeriod.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
-        DgvPeriod.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvPeriod.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DgvPeriod.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         DgvPeriod.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
         DgvPeriod.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
