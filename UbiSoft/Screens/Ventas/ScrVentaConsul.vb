@@ -36,7 +36,6 @@
 
 #Region "Eventos"
 
-
     ''' <summary>
     ''' Cierra el formulario y abre la pantalla principal
     ''' </summary>
