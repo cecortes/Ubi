@@ -140,7 +140,7 @@ Public Class ScrVentaConsul
     Private Sub GetClientesVtas()
 
         'Captura Periódo inicial, final y rfc
-        datos.rfc_cli = CboRfc.Text
+        datos.ventas_rfc = CboRfc.Text
         datos.cliente_ini = dateIniCli
         datos.cliente_fin = dateFinCli
 
@@ -154,7 +154,34 @@ Public Class ScrVentaConsul
         DgvCli.DataSource = consulCliDgv.dgvCode.Tables("CLIVTA")
 
         'Formato al Dgv
-        'FormatDgvCli()
+        FormatDgvCli()
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de aplicar el formato al DGV
+    ''' </summary>
+    Private Sub FormatDgvCli()
+
+        'Formato
+        DgvCli.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvCli.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvCli.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(1).SortMode = DataGridViewColumnSortMode.Automatic
+        DgvCli.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCli.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvCli.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCli.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvCli.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvCli.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvCli.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvCli.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvCli.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvCli.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
     End Sub
 

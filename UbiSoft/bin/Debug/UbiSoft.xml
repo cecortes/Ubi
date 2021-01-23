@@ -4003,6 +4003,11 @@ UbiSoft
  Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.FormatDgvCli">
+ <summary>
+ Se encarga de aplicar el formato al DGV
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
