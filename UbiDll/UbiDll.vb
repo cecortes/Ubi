@@ -3322,7 +3322,7 @@ Public Class Consulta
         dgvCode.Tables("PERVTA").Columns.Add("RFC", GetType(String))
         dgvCode.Tables("PERVTA").Columns.Add("Cliente", GetType(String))
         dgvCode.Tables("PERVTA").Columns.Add("Correo", GetType(String))
-        dgvCode.Tables("PERVTA").Columns.Add("Total", GetType(Decimal))
+        dgvCode.Tables("PERVTA").Columns.Add("Total", GetType(String))
 
         'Control de excepción
         Try
