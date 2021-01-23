@@ -12,6 +12,8 @@ Public Class ScrVentaConsul
 
     Dim dateIniPer As String = ""
     Dim dateFinPer As String = ""
+    Dim dateIniCli As String = ""
+    Dim dateFinCli As String = ""
 
 #End Region
 
@@ -28,15 +30,25 @@ Public Class ScrVentaConsul
         DtpInicial.Style.TextAlign = ContentAlignment.MiddleCenter
         DtpInicial.BorderRadius = 20
         DtpInicial.Style.colhover = Color.FromArgb(79, 52, 90)
+        DtpIniCli.Style.TextAlign = ContentAlignment.MiddleCenter
+        DtpIniCli.BorderRadius = 20
+        DtpIniCli.Style.colhover = Color.FromArgb(79, 52, 90)
         DtpFinal.Style.TextAlign = ContentAlignment.MiddleCenter
         DtpFinal.BorderRadius = 20
         DtpFinal.Style.colhover = Color.FromArgb(79, 52, 90)
+        DtpFinCli.Style.TextAlign = ContentAlignment.MiddleCenter
+        DtpFinCli.BorderRadius = 20
+        DtpFinCli.Style.colhover = Color.FromArgb(79, 52, 90)
 
         'Captura de las fechas
         DtpInicial.Value = Date.Now.ToShortDateString
         DtpFinal.Value = Date.Now.ToShortDateString
         dateIniPer = DtpInicial.Value.ToShortDateString
         dateFinPer = DtpFinal.Value.ToShortDateString
+        DtpIniCli.Value = Date.Now.ToShortDateString
+        DtpFinCli.Value = Date.Now.ToShortDateString
+        dateIniCli = DtpIniCli.Value.ToShortDateString
+        dateFinCli = DtpFinCli.Value.ToShortDateString
 
     End Sub
 
