@@ -3982,12 +3982,18 @@ UbiSoft
  Carga los valores iniciales en sus respectivas variables globales.
  </summary>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.FillCboRfc">
+ <summary>
+ Consulta clientes
+ Llena el cbo con los resultados
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.GetPeriodoVtas">
  <summary>
  Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
  </summary>
 </member>
-<member name="M:UbiSoft.ScrVentaConsul.FormatDgv">
+<member name="M:UbiSoft.ScrVentaConsul.FormatDgvPer">
  <summary>
  Se encarga de aplicar el formato al DGV
  </summary>
@@ -4035,6 +4041,20 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchCli_MouseHover(System.Object,System.EventArgs)">
+ <summary>
+ Cambia el color de fondo
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.BtnSrchCli_MouseLeave(System.Object,System.EventArgs)">
+ <summary>
+ Regresa el color de fondo original
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrVentaConsul.DtpInicial_onValueChanged(System.Object,System.EventArgs)">
  <summary>
  Captura el valor seleccionado
@@ -4043,6 +4063,20 @@ UbiSoft
  <param name="e"></param>
 </member>
 <member name="M:UbiSoft.ScrVentaConsul.DtpFinal_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor seleccionado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.DtpIniCli_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor seleccionado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrVentaConsul.DtpFinCli_onValueChanged(System.Object,System.EventArgs)">
  <summary>
  Captura el valor seleccionado
  </summary>

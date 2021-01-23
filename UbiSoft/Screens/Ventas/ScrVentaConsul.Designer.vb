@@ -26,10 +26,6 @@ Partial Class ScrVentaConsul
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,6 +34,10 @@ Partial Class ScrVentaConsul
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
         Me.PbMax = New System.Windows.Forms.PictureBox()
@@ -55,7 +55,6 @@ Partial Class ScrVentaConsul
         Me.Label13 = New System.Windows.Forms.Label()
         Me.DtpInicial = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.cliente = New System.Windows.Forms.TabPage()
-        Me.DgvCli = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CboRfc = New System.Windows.Forms.ComboBox()
         Me.BtnSrchCli = New System.Windows.Forms.Button()
@@ -81,6 +80,7 @@ Partial Class ScrVentaConsul
         Me.DtpFinProd = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DtpIniProd = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.DgvCli = New System.Windows.Forms.DataGridView()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,11 +92,11 @@ Partial Class ScrVentaConsul
         Me.periodo.SuspendLayout()
         CType(Me.DgvPeriod, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cliente.SuspendLayout()
-        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.folio.SuspendLayout()
         CType(Me.DgvFolios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.producto.SuspendLayout()
         CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTop
@@ -347,56 +347,6 @@ Partial Class ScrVentaConsul
         Me.cliente.Text = "Por Cliente"
         Me.cliente.UseVisualStyleBackColor = True
         '
-        'DgvCli
-        '
-        Me.DgvCli.AllowUserToAddRows = False
-        Me.DgvCli.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvCli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DgvCli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DgvCli.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvCli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DgvCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvCli.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DgvCli.EnableHeadersVisualStyles = False
-        Me.DgvCli.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.DgvCli.Location = New System.Drawing.Point(21, 138)
-        Me.DgvCli.Name = "DgvCli"
-        Me.DgvCli.ReadOnly = True
-        Me.DgvCli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvCli.RowHeadersWidth = 51
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.DgvCli.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DgvCli.RowTemplate.Height = 240
-        Me.DgvCli.Size = New System.Drawing.Size(981, 534)
-        Me.DgvCli.TabIndex = 55
-        '
         'Label5
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -456,7 +406,7 @@ Partial Class ScrVentaConsul
         Me.DtpFinCli.Location = New System.Drawing.Point(336, 41)
         Me.DtpFinCli.Margin = New System.Windows.Forms.Padding(4, 13, 4, 13)
         Me.DtpFinCli.Name = "DtpFinCli"
-        Me.DtpFinCli.Size = New System.Drawing.Size(245, 44)
+        Me.DtpFinCli.Size = New System.Drawing.Size(235, 40)
         Me.DtpFinCli.TabIndex = 50
         Me.DtpFinCli.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
         '
@@ -482,7 +432,7 @@ Partial Class ScrVentaConsul
         Me.DtpIniCli.Location = New System.Drawing.Point(21, 41)
         Me.DtpIniCli.Margin = New System.Windows.Forms.Padding(4, 9, 4, 9)
         Me.DtpIniCli.Name = "DtpIniCli"
-        Me.DtpIniCli.Size = New System.Drawing.Size(245, 44)
+        Me.DtpIniCli.Size = New System.Drawing.Size(235, 40)
         Me.DtpIniCli.TabIndex = 48
         Me.DtpIniCli.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
         '
@@ -801,6 +751,56 @@ Partial Class ScrVentaConsul
         Me.DtpIniProd.TabIndex = 64
         Me.DtpIniProd.Value = New Date(2021, 1, 18, 17, 11, 17, 947)
         '
+        'DgvCli
+        '
+        Me.DgvCli.AllowUserToAddRows = False
+        Me.DgvCli.AllowUserToDeleteRows = False
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvCli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvCli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DgvCli.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvCli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DgvCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvCli.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DgvCli.EnableHeadersVisualStyles = False
+        Me.DgvCli.GridColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.DgvCli.Location = New System.Drawing.Point(21, 108)
+        Me.DgvCli.Name = "DgvCli"
+        Me.DgvCli.ReadOnly = True
+        Me.DgvCli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvCli.RowHeadersWidth = 51
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.DgvCli.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DgvCli.RowTemplate.Height = 25
+        Me.DgvCli.Size = New System.Drawing.Size(981, 564)
+        Me.DgvCli.TabIndex = 55
+        '
         'ScrVentaConsul
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
@@ -831,13 +831,13 @@ Partial Class ScrVentaConsul
         CType(Me.DgvPeriod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cliente.ResumeLayout(False)
         Me.cliente.PerformLayout()
-        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.folio.ResumeLayout(False)
         Me.folio.PerformLayout()
         CType(Me.DgvFolios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.producto.ResumeLayout(False)
         Me.producto.PerformLayout()
         CType(Me.DgvProd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvCli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -866,7 +866,6 @@ Partial Class ScrVentaConsul
     Friend WithEvents DtpFinCli As Bunifu.Framework.UI.BunifuDatepicker
     Friend WithEvents Label4 As Label
     Friend WithEvents DtpIniCli As Bunifu.Framework.UI.BunifuDatepicker
-    Friend WithEvents DgvCli As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents CboRfc As ComboBox
     Friend WithEvents DgvFolios As DataGridView
@@ -885,4 +884,5 @@ Partial Class ScrVentaConsul
     Friend WithEvents DtpFinProd As Bunifu.Framework.UI.BunifuDatepicker
     Friend WithEvents Label11 As Label
     Friend WithEvents DtpIniProd As Bunifu.Framework.UI.BunifuDatepicker
+    Friend WithEvents DgvCli As DataGridView
 End Class

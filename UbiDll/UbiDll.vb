@@ -1252,6 +1252,8 @@ Public Class Datos
 
     Private _periodo_ini As Date
     Private _periodo_fin As Date
+    Private _cliente_ini As Date
+    Private _cliente_fin As Date
     Private _ventas_id As Integer
     Private _ventas_folio As String
     Private _ventas_date As Date
@@ -1286,6 +1288,24 @@ Public Class Datos
         End Get
         Set(ByVal value As Date)
             _periodo_ini = value
+        End Set
+    End Property
+
+    Public Property cliente_fin() As Date
+        Get
+            Return _cliente_fin
+        End Get
+        Set(ByVal value As Date)
+            _cliente_fin = value
+        End Set
+    End Property
+
+    Public Property cliente_ini() As Date
+        Get
+            Return _cliente_ini
+        End Get
+        Set(ByVal value As Date)
+            _cliente_ini = value
         End Set
     End Property
 

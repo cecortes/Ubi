@@ -8,6 +8,8 @@ Public Class ScrVentaConsul
     'UbiDll
     Dim datos As New Datos
     Dim consulta As New Consulta
+    Dim consulCli As New Consulta
+    Dim consulCliDgv As New Consulta
     Dim errorMsg As New ErrorMsg
 
     Dim dateIniPer As String = ""
@@ -53,6 +55,36 @@ Public Class ScrVentaConsul
     End Sub
 
     ''' <summary>
+    ''' Consulta clientes
+    ''' Llena el cbo con los resultados
+    ''' </summary>
+    Private Sub FillCboRfc()
+
+        'Reset
+        consulCli._dtsCbo.Reset()
+
+        'Consulta
+        consulCli.GetAllRfc()
+
+        'Dataset 
+        CboRfc.DataSource = consulCli._dtsCbo.Tables("rfcCli")
+
+        'Datos
+        CboRfc.DisplayMember = "rfc_cli"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboRfc.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
     ''' Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
     ''' </summary>
     Private Sub GetPeriodoVtas()
@@ -71,14 +103,14 @@ Public Class ScrVentaConsul
         DgvPeriod.DataSource = consulta.dgvCode.Tables("PERVTA")
 
         'Formato al Dgv
-        FormatDgv()
+        FormatDgvPer()
 
     End Sub
 
     ''' <summary>
     ''' Se encarga de aplicar el formato al DGV
     ''' </summary>
-    Private Sub FormatDgv()
+    Private Sub FormatDgvPer()
 
         'Formato
         DgvPeriod.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -99,6 +131,29 @@ Public Class ScrVentaConsul
         DgvPeriod.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         DgvPeriod.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
         DgvPeriod.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
+    ''' </summary>
+    Private Sub GetClientesVtas()
+
+        'Captura Periódo inicial y final
+        datos.periodo_ini = dateIniPer
+        datos.periodo_fin = dateFinPer
+
+        'Reset
+        consulCliDgv.dgvCode.Reset()
+
+        'Consulta
+        consulCliDgv.GetPerVtas(datos)
+
+        'Datagrid
+        DgvCli.DataSource = consulCliDgv.dgvCode.Tables("PERVTA")
+
+        'Formato al Dgv
+        'FormatDgvCli()
 
     End Sub
 
@@ -160,6 +215,9 @@ Public Class ScrVentaConsul
         'Fecha y Formato Dtp
         FormatDtp()
 
+        'Cbo
+        FillCboRfc()
+
     End Sub
 
     ''' <summary>
@@ -183,6 +241,30 @@ Public Class ScrVentaConsul
 
         'Color normal
         BtnSrchPer.BackColor = Color.FromArgb(156, 191, 167)
+
+    End Sub
+
+    ''' <summary>
+    ''' Cambia el color de fondo
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSrchCli_MouseHover(sender As Object, e As EventArgs) Handles BtnSrchCli.MouseHover
+
+        'Color Accent
+        BtnSrchCli.BackColor = Color.WhiteSmoke
+
+    End Sub
+
+    ''' <summary>
+    ''' Regresa el color de fondo original
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSrchCli_MouseLeave(sender As Object, e As EventArgs) Handles BtnSrchCli.MouseLeave
+
+        'Color normal
+        BtnSrchCli.BackColor = Color.FromArgb(156, 191, 167)
 
     End Sub
 
@@ -211,14 +293,49 @@ Public Class ScrVentaConsul
     End Sub
 
     ''' <summary>
-    ''' Llama al método para realizar la consulta en el DGV
+    ''' Captura el valor seleccionado
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DtpIniCli_onValueChanged(sender As Object, e As EventArgs) Handles DtpIniCli.onValueChanged
+
+        'Captura
+        dateIniCli = DtpIniCli.Value.ToShortDateString
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el valor seleccionado
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DtpFinCli_onValueChanged(sender As Object, e As EventArgs) Handles DtpFinCli.onValueChanged
+
+        dateFinCli = DtpFinCli.Value.ToShortDateString
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta por Periódo en el DGV
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnSrchPer_Click(sender As Object, e As EventArgs) Handles BtnSrchPer.Click
 
-        'Dgv
+        'DgvPer
         GetPeriodoVtas()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta por Clientes en el DGV
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSrchCli_Click(sender As Object, e As EventArgs) Handles BtnSrchCli.Click
+
+        'DgvCli
+        GetClientesVtas()
 
     End Sub
 
