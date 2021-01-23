@@ -3355,7 +3355,7 @@ Public Class Consulta
                 resultado.ventas_tot = reader("ventas_tot")
 
                 'Agregamos el arreglo byte para la foto y los demás datos
-                dgvCode.Tables("PERVTA").Rows.Add(resultado.ventas_folio, resultado.ventas_date, resultado.ventas_rfc, resultado.ventas_nom, resultado.ventas_mail, resultado.ventas_tot)
+                dgvCode.Tables("PERVTA").Rows.Add(resultado.ventas_folio, resultado.ventas_date, resultado.ventas_rfc, resultado.ventas_nom, resultado.ventas_mail, resultado.ventas_tot.ToString("$ #,###,##0.00"))
 
             End While
 
