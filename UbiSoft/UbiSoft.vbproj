@@ -152,6 +152,36 @@
     <Compile Include="Screens\Admin\Bancos\ScrExternaNew.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmacen.Designer.vb">
+      <DependentUpon>ScrAlmacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaConsultas.Designer.vb">
+      <DependentUpon>ScrAlmaConsultas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaConsultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaEntradas.Designer.vb">
+      <DependentUpon>ScrAlmaEntradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaEntradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaSalidas.Designer.vb">
+      <DependentUpon>ScrAlmaSalidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaSalidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaTraspasos.Designer.vb">
+      <DependentUpon>ScrAlmaTraspasos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Almacen\ScrAlmaTraspasos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Config\Autos\ScrAutoDelFromDevice.Designer.vb">
       <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
     </Compile>
@@ -492,6 +522,9 @@
     <EmbeddedResource Include="Screens\Admin\ScrAdmin.resx">
       <DependentUpon>ScrAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Almacen\ScrAlmacen.resx">
+      <DependentUpon>ScrAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Autos\ScrAutoDelFromDevice.resx">
       <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
     </EmbeddedResource>
@@ -761,6 +794,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eliminar128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portapapeles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carretilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traspasos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consulta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

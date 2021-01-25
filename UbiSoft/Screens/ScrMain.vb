@@ -145,7 +145,7 @@
     ''' <param name="e"></param>
     Private Sub BtnAlmacen_Click(sender As Object, e As EventArgs) Handles BtnAlmacen.Click
 
-        'ScrAlmacen.Show()
+        ScrAlmacen.Show()
         Me.Close()
 
     End Sub
