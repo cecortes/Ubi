@@ -1468,9 +1468,90 @@ Public Class Datos
     Private _alma_prima_pack As String
     Private _alma_prima_canti As Integer
 
+    Private _alma_prod_folio As String
+    Private _alma_prod_fecha As Date
+    Private _alma_prod_cadu As Date
+    Private _alma_prod_tpo As String
+    Private _alma_prod_nom As String
+    Private _alma_prod_uni As String
+    Private _alma_prod_pack As String
+    Private _alma_prod_canti As Integer
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property alma_prod_folio() As String
+        Get
+            Return _alma_prod_folio
+        End Get
+        Set(ByVal value As String)
+            _alma_prod_folio = value
+        End Set
+    End Property
+
+    Public Property alma_prod_fecha() As Date
+        Get
+            Return _alma_prod_fecha
+        End Get
+        Set(ByVal value As Date)
+            _alma_prod_fecha = value
+        End Set
+    End Property
+
+    Public Property alma_prod_cadu() As Date
+        Get
+            Return _alma_prod_cadu
+        End Get
+        Set(ByVal value As Date)
+            _alma_prod_cadu = value
+        End Set
+    End Property
+
+    Public Property alma_prod_tpo() As String
+        Get
+            Return _alma_prod_tpo
+        End Get
+        Set(ByVal value As String)
+            _alma_prod_tpo = value
+        End Set
+    End Property
+
+    Public Property alma_prod_nom() As String
+        Get
+            Return _alma_prod_nom
+        End Get
+        Set(ByVal value As String)
+            _alma_prod_nom = value
+        End Set
+    End Property
+
+    Public Property alma_prod_uni() As String
+        Get
+            Return _alma_prod_uni
+        End Get
+        Set(ByVal value As String)
+            _alma_prod_uni = value
+        End Set
+    End Property
+
+    Public Property alma_prod_pack() As String
+        Get
+            Return _alma_prod_pack
+        End Get
+        Set(ByVal value As String)
+            _alma_prod_pack = value
+        End Set
+    End Property
+
+    Public Property alma_prod_canti() As Integer
+        Get
+            Return _alma_prod_canti
+        End Get
+        Set(ByVal value As Integer)
+            _alma_prod_canti = value
+        End Set
+    End Property
 
     Public Property alma_prima_folio() As String
         Get
