@@ -4598,6 +4598,68 @@ Public Class Agregar
 
 #End Region
 
+#Region "ALMACEN PROD"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla alma_prod
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewAlmaProd(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand =
+                New MySqlCommand("INSERT INTO alma_prod 
+                ( alma_prod_folio, alma_prod_fecha, alma_prod_cadu, alma_prod_tpo, alma_prod_nom, alma_prod_uni, alma_prod_pack, alma_prod_canti) 
+                VALUES 
+                (@alma_prod_folio,@alma_prod_fecha,@alma_prod_cadu,@alma_prod_tpo,@alma_prod_nom,@alma_prod_uni,@alma_prod_pack,@alma_prod_canti)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_folio", MySqlDbType.String, 45).Value = datos.alma_prod_folio
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_fecha", MySqlDbType.Date).Value = datos.alma_prod_fecha
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_cadu", MySqlDbType.Date).Value = datos.alma_prod_cadu
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_tpo", MySqlDbType.String, 45).Value = datos.alma_prod_tpo
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_nom", MySqlDbType.String, 100).Value = datos.alma_prod_nom
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_uni", MySqlDbType.String, 45).Value = datos.alma_prod_uni
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_pack", MySqlDbType.String, 45).Value = datos.alma_prod_pack
+            _adaptador.InsertCommand.Parameters.Add("@alma_prod_canti", MySqlDbType.Int32, 11).Value = datos.alma_prod_canti
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class Actualizar
