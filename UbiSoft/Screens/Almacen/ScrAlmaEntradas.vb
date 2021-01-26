@@ -327,16 +327,17 @@ Public Class ScrAlmaEntradas
                 Case "Materia Prima"
 
                     'Captura de datos
-                    datos.alma_refa_folio = folioAlma
-                    datos.alma_refa_fecha = filas.Cells(0).Value
-                    datos.alma_refa_tpo = filas.Cells(1).Value
-                    datos.alma_refa_nom = filas.Cells(3).Value
-                    datos.alma_refa_uni = filas.Cells(4).Value
-                    datos.alma_refa_pack = filas.Cells(5).Value
-                    datos.alma_refa_canti = Integer.Parse(filas.Cells(6).Value)
+                    datos.alma_prima_folio = folioAlma
+                    datos.alma_prima_fecha = filas.Cells(0).Value
+                    datos.alma_prima_tpo = filas.Cells(1).Value
+                    datos.alma_prima_cadu = filas.Cells(2).Value
+                    datos.alma_prima_nom = filas.Cells(3).Value
+                    datos.alma_prima_uni = filas.Cells(4).Value
+                    datos.alma_prima_pack = filas.Cells(5).Value
+                    datos.alma_prima_canti = Integer.Parse(filas.Cells(6).Value)
 
                     'Insert en la tabla alma_general
-                    If (add.NewAlmaRefa(datos)) Then
+                    If (add.NewAlmaPrima(datos)) Then
 
                         'Incrementamos el contador
                         contAdd += 1
