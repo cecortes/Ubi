@@ -762,6 +762,13 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmaEntradas.BtnAlta_Click(System.Object,System.EventArgs)">
+ <summary>
+ Recorre el DGV para extraer los datos y realizar la insercción
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAutoDelFromDevice.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke

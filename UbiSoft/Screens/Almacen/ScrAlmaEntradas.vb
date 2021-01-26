@@ -283,10 +283,47 @@ Public Class ScrAlmaEntradas
         'Rutina para recorrer las filas del datagridview
         For Each filas As DataGridViewRow In DgvEntradas.Rows
 
-            'Captura el tipo de almacen
+            'Valida el tipo de almacén
+            Select Case filas.Cells(1).Value
 
+                Case "General"
+
+                    'Captura de datos
+                    datos.alma_gral_folio = folioAlma
+                    datos.alma_gral_fecha = filas.Cells(0).Value
+                    datos.alma_gral_tpo = filas.Cells(1).Value
+                    datos.alma_gral_nom = filas.Cells(3).Value
+                    datos.alma_gral_uni = filas.Cells(4).Value
+                    datos.alma_gral_pack = filas.Cells(5).Value
+                    datos.alma_gral_canti = Integer.Parse(filas.Cells(6).Value)
+
+                    'Insert en la tabla alma_general
+                    If (add.NewAlmaGral(datos)) Then
+
+                        'Incrementamos el contador
+                        contAdd += 1
+
+                    End If
+
+            End Select
 
         Next
+
+        'Validación de todos las insert & update
+        If (DgvEntradas.Rows.Count = contAdd) Then
+
+            'Usuario
+            MsgBox("Todos las entradas fueron agregadas con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Else
+
+            'Usuario
+            MsgBox("Una o más entradas no pudieron agregarse a la base de datos", MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Limpiar Dgv
+        DgvEntradas.Rows.Clear()
 
     End Sub
 

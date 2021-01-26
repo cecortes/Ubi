@@ -1451,9 +1451,80 @@ Public Class Datos
     Private _alma_gral_pack As String
     Private _alma_gral_canti As Integer
 
+    Private _alma_refa_folio As String
+    Private _alma_refa_fecha As Date
+    Private _alma_refa_tpo As String
+    Private _alma_refa_nom As String
+    Private _alma_refa_uni As String
+    Private _alma_refa_pack As String
+    Private _alma_refa_canti As Integer
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property alma_refa_folio() As String
+        Get
+            Return _alma_refa_folio
+        End Get
+        Set(ByVal value As String)
+            _alma_refa_folio = value
+        End Set
+    End Property
+
+    Public Property alma_refa_fecha() As Date
+        Get
+            Return _alma_refa_fecha
+        End Get
+        Set(ByVal value As Date)
+            _alma_refa_fecha = value
+        End Set
+    End Property
+
+    Public Property alma_refa_tpo() As String
+        Get
+            Return _alma_refa_tpo
+        End Get
+        Set(ByVal value As String)
+            _alma_refa_tpo = value
+        End Set
+    End Property
+
+    Public Property alma_refa_nom() As String
+        Get
+            Return _alma_refa_nom
+        End Get
+        Set(ByVal value As String)
+            _alma_refa_nom = value
+        End Set
+    End Property
+
+    Public Property alma_refa_uni() As String
+        Get
+            Return _alma_refa_uni
+        End Get
+        Set(ByVal value As String)
+            _alma_refa_uni = value
+        End Set
+    End Property
+
+    Public Property alma_refa_pack() As String
+        Get
+            Return _alma_refa_pack
+        End Get
+        Set(ByVal value As String)
+            _alma_refa_pack = value
+        End Set
+    End Property
+
+    Public Property alma_refa_canti() As Integer
+        Get
+            Return _alma_refa_canti
+        End Get
+        Set(ByVal value As Integer)
+            _alma_refa_canti = value
+        End Set
+    End Property
 
     Public Property alma_gral_folio() As String
         Get
@@ -3160,7 +3231,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -4211,6 +4284,67 @@ Public Class Agregar
             _adaptador.InsertCommand.Parameters.Add("@alma_gral_uni", MySqlDbType.String, 45).Value = datos.alma_gral_uni
             _adaptador.InsertCommand.Parameters.Add("@alma_gral_pack", MySqlDbType.String, 45).Value = datos.alma_gral_pack
             _adaptador.InsertCommand.Parameters.Add("@alma_gral_canti", MySqlDbType.Int32, 11).Value = datos.alma_gral_canti
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "ALMACEN REFACCIONES"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla alma_refa 
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewAlmaRefa(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand =
+                New MySqlCommand("INSERT INTO alma_refa 
+                (alma_refa_folio, alma_refa_fecha, alma_refa_tpo, alma_refa_nom, alma_refa_uni, alma_refa_pack, alma_refa_canti) 
+                VALUES 
+                (@alma_refa_folio,@alma_refa_fecha,@alma_refa_tpo,@alma_refa_nom,@alma_refa_uni,@alma_refa_pack,@alma_refa_canti)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_folio", MySqlDbType.String, 45).Value = datos.alma_refa_folio
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_fecha", MySqlDbType.Date).Value = datos.alma_refa_fecha
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_tpo", MySqlDbType.String, 45).Value = datos.alma_refa_tpo
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_nom", MySqlDbType.String, 100).Value = datos.alma_gral_nom
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_uni", MySqlDbType.String, 45).Value = datos.alma_refa_uni
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_pack", MySqlDbType.String, 45).Value = datos.alma_refa_pack
+            _adaptador.InsertCommand.Parameters.Add("@alma_refa_canti", MySqlDbType.Int32, 11).Value = datos.alma_refa_canti
 
             'Insert
             con._conexion.Open()
