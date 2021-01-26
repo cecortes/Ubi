@@ -169,6 +169,13 @@ Public Class ScrAlmaEntradas
             DtpCaducidad.Visible = True
             dateCaduci = DtpCaducidad.Value.ToShortDateString
 
+        ElseIf (CboAlma.Text = "Producto Terminado") Then
+
+            'Enable
+            DtpCaducidad.Enabled = True
+            DtpCaducidad.Visible = True
+            dateCaduci = DtpCaducidad.Value.ToShortDateString
+
         Else
 
             'Disable
@@ -233,35 +240,35 @@ Public Class ScrAlmaEntradas
         DgvEntradas.Rows.Add(dateEntrada, CboAlma.Text, dateCaduci, TxtNombre.Text, CboUnidades.Text, TxtPack.Text, TxtCantidad.Text)
 
         'Re inicio de campos
-        'Control de errores del CboAlma
-        Try
+        ''Control de errores del CboAlma
+        'Try
 
-            'Index
-            CboAlma.SelectedIndex = 0
+        '    'Index
+        '    CboAlma.SelectedIndex = 0
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
-        'Control de errores del CboUnidad
-        Try
+        ''Control de errores del CboUnidad
+        'Try
 
-            'Index
-            CboUnidades.SelectedIndex = 0
+        '    'Index
+        '    CboUnidades.SelectedIndex = 0
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
-        'Control de errores del CboEntrada
-        Try
+        ''Control de errores del CboEntrada
+        'Try
 
-            'Index
-            CboEntradas.SelectedIndex = 0
+        '    'Index
+        '    CboEntradas.SelectedIndex = 0
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
         'Textos
         TxtNombre.Text = ""
@@ -338,6 +345,26 @@ Public Class ScrAlmaEntradas
 
                     'Insert en la tabla alma_general
                     If (add.NewAlmaPrima(datos)) Then
+
+                        'Incrementamos el contador
+                        contAdd += 1
+
+                    End If
+
+                Case "Producto Terminado"
+
+                    'Captura de datos
+                    datos.alma_prod_folio = folioAlma
+                    datos.alma_prod_fecha = filas.Cells(0).Value
+                    datos.alma_prod_tpo = filas.Cells(1).Value
+                    datos.alma_prod_cadu = filas.Cells(2).Value
+                    datos.alma_prod_nom = filas.Cells(3).Value
+                    datos.alma_prod_uni = filas.Cells(4).Value
+                    datos.alma_prod_pack = filas.Cells(5).Value
+                    datos.alma_prod_canti = Integer.Parse(filas.Cells(6).Value)
+
+                    'Insert en la tabla alma_general
+                    If (add.NewAlmaProd(datos)) Then
 
                         'Incrementamos el contador
                         contAdd += 1
