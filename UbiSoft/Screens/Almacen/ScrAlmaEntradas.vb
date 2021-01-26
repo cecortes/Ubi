@@ -7,6 +7,7 @@ Public Class ScrAlmaEntradas
     Dim dateCaduci As String = ""
     Dim dateIni As String = ""
     Dim dateFin As String = ""
+    Dim folioAlma As String = ""
 
 #End Region
 
@@ -134,6 +135,12 @@ Public Class ScrAlmaEntradas
         Catch ex As Exception
 
         End Try
+
+        'Folio
+        folioAlma = Now.Year.ToString + Now.Month.ToString + Now.Day.ToString
+        folioAlma += Now.Hour.ToString + Now.Minute.ToString + Now.Second.ToString
+        folioAlma += "-AL"
+        LblFolio.Text = folioAlma
 
     End Sub
 

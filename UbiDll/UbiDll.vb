@@ -1439,6 +1439,89 @@ Public Class Datos
 
 #End Region
 
+#Region "almacen"
+
+#Region "DATAMEMBERS"
+
+    Private _alma_gral_folio As String
+    Private _alma_gral_fecha As Date
+    Private _alma_gral_tpo As String
+    Private _alma_gral_nom As String
+    Private _alma_gral_uni As String
+    Private _alma_gral_pack As String
+    Private _alma_gral_canti As Integer
+
+#End Region
+
+#Region "PROPIEDADES"
+
+    Public Property alma_gral_folio() As String
+        Get
+            Return _alma_gral_folio
+        End Get
+        Set(ByVal value As String)
+            _alma_gral_folio = value
+        End Set
+    End Property
+
+    Public Property alma_gral_fecha() As Date
+        Get
+            Return _alma_gral_fecha
+        End Get
+        Set(ByVal value As Date)
+            _alma_gral_fecha = value
+        End Set
+    End Property
+
+    Public Property alma_gral_tpo() As String
+        Get
+            Return _alma_gral_tpo
+        End Get
+        Set(ByVal value As String)
+            _alma_gral_tpo = value
+        End Set
+    End Property
+
+    Public Property alma_gral_nom() As String
+        Get
+            Return _alma_gral_nom
+        End Get
+        Set(ByVal value As String)
+            _alma_gral_nom = value
+        End Set
+    End Property
+
+    Public Property alma_gral_uni() As String
+        Get
+            Return _alma_gral_uni
+        End Get
+        Set(ByVal value As String)
+            _alma_gral_uni = value
+        End Set
+    End Property
+
+    Public Property alma_gral_pack() As String
+        Get
+            Return _alma_gral_pack
+        End Get
+        Set(ByVal value As String)
+            _alma_gral_pack = value
+        End Set
+    End Property
+
+    Public Property alma_gral_canti() As Integer
+        Get
+            Return _alma_gral_canti
+        End Get
+        Set(ByVal value As Integer)
+            _alma_gral_canti = value
+        End Set
+    End Property
+
+#End Region
+
+#End Region
+
 End Class
 
 Public Class Consulta
