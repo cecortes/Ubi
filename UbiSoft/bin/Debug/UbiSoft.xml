@@ -702,6 +702,27 @@ UbiSoft
  Carga los valores iniciales en sus respectivas variables globales.
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaEntradas.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.ScrAlmaEntradas_Load(System.Object,System.EventArgs)">
  <summary>
  Condiciones iniciales de los elementos
@@ -713,6 +734,30 @@ UbiSoft
  <summary>
  Valida el valor capturado para habilitar el DtpCaducidad
  Llama al método para realizar la consulta de entradas anteriores
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DtpEntrada_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura la fecha seleccionada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DtpCaducidad_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura la fecha seleccionada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.BtnAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida los textos
+ Captura los valores necesarios
+ Agrega los valores al DGV
+ Re inicia los campos necesarios
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
