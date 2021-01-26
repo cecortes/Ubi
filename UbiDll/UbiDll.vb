@@ -1459,9 +1459,90 @@ Public Class Datos
     Private _alma_refa_pack As String
     Private _alma_refa_canti As Integer
 
+    Private _alma_prima_folio As String
+    Private _alma_prima_fecha As Date
+    Private _alma_prima_cadu As Date
+    Private _alma_prima_tpo As String
+    Private _alma_prima_nom As String
+    Private _alma_prima_uni As String
+    Private _alma_prima_pack As String
+    Private _alma_prima_canti As Integer
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property alma_prima_folio() As String
+        Get
+            Return _alma_prima_folio
+        End Get
+        Set(ByVal value As String)
+            _alma_prima_folio = value
+        End Set
+    End Property
+
+    Public Property alma_prima_fecha() As Date
+        Get
+            Return _alma_prima_fecha
+        End Get
+        Set(ByVal value As Date)
+            _alma_prima_fecha = value
+        End Set
+    End Property
+
+    Public Property alma_prima_cadu() As Date
+        Get
+            Return _alma_prima_cadu
+        End Get
+        Set(ByVal value As Date)
+            _alma_prima_cadu = value
+        End Set
+    End Property
+
+    Public Property alma_prima_tpo() As String
+        Get
+            Return _alma_prima_tpo
+        End Get
+        Set(ByVal value As String)
+            _alma_prima_tpo = value
+        End Set
+    End Property
+
+    Public Property alma_prima_nom() As String
+        Get
+            Return _alma_prima_nom
+        End Get
+        Set(ByVal value As String)
+            _alma_prima_nom = value
+        End Set
+    End Property
+
+    Public Property alma_prima_uni() As String
+        Get
+            Return _alma_prima_uni
+        End Get
+        Set(ByVal value As String)
+            _alma_prima_uni = value
+        End Set
+    End Property
+
+    Public Property alma_prima_pack() As String
+        Get
+            Return _alma_prima_pack
+        End Get
+        Set(ByVal value As String)
+            _alma_prima_pack = value
+        End Set
+    End Property
+
+    Public Property alma_prima_canti() As Integer
+        Get
+            Return _alma_prima_canti
+        End Get
+        Set(ByVal value As Integer)
+            _alma_prima_canti = value
+        End Set
+    End Property
 
     Public Property alma_refa_folio() As String
         Get
@@ -3324,7 +3405,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
