@@ -72,12 +72,22 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.carretilla">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.close">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.comite">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.consulta">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -167,6 +177,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.portapapeles">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.proveedor">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -183,6 +198,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.splash">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.traspasos">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -643,6 +663,56 @@ UbiSoft
  <summary>
  Obtiene los datos de la fila / celda seleccionada
  Carga los valores en los textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmacen.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmacen.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmacen.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmacen.pbEntradas_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la ventana de Entradas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.FormatDtp">
+ <summary>
+ Se encarga de darle formato a los date time picker del formulario
+ Cambia el color de fondo cuando hover en ambos dtp
+ Carga los valores iniciales en sus respectivas variables globales.
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.ScrAlmaEntradas_Load(System.Object,System.EventArgs)">
+ <summary>
+ Condiciones iniciales de los elementos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.CboAlma_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Valida el valor capturado para habilitar el DtpCaducidad
+ Llama al método para realizar la consulta de entradas anteriores
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
