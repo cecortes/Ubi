@@ -3095,7 +3095,9 @@ Public Class Consulta
         Finally
 
             'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
 
         End Try
@@ -4148,6 +4150,67 @@ Public Class Agregar
             _adaptador.InsertCommand.Parameters.Add("@ventas_pu", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_pu
             _adaptador.InsertCommand.Parameters.Add("@ventas_sub", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_sub
             _adaptador.InsertCommand.Parameters.Add("@ventas_tot", MySqlDbType.Decimal, 10, 2).Value = datos.ventas_tot
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "ALMACEN GENERAL"
+
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla alma_general
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewAlmaGral(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand =
+                New MySqlCommand("INSERT INTO alma_general 
+                (alma_gral_folio, alma_gral_fecha, alma_gral_tpo, alma_gral_nom, alma_gral_uni, alma_gral_pack, alma_gral_canti) 
+                VALUES 
+                (@alma_gral_folio,@alma_gral_fecha,@alma_gral_tpo,@alma_gral_nom,@alma_gral_uni,@alma_gral_pack,@alma_gral_canti)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_folio", MySqlDbType.String, 45).Value = datos.alma_gral_folio
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_fecha", MySqlDbType.Date).Value = datos.alma_gral_fecha
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_tpo", MySqlDbType.String, 45).Value = datos.alma_gral_tpo
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_nom", MySqlDbType.String, 45).Value = datos.alma_gral_nom
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_uni", MySqlDbType.String, 45).Value = datos.alma_gral_uni
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_pack", MySqlDbType.String, 45).Value = datos.alma_gral_pack
+            _adaptador.InsertCommand.Parameters.Add("@alma_gral_canti", MySqlDbType.Int32, 11).Value = datos.alma_gral_canti
 
             'Insert
             con._conexion.Open()

@@ -338,6 +338,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Agregar.NewAlmaGral(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla alma_general
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Actualizar.UpdUsr(UbiDll.Datos)">
  <summary>
  Actualiza los datos de la tabla de usuarios por medio de la llave primaria correo_usr

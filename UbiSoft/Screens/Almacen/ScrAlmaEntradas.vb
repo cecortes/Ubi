@@ -1,7 +1,16 @@
-﻿
+﻿'Imports
+Imports UbiDll
+
 Public Class ScrAlmaEntradas
 
 #Region "Variables"
+
+    'Dll
+    Dim datos As New Datos
+    'Dim consulCli As New Consulta
+    'Dim consulProd As New Consulta
+    Dim add As New Agregar
+    Dim errMsg As New ErrorMsg
 
     Dim dateEntrada As String = ""
     Dim dateCaduci As String = ""
@@ -258,6 +267,26 @@ Public Class ScrAlmaEntradas
         TxtNombre.Text = ""
         TxtPack.Text = ""
         TxtCantidad.Text = ""
+
+    End Sub
+
+    ''' <summary>
+    ''' Recorre el DGV para extraer los datos y realizar la insercción
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles BtnAlta.Click
+
+        'Contador
+        Dim contAdd As Integer = 0
+
+        'Rutina para recorrer las filas del datagridview
+        For Each filas As DataGridViewRow In DgvEntradas.Rows
+
+            'Captura el tipo de almacen
+
+
+        Next
 
     End Sub
 
