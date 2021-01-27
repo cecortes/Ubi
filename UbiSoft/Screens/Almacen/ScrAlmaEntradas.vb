@@ -58,6 +58,35 @@ Public Class ScrAlmaEntradas
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los folios de las tablas de los almacénes dentro de un periódo de fechas
+    ''' </summary>
+    Private Sub GetFolios()
+
+        ''Reset
+        'consulCli._dtsCbo.Reset()
+
+        ''Consulta
+        'consulCli.GetAllRfc()
+
+        ''Dataset 
+        'CboRfc.DataSource = consulCli._dtsCbo.Tables("rfcCli")
+
+        ''Datos
+        'CboRfc.DisplayMember = "rfc_cli"
+
+        ''Control de errores
+        'Try
+
+        '    'Index
+        '    CboRfc.SelectedIndex = 0
+
+        'Catch ex As Exception
+
+        'End Try
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -150,6 +179,9 @@ Public Class ScrAlmaEntradas
         folioAlma += Now.Hour.ToString + Now.Minute.ToString + Now.Second.ToString
         folioAlma += "-AL"
         LblFolio.Text = folioAlma
+
+        'Consulta de Folios
+        GetFolios()
 
     End Sub
 

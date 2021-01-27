@@ -702,6 +702,11 @@ UbiSoft
  Carga los valores iniciales en sus respectivas variables globales.
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaEntradas.GetFolios">
+ <summary>
+ Se encarga de obtener los folios de las tablas de los almacénes dentro de un periódo de fechas
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

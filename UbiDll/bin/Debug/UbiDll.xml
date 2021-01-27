@@ -268,6 +268,14 @@ UbiDll
  Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetFolioAlma">
+ <summary>
+ *****************************************
+ *** SOLO VALORES DISTINTOS DE FOLIOS ****
+ *****************************************
+ Se encarga de consultar a ventas y llenar al cbo correspondiente con almacenes
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

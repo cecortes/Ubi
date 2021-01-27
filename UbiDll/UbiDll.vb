@@ -3809,6 +3809,51 @@ Public Class Consulta
     End Sub
 #End Region
 
+#Region "almacenes"
+
+    ''' <summary>
+    ''' *****************************************
+    ''' *** SOLO VALORES DISTINTOS DE FOLIOS ****
+    ''' *****************************************
+    ''' Se encarga de consultar a ventas y llenar al cbo correspondiente con almacenes
+    ''' </summary>
+    Public Sub GetFolioAlma()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT DISTINCT(ventas_folio) FROM alma_general", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "alma_folio")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+#End Region
+
 End Class
 
 Public Class Agregar
