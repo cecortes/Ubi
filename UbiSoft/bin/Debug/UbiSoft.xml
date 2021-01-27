@@ -712,6 +712,11 @@ UbiSoft
  Se encarga de aplicar el formato al DGV
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DelFoliosAlmacenes">
+ <summary>
+ Se encarga de borrar los folios de las tablas de almacenes
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -796,6 +801,22 @@ UbiSoft
 <member name="M:UbiSoft.ScrAlmaEntradas.BtnSrchFol_Click(System.Object,System.EventArgs)">
  <summary>
  Llama al método para realizar la consulta por periódo de fechas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.BtnDel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DgvAlmaEntrada_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Captura el folio de la fila
+ Lo almacena en la clase datos
+ Llama el método para borrar
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

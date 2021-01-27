@@ -6059,6 +6059,151 @@ Public Class Eliminar
 
 #End Region
 
+#Region "ALMACENES"
+
+    ''' <summary>
+    ''' Se encarga de eliminar al folio por medio de la key recibida como parámetro
+    ''' </summary>
+    ''' <param name="datos"> Resultado del borrado </param>
+    ''' <returns></returns>
+    Public Function DelFolAlma(ByVal datos As Datos) As Boolean
+
+        'Variables Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM alma_general WHERE alma_gral_folio=@alma_gral_folio", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@alma_gral_folio", MySqlDbType.String, 45).Value = datos.alma_gral_folio
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM alma_refa WHERE alma_refa_folio=@alma_refa_folio", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@alma_refa_folio", MySqlDbType.String, 45).Value = datos.alma_refa_folio
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM alma_prima WHERE alma_prima_folio=@alma_prima_folio", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@alma_prima_folio", MySqlDbType.String, 45).Value = datos.alma_prima_folio
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM alma_prod WHERE alma_prod_folio=@alma_prod_folio", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@alma_prod_folio", MySqlDbType.String, 45).Value = datos.alma_prod_folio
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Resultado
+        Return estado
+
+    End Function
+
+#End Region
+
 End Class
 
 Public Class ErrorMsg

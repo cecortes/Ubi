@@ -9,6 +9,7 @@ Public Class ScrAlmaEntradas
     Dim datos As New Datos
     Dim consulta As New Consulta
     Dim add As New Agregar
+    Dim del As New Eliminar
     Dim errMsg As New ErrorMsg
 
     Dim dateEntrada As String = ""
@@ -107,6 +108,26 @@ Public Class ScrAlmaEntradas
         DgvAlmaEntrada.Columns(6).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         DgvAlmaEntrada.Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
         DgvAlmaEntrada.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de borrar los folios de las tablas de almacenes
+    ''' </summary>
+    Private Sub DelFoliosAlmacenes()
+
+        'Delete 
+        If (del.DelFolAlma(datos)) Then
+
+            'Msg Usr
+            MsgBox("Folios de almacenes eliminados", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+
+        'Clear and Reset
+        consulta._dtsDgv.Reset()
+        DgvAlmaEntrada.DataSource = consulta._dtvDgv
 
     End Sub
 
@@ -476,11 +497,33 @@ Public Class ScrAlmaEntradas
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Llama el método para borrar
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub BtnDel_Click(sender As Object, e As EventArgs) Handles BtnDel.Click
+
+        'Método
+        DelFoliosAlmacenes()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el folio de la fila
+    ''' Lo almacena en la clase datos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DgvAlmaEntrada_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvAlmaEntrada.CellClick
+
+        'Captura
+        Dim folioUniversal As String = DgvAlmaEntrada.CurrentRow.Cells(0).Value
+
+        'Datos
+        datos.alma_gral_folio = folioUniversal
+        datos.alma_refa_folio = folioUniversal
+        datos.alma_prima_folio = folioUniversal
+        datos.alma_prod_folio = folioUniversal
 
     End Sub
 
