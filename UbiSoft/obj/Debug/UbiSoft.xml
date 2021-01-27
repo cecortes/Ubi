@@ -702,9 +702,14 @@ UbiSoft
  Carga los valores iniciales en sus respectivas variables globales.
  </summary>
 </member>
-<member name="M:UbiSoft.ScrAlmaEntradas.GetFolios">
+<member name="M:UbiSoft.ScrAlmaEntradas.GetPeriodoVtas">
  <summary>
- Se encarga de obtener los folios de las tablas de los almacénes dentro de un periódo de fechas
+ Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.FormatDgvAlma">
+ <summary>
+ Se encarga de aplicar el formato al DGV
  </summary>
 </member>
 <member name="M:UbiSoft.ScrAlmaEntradas.PbClose_Click(System.Object,System.EventArgs)">
@@ -757,6 +762,20 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DtpAlmaIni_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura la fecha seleccionada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.DtpAlmaFin_onValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura la fecha seleccionada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.BtnAdd_Click(System.Object,System.EventArgs)">
  <summary>
  Valida los textos
@@ -770,6 +789,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrAlmaEntradas.BtnAlta_Click(System.Object,System.EventArgs)">
  <summary>
  Recorre el DGV para extraer los datos y realizar la insercción
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaEntradas.BtnSrchFol_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta por periódo de fechas
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

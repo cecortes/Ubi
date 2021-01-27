@@ -22,18 +22,18 @@ Partial Class ScrAlmaEntradas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlTop = New System.Windows.Forms.Panel()
         Me.PnlCtrl = New System.Windows.Forms.Panel()
         Me.PbMax = New System.Windows.Forms.PictureBox()
@@ -55,6 +55,8 @@ Partial Class ScrAlmaEntradas
         Me.PnlDown = New System.Windows.Forms.Panel()
         Me.BtnAlta = New System.Windows.Forms.Button()
         Me.PnlDatos = New System.Windows.Forms.Panel()
+        Me.LblFolio = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -79,14 +81,11 @@ Partial Class ScrAlmaEntradas
         Me.PnlBot = New System.Windows.Forms.Panel()
         Me.BtnDel = New System.Windows.Forms.Button()
         Me.PnlSearch = New System.Windows.Forms.Panel()
-        Me.CboFolio = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.BtnSrchFol = New System.Windows.Forms.Button()
         Me.DtpAlmaFin = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DtpAlmaIni = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.LblFolio = New System.Windows.Forms.Label()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
         CType(Me.PbMax, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,29 +220,29 @@ Partial Class ScrAlmaEntradas
         '
         Me.DgvEntradas.AllowUserToAddRows = False
         Me.DgvEntradas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.DgvEntradas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.DgvEntradas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvEntradas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.DgvEntradas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvEntradas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvEntradas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvEntradas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvEntradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvEntradas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle57.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle57.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
-        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvEntradas.DefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvEntradas.DefaultCellStyle = DataGridViewCellStyle9
         Me.DgvEntradas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvEntradas.DoubleBuffered = True
         Me.DgvEntradas.EnableHeadersVisualStyles = False
@@ -262,8 +261,8 @@ Partial Class ScrAlmaEntradas
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
         Me.Column1.HeaderText = "Fecha"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
@@ -273,8 +272,8 @@ Partial Class ScrAlmaEntradas
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
         Me.Column2.HeaderText = "Almacén"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
@@ -284,8 +283,8 @@ Partial Class ScrAlmaEntradas
         'Column3
         '
         Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle5
         Me.Column3.HeaderText = "Caducidad"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
@@ -295,8 +294,8 @@ Partial Class ScrAlmaEntradas
         'Column4
         '
         Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle6
         Me.Column4.HeaderText = "Entrada"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
@@ -305,8 +304,8 @@ Partial Class ScrAlmaEntradas
         'Column5
         '
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
         Me.Column5.HeaderText = "Unidades"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
@@ -316,8 +315,8 @@ Partial Class ScrAlmaEntradas
         'Column6
         '
         Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle8
         Me.Column6.HeaderText = "Pack"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -377,6 +376,30 @@ Partial Class ScrAlmaEntradas
         Me.PnlDatos.Name = "PnlDatos"
         Me.PnlDatos.Size = New System.Drawing.Size(1010, 144)
         Me.PnlDatos.TabIndex = 1
+        '
+        'LblFolio
+        '
+        Me.LblFolio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblFolio.AutoSize = True
+        Me.LblFolio.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFolio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblFolio.Location = New System.Drawing.Point(128, 96)
+        Me.LblFolio.Name = "LblFolio"
+        Me.LblFolio.Size = New System.Drawing.Size(40, 25)
+        Me.LblFolio.TabIndex = 62
+        Me.LblFolio.Text = "NA"
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(5, 93)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 28)
+        Me.Label6.TabIndex = 61
+        Me.Label6.Text = "Folio:"
         '
         'BtnAdd
         '
@@ -640,28 +663,28 @@ Partial Class ScrAlmaEntradas
         'DgvAlmaEntrada
         '
         Me.DgvAlmaEntrada.AllowUserToAddRows = False
-        DataGridViewCellStyle58.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.DgvAlmaEntrada.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.DgvAlmaEntrada.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.DgvAlmaEntrada.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.DgvAlmaEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvAlmaEntrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle59.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle59.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvAlmaEntrada.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvAlmaEntrada.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DgvAlmaEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle60.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
-        DataGridViewCellStyle60.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
-        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvAlmaEntrada.DefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(149, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Ebrima", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(70, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvAlmaEntrada.DefaultCellStyle = DataGridViewCellStyle12
         Me.DgvAlmaEntrada.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvAlmaEntrada.DoubleBuffered = True
         Me.DgvAlmaEntrada.EnableHeadersVisualStyles = False
@@ -705,8 +728,7 @@ Partial Class ScrAlmaEntradas
         '
         'PnlSearch
         '
-        Me.PnlSearch.Controls.Add(Me.CboFolio)
-        Me.PnlSearch.Controls.Add(Me.Label5)
+        Me.PnlSearch.Controls.Add(Me.BtnSrchFol)
         Me.PnlSearch.Controls.Add(Me.DtpAlmaFin)
         Me.PnlSearch.Controls.Add(Me.Label4)
         Me.PnlSearch.Controls.Add(Me.DtpAlmaIni)
@@ -717,30 +739,19 @@ Partial Class ScrAlmaEntradas
         Me.PnlSearch.Size = New System.Drawing.Size(1010, 97)
         Me.PnlSearch.TabIndex = 0
         '
-        'CboFolio
+        'BtnSrchFol
         '
-        Me.CboFolio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CboFolio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboFolio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboFolio.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboFolio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboFolio.FormattingEnabled = True
-        Me.CboFolio.Location = New System.Drawing.Point(631, 37)
-        Me.CboFolio.Name = "CboFolio"
-        Me.CboFolio.Size = New System.Drawing.Size(323, 31)
-        Me.CboFolio.TabIndex = 56
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(755, 3)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 28)
-        Me.Label5.TabIndex = 57
-        Me.Label5.Text = "Folio:"
+        Me.BtnSrchFol.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSrchFol.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSrchFol.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSrchFol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSrchFol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnSrchFol.Image = Global.UbiSoft.My.Resources.Resources.lupa
+        Me.BtnSrchFol.Location = New System.Drawing.Point(894, 12)
+        Me.BtnSrchFol.Name = "BtnSrchFol"
+        Me.BtnSrchFol.Size = New System.Drawing.Size(60, 60)
+        Me.BtnSrchFol.TabIndex = 58
+        Me.BtnSrchFol.UseVisualStyleBackColor = False
         '
         'DtpAlmaFin
         '
@@ -793,30 +804,6 @@ Partial Class ScrAlmaEntradas
         Me.Label3.Size = New System.Drawing.Size(134, 28)
         Me.Label3.TabIndex = 52
         Me.Label3.Text = "Fecha Inicial:"
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(5, 93)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 28)
-        Me.Label6.TabIndex = 61
-        Me.Label6.Text = "Folio:"
-        '
-        'LblFolio
-        '
-        Me.LblFolio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblFolio.AutoSize = True
-        Me.LblFolio.Font = New System.Drawing.Font("Ebrima", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFolio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblFolio.Location = New System.Drawing.Point(128, 96)
-        Me.LblFolio.Name = "LblFolio"
-        Me.LblFolio.Size = New System.Drawing.Size(40, 25)
-        Me.LblFolio.TabIndex = 62
-        Me.LblFolio.Text = "NA"
         '
         'ScrAlmaEntradas
         '
@@ -901,8 +888,6 @@ Partial Class ScrAlmaEntradas
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents PnlSearch As Panel
-    Friend WithEvents CboFolio As ComboBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents DtpAlmaFin As Bunifu.Framework.UI.BunifuDatepicker
     Friend WithEvents Label4 As Label
     Friend WithEvents DtpAlmaIni As Bunifu.Framework.UI.BunifuDatepicker
@@ -913,4 +898,5 @@ Partial Class ScrAlmaEntradas
     Friend WithEvents DgvAlmaEntrada As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents Label6 As Label
     Friend WithEvents LblFolio As Label
+    Friend WithEvents BtnSrchFol As Button
 End Class

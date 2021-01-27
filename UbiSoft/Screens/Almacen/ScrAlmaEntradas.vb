@@ -7,8 +7,7 @@ Public Class ScrAlmaEntradas
 
     'Dll
     Dim datos As New Datos
-    'Dim consulCli As New Consulta
-    'Dim consulProd As New Consulta
+    Dim consulta As New Consulta
     Dim add As New Agregar
     Dim errMsg As New ErrorMsg
 
@@ -59,31 +58,55 @@ Public Class ScrAlmaEntradas
     End Sub
 
     ''' <summary>
-    ''' Se encarga de obtener los folios de las tablas de los almacénes dentro de un periódo de fechas
+    ''' Se encarga de realizar la consulta mediante DLL del periódo seleccionado por los DTP
     ''' </summary>
-    Private Sub GetFolios()
+    Private Sub GetPeriodoVtas()
 
-        ''Reset
-        'consulCli._dtsCbo.Reset()
+        'Captura Periódo inicial y final
+        datos.periodo_ini = dateIni
+        datos.periodo_fin = dateFin
 
-        ''Consulta
-        'consulCli.GetAllRfc()
+        'Reset
+        consulta.dgvCode.Reset()
 
-        ''Dataset 
-        'CboRfc.DataSource = consulCli._dtsCbo.Tables("rfcCli")
+        'Consulta
+        consulta.GetFolAlma(datos)
 
-        ''Datos
-        'CboRfc.DisplayMember = "rfc_cli"
+        'Datagrid
+        DgvAlmaEntrada.DataSource = consulta.dgvCode.Tables("PERALMA")
 
-        ''Control de errores
-        'Try
+        'Formato al Dgv
+        FormatDgvAlma()
 
-        '    'Index
-        '    CboRfc.SelectedIndex = 0
+    End Sub
 
-        'Catch ex As Exception
+    ''' <summary>
+    ''' Se encarga de aplicar el formato al DGV
+    ''' </summary>
+    Private Sub FormatDgvAlma()
 
-        'End Try
+        'Formato
+        DgvAlmaEntrada.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvAlmaEntrada.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(1).SortMode = DataGridViewColumnSortMode.Automatic
+        DgvAlmaEntrada.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvAlmaEntrada.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvAlmaEntrada.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvAlmaEntrada.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvAlmaEntrada.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvAlmaEntrada.Columns(6).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvAlmaEntrada.Columns(6).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvAlmaEntrada.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
     End Sub
 
@@ -180,9 +203,6 @@ Public Class ScrAlmaEntradas
         folioAlma += "-AL"
         LblFolio.Text = folioAlma
 
-        'Consulta de Folios
-        GetFolios()
-
     End Sub
 
     ''' <summary>
@@ -235,6 +255,24 @@ Public Class ScrAlmaEntradas
     ''' <param name="e"></param>
     Private Sub DtpCaducidad_onValueChanged(sender As Object, e As EventArgs) Handles DtpCaducidad.onValueChanged
         dateCaduci = DtpCaducidad.Value.ToShortDateString
+    End Sub
+
+    ''' <summary>
+    ''' Captura la fecha seleccionada
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DtpAlmaIni_onValueChanged(sender As Object, e As EventArgs) Handles DtpAlmaIni.onValueChanged
+        dateIni = DtpAlmaIni.Value.ToShortDateString
+    End Sub
+
+    ''' <summary>
+    ''' Captura la fecha seleccionada
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DtpAlmaFin_onValueChanged(sender As Object, e As EventArgs) Handles DtpAlmaFin.onValueChanged
+        dateFin = DtpAlmaFin.Value.ToShortDateString
     End Sub
 
     ''' <summary>
@@ -422,6 +460,27 @@ Public Class ScrAlmaEntradas
 
         'Limpiar Dgv
         DgvEntradas.Rows.Clear()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar la consulta por periódo de fechas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSrchFol_Click(sender As Object, e As EventArgs) Handles BtnSrchFol.Click
+
+        'Consulta
+        GetPeriodoVtas()
+
+    End Sub
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnDel_Click(sender As Object, e As EventArgs) Handles BtnDel.Click
 
     End Sub
 

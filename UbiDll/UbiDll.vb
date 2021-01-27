@@ -3812,42 +3812,231 @@ Public Class Consulta
 #Region "almacenes"
 
     ''' <summary>
-    ''' *****************************************
-    ''' *** SOLO VALORES DISTINTOS DE FOLIOS ****
-    ''' *****************************************
-    ''' Se encarga de consultar a ventas y llenar al cbo correspondiente con almacenes
+    ''' Crea una tabla harcode en el dataset
+    ''' Crea las columnas del tipo necesario para los datos
+    ''' Realiza una consulta para obtener los datos de las tablas de almacenes
+    ''' Mediante un reader almacena los datos
+    ''' Genera una nueva fila en el dataset con todos los datos
     ''' </summary>
-    Public Sub GetFolioAlma()
+    Public Sub GetFolAlma(ByVal Datos As Datos)
 
-        'Variables Locales
+        'Privadas
         Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
 
-        'Control Excepción
+        'Init Tabla, hardcode PERALMA
+        dgvCode.Tables.Add("PERALMA")
+        dgvCode.Tables("PERALMA").Columns.Add("Folio", GetType(String))
+        dgvCode.Tables("PERALMA").Columns.Add("Fecha", GetType(Date))
+        dgvCode.Tables("PERALMA").Columns.Add("Tipo", GetType(String))
+        dgvCode.Tables("PERALMA").Columns.Add("Nombre", GetType(String))
+        dgvCode.Tables("PERALMA").Columns.Add("Unidades", GetType(String))
+        dgvCode.Tables("PERALMA").Columns.Add("Pack", GetType(String))
+        dgvCode.Tables("PERALMA").Columns.Add("Cantidad", GetType(Integer))
+
+        'Control de excepción
         Try
 
-            'Conexión
+            'Objeto conexión
             con.Con_Global()
 
-            'MySql
-            _adaptador.SelectCommand = New MySqlCommand("SELECT DISTINCT(ventas_folio) FROM alma_general", con._conexion)
-            _adaptador.Fill(_dtsCbo)
+            'MySql 
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT * FROM alma_general WHERE alma_gral_fecha >= @ini AND alma_gral_fecha <= @fin", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.periodo_ini
+            _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.periodo_fin
 
-            'Cbo
-            _adaptador.Fill(_dtsCbo, "alma_folio")
-            _dtvCbo.Table = _dtsCbo.Tables(0)
-
-            'Query
+            'Open Conection
             con._conexion.Open()
             _adaptador.SelectCommand.Connection = con._conexion
-            _adaptador.SelectCommand.ExecuteNonQuery()
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.alma_gral_folio = reader("alma_gral_folio")
+                resultado.alma_gral_fecha = reader("alma_gral_fecha")
+                resultado.alma_gral_tpo = reader("alma_gral_tpo")
+                resultado.alma_gral_nom = reader("alma_gral_nom")
+                resultado.alma_gral_uni = reader("alma_gral_uni")
+                resultado.alma_gral_pack = reader("alma_gral_pack")
+                resultado.alma_gral_canti = reader("alma_gral_canti")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PERALMA").Rows.Add(resultado.alma_gral_folio, resultado.alma_gral_fecha, resultado.alma_gral_tpo, resultado.alma_gral_nom, resultado.alma_gral_uni, resultado.alma_gral_pack, resultado.alma_gral_canti)
+
+            End While
 
         Catch ex As MySqlException
 
-            'Error
+            'Usuario
             MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
 
         Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             con._conexion.Close()
+
+        End Try
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT * FROM alma_refa WHERE alma_refa_fecha >= @ini AND alma_refa_fecha <= @fin", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.periodo_ini
+            _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.periodo_fin
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.alma_refa_folio = reader("alma_refa_folio")
+                resultado.alma_refa_fecha = reader("alma_refa_fecha")
+                resultado.alma_refa_tpo = reader("alma_refa_tpo")
+                resultado.alma_refa_nom = reader("alma_refa_nom")
+                resultado.alma_refa_uni = reader("alma_refa_uni")
+                resultado.alma_refa_pack = reader("alma_refa_pack")
+                resultado.alma_refa_canti = reader("alma_refa_canti")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PERALMA").Rows.Add(resultado.alma_refa_folio, resultado.alma_refa_fecha, resultado.alma_refa_tpo, resultado.alma_refa_nom, resultado.alma_refa_uni, resultado.alma_refa_pack, resultado.alma_refa_canti)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT * FROM alma_prima WHERE alma_prima_fecha >= @ini AND alma_prima_fecha <= @fin", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.periodo_ini
+            _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.periodo_fin
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.alma_prima_folio = reader("alma_prima_folio")
+                resultado.alma_prima_fecha = reader("alma_prima_fecha")
+                resultado.alma_prima_tpo = reader("alma_prima_tpo")
+                resultado.alma_prima_nom = reader("alma_prima_nom")
+                resultado.alma_prima_uni = reader("alma_prima_uni")
+                resultado.alma_prima_pack = reader("alma_prima_pack")
+                resultado.alma_prima_canti = reader("alma_prima_canti")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PERALMA").Rows.Add(resultado.alma_prima_folio, resultado.alma_prima_fecha, resultado.alma_prima_tpo, resultado.alma_prima_nom, resultado.alma_prima_uni, resultado.alma_prima_pack, resultado.alma_prima_canti)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT * FROM alma_prod WHERE alma_prod_fecha >= @ini AND alma_prod_fecha <= @fin", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@ini", MySqlDbType.Date).Value = Datos.periodo_ini
+            _adaptador.SelectCommand.Parameters.Add("@fin", MySqlDbType.Date).Value = Datos.periodo_fin
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.alma_prod_folio = reader("alma_prod_folio")
+                resultado.alma_prod_fecha = reader("alma_prod_fecha")
+                resultado.alma_prod_tpo = reader("alma_prod_tpo")
+                resultado.alma_prod_nom = reader("alma_prod_nom")
+                resultado.alma_prod_uni = reader("alma_prod_uni")
+                resultado.alma_prod_pack = reader("alma_prod_pack")
+                resultado.alma_prod_canti = reader("alma_prod_canti")
+
+                'Agregamos el arreglo byte para la foto y los demás datos
+                dgvCode.Tables("PERALMA").Rows.Add(resultado.alma_prod_folio, resultado.alma_prod_fecha, resultado.alma_prod_tpo, resultado.alma_prod_nom, resultado.alma_prod_uni, resultado.alma_prod_pack, resultado.alma_prod_canti)
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
         End Try
 
     End Sub

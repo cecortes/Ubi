@@ -268,12 +268,13 @@ UbiDll
  Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
-<member name="M:UbiDll.Consulta.GetFolioAlma">
+<member name="M:UbiDll.Consulta.GetFolAlma(UbiDll.Datos)">
  <summary>
- *****************************************
- *** SOLO VALORES DISTINTOS DE FOLIOS ****
- *****************************************
- Se encarga de consultar a ventas y llenar al cbo correspondiente con almacenes
+ Crea una tabla harcode en el dataset
+ Crea las columnas del tipo necesario para los datos
+ Realiza una consulta para obtener los datos de las tablas de almacenes
+ Mediante un reader almacena los datos
+ Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
