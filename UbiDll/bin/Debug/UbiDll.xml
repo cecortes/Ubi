@@ -294,6 +294,23 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
+<member name="M:UbiDll.Consulta.GetAlmarefaCbo">
+ <summary>
+ Obtiene todos los datos de la tabla almarefa y carga el CBO con el resultado
+ </summary>
+</member>
+<member name="M:UbiDll.Consulta.GetAlmarefaDgv(UbiDll.Datos)">
+ <summary>
+ Se encarga de consultar la tabla de almarefa y llenar el DGV con el resultado
+ </summary>
+</member>
+<member name="M:UbiDll.Consulta.GetAlmarefaData(UbiDll.Datos)">
+ <summary>
+ Se encarga de obtener los datos de un producto de almarefa en particular y regresarlo como datos
+ </summary>
+ <param name="Datos"></param>
+ <returns>Resultado como objeto de Datos</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
