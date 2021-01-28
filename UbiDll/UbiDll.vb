@@ -1491,9 +1491,151 @@ Public Class Datos
     Private _almarefa_tpo As String
     Private _almarefa_fecha As Date
 
+    Private _almapri_nom As String
+    Private _almapri_uni As String
+    Private _almapri_pack As String
+    Private _almapri_canti As Integer
+    Private _almapri_tpo As String
+    Private _almapri_fecha As Date
+    Private _almapri_cadu As Date
+
+    Private _almater_nom As String
+    Private _almater_uni As String
+    Private _almater_pack As String
+    Private _almater_canti As Integer
+    Private _almater_tpo As String
+    Private _almater_fecha As Date
+    Private _almater_cadu As Date
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property almater_nom() As String
+        Get
+            Return _almater_nom
+        End Get
+        Set(ByVal value As String)
+            _almater_nom = value
+        End Set
+    End Property
+
+    Public Property almater_uni() As String
+        Get
+            Return _almater_uni
+        End Get
+        Set(ByVal value As String)
+            _almater_uni = value
+        End Set
+    End Property
+
+    Public Property almater_pack() As String
+        Get
+            Return _almater_pack
+        End Get
+        Set(ByVal value As String)
+            _almater_pack = value
+        End Set
+    End Property
+
+    Public Property almater_canti() As Integer
+        Get
+            Return _almater_canti
+        End Get
+        Set(ByVal value As Integer)
+            _almater_canti = value
+        End Set
+    End Property
+
+    Public Property almater_tpo() As String
+        Get
+            Return _almater_tpo
+        End Get
+        Set(ByVal value As String)
+            _almater_tpo = value
+        End Set
+    End Property
+
+    Public Property almater_fecha() As Date
+        Get
+            Return _almater_fecha
+        End Get
+        Set(ByVal value As Date)
+            _almater_fecha = value
+        End Set
+    End Property
+
+    Public Property almater_cadu() As Date
+        Get
+            Return _almater_cadu
+        End Get
+        Set(ByVal value As Date)
+            _almater_cadu = value
+        End Set
+    End Property
+
+    Public Property almapri_nom() As String
+        Get
+            Return _almapri_nom
+        End Get
+        Set(ByVal value As String)
+            _almapri_nom = value
+        End Set
+    End Property
+
+    Public Property almapri_uni() As String
+        Get
+            Return _almapri_uni
+        End Get
+        Set(ByVal value As String)
+            _almapri_uni = value
+        End Set
+    End Property
+
+    Public Property almapri_pack() As String
+        Get
+            Return _almapri_pack
+        End Get
+        Set(ByVal value As String)
+            _almapri_pack = value
+        End Set
+    End Property
+
+    Public Property almapri_canti() As Integer
+        Get
+            Return _almapri_canti
+        End Get
+        Set(ByVal value As Integer)
+            _almapri_canti = value
+        End Set
+    End Property
+
+    Public Property almapri_tpo() As String
+        Get
+            Return _almapri_tpo
+        End Get
+        Set(ByVal value As String)
+            _almapri_tpo = value
+        End Set
+    End Property
+
+    Public Property almapri_fecha() As Date
+        Get
+            Return _almapri_fecha
+        End Get
+        Set(ByVal value As Date)
+            _almapri_fecha = value
+        End Set
+    End Property
+
+    Public Property almapri_cadu() As Date
+        Get
+            Return _almapri_cadu
+        End Get
+        Set(ByVal value As Date)
+            _almapri_cadu = value
+        End Set
+    End Property
 
     Public Property almarefa_nom() As String
         Get
