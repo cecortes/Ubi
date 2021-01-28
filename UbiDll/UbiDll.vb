@@ -1477,9 +1477,70 @@ Public Class Datos
     Private _alma_prod_pack As String
     Private _alma_prod_canti As Integer
 
+    Private _almagrl_nom As String
+    Private _almagrl_uni As String
+    Private _almagrl_pack As String
+    Private _almagrl_canti As Integer
+    Private _almagrl_tpo As String
+    Private _almagrl_fecha As Date
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property almagrl_nom() As String
+        Get
+            Return _almagrl_nom
+        End Get
+        Set(ByVal value As String)
+            _almagrl_nom = value
+        End Set
+    End Property
+
+    Public Property almagrl_uni() As String
+        Get
+            Return _almagrl_uni
+        End Get
+        Set(ByVal value As String)
+            _almagrl_uni = value
+        End Set
+    End Property
+
+    Public Property almagrl_pack() As String
+        Get
+            Return _almagrl_pack
+        End Get
+        Set(ByVal value As String)
+            _almagrl_pack = value
+        End Set
+    End Property
+
+    Public Property almagrl_canti() As Integer
+        Get
+            Return _almagrl_canti
+        End Get
+        Set(ByVal value As Integer)
+            _almagrl_canti = value
+        End Set
+    End Property
+
+    Public Property almagrl_tpo() As String
+        Get
+            Return _almagrl_tpo
+        End Get
+        Set(ByVal value As String)
+            _almagrl_tpo = value
+        End Set
+    End Property
+
+    Public Property almagrl_fecha() As Date
+        Get
+            Return _almagrl_fecha
+        End Get
+        Set(ByVal value As Date)
+            _almagrl_fecha = value
+        End Set
+    End Property
 
     Public Property alma_prod_folio() As String
         Get
