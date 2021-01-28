@@ -827,6 +827,12 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillCboAlmagral">
+ <summary>
+ Realiza la consulta por medio de la DLL a almagral
+ Llena el cbo con el resultado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -844,6 +850,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrAlmaSalidas.PbMin_Click(System.Object,System.EventArgs)">
  <summary>
  Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.ScrAlmaSalidas_Load(System.Object,System.EventArgs)">
+ <summary>
+ Inicia los componentes necesarios
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

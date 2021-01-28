@@ -1,10 +1,47 @@
-﻿Public Class ScrAlmaSalidas
+﻿'Imports
+Imports UbiDll
+
+Public Class ScrAlmaSalidas
 
 #Region "Variables"
+
+    'Dll
+    Dim datos As New Datos
+    Dim consulta As New Consulta
 
 #End Region
 
 #Region "Funciones y Métodos"
+
+    ''' <summary>
+    ''' Realiza la consulta por medio de la DLL a almagral
+    ''' Llena el cbo con el resultado
+    ''' </summary>
+    Private Sub FillCboAlmagral()
+
+        'Reset
+        consulta._dtsCbo.Reset()
+
+        'Consulta
+        consulta.GetAlmagralCbo()
+
+        'Dataset 
+        CboEntraGral.DataSource = consulta._dtsCbo.Tables("almagrl_nom")
+
+        'Datos
+        CboEntraGral.DisplayMember = "almagrl_nom"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboEntraGral.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
 #End Region
 
@@ -50,6 +87,18 @@
     Private Sub PbMin_Click(sender As Object, e As EventArgs) Handles PbMin.Click
 
         Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    ''' <summary>
+    ''' Inicia los componentes necesarios
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ScrAlmaSalidas_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'AlmaGral
+        FillCboAlmagral()
 
     End Sub
 
