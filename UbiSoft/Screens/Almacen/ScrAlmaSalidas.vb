@@ -8,7 +8,10 @@ Public Class ScrAlmaSalidas
     'Dll
     Dim datos As New Datos
     Dim almagrl As New Datos
+    Dim almarefa As New Datos
     Dim consulta As New Consulta
+    Dim cboGral As New Consulta
+    Dim cboRefa As New Consulta
 
 #End Region
 
@@ -21,13 +24,13 @@ Public Class ScrAlmaSalidas
     Private Sub FillCboAlmagral()
 
         'Reset
-        consulta._dtsCbo.Reset()
+        cboGral._dtsCbo.Reset()
 
         'Consulta
-        consulta.GetAlmagralCbo()
+        cboGral.GetAlmagralCbo()
 
         'Dataset 
-        CboEntraGral.DataSource = consulta._dtsCbo.Tables("almagrl_nom")
+        CboEntraGral.DataSource = cboGral._dtsCbo.Tables("almagrl_nom")
 
         'Datos
         CboEntraGral.DisplayMember = "almagrl_nom"
@@ -108,6 +111,100 @@ Public Class ScrAlmaSalidas
 
     End Sub
 
+    ''' <summary>
+    ''' Realiza la consulta por medio de la DLL a almarefa
+    ''' Llena el cbo con el resultado
+    ''' </summary>
+    Private Sub FillCboAlmarefa()
+
+        'Reset
+        cboRefa._dtsCbo.Reset()
+
+        'Consulta
+        cboRefa.GetAlmarefaCbo()
+
+        'Dataset 
+        CboEntraRefa.DataSource = cboRefa._dtsCbo.Tables("almarefa_nom")
+
+        'Datos
+        CboEntraRefa.DisplayMember = "almarefa_nom"
+
+        'Control de errores
+        Try
+
+            'Index
+            CboEntraRefa.SelectedIndex = 0
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Realiza la consulta por medio de la DLL a almarefa
+    ''' Llena el dgv con el resultado
+    ''' </summary>
+    Private Sub FillDgvAlmarefa()
+
+        'Reset
+        consulta._dtsDgv.Reset()
+
+        'Consulta
+        consulta.GetAlmarefaDgv(datos)
+
+        'Datagrid
+        DgvSalRefa.DataSource = consulta._dtvDgv
+
+        'Formato Dgv
+        DgvSalRefa.Columns(0).HeaderText = "Nombre Producto"
+        DgvSalRefa.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvSalRefa.Columns(1).HeaderText = "Unidades"
+        DgvSalRefa.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalRefa.Columns(2).HeaderText = "Pack"
+        DgvSalRefa.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalRefa.Columns(3).HeaderText = "Cantidad"
+        DgvSalRefa.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalRefa.Columns(4).HeaderText = "Tipo Almacén"
+        DgvSalRefa.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalRefa.Columns(5).HeaderText = "Fecha"
+        DgvSalRefa.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalRefa.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalRefa.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvSalRefa.Refresh()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el valor del cbo
+    ''' Realiza la consulta de los datos del valor seleccionado en el cbo
+    ''' Actualiza los campos con el resultado
+    ''' </summary>
+    Private Sub GetAlmaRefa()
+
+        'Captura
+        datos.almarefa_nom = CboEntraRefa.Text
+
+        'Consulta mediante Dll devuelve un objeto Datos
+        almarefa = consulta.GetAlmarefaData(datos)
+
+        'Textos y datos
+        LblUniRefa.Text = almarefa.almarefa_uni
+        LblPackRefa.Text = almarefa.almarefa_pack
+        LblCantiRefa.Text = almarefa.almarefa_canti
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -166,6 +263,10 @@ Public Class ScrAlmaSalidas
         FillCboAlmagral()
         FillDgvAlmagral()
 
+        'AlmaRefa
+        FillCboAlmarefa()
+        FillDgvAlmarefa()
+
     End Sub
 
     ''' <summary>
@@ -177,6 +278,18 @@ Public Class ScrAlmaSalidas
 
         'Consulta
         GetAlmaGrl()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para consultar el producto de almagrl
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboEntraRefa_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboEntraRefa.SelectedValueChanged
+
+        'Consulta
+        GetAlmaRefa()
 
     End Sub
 

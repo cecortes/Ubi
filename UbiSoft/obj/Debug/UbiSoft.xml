@@ -846,6 +846,25 @@ UbiSoft
  Actualiza los campos con el resultado
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillCboAlmarefa">
+ <summary>
+ Realiza la consulta por medio de la DLL a almarefa
+ Llena el cbo con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillDgvAlmarefa">
+ <summary>
+ Realiza la consulta por medio de la DLL a almarefa
+ Llena el dgv con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.GetAlmaRefa">
+ <summary>
+ Captura el valor del cbo
+ Realiza la consulta de los datos del valor seleccionado en el cbo
+ Actualiza los campos con el resultado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -875,6 +894,13 @@ UbiSoft
  <param name="e"></param>
 </member>
 <member name="M:UbiSoft.ScrAlmaSalidas.CboEntraGral_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para consultar el producto de almagrl
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraRefa_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
  Llama al método para consultar el producto de almagrl
  </summary>
