@@ -695,6 +695,13 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmacen.pbSalidas_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la ventana de salidas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.FormatDtp">
  <summary>
  Se encarga de darle formato a los date time picker del formulario
@@ -807,7 +814,7 @@ UbiSoft
 </member>
 <member name="M:UbiSoft.ScrAlmaEntradas.BtnDel_Click(System.Object,System.EventArgs)">
  <summary>
- 
+ Llama el método para borrar
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
@@ -816,7 +823,27 @@ UbiSoft
  <summary>
  Captura el folio de la fila
  Lo almacena en la clase datos
- Llama el método para borrar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

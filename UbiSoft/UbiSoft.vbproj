@@ -528,6 +528,9 @@
     <EmbeddedResource Include="Screens\Almacen\ScrAlmaEntradas.resx">
       <DependentUpon>ScrAlmaEntradas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Almacen\ScrAlmaSalidas.resx">
+      <DependentUpon>ScrAlmaSalidas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Config\Autos\ScrAutoDelFromDevice.resx">
       <DependentUpon>ScrAutoDelFromDevice.vb</DependentUpon>
     </EmbeddedResource>
