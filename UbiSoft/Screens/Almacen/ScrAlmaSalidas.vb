@@ -7,6 +7,7 @@ Public Class ScrAlmaSalidas
 
     'Dll
     Dim datos As New Datos
+    Dim almagrl As New Datos
     Dim consulta As New Consulta
 
 #End Region
@@ -97,8 +98,13 @@ Public Class ScrAlmaSalidas
         'Captura
         datos.almagrl_nom = CboEntraGral.Text
 
-        'Consulta
+        'Consulta mediante Dll devuelve un objeto Datos
+        almagrl = consulta.GetAlmagrlData(datos)
 
+        'Textos y datos
+        LblUniGral.Text = almagrl.almagrl_uni
+        LblPackGral.Text = almagrl.almagrl_pack
+        LblCantiGral.Text = almagrl.almagrl_canti
 
     End Sub
 

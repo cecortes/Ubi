@@ -839,6 +839,13 @@ UbiSoft
  Llena el dgv con el resultado
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.GetAlmaGrl">
+ <summary>
+ Captura el valor del cbo
+ Realiza la consulta de los datos del valor seleccionado en el cbo
+ Actualiza los campos con el resultado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -863,6 +870,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrAlmaSalidas.ScrAlmaSalidas_Load(System.Object,System.EventArgs)">
  <summary>
  Inicia los componentes necesarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraGral_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para consultar el producto de almagrl
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
