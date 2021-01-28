@@ -4102,6 +4102,44 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Obtiene todos los datos de la tabla almagrl y carga el CBO con el resultado
+    ''' </summary>
+    Public Sub GetAlmagralCbo()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM almagrl", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "almagrl_nom")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
 #End Region
 
 End Class

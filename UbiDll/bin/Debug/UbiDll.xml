@@ -277,6 +277,11 @@ UbiDll
  Genera una nueva fila en el dataset con todos los datos
  </summary>
 </member>
+<member name="M:UbiDll.Consulta.GetAlmagralCbo">
+ <summary>
+ Obtiene todos los datos de la tabla almagrl y carga el CBO con el resultado
+ </summary>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
