@@ -833,6 +833,12 @@ UbiSoft
  Llena el cbo con el resultado
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillDgvAlmagral">
+ <summary>
+ Realiza la consulta por medio de la DLL a almagral
+ Llena el dgv con el resultado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

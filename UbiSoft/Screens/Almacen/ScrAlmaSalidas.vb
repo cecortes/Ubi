@@ -43,6 +43,65 @@ Public Class ScrAlmaSalidas
 
     End Sub
 
+    ''' <summary>
+    ''' Realiza la consulta por medio de la DLL a almagral
+    ''' Llena el dgv con el resultado
+    ''' </summary>
+    Private Sub FillDgvAlmagral()
+
+        'Reset
+        consulta._dtsDgv.Reset()
+
+        'Consulta
+        consulta.GetAlmagralDgv(datos)
+
+        'Datagrid
+        DgvSalGral.DataSource = consulta._dtvDgv
+
+        'Formato Dgv
+        DgvSalGral.Columns(0).HeaderText = "Nombre Producto"
+        DgvSalGral.Columns(0).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvSalGral.Columns(1).HeaderText = "Unidades"
+        DgvSalGral.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalGral.Columns(2).HeaderText = "Pack"
+        DgvSalGral.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalGral.Columns(3).HeaderText = "Cantidad"
+        DgvSalGral.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalGral.Columns(4).HeaderText = "Tipo Almacén"
+        DgvSalGral.Columns(4).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        DgvSalGral.Columns(5).HeaderText = "Fecha"
+        DgvSalGral.Columns(5).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DgvSalGral.Columns(5).SortMode = DataGridViewColumnSortMode.NotSortable
+        DgvSalGral.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DgvSalGral.Refresh()
+
+    End Sub
+
+    ''' <summary>
+    ''' Captura el valor del cbo
+    ''' Realiza la consulta de los datos del valor seleccionado en el cbo
+    ''' Actualiza los campos con el resultado
+    ''' </summary>
+    Private Sub GetAlmaGrl()
+
+        'Captura
+        datos.almagrl_nom = CboEntraGral.Text
+
+        'Consulta
+
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -99,6 +158,19 @@ Public Class ScrAlmaSalidas
 
         'AlmaGral
         FillCboAlmagral()
+        FillDgvAlmagral()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para consultar el producto de almagrl
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub CboEntraGral_SelectedValueChanged(sender As Object, e As EventArgs) Handles CboEntraGral.SelectedValueChanged
+
+        'Consulta
+        GetAlmaGrl()
 
     End Sub
 

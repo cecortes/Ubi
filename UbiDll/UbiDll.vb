@@ -4185,6 +4185,69 @@ Public Class Consulta
 
     End Sub
 
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un producto de almagrl en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetAlmagrlData(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM almagrl WHERE almagrl_nom = @almagrl_nom", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@almagrl_nom", MySqlDbType.String, 100).Value = Datos.almagrl_nom
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.almagrl_uni = reader("almagrl_uni")
+                resultado.almagrl_pack = reader("almagrl_pack")
+                resultado.almagrl_canti = reader("almagrl_canti")
+                resultado.almagrl_tpo = reader("almagrl_tpo")
+                resultado.almagrl_fecha = reader("almagrl_fecha")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class
