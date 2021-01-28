@@ -1484,9 +1484,70 @@ Public Class Datos
     Private _almagrl_tpo As String
     Private _almagrl_fecha As Date
 
+    Private _almarefa_nom As String
+    Private _almarefa_uni As String
+    Private _almarefa_pack As String
+    Private _almarefa_canti As Integer
+    Private _almarefa_tpo As String
+    Private _almarefa_fecha As Date
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property almarefa_nom() As String
+        Get
+            Return _almarefa_nom
+        End Get
+        Set(ByVal value As String)
+            _almarefa_nom = value
+        End Set
+    End Property
+
+    Public Property almarefa_uni() As String
+        Get
+            Return _almarefa_uni
+        End Get
+        Set(ByVal value As String)
+            _almarefa_uni = value
+        End Set
+    End Property
+
+    Public Property almarefa_pack() As String
+        Get
+            Return _almarefa_pack
+        End Get
+        Set(ByVal value As String)
+            _almarefa_pack = value
+        End Set
+    End Property
+
+    Public Property almarefa_canti() As Integer
+        Get
+            Return _almarefa_canti
+        End Get
+        Set(ByVal value As Integer)
+            _almarefa_canti = value
+        End Set
+    End Property
+
+    Public Property almarefa_tpo() As String
+        Get
+            Return _almarefa_tpo
+        End Get
+        Set(ByVal value As String)
+            _almarefa_tpo = value
+        End Set
+    End Property
+
+    Public Property almarefa_fecha() As Date
+        Get
+            Return _almarefa_fecha
+        End Get
+        Set(ByVal value As Date)
+            _almarefa_fecha = value
+        End Set
+    End Property
 
     Public Property almagrl_nom() As String
         Get
