@@ -20,7 +20,7 @@ Public Class ScrAlmaSalidas
     Dim dgvRefa As New Consulta
     Dim dgvPri As New Consulta
     Dim dgvTer As New Consulta
-    Dim updAlmaGral As New Actualizar
+    Dim updAlma As New Actualizar
 
 #End Region
 
@@ -572,7 +572,7 @@ Public Class ScrAlmaSalidas
         datos.almagrl_nom = CboEntraGral.Text
 
         'Método
-        If (updAlmaGral.UpdAlmaGral(datos)) Then
+        If (updAlma.UpdAlmaGral(datos)) Then
 
             'Usuario
             MsgBox("La salida fue aplicada con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
@@ -585,6 +585,180 @@ Public Class ScrAlmaSalidas
         'Re load Dgv
         FillCboAlmagral()
         FillDgvAlmagral()
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida el valor del textbox
+    ''' Lo convierte y almacena en la clase datos
+    ''' Llama al método para actualizar la tabla almarefa
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSalRefa_Click(sender As Object, e As EventArgs) Handles BtnSalRefa.Click
+
+        'Locales
+        Dim cantiRefa As Integer = 0
+
+        'Validación
+        If (String.IsNullOrEmpty(TxtCantiRefa.Text)) Then
+
+            'Usuario
+            MsgBox("La cantidad no puede estar vacía", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Control de errores
+        Try
+
+            'Conversión
+            cantiRefa = Integer.Parse(TxtCantiRefa.Text)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox("La cantidad debe ser un número entero", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End Try
+
+        'Captura
+        datos.almarefa_canti = cantiRefa
+        datos.almarefa_nom = CboEntraRefa.Text
+
+        'Método
+        If (updAlma.UpdAlmaRefa(datos)) Then
+
+            'Usuario
+            MsgBox("La salida fue aplicada con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Clear Text
+        TxtCantiRefa.Text = ""
+
+        'Re load Dgv
+        FillCboAlmarefa()
+        FillDgvAlmarefa()
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida el valor del textbox
+    ''' Lo convierte y almacena en la clase datos
+    ''' Llama al método para actualizar la tabla almapri
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSalPrima_Click(sender As Object, e As EventArgs) Handles BtnSalPrima.Click
+
+        'Locales
+        Dim cantiPri As Integer = 0
+
+        'Validación
+        If (String.IsNullOrEmpty(TxtCantiPrima.Text)) Then
+
+            'Usuario
+            MsgBox("La cantidad no puede estar vacía", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Control de errores
+        Try
+
+            'Conversión
+            cantiPri = Integer.Parse(TxtCantiPrima.Text)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox("La cantidad debe ser un número entero", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End Try
+
+        'Captura
+        datos.almapri_canti = cantiPri
+        datos.almapri_nom = CboEntraPrima.Text
+
+        'Método
+        If (updAlma.UpdAlmaPri(datos)) Then
+
+            'Usuario
+            MsgBox("La salida fue aplicada con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Clear Text
+        TxtCantiPrima.Text = ""
+
+        'Re load Dgv
+        FillCboAlmapri()
+        FillDgvAlmapri()
+
+    End Sub
+
+    ''' <summary>
+    ''' Valida el valor del textbox
+    ''' Lo convierte y almacena en la clase datos
+    ''' Llama al método para actualizar la tabla almater
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSalTermi_Click(sender As Object, e As EventArgs) Handles BtnSalTermi.Click
+
+        'Locales
+        Dim cantiTer As Integer = 0
+
+        'Validación
+        If (String.IsNullOrEmpty(TxtCantiTermi.Text)) Then
+
+            'Usuario
+            MsgBox("La cantidad no puede estar vacía", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End If
+
+        'Control de errores
+        Try
+
+            'Conversión
+            cantiTer = Integer.Parse(TxtCantiTermi.Text)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox("La cantidad debe ser un número entero", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
+
+        End Try
+
+        'Captura
+        datos.almater_canti = cantiTer
+        datos.almater_nom = CboEntraTermi.Text
+
+        'Método
+        If (updAlma.UpdAlmaTer(datos)) Then
+
+            'Usuario
+            MsgBox("La salida fue aplicada con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Clear Text
+        TxtCantiTermi.Text = ""
+
+        'Re load Dgv
+        FillCboAlmater()
+        FillDgvAlmater()
 
     End Sub
 
