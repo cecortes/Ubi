@@ -20,6 +20,7 @@ Public Class ScrAlmaSalidas
     Dim dgvRefa As New Consulta
     Dim dgvPri As New Consulta
     Dim dgvTer As New Consulta
+    Dim updAlmaGral As New Actualizar
 
 #End Region
 
@@ -538,11 +539,16 @@ Public Class ScrAlmaSalidas
     ''' <param name="e"></param>
     Private Sub BtnSalGral_Click(sender As Object, e As EventArgs) Handles BtnSalGral.Click
 
+        'Locales
+        Dim cantiGral As Integer = 0
+
         'Validación
         If (String.IsNullOrEmpty(TxtCantiGral.Text)) Then
 
             'Usuario
             MsgBox("La cantidad no puede estar vacía", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+            Return
 
         End If
 
@@ -550,14 +556,35 @@ Public Class ScrAlmaSalidas
         Try
 
             'Conversión
-            Dim cantiGral As Integer = Integer.Parse(TxtCantiGral.Text)
+            cantiGral = Integer.Parse(TxtCantiGral.Text)
 
         Catch ex As Exception
 
             'Usuario
             MsgBox("La cantidad debe ser un número entero", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
+            Return
+
         End Try
+
+        'Captura
+        datos.almagrl_canti = cantiGral
+        datos.almagrl_nom = CboEntraGral.Text
+
+        'Método
+        If (updAlmaGral.UpdAlmaGral(datos)) Then
+
+            'Usuario
+            MsgBox("La salida fue aplicada con éxito", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Clear Text
+        TxtCantiGral.Text = ""
+
+        'Re load Dgv
+        FillCboAlmagral()
+        FillDgvAlmagral()
 
     End Sub
 

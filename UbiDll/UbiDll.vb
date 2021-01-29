@@ -6428,6 +6428,150 @@ Public Class Actualizar
 
     End Function
 
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla almarefa
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdAlmaRefa(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE almarefa SET almarefa_canti= almarefa_canti - @almarefa_canti WHERE almarefa_nom= @almarefa_nom ", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@almarefa_canti", MySqlDbType.Int32, 11).Value = datos.almarefa_canti
+            _adaptador.UpdateCommand.Parameters.Add("@almarefa_nom", MySqlDbType.String, 45).Value = datos.almarefa_nom
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla almapri
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdAlmaPri(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE almapri SET almapri_canti= almapri_canti - @almapri_canti WHERE almapri_nom= @almapri_nom ", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@almapri_canti", MySqlDbType.Int32, 11).Value = datos.almapri_canti
+            _adaptador.UpdateCommand.Parameters.Add("@almapri_nom", MySqlDbType.String, 45).Value = datos.almapri_nom
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla almater
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdAlmaTer(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE almater SET almater_canti= almater_canti - @almater_canti WHERE almater_nom= @almater_nom ", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@almater_canti", MySqlDbType.Int32, 11).Value = datos.almater_canti
+            _adaptador.UpdateCommand.Parameters.Add("@almater_nom", MySqlDbType.String, 45).Value = datos.almater_nom
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
 #End Region
 
 End Class

@@ -42,7 +42,6 @@ UbiDll
  <summary>
  Se encarga de consultar la tabala de usuarios y llenar el DGV con el resultado
  </summary>
- <param name="datos"></param>
 </member>
 <member name="M:UbiDll.Consulta.GetTotDepa(UbiDll.Datos)">
  <summary>
@@ -511,6 +510,13 @@ UbiDll
 <member name="M:UbiDll.Actualizar.UpdPrima(UbiDll.Datos)">
  <summary>
  Realiza la actualización de datos en la tabla prima
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Actualizar.UpdAlmaGral(UbiDll.Datos)">
+ <summary>
+ Realiza la actualización de datos en la tabla almagrl
  </summary>
  <param name="datos"></param>
  <returns></returns>

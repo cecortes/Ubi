@@ -521,6 +521,27 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Actualizar.UpdAlmaRefa(UbiDll.Datos)">
+ <summary>
+ Realiza la actualización de datos en la tabla almarefa
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Actualizar.UpdAlmaPri(UbiDll.Datos)">
+ <summary>
+ Realiza la actualización de datos en la tabla almapri
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Actualizar.UpdAlmaTer(UbiDll.Datos)">
+ <summary>
+ Realiza la actualización de datos en la tabla almater
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Eliminar.DelUsr(UbiDll.Datos)">
  <summary>
  Se encarga de eliminar al usuario por medio de la key recibida como parámetro
