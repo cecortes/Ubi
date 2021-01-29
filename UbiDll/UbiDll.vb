@@ -2096,7 +2096,6 @@ Public Class Consulta
     ''' <summary>
     ''' Se encarga de consultar la tabala de usuarios y llenar el DGV con el resultado
     ''' </summary>
-    ''' <param name="datos"></param>
     Public Sub GetAllUsr()
 
         'Privadas
@@ -6352,6 +6351,58 @@ Public Class Actualizar
             _adaptador.UpdateCommand.Parameters.Add("@prima_comercial", MySqlDbType.String, 45).Value = datos.prima_comercial
             _adaptador.UpdateCommand.Parameters.Add("@prima_tag", MySqlDbType.String, 45).Value = datos.prima_tag
             _adaptador.UpdateCommand.Parameters.Add("@prima_desc", MySqlDbType.String, 100).Value = datos.prima_desc
+
+            'Update
+            con._conexion.Open()
+            _adaptador.UpdateCommand.Connection = con._conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
+#End Region
+
+#Region "ALMACENES"
+
+    ''' <summary>
+    ''' Realiza la actualización de datos en la tabla almagrl
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function UpdAlmaGral(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE almagrl SET almagrl_canti= almagrl_canti - @almagrl_canti WHERE almagrl_nom= @almagrl_nom ", con._conexion)
+
+            'Parámetros
+            _adaptador.UpdateCommand.Parameters.Add("@almagrl_canti", MySqlDbType.Int32, 11).Value = datos.almagrl_canti
+            _adaptador.UpdateCommand.Parameters.Add("@almagrl_nom", MySqlDbType.String, 45).Value = datos.almagrl_nom
 
             'Update
             con._conexion.Open()

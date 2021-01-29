@@ -529,6 +529,38 @@ Public Class ScrAlmaSalidas
 
     End Sub
 
+    ''' <summary>
+    ''' Valida el valor del textbox
+    ''' Lo convierte y almacena en la clase datos
+    ''' Llama al método para actualizar la tabla almagrl
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnSalGral_Click(sender As Object, e As EventArgs) Handles BtnSalGral.Click
+
+        'Validación
+        If (String.IsNullOrEmpty(TxtCantiGral.Text)) Then
+
+            'Usuario
+            MsgBox("La cantidad no puede estar vacía", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End If
+
+        'Control de errores
+        Try
+
+            'Conversión
+            Dim cantiGral As Integer = Integer.Parse(TxtCantiGral.Text)
+
+        Catch ex As Exception
+
+            'Usuario
+            MsgBox("La cantidad debe ser un número entero", MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+        End Try
+
+    End Sub
+
 #End Region
 
 End Class

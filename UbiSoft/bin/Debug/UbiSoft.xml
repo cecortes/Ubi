@@ -959,6 +959,15 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.BtnSalGral_Click(System.Object,System.EventArgs)">
+ <summary>
+ Valida el valor del textbox
+ Lo convierte y almacena en la clase datos
+ Llama al método para actualizar la tabla almagrl
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAutoDelFromDevice.GetRfid(System.String)">
  <summary>
  El método delegado como tal, tiene como nombre el mismo que usa Invoke
