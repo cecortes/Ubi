@@ -4744,6 +4744,153 @@ Public Class Consulta
 
     End Function
 
+    ''' <summary>
+    ''' Obtiene todos los datos de la tabla almater y carga el CBO con el resultado
+    ''' </summary>
+    Public Sub GetAlmaterCbo()
+
+        'Variables Locales
+        Dim con As New Conexion
+
+        'Control Excepción
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM almater", con._conexion)
+            _adaptador.Fill(_dtsCbo)
+
+            'Cbo
+            _adaptador.Fill(_dtsCbo, "almater_nom")
+            _dtvCbo.Table = _dtsCbo.Tables(0)
+
+            'Query
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Error
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+            con._conexion.Close()
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de consultar la tabla de almater y llenar el DGV con el resultado
+    ''' </summary>
+    Public Sub GetAlmaterDgv(ByVal Datos As Datos)
+
+        'Privadas
+        Dim con As New Conexion
+
+        'Control de excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql
+            _adaptador.SelectCommand =
+                New MySqlCommand("SELECT * FROM almater", con._conexion)
+
+            'Pasamos el resultado al DataSet
+            _adaptador.Fill(_dtsDgv)
+
+            'Pasamos la tabla al DataView
+            _dtvDgv.Table = _dtsDgv.Tables(0)
+
+            'Open Conection
+            con._conexion.Open()
+
+            'Query
+            _adaptador.SelectCommand.Connection = con._conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close conection
+            con._conexion.Close()
+
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' Se encarga de obtener los datos de un producto de almater en particular y regresarlo como datos
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Resultado como objeto de Datos</returns>
+    Public Function GetAlmaterData(ByVal Datos As Datos) As Datos
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim resultado As New Datos
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT * FROM almater WHERE almater_nom = @almater_nom", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@almater_nom", MySqlDbType.String, 100).Value = Datos.almater_nom
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+
+                'Captura de datos en el objeto
+                resultado.almater_uni = reader("almater_uni")
+                resultado.almater_pack = reader("almater_pack")
+                resultado.almater_canti = reader("almater_canti")
+                resultado.almater_tpo = reader("almater_tpo")
+                resultado.almater_fecha = reader("almater_fecha")
+                resultado.almater_cadu = reader("almater_cadu")
+
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+        'Debug
+        'MsgBox(resultado.ToString, MsgBoxStyle.Information, "UbiSoft by Ubicamatic - 2020(C)")
+
+        'Regresamos el resultado de la consulta
+        Return resultado
+
+    End Function
+
 #End Region
 
 End Class
