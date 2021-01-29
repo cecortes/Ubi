@@ -865,6 +865,44 @@ UbiSoft
  Actualiza los campos con el resultado
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillCboAlmapri">
+ <summary>
+ Realiza la consulta por medio de la DLL a almapri
+ Llena el cbo con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillDgvAlmapri">
+ <summary>
+ Realiza la consulta por medio de la DLL a almapri
+ Llena el dgv con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.GetAlmaPri">
+ <summary>
+ Captura el valor del cbo
+ Realiza la consulta de los datos del valor seleccionado en el cbo
+ Actualiza los campos con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillCboAlmater">
+ <summary>
+ Realiza la consulta por medio de la DLL a almater
+ Llena el cbo con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.FillDgvAlmater">
+ <summary>
+ Realiza la consulta por medio de la DLL a almater
+ Llena el dgv con el resultado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.GetAlmaTer">
+ <summary>
+ Captura el valor del cbo
+ Realiza la consulta de los datos del valor seleccionado en el cbo
+ Actualiza los campos con el resultado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaSalidas.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -893,16 +931,30 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraGral_SelectedValueChanged(System.Object,System.EventArgs)">
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraGral_TextChanged(System.Object,System.EventArgs)">
  <summary>
  Llama al método para consultar el producto de almagrl
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraRefa_SelectedValueChanged(System.Object,System.EventArgs)">
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraRefa_TextChanged(System.Object,System.EventArgs)">
  <summary>
- Llama al método para consultar el producto de almagrl
+ Llama al método para consultar el producto de almarefa
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraPrima_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para consultar el producto de almapri
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaSalidas.CboEntraTermi_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para consultar el producto de almater
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
