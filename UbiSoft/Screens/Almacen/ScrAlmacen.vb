@@ -73,8 +73,14 @@
         Me.Close()
     End Sub
 
+    ''' <summary>
+    ''' Muestra la ventana de traspasos
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub pbTraspasos_Click(sender As Object, e As EventArgs) Handles pbTraspasos.Click
-
+        ScrAlmaTraspasos.Show()
+        Me.Close()
     End Sub
 
     Private Sub pbConsultas_Click(sender As Object, e As EventArgs) Handles pbConsultas.Click
