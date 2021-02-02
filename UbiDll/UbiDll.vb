@@ -5808,6 +5808,62 @@ Public Class Agregar
 
     End Function
 
+    ''' <summary>
+    ''' Realiza la inserción de datos en la tabla almarefa
+    ''' </summary>
+    ''' <param name="datos"></param>
+    ''' <returns></returns>
+    Public Function NewAlmaRef(ByVal datos As Datos) As Boolean
+
+        'Privadas
+        Dim estado As Boolean = False
+        Dim con As New Conexion
+
+        'Control excepciones
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.InsertCommand =
+                New MySqlCommand("INSERT INTO almarefa 
+                (almarefa_nom, almarefa_uni, almarefa_pack, almarefa_canti, almarefa_tpo, almarefa_fecha) 
+                VALUES 
+                (@almarefa_nom,@almarefa_uni,@almarefa_pack,@almarefa_canti,@almarefa_tpo,@almarefa_fecha)", con._conexion)
+
+            'Parámetros
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_nom", MySqlDbType.String, 100).Value = datos.almanom
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_uni", MySqlDbType.String, 45).Value = datos.almauni
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_pack", MySqlDbType.String, 45).Value = datos.almapack
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_canti", MySqlDbType.Int32, 11).Value = datos.almacanti
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_tpo", MySqlDbType.String, 45).Value = datos.almatpo
+            _adaptador.InsertCommand.Parameters.Add("@almarefa_fecha", MySqlDbType.Date).Value = datos.almafecha
+
+            'Insert
+            con._conexion.Open()
+            _adaptador.InsertCommand.Connection = con._conexion
+            _adaptador.InsertCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Estado
+        Return estado
+
+    End Function
+
 #End Region
 
 #Region "ALMACEN REFACCIONES"
