@@ -8,6 +8,7 @@ Public Class ScrAlmaTraspasos
     'Dll
     Dim datos As New Datos
     Dim dataProdFrom As New Datos
+    Dim dataProdTo As New Datos
     Dim cboFrom As New Consulta
     Dim consulta As New Consulta
     Dim dgvData As New Consulta
@@ -321,6 +322,39 @@ Public Class ScrAlmaTraspasos
 
     End Sub
 
+    ''' <summary>
+    ''' Consulta si en el almacén de destino existe el producto
+    ''' Captura el valor de las unidades del textbox
+    ''' Almacena los datos en un objeto
+    ''' Consulta si en el almacén de destino existe el producto
+    ''' Si no existe borra de la tabla existente el producto 
+    ''' Inserta el producto en la tabla del almacén de destino seleccionado
+    ''' </summary>
+    Private Sub Traspaso()
+
+        'Case
+        Select Case CboTpoTo.Text
+
+            Case "General"
+
+                'Consulta
+                datos.almanom = CboNomFrom.Text
+                datos.almatpo = CboTpoTo.Text
+
+            Case "Refacciones"
+
+            Case "Materia Prima"
+
+            Case "Producto Terminado"
+
+
+        End Select
+
+        'Captura datos
+
+
+    End Sub
+
 #End Region
 
 #Region "Eventos"
@@ -418,6 +452,18 @@ Public Class ScrAlmaTraspasos
 
         'Consulta
         GetDgvData()
+
+    End Sub
+
+    ''' <summary>
+    ''' Llama al método para realizar el traspaso
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BtnTraspaso_Click(sender As Object, e As EventArgs) Handles BtnTraspaso.Click
+
+        'Traspaso
+        Traspaso()
 
     End Sub
 
