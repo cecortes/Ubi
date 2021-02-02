@@ -470,6 +470,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Agregar.NewAlmaTer(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almater
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Agregar.NewAlmaRefa(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla alma_refa 

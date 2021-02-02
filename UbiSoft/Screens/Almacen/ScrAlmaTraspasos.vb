@@ -546,7 +546,7 @@ Public Class ScrAlmaTraspasos
                 'Consulta
                 datos.almanom = CboNomFrom.Text
 
-                If (consulta.ChkUniqueAlmaPrima(datos)) Then
+                If (consulta.ChkUniqueAlmaTerm(datos)) Then
 
                     'Captura de los datos
                     dataProdTo.almanom = CboNomFrom.Text
@@ -558,7 +558,7 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almacadu = dataProdFrom.almacadu
 
                     'Borrado
-                    If (borrar.DelProdAlmaPrima(datos)) Then
+                    If (borrar.DelProdAlmaTer(datos)) Then
                     Else
 
                         'Usuario
