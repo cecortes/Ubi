@@ -5085,6 +5085,67 @@ Public Class Consulta
 
     End Function
 
+    ''' <summary>
+    ''' Se encarga de verificar que un producto sea único en la tabla
+    ''' </summary>
+    ''' <param name="Datos"></param>
+    ''' <returns>Password as string</returns>
+    Public Function ChkUniqueAlmaPrima(ByVal Datos As Datos) As String
+        'Variables locales
+        Dim con As New Conexion
+        Dim reader As MySqlDataReader
+        Dim data As String = ""
+        Dim unique As Boolean = False
+
+        'Excepción
+        Try
+
+            'Objeto conexión
+            con.Con_Global()
+
+            'MySql 
+            _adaptador.SelectCommand = New MySqlCommand("SELECT almapri_nom FROM almapri WHERE almapri_nom = @nombre", con._conexion)
+            _adaptador.SelectCommand.Parameters.Add("@nombre", MySqlDbType.String, 100).Value = Datos.almanom
+
+            'Open Conection
+            con._conexion.Open()
+            _adaptador.SelectCommand.Connection = con._conexion
+
+            'MySql Reader
+            reader = _adaptador.SelectCommand.ExecuteReader()
+
+            'Rutina para resultados
+            While reader.Read()
+                data = reader("almapri_nom").ToString()
+            End While
+
+        Catch ex As MySqlException
+
+            'Usuario
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Close
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            reader.Close()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            con._conexion.Close()
+
+        End Try
+
+        'Validación
+        If (String.IsNullOrEmpty(data)) Then
+
+            'Flg
+            unique = True
+
+        End If
+
+        'Regresamos el resultado de la validación
+        Return unique
+
+    End Function
 
 #End Region
 
