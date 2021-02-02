@@ -1507,9 +1507,80 @@ Public Class Datos
     Private _almater_fecha As Date
     Private _almater_cadu As Date
 
+    Private _almafecha As Date
+    Private _almacadu As Date
+    Private _almatpo As String
+    Private _almanom As String
+    Private _almauni As String
+    Private _almapack As String
+    Private _almacanti As Integer
+
 #End Region
 
 #Region "PROPIEDADES"
+
+    Public Property almanom() As String
+        Get
+            Return _almanom
+        End Get
+        Set(ByVal value As String)
+            _almanom = value
+        End Set
+    End Property
+
+    Public Property almauni() As String
+        Get
+            Return _almauni
+        End Get
+        Set(ByVal value As String)
+            _almauni = value
+        End Set
+    End Property
+
+    Public Property almapack() As String
+        Get
+            Return _almapack
+        End Get
+        Set(ByVal value As String)
+            _almapack = value
+        End Set
+    End Property
+
+    Public Property almacanti() As Integer
+        Get
+            Return _almacanti
+        End Get
+        Set(ByVal value As Integer)
+            _almacanti = value
+        End Set
+    End Property
+
+    Public Property almatpo() As String
+        Get
+            Return _almatpo
+        End Get
+        Set(ByVal value As String)
+            _almater_tpo = value
+        End Set
+    End Property
+
+    Public Property almafecha() As Date
+        Get
+            Return _almafecha
+        End Get
+        Set(ByVal value As Date)
+            _almafecha = value
+        End Set
+    End Property
+
+    Public Property almacadu() As Date
+        Get
+            Return _almacadu
+        End Get
+        Set(ByVal value As Date)
+            _almacadu = value
+        End Set
+    End Property
 
     Public Property almater_nom() As String
         Get

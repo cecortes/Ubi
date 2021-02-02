@@ -525,6 +525,9 @@
     <EmbeddedResource Include="Screens\Almacen\ScrAlmacen.resx">
       <DependentUpon>ScrAlmacen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Almacen\ScrAlmaConsultas.resx">
+      <DependentUpon>ScrAlmaConsultas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Almacen\ScrAlmaEntradas.resx">
       <DependentUpon>ScrAlmaEntradas.vb</DependentUpon>
     </EmbeddedResource>

@@ -702,6 +702,20 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmacen.pbTraspasos_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la ventana de traspasos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmacen.pbConsultas_Click(System.Object,System.EventArgs)">
+ <summary>
+ Muestra la ventana de consultas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.FormatDtp">
  <summary>
  Se encarga de darle formato a los date time picker del formulario
@@ -991,6 +1005,82 @@ UbiSoft
  Valida el valor del textbox
  Lo convierte y almacena en la clase datos
  Llama al método para actualizar la tabla almater
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.GetProdFrom">
+ <summary>
+ Realiza la consulta en el almacén seleccionado en el cbotpofrom
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.GetProdDataFrom">
+ <summary>
+ Carga un objeto con los datos del producto seleccionado
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.GetDgvData">
+ <summary>
+ Realiza una consulta de acuerdo al almacén seleccionado en el CboTpoTo
+ Carga el resultado en el DGV
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.FormatDgv">
+ <summary>
+ Se encarga de aplicar formato al DgvTraspasos sin fecha de caducidad
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.FormatDgvCad">
+ <summary>
+ Se encarga de aplicar formato al DgvTraspasos con fecha de caducidad
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.ScrAlmaTraspasos_Load(System.Object,System.EventArgs)">
+ <summary>
+ Cbo en posición 0
+ Cargar producto con el valor del cbo mediante consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.CboTpoFrom_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Carga el producto con el valor del cbo mediante consulta
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.CboNomFrom_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para obtener los datos del producto seleccionado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.CboTpoTo_SelectedValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar la consulta en el DGV
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

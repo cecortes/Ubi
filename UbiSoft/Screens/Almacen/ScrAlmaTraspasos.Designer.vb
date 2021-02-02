@@ -33,21 +33,21 @@ Partial Class ScrAlmaTraspasos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PbLogoMin = New System.Windows.Forms.PictureBox()
         Me.PnlFrom = New System.Windows.Forms.Panel()
-        Me.PnlTo = New System.Windows.Forms.Panel()
-        Me.PnlBotttom = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.CboNomFrom = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.CboTpoFrom = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.LblCantiFrom = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.TxtCantiTo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.CboTpoTo = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CboTpoFrom = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CboNomFrom = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PnlTo = New System.Windows.Forms.Panel()
         Me.BtnTraspaso = New System.Windows.Forms.Button()
+        Me.CboTpoTo = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TxtCantiTo = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.PnlBotttom = New System.Windows.Forms.Panel()
         Me.DgvTraspaso = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.PnlTop.SuspendLayout()
         Me.PnlCtrl.SuspendLayout()
@@ -151,6 +151,90 @@ Partial Class ScrAlmaTraspasos
         Me.PnlFrom.Size = New System.Drawing.Size(1024, 116)
         Me.PnlFrom.TabIndex = 7
         '
+        'LblCantiFrom
+        '
+        Me.LblCantiFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblCantiFrom.AutoSize = True
+        Me.LblCantiFrom.Font = New System.Drawing.Font("Ebrima", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCantiFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.LblCantiFrom.Location = New System.Drawing.Point(919, 49)
+        Me.LblCantiFrom.Name = "LblCantiFrom"
+        Me.LblCantiFrom.Size = New System.Drawing.Size(42, 28)
+        Me.LblCantiFrom.TabIndex = 64
+        Me.LblCantiFrom.Text = "NA"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(778, 49)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(112, 28)
+        Me.Label5.TabIndex = 63
+        Me.Label5.Text = "Existencia:"
+        '
+        'CboTpoFrom
+        '
+        Me.CboTpoFrom.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CboTpoFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboTpoFrom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboTpoFrom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboTpoFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboTpoFrom.FormattingEnabled = True
+        Me.CboTpoFrom.Items.AddRange(New Object() {"General", "Refacciones", "Materia Prima", "Producto Terminado"})
+        Me.CboTpoFrom.Location = New System.Drawing.Point(575, 51)
+        Me.CboTpoFrom.Name = "CboTpoFrom"
+        Me.CboTpoFrom.Size = New System.Drawing.Size(136, 31)
+        Me.CboTpoFrom.TabIndex = 62
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(470, 49)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(99, 28)
+        Me.Label4.TabIndex = 61
+        Me.Label4.Text = "Almacén:"
+        '
+        'CboNomFrom
+        '
+        Me.CboNomFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboNomFrom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboNomFrom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboNomFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboNomFrom.FormattingEnabled = True
+        Me.CboNomFrom.Location = New System.Drawing.Point(121, 51)
+        Me.CboNomFrom.Name = "CboNomFrom"
+        Me.CboNomFrom.Size = New System.Drawing.Size(324, 31)
+        Me.CboNomFrom.TabIndex = 60
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(12, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 28)
+        Me.Label3.TabIndex = 53
+        Me.Label3.Text = "Producto:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(11, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(191, 28)
+        Me.Label2.TabIndex = 52
+        Me.Label2.Text = "Almacén de Salida:"
+        '
         'PnlTo
         '
         Me.PnlTo.BackColor = System.Drawing.Color.Transparent
@@ -165,162 +249,6 @@ Partial Class ScrAlmaTraspasos
         Me.PnlTo.Name = "PnlTo"
         Me.PnlTo.Size = New System.Drawing.Size(1024, 108)
         Me.PnlTo.TabIndex = 8
-        '
-        'PnlBotttom
-        '
-        Me.PnlBotttom.BackColor = System.Drawing.Color.Transparent
-        Me.PnlBotttom.Controls.Add(Me.DgvTraspaso)
-        Me.PnlBotttom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlBotttom.Location = New System.Drawing.Point(0, 264)
-        Me.PnlBotttom.Name = "PnlBotttom"
-        Me.PnlBotttom.Size = New System.Drawing.Size(1024, 504)
-        Me.PnlBotttom.TabIndex = 9
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(11, 8)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(191, 28)
-        Me.Label2.TabIndex = 52
-        Me.Label2.Text = "Almacén de Salida:"
-        '
-        'Label13
-        '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(12, 12)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(207, 28)
-        Me.Label13.TabIndex = 61
-        Me.Label13.Text = "Almacén de Destino:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 49)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 28)
-        Me.Label3.TabIndex = 53
-        Me.Label3.Text = "Producto:"
-        '
-        'CboNomFrom
-        '
-        Me.CboNomFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboNomFrom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboNomFrom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboNomFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboNomFrom.FormattingEnabled = True
-        Me.CboNomFrom.Location = New System.Drawing.Point(121, 51)
-        Me.CboNomFrom.Name = "CboNomFrom"
-        Me.CboNomFrom.Size = New System.Drawing.Size(324, 31)
-        Me.CboNomFrom.TabIndex = 60
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(470, 49)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 28)
-        Me.Label4.TabIndex = 61
-        Me.Label4.Text = "Almacén:"
-        '
-        'CboTpoFrom
-        '
-        Me.CboTpoFrom.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CboTpoFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboTpoFrom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboTpoFrom.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboTpoFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboTpoFrom.FormattingEnabled = True
-        Me.CboTpoFrom.Location = New System.Drawing.Point(575, 51)
-        Me.CboTpoFrom.Name = "CboTpoFrom"
-        Me.CboTpoFrom.Size = New System.Drawing.Size(136, 31)
-        Me.CboTpoFrom.TabIndex = 62
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(778, 49)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(112, 28)
-        Me.Label5.TabIndex = 63
-        Me.Label5.Text = "Existencia:"
-        '
-        'LblCantiFrom
-        '
-        Me.LblCantiFrom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblCantiFrom.AutoSize = True
-        Me.LblCantiFrom.Font = New System.Drawing.Font("Ebrima", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCantiFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.LblCantiFrom.Location = New System.Drawing.Point(919, 49)
-        Me.LblCantiFrom.Name = "LblCantiFrom"
-        Me.LblCantiFrom.Size = New System.Drawing.Size(42, 28)
-        Me.LblCantiFrom.TabIndex = 64
-        Me.LblCantiFrom.Text = "NA"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(12, 51)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(194, 28)
-        Me.Label15.TabIndex = 65
-        Me.Label15.Text = "Traspaso Unidades:"
-        '
-        'TxtCantiTo
-        '
-        Me.TxtCantiTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtCantiTo.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.TxtCantiTo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCantiTo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCantiTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtCantiTo.Location = New System.Drawing.Point(212, 54)
-        Me.TxtCantiTo.MaxLength = 100
-        Me.TxtCantiTo.Name = "TxtCantiTo"
-        Me.TxtCantiTo.Size = New System.Drawing.Size(145, 31)
-        Me.TxtCantiTo.TabIndex = 66
-        Me.TxtCantiTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(470, 51)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(99, 28)
-        Me.Label6.TabIndex = 67
-        Me.Label6.Text = "Almacén:"
-        '
-        'CboTpoTo
-        '
-        Me.CboTpoTo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CboTpoTo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboTpoTo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboTpoTo.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.CboTpoTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboTpoTo.FormattingEnabled = True
-        Me.CboTpoTo.Location = New System.Drawing.Point(575, 53)
-        Me.CboTpoTo.Name = "CboTpoTo"
-        Me.CboTpoTo.Size = New System.Drawing.Size(136, 31)
-        Me.CboTpoTo.TabIndex = 68
         '
         'BtnTraspaso
         '
@@ -338,6 +266,80 @@ Partial Class ScrAlmaTraspasos
         Me.BtnTraspaso.Text = "Procesar Traspaso"
         Me.BtnTraspaso.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnTraspaso.UseVisualStyleBackColor = False
+        '
+        'CboTpoTo
+        '
+        Me.CboTpoTo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CboTpoTo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboTpoTo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboTpoTo.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.CboTpoTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboTpoTo.FormattingEnabled = True
+        Me.CboTpoTo.Items.AddRange(New Object() {"General", "Refacciones", "Materia Prima", "Producto Terminado"})
+        Me.CboTpoTo.Location = New System.Drawing.Point(575, 53)
+        Me.CboTpoTo.Name = "CboTpoTo"
+        Me.CboTpoTo.Size = New System.Drawing.Size(136, 31)
+        Me.CboTpoTo.TabIndex = 68
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(470, 51)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(99, 28)
+        Me.Label6.TabIndex = 67
+        Me.Label6.Text = "Almacén:"
+        '
+        'TxtCantiTo
+        '
+        Me.TxtCantiTo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtCantiTo.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.TxtCantiTo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCantiTo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCantiTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.TxtCantiTo.Location = New System.Drawing.Point(212, 54)
+        Me.TxtCantiTo.MaxLength = 100
+        Me.TxtCantiTo.Name = "TxtCantiTo"
+        Me.TxtCantiTo.Size = New System.Drawing.Size(145, 31)
+        Me.TxtCantiTo.TabIndex = 66
+        Me.TxtCantiTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(12, 51)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(194, 28)
+        Me.Label15.TabIndex = 65
+        Me.Label15.Text = "Traspaso Unidades:"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(12, 12)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(207, 28)
+        Me.Label13.TabIndex = 61
+        Me.Label13.Text = "Almacén de Destino:"
+        '
+        'PnlBotttom
+        '
+        Me.PnlBotttom.BackColor = System.Drawing.Color.Transparent
+        Me.PnlBotttom.Controls.Add(Me.DgvTraspaso)
+        Me.PnlBotttom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlBotttom.Location = New System.Drawing.Point(0, 264)
+        Me.PnlBotttom.Name = "PnlBotttom"
+        Me.PnlBotttom.Size = New System.Drawing.Size(1024, 504)
+        Me.PnlBotttom.TabIndex = 9
         '
         'DgvTraspaso
         '

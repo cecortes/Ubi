@@ -83,8 +83,14 @@
         Me.Close()
     End Sub
 
+    ''' <summary>
+    ''' Muestra la ventana de consultas
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub pbConsultas_Click(sender As Object, e As EventArgs) Handles pbConsultas.Click
-
+        ScrAlmaConsultas.Show()
+        Me.Close()
     End Sub
 
 #End Region
