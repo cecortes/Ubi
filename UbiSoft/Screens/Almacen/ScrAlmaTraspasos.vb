@@ -403,6 +403,10 @@ Public Class ScrAlmaTraspasos
                     GetProdFrom()
                     TxtCantiTo.Text = ""
 
+                    'Usuario
+                    MsgBox("Traspaso realizado con éxito",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
                 Else
 
                     'Usuario
@@ -429,12 +433,8 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almatpo = "Refacciones"
                     dataProdTo.almafecha = dataProdFrom.almafecha
 
-                    MsgBox("Antes de borrar: " + dataProdTo.almatpo)
-                    Stop
                     'Borrado
                     BorrarFrom()
-
-                    MsgBox("Después de borrar: " + dataProdTo.almatpo)
 
                     'Insert
                     If (add.NewAlmaRef(dataProdTo)) Then
@@ -454,6 +454,10 @@ Public Class ScrAlmaTraspasos
                     CboTpoTo.SelectedIndex = 0
                     GetProdFrom()
                     TxtCantiTo.Text = ""
+
+                    'Usuario
+                    MsgBox("Traspaso realizado con éxito",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
                 Else
 
@@ -504,6 +508,10 @@ Public Class ScrAlmaTraspasos
                     GetProdFrom()
                     TxtCantiTo.Text = ""
 
+                    'Usuario
+                    MsgBox("Traspaso realizado con éxito",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
                 Else
 
                     'Usuario
@@ -552,6 +560,10 @@ Public Class ScrAlmaTraspasos
                     CboTpoTo.SelectedIndex = 0
                     GetProdFrom()
                     TxtCantiTo.Text = ""
+
+                    'Usuario
+                    MsgBox("Traspaso realizado con éxito",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
                 Else
 
