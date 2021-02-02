@@ -496,6 +496,7 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
                     dataProdTo.almatpo = dataProdFrom.almatpo
                     dataProdTo.almafecha = dataProdFrom.almafecha
+                    dataProdTo.almacadu = dataProdFrom.almacadu
 
                     'Borrado
                     If (borrar.DelProdAlmaPrima(datos)) Then
@@ -511,7 +512,7 @@ Public Class ScrAlmaTraspasos
                     End If
 
                     'Insert
-                    If (add.NewAlmaRef(dataProdTo)) Then
+                    If (add.NewAlmaPri(dataProdTo)) Then
                     Else
 
                         'Usuario
@@ -541,6 +542,63 @@ Public Class ScrAlmaTraspasos
                 End If
 
             Case "Producto Terminado"
+
+                'Consulta
+                datos.almanom = CboNomFrom.Text
+
+                If (consulta.ChkUniqueAlmaPrima(datos)) Then
+
+                    'Captura de los datos
+                    dataProdTo.almanom = CboNomFrom.Text
+                    dataProdTo.almauni = dataProdFrom.almauni
+                    dataProdTo.almapack = dataProdFrom.almapack
+                    dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
+                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almafecha = dataProdFrom.almafecha
+                    dataProdTo.almacadu = dataProdFrom.almacadu
+
+                    'Borrado
+                    If (borrar.DelProdAlmaPrima(datos)) Then
+                    Else
+
+                        'Usuario
+                        MsgBox("Error en el traspaso",
+                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                        'Salida
+                        Return
+
+                    End If
+
+                    'Insert
+                    If (add.NewAlmaPri(dataProdTo)) Then
+                    Else
+
+                        'Usuario
+                        MsgBox("Error en el traspaso",
+                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                        'Salida
+                        Return
+
+                    End If
+
+                    'Refresh
+                    CboTpoFrom.SelectedIndex = 0
+                    CboTpoTo.SelectedIndex = 0
+                    GetProdFrom()
+                    TxtCantiTo.Text = ""
+
+                Else
+
+                    'Usuario
+                    MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
 
 
         End Select
