@@ -1040,7 +1040,6 @@ UbiSoft
  Consulta si en el almacén de destino existe el producto
  Captura el valor de las unidades del textbox
  Almacena los datos en un objeto
- Consulta si en el almacén de destino existe el producto
  Si no existe borra de la tabla existente el producto 
  Inserta el producto en la tabla del almacén de destino seleccionado
  </summary>

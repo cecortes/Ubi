@@ -12,6 +12,8 @@ Public Class ScrAlmaTraspasos
     Dim cboFrom As New Consulta
     Dim consulta As New Consulta
     Dim dgvData As New Consulta
+    Dim borrar As New Eliminar
+    Dim add As New Agregar
 
 #End Region
 
@@ -356,7 +358,6 @@ Public Class ScrAlmaTraspasos
     ''' Consulta si en el almacén de destino existe el producto
     ''' Captura el valor de las unidades del textbox
     ''' Almacena los datos en un objeto
-    ''' Consulta si en el almacén de destino existe el producto
     ''' Si no existe borra de la tabla existente el producto 
     ''' Inserta el producto en la tabla del almacén de destino seleccionado
     ''' </summary>
@@ -374,12 +375,32 @@ Public Class ScrAlmaTraspasos
 
                     'Captura de los datos
                     dataProdTo.almanom = CboNomFrom.Text
-                    dataProdTo.almauni = dataProdFrom.
+                    dataProdTo.almauni = dataProdFrom.almauni
+                    dataProdTo.almapack = dataProdFrom.almapack
+                    dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
+                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almafecha = dataProdFrom.almafecha
 
-                Else
+                    'Borrado
+                    If (borrar.DelProdAlmaGrl(datos)) Then
+                    Else
 
-                    'Usuario
-                    MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
+                        'Usuario
+                        MsgBox("Error en el traspaso",
+                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                        'Salida
+                        Return
+
+                    End If
+
+                    'Insert
+                    If () Then
+
+                    Else
+
+                        'Usuario
+                        MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
                            MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
                     'Salida
