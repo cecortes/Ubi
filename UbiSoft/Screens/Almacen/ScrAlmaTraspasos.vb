@@ -144,6 +144,13 @@ Public Class ScrAlmaTraspasos
                 'Labels
                 LblCantiFrom.Text = dataProdFrom.almagrl_canti
 
+                'Generales
+                dataProdFrom.almanom = dataProdFrom.almagrl_nom
+                dataProdFrom.almauni = dataProdFrom.almagrl_uni
+                dataProdFrom.almapack = dataProdFrom.almagrl_pack
+                dataProdFrom.almacanti = dataProdFrom.almagrl_canti
+                dataProdFrom.almafecha = dataProdFrom.almagrl_fecha
+
             Case "Refacciones"
 
                 'Datos
@@ -154,6 +161,13 @@ Public Class ScrAlmaTraspasos
 
                 'Labels
                 LblCantiFrom.Text = dataProdFrom.almarefa_canti
+
+                'Generales
+                dataProdFrom.almanom = dataProdFrom.almarefa_nom
+                dataProdFrom.almauni = dataProdFrom.almarefa_uni
+                dataProdFrom.almapack = dataProdFrom.almarefa_pack
+                dataProdFrom.almacanti = dataProdFrom.almarefa_canti
+                dataProdFrom.almafecha = dataProdFrom.almarefa_fecha
 
             Case "Materia Prima"
 
@@ -166,6 +180,14 @@ Public Class ScrAlmaTraspasos
                 'Labels
                 LblCantiFrom.Text = dataProdFrom.almapri_canti
 
+                'Generales
+                dataProdFrom.almanom = dataProdFrom.almapri_nom
+                dataProdFrom.almauni = dataProdFrom.almapri_uni
+                dataProdFrom.almapack = dataProdFrom.almapri_pack
+                dataProdFrom.almacanti = dataProdFrom.almapri_canti
+                dataProdFrom.almafecha = dataProdFrom.almapri_fecha
+                dataProdFrom.almacadu = dataProdFrom.almapri_cadu
+
             Case "Producto Terminado"
 
                 'Datos
@@ -176,6 +198,14 @@ Public Class ScrAlmaTraspasos
 
                 'Labels
                 LblCantiFrom.Text = dataProdFrom.almater_canti
+
+                'Generales
+                dataProdFrom.almanom = dataProdFrom.almater_nom
+                dataProdFrom.almauni = dataProdFrom.almater_uni
+                dataProdFrom.almapack = dataProdFrom.almater_pack
+                dataProdFrom.almacanti = dataProdFrom.almater_canti
+                dataProdFrom.almafecha = dataProdFrom.almater_fecha
+                dataProdFrom.almacadu = dataProdFrom.almater_cadu
 
         End Select
 
@@ -339,7 +369,23 @@ Public Class ScrAlmaTraspasos
 
                 'Consulta
                 datos.almanom = CboNomFrom.Text
-                datos.almatpo = CboTpoTo.Text
+
+                If (consulta.ChkUniqueAlmaGral(datos)) Then
+
+                    'Captura de los datos
+                    dataProdTo.almanom = CboNomFrom.Text
+                    dataProdTo.almauni = dataProdFrom.
+
+                Else
+
+                    'Usuario
+                    MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
+                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
 
             Case "Refacciones"
 

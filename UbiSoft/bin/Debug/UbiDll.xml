@@ -344,6 +344,13 @@ UbiDll
  <param name="Datos"></param>
  <returns>Resultado como objeto de Datos</returns>
 </member>
+<member name="M:UbiDll.Consulta.ChkUniqueAlmaGral(UbiDll.Datos)">
+ <summary>
+ Se encarga de verificar que un producto sea único en la tabla
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios

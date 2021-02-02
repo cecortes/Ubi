@@ -1035,6 +1035,16 @@ UbiSoft
  Se encarga de aplicar formato al DgvTraspasos con fecha de caducidad
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.Traspaso">
+ <summary>
+ Consulta si en el almacén de destino existe el producto
+ Captura el valor de las unidades del textbox
+ Almacena los datos en un objeto
+ Consulta si en el almacén de destino existe el producto
+ Si no existe borra de la tabla existente el producto 
+ Inserta el producto en la tabla del almacén de destino seleccionado
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaTraspasos.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal
@@ -1081,6 +1091,13 @@ UbiSoft
 <member name="M:UbiSoft.ScrAlmaTraspasos.CboTpoTo_SelectedValueChanged(System.Object,System.EventArgs)">
  <summary>
  Llama al método para realizar la consulta en el DGV
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.BtnTraspaso_Click(System.Object,System.EventArgs)">
+ <summary>
+ Llama al método para realizar el traspaso
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
