@@ -7547,6 +7547,54 @@ Public Class Eliminar
 
     End Function
 
+    ''' <summary>
+    ''' Se encarga de eliminar un producto de almacén refacciones por medio de la key recibida como parámetro
+    ''' </summary>
+    ''' <param name="datos"> Resultado del borrado </param>
+    ''' <returns></returns>
+    Public Function DelProdAlmaRefa(ByVal datos As Datos) As Boolean
+
+        'Variables Privadas
+        Dim estado As Boolean = False
+
+        Dim con As New Conexion
+
+        'Control de Errores
+        Try
+
+            'Conexión
+            con.Con_Global()
+
+            'Query
+            _adaptador.DeleteCommand = New MySqlCommand("DELETE FROM almarefa WHERE almarefa_nom=@almarefa_nom", con._conexion)
+
+            'Parámetros
+            _adaptador.DeleteCommand.Parameters.Add("@almarefa_nom", MySqlDbType.String, 100).Value = datos.almanom
+
+            'Delete
+            con._conexion.Open()
+            _adaptador.DeleteCommand.Connection = con._conexion
+            _adaptador.DeleteCommand.ExecuteNonQuery()
+            estado = True
+
+        Catch ex As MySqlException
+
+            'Error
+            estado = False
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "UbiSoft by Ubicamatic - 2020(C)")
+
+        Finally
+
+            'Conexión Close
+            con._conexion.Close()
+
+        End Try
+
+        'Resultado
+        Return estado
+
+    End Function
+
 #End Region
 
 End Class
