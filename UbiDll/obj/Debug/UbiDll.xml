@@ -456,6 +456,13 @@ UbiDll
  <param name="datos"></param>
  <returns></returns>
 </member>
+<member name="M:UbiDll.Agregar.NewAlmaPri(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almapri
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
 <member name="M:UbiDll.Agregar.NewAlmaRefa(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla alma_refa 
