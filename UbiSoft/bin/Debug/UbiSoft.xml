@@ -1044,6 +1044,11 @@ UbiSoft
  Inserta el producto en la tabla del almacén de destino seleccionado
  </summary>
 </member>
+<member name="M:UbiSoft.ScrAlmaTraspasos.BorrarFrom">
+ <summary>
+ Se encarga de borrar el producto de la tabla seleccionada FROM
+ </summary>
+</member>
 <member name="M:UbiSoft.ScrAlmaTraspasos.PbClose_Click(System.Object,System.EventArgs)">
  <summary>
  Cierra el formulario y abre la pantalla principal

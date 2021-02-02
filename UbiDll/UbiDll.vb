@@ -1560,7 +1560,7 @@ Public Class Datos
             Return _almatpo
         End Get
         Set(ByVal value As String)
-            _almater_tpo = value
+            _almatpo = value
         End Set
     End Property
 

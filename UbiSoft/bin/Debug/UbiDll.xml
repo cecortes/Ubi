@@ -351,6 +351,27 @@ UbiDll
  <param name="Datos"></param>
  <returns>Password as string</returns>
 </member>
+<member name="M:UbiDll.Consulta.ChkUniqueAlmaRefa(UbiDll.Datos)">
+ <summary>
+ Se encarga de verificar que un producto sea único en la tabla
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
+<member name="M:UbiDll.Consulta.ChkUniqueAlmaPrima(UbiDll.Datos)">
+ <summary>
+ Se encarga de verificar que un producto sea único en la tabla
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
+<member name="M:UbiDll.Consulta.ChkUniqueAlmaTerm(UbiDll.Datos)">
+ <summary>
+ Se encarga de verificar que un producto sea único en la tabla
+ </summary>
+ <param name="Datos"></param>
+ <returns>Password as string</returns>
+</member>
 <member name="M:UbiDll.Agregar.NewUsr(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla usuarios
@@ -424,6 +445,34 @@ UbiDll
 <member name="M:UbiDll.Agregar.NewAlmaGral(UbiDll.Datos)">
  <summary>
  Realiza la inserción de datos en la tabla alma_general
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Agregar.NewAlmaGrl(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almagrl
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Agregar.NewAlmaRef(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almarefa
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Agregar.NewAlmaPri(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almapri
+ </summary>
+ <param name="datos"></param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Agregar.NewAlmaTer(UbiDll.Datos)">
+ <summary>
+ Realiza la inserción de datos en la tabla almater
  </summary>
  <param name="datos"></param>
  <returns></returns>
@@ -629,6 +678,27 @@ UbiDll
 <member name="M:UbiDll.Eliminar.DelProdAlmaGrl(UbiDll.Datos)">
  <summary>
  Se encarga de eliminar un producto de almacén general por medio de la key recibida como parámetro
+ </summary>
+ <param name="datos"> Resultado del borrado </param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Eliminar.DelProdAlmaRefa(UbiDll.Datos)">
+ <summary>
+ Se encarga de eliminar un producto de almacén refacciones por medio de la key recibida como parámetro
+ </summary>
+ <param name="datos"> Resultado del borrado </param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Eliminar.DelProdAlmaPrima(UbiDll.Datos)">
+ <summary>
+ Se encarga de eliminar un producto de almacén materia prima por medio de la key recibida como parámetro
+ </summary>
+ <param name="datos"> Resultado del borrado </param>
+ <returns></returns>
+</member>
+<member name="M:UbiDll.Eliminar.DelProdAlmaTer(UbiDll.Datos)">
+ <summary>
+ Se encarga de eliminar un producto de almacén producto terminado por medio de la key recibida como parámetro
  </summary>
  <param name="datos"> Resultado del borrado </param>
  <returns></returns>

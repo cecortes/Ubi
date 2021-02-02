@@ -378,21 +378,11 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almauni = dataProdFrom.almauni
                     dataProdTo.almapack = dataProdFrom.almapack
                     dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
-                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almatpo = "General"
                     dataProdTo.almafecha = dataProdFrom.almafecha
 
                     'Borrado
-                    If (borrar.DelProdAlmaGrl(datos)) Then
-                    Else
-
-                        'Usuario
-                        MsgBox("Error en el traspaso",
-                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
-
-                        'Salida
-                        Return
-
-                    End If
+                    BorrarFrom()
 
                     'Insert
                     If (add.NewAlmaGrl(dataProdTo)) Then
@@ -415,9 +405,9 @@ Public Class ScrAlmaTraspasos
 
                 Else
 
-                        'Usuario
-                        MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
-                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+                    'Usuario
+                    MsgBox("No se puede realizar el traspaso, el producto ya existe en el almacén",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
 
                     'Salida
                     Return
@@ -436,21 +426,15 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almauni = dataProdFrom.almauni
                     dataProdTo.almapack = dataProdFrom.almapack
                     dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
-                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almatpo = "Refacciones"
                     dataProdTo.almafecha = dataProdFrom.almafecha
 
+                    MsgBox("Antes de borrar: " + dataProdTo.almatpo)
+                    Stop
                     'Borrado
-                    If (borrar.DelProdAlmaRefa(datos)) Then
-                    Else
+                    BorrarFrom()
 
-                        'Usuario
-                        MsgBox("Error en el traspaso",
-                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
-
-                        'Salida
-                        Return
-
-                    End If
+                    MsgBox("Después de borrar: " + dataProdTo.almatpo)
 
                     'Insert
                     If (add.NewAlmaRef(dataProdTo)) Then
@@ -494,22 +478,12 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almauni = dataProdFrom.almauni
                     dataProdTo.almapack = dataProdFrom.almapack
                     dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
-                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almatpo = "Materia Prima"
                     dataProdTo.almafecha = dataProdFrom.almafecha
                     dataProdTo.almacadu = dataProdFrom.almacadu
 
                     'Borrado
-                    If (borrar.DelProdAlmaPrima(datos)) Then
-                    Else
-
-                        'Usuario
-                        MsgBox("Error en el traspaso",
-                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
-
-                        'Salida
-                        Return
-
-                    End If
+                    BorrarFrom()
 
                     'Insert
                     If (add.NewAlmaPri(dataProdTo)) Then
@@ -553,25 +527,15 @@ Public Class ScrAlmaTraspasos
                     dataProdTo.almauni = dataProdFrom.almauni
                     dataProdTo.almapack = dataProdFrom.almapack
                     dataProdTo.almacanti = Integer.Parse(TxtCantiTo.Text)
-                    dataProdTo.almatpo = dataProdFrom.almatpo
+                    dataProdTo.almatpo = "Producto Terminado"
                     dataProdTo.almafecha = dataProdFrom.almafecha
                     dataProdTo.almacadu = dataProdFrom.almacadu
 
                     'Borrado
-                    If (borrar.DelProdAlmaTer(datos)) Then
-                    Else
-
-                        'Usuario
-                        MsgBox("Error en el traspaso",
-                           MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
-
-                        'Salida
-                        Return
-
-                    End If
+                    BorrarFrom()
 
                     'Insert
-                    If (add.NewAlmaPri(dataProdTo)) Then
+                    If (add.NewAlmaTer(dataProdTo)) Then
                     Else
 
                         'Usuario
@@ -603,8 +567,79 @@ Public Class ScrAlmaTraspasos
 
         End Select
 
-        'Captura datos
+    End Sub
 
+    ''' <summary>
+    ''' Se encarga de borrar el producto de la tabla seleccionada FROM
+    ''' </summary>
+    Private Sub BorrarFrom()
+
+        'Datos
+        datos.almanom = CboNomFrom.Text
+
+        Select Case CboTpoFrom.Text
+
+            Case "General"
+
+                'Delete
+                If (borrar.DelProdAlmaGrl(datos)) Then
+                Else
+
+                    'Usuario
+                    MsgBox("Error en el traspaso",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
+
+            Case "Refacciones"
+
+                'Delete
+                If (borrar.DelProdAlmaRefa(datos)) Then
+                Else
+
+                    'Usuario
+                    MsgBox("Error en el traspaso",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
+
+            Case "Materia Prima"
+
+                'Delete
+                If (borrar.DelProdAlmaPrima(datos)) Then
+                Else
+
+                    'Usuario
+                    MsgBox("Error en el traspaso",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
+
+            Case "Producto Terminado"
+
+                'Delete
+                If (borrar.DelProdAlmaTer(datos)) Then
+                Else
+
+                    'Usuario
+                    MsgBox("Error en el traspaso",
+                       MsgBoxStyle.OkOnly, "UbiSoft by Ubicamatic - 2020(C)")
+
+                    'Salida
+                    Return
+
+                End If
+
+        End Select
 
     End Sub
 
