@@ -716,6 +716,61 @@ UbiSoft
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:UbiSoft.ScrAlmaConsultas.GetAllCbo">
+ <summary>
+ Carga el resultado de la consulta de productos para almagral, almarefa, almapri, almater
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.GetAllDgv">
+ <summary>
+ Realiza la consulta para almagral, almarefa, almapri, almater
+ Carga los resultados en los DGV correspondientes para cada almacén
+ </summary>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.ScrAlmaConsultas_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga los cbo con los datos de todos los almacénes
+ Carga los DGV con los datos de todos los almacénes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.CboProdGral_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor dentro de datos
+ Llama al método para realizar la consulta
+ Recibe el resultado y actualiza las etiquetas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.CboProdRefa_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor dentro de datos
+ Llama al método para realizar la consulta
+ Recibe el resultado y actualiza las etiquetas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.CboProdPri_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor dentro de datos
+ Llama al método para realizar la consulta
+ Recibe el resultado y actualiza las etiquetas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrAlmaConsultas.CboProdTer_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Captura el valor dentro de datos
+ Llama al método para realizar la consulta
+ Recibe el resultado y actualiza las etiquetas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:UbiSoft.ScrAlmaEntradas.FormatDtp">
  <summary>
  Se encarga de darle formato a los date time picker del formulario
