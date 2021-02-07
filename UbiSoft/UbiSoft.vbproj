@@ -681,6 +681,9 @@
     <EmbeddedResource Include="Screens\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Produccion\ScrOP.resx">
+      <DependentUpon>ScrOP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Produccion\ScrProd.resx">
       <DependentUpon>ScrProd.vb</DependentUpon>
     </EmbeddedResource>
