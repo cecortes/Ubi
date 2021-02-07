@@ -96,3 +96,4 @@ D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.vbprojAssemblyReference.cache
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAlmaSalidas.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAlmaConsultas.resources
 D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrAlmaTraspasos.resources
+D:\GITHUB\Ubi\UbiSoft\obj\Debug\UbiSoft.ScrProd.resources

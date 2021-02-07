@@ -157,6 +157,11 @@ UbiSoft
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:UbiSoft.My.Resources.Resources.monitor">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:UbiSoft.My.Resources.Resources.ok">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -178,6 +183,11 @@ UbiSoft
 </summary>
 </member>
 <member name="P:UbiSoft.My.Resources.Resources.portapapeles">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:UbiSoft.My.Resources.Resources.prod">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -4324,6 +4334,27 @@ UbiSoft
  Captura la info de los cuadros textos
  Realiza la consulta mediante la dll
  Valida el resultado y da acceso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrProd.PbClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cierra el formulario y abre la pantalla principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrProd.PbMax_Click(System.Object,System.EventArgs)">
+ <summary>
+ Maximiza o minimiza la pantalla, según sea el caso
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:UbiSoft.ScrProd.PbMin_Click(System.Object,System.EventArgs)">
+ <summary>
+ Minimiza el formulario
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

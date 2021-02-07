@@ -434,10 +434,22 @@
     <Compile Include="Screens\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Screens\Produccion\ScrOP.Designer.vb">
+      <DependentUpon>ScrOP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Produccion\ScrOP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Screens\Produccion\ScrProd.Designer.vb">
       <DependentUpon>ScrProd.vb</DependentUpon>
     </Compile>
     <Compile Include="Screens\Produccion\ScrProd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Produccion\ScrProdSetup.Designer.vb">
+      <DependentUpon>ScrProdSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Produccion\ScrProdSetup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\ScrMain.Designer.vb">
@@ -669,6 +681,9 @@
     <EmbeddedResource Include="Screens\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Produccion\ScrProd.resx">
+      <DependentUpon>ScrProd.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\ScrMain.resx">
       <DependentUpon>ScrMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -824,6 +839,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\consulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
