@@ -158,7 +158,7 @@
     ''' <param name="e"></param>
     Private Sub BtnProd_Click(sender As Object, e As EventArgs) Handles BtnProd.Click
 
-        'ScrProd.Show()
+        ScrProd.Show()
         Me.Close()
 
     End Sub
